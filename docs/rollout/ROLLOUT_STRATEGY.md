@@ -103,11 +103,13 @@ Developers must utilize the following schema structures to ensure portability be
 
 ## 4. The "LGU Synchronization" Protocol (Human-in-the-Loop)
 
-To prevent "Zombie Projects" (software that exists but is outdated), every repository must contain a `TEAM_SYNC.md` file. This establishes clear ownership of the data pipeline.
+To prevent "Zombie Projects" (software that exists but is outdated), every repository must contain a `TEAM_SYNC.md` file **at the repository root** (not nested under `docs/`), so that its ownership and verification status are visible from the GitHub repository landing page. This establishes clear ownership of the data pipeline.
+
+This repository's completed instance of that file is [`/TEAM_SYNC.md`](../../TEAM_SYNC.md).
 
 ### 4.1 TEAM_SYNC.md Template
 
-All new repositories must initialize with the following template:
+All new repositories must initialize with the following template, saved as `TEAM_SYNC.md` at the repository root:
 
 ```markdown
 # LGU Synchronization Protocol
