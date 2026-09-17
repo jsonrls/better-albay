@@ -57,11 +57,11 @@ Developers are responsible for ETL (Extract, Transform, Load) operations mapping
 
 ### 2.2 Integration Workflows
 
-1.  **Open Data Aggregation:**
+1. **Open Data Aggregation:**
     - Scripts should query `data.gov.ph` APIs where available. If APIs are unavailable, CSV exports must be parsed and validated against the `BetterLGU` TypeScript interfaces before commitment to the repository.
-2.  **Request-Based Ingestion:**
+2. **Request-Based Ingestion:**
     - For data not publicly available, developers must utilize the **FOI Portal** (foi.gov.ph) to request datasets. Pending FOI requests should be tracked in the project issue tracker.
-3.  **Search Indexing (Meilisearch):**
+3. **Search Indexing (Meilisearch):**
     - For enterprise-grade retrieval, the aggregated JSON files should be indexed into a self-hosted Meilisearch instance (optional for basic deployments, mandatory for provincial/city level).
     - **Index UID:** `lgu_services`, `lgu_officials`.
     - **Searchable Attributes:** `service_name`, `keywords`, `official_name`, `ordinance_title`.

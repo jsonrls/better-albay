@@ -133,21 +133,21 @@ git clone https://github.com/jsonrls/betteralbay.git
 cd betteralbay
 ```
 
-2. **Install dependencies**
+1. **Install dependencies**
 
 ```bash
 npm install
 ```
 
-3. **Start the development server**
+1. **Start the development server**
 
 ```bash
 npm run dev
 ```
 
-4. **Open in browser**
-   - Development: http://localhost:8000
-   - Production preview: http://localhost:8080 (after build)
+1. **Open in browser**
+   - Development: <http://localhost:8000>
+   - Production preview: <http://localhost:8080> (after build)
 
 ## Usage
 
@@ -176,11 +176,11 @@ npm run dev
 npm run build
 ```
 
-2. **Output location**
+1. **Output location**
    - Minified files are generated in the `dist/` folder
    - Original size: ~17MB → Minified: ~3.9MB
 
-3. **Deploy to server**
+2. **Deploy to server**
    - Upload contents of `dist/` to your web server's `public_html` directory
    - Ensure `.htaccess` is included for clean URLs, CSP headers, and security
 
@@ -382,19 +382,25 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 1. **Fork** the repository
 2. **Create** a feature branch
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 3. **Make** your changes
 4. **Test** thoroughly on multiple browsers
 5. **Commit** with a descriptive message
+
    ```bash
    git commit -m "Add: description of your changes"
    ```
+
 6. **Push** to your fork
+
    ```bash
    git push origin feature/your-feature-name
    ```
+
 7. **Open** a Pull Request with detailed description
 
 ### Contribution Areas
@@ -454,7 +460,7 @@ See [LICENSE](LICENSE) for full details.
 | Channel  | Link                                                                      |
 | -------- | ------------------------------------------------------------------------- |
 | Website  | [betteralbay.org](https://betteralbay.org)                              |
-| Email    | volunteer@betteralbay.org                                                |
+| Email    | <volunteer@betteralbay.org>                                                |
 | Facebook | [@betteralbay.org](https://www.facebook.com/pioalbay2023)            |
 | LinkedIn | [BetterAlbay](https://www.linkedin.com/company/betteralbay/)            |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
