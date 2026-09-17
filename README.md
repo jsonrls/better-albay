@@ -98,10 +98,10 @@ Visit the live website: [https://betteralbay.org](https://betteralbay.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/jsonrls/betteralbay.git
+git clone https://github.com/jsonrls/better-albay.git
 
 # Navigate to project directory
-cd betteralbay
+cd better-albay
 
 # Install dependencies
 npm install
@@ -129,8 +129,8 @@ py serve.py --port 8000 --directory .
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/jsonrls/betteralbay.git
-cd betteralbay
+git clone https://github.com/jsonrls/better-albay.git
+cd better-albay
 ```
 
 1. **Install dependencies**
@@ -464,7 +464,7 @@ See [LICENSE](LICENSE) for full details.
 | Facebook | [@betteralbay.org](https://www.facebook.com/pioalbay2023)            |
 | LinkedIn | [BetterAlbay](https://www.linkedin.com/company/betteralbay/)            |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
-| GitHub   | [jsonrls/betteralbay](https://github.com/jsonrls/betteralbay) |
+| GitHub   | [jsonrls/better-albay](https://github.com/jsonrls/better-albay) |
 
 ## Acknowledgments
 

@@ -148,7 +148,7 @@ export default function Footer() {
               <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
             </a>
             <a
-              href="https://github.com/jsonrls/betteralbay"
+              href="https://github.com/jsonrls/better-albay"
               className="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"

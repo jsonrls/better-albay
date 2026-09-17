@@ -64,8 +64,8 @@ BetterAlbay.org now has two versions:
 
 ```bash
 # Clone the repository
-git clone https://github.com/jsonrls/betteralbay.git
-cd betteralbay
+git clone https://github.com/jsonrls/better-albay.git
+cd better-albay
 
 # Switch to React branch
 git checkout react-typescript
