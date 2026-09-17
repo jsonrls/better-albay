@@ -98,7 +98,7 @@ Visit the live website: [https://betteralbay.org](https://betteralbay.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterAlbay/betteralbay.git
+git clone https://github.com/jsonrls/betteralbay.git
 
 # Navigate to project directory
 cd betteralbay
@@ -129,7 +129,7 @@ py serve.py --port 8000 --directory .
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/BetterAlbay/betteralbay.git
+git clone https://github.com/jsonrls/betteralbay.git
 cd betteralbay
 ```
 
@@ -458,7 +458,7 @@ See [LICENSE](LICENSE) for full details.
 | Facebook | [@betteralbay.org](https://www.facebook.com/pioalbay2023)            |
 | LinkedIn | [BetterAlbay](https://www.linkedin.com/company/betteralbay/)            |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
-| GitHub   | [BetterAlbay/betteralbay](https://github.com/BetterAlbay/betteralbay) |
+| GitHub   | [jsonrls/betteralbay](https://github.com/jsonrls/betteralbay) |
 
 ## Acknowledgments
 

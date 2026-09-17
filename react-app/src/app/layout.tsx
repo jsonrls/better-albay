@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import Script from 'next/script';
 import HotlineBar from '@/components/layout/HotlineBar';
 import Header from '@/components/layout/Header';
 import InfoBar from '@/components/layout/InfoBar';
@@ -12,7 +11,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: { default: 'BetterAlbay.org | Official Portal', template: '%s | BetterAlbay.org' },
+  title: {
+    default: 'BetterAlbay.org | Community Information Portal',
+    template: '%s | BetterAlbay.org',
+  },
   description: 'BetterAlbay.org - Your digital gateway to LGU Albay services.',
   keywords: ['BetterAlbay', 'Albay Bicol Region', 'LGU Albay', 'municipal services'],
   authors: [{ name: 'Jayson (jsonrls)' }],
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     locale: 'en_PH',
     url: 'https://betteralbay.org/',
     siteName: 'BetterAlbay.org',
-    title: 'BetterAlbay.org | Official Portal',
+    title: 'BetterAlbay.org | Community Information Portal',
     description: 'Empowering the people of Albay with transparent access to services.',
     images: [
       {
@@ -72,10 +74,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <PWAManager />
         </LanguageProvider>
-        <Script
-          src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   );

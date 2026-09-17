@@ -217,7 +217,7 @@ const CacheManager = {
 // ============================================
 
 const CONFIG = {
-  EXCHANGE_RATE_TTL: 30 * 60 * 1000, // 30 minutes
+  EXCHANGE_RATE_TTL: 24 * 60 * 60 * 1000, // Provider updates daily
   WEATHER_TTL: 15 * 60 * 1000, // 15 minutes
   TIME_UPDATE_INTERVAL: 1000, // 1 second
   ALBAY_LAT: 13.1391,
@@ -234,64 +234,26 @@ const CONFIG = {
 // ============================================
 
 const ExchangeRateService = {
-  /**
-   * Fetch exchange rates from API
-   * Uses frankfurter.app (free, no API key required)
-   * Note: This API uses EUR as base, so we need to convert to PHP
-   * @returns {Promise<object>} Exchange rates relative to PHP
-   */
+  /** Fetch daily PHP rates from the provider's no-key endpoint. */
   async fetchRates() {
     try {
-      // Using exchangerate.host which is free and supports PHP as base
-      const currencies = CONFIG.CURRENCIES.join(',');
-      const response = await fetch(
-        `https://api.exchangerate.host/latest?base=PHP&symbols=${currencies}`
-      );
-
+      const response = await fetch('https://open.er-api.com/v6/latest/PHP');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-
       const data = await response.json();
-
-      if (!data.success && data.rates) {
-        // Some APIs return rates directly
-        return this.processRates(data.rates);
+      if (
+        data.result !== 'success' ||
+        data.base_code !== 'PHP' ||
+        !data.rates ||
+        typeof data.rates !== 'object' ||
+        Array.isArray(data.rates)
+      ) {
+        throw new Error('Invalid exchange-rate API response');
       }
-
-      if (data.rates) {
-        return this.processRates(data.rates);
-      }
-
-      throw new Error('Invalid API response');
+      return this.processRates(data.rates);
     } catch (error) {
       console.error('ExchangeRateService: Failed to fetch rates', error);
-      // Try fallback API
-      return this.fetchRatesFallback();
-    }
-  },
-
-  /**
-   * Fallback API using Open Exchange Rates style endpoint
-   */
-  async fetchRatesFallback() {
-    try {
-      // Using a different free API as fallback
-      const response = await fetch('https://open.er-api.com/v6/latest/PHP');
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      if (data.rates) {
-        return this.processRates(data.rates);
-      }
-
-      throw new Error('Invalid fallback API response');
-    } catch (error) {
-      console.error('ExchangeRateService: Fallback also failed', error);
       return null;
     }
   },
@@ -304,7 +266,7 @@ const ExchangeRateService = {
   processRates(rates) {
     const processed = {};
     for (const currency of CONFIG.CURRENCIES) {
-      if (rates[currency] !== undefined) {
+      if (typeof rates[currency] === 'number' && Number.isFinite(rates[currency])) {
         // API returns how much of each currency equals 1 PHP
         // We want to show how much PHP equals 1 of each currency
         // So we need to invert: 1 / rate
@@ -515,6 +477,21 @@ const InfoBarManager = {
    * Initialize the info bar
    */
   async init() {
+    // The open-access provider requires a visible attribution link.
+    const rateDisplay = document.querySelector('.rate-display');
+    if (rateDisplay && !document.querySelector('.exchange-rate-source')) {
+      const source = document.createElement('a');
+      source.className = 'exchange-rate-source';
+      source.href = 'https://www.exchangerate-api.com';
+      source.textContent = 'Rates by ExchangeRate-API';
+      source.style.color = 'inherit';
+      source.style.marginInlineStart = '0.5rem';
+      const infoItems = rateDisplay.closest('.info-bar-inner');
+      if (infoItems) {
+        infoItems.style.flexWrap = 'wrap';
+        infoItems.appendChild(source);
+      }
+    }
     // Initial render with loading state
     this.renderLoading();
 
@@ -638,7 +615,7 @@ const InfoBarManager = {
       this.updateWeather();
     }, CONFIG.WEATHER_TTL);
 
-    // Exchange rates update every 30 minutes
+    // Exchange rates update daily
     this.intervals.exchangeRates = setInterval(() => {
       this.updateExchangeRates();
     }, CONFIG.EXCHANGE_RATE_TTL);

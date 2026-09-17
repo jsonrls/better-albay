@@ -83,7 +83,11 @@
     if (!grid) return;
 
     var items = sortByDateDesc(articles).slice(0, 3);
-    if (!items.length) return; // leave the static placeholder in place
+    if (!items.length) {
+      grid.innerHTML =
+        '<p>Verified Albay news is not yet available. <a href="https://albay.gov.ph/">Official Albay government website</a></p>';
+      return;
+    }
 
     var html = '';
     for (var i = 0; i < items.length; i++) {
@@ -123,8 +127,8 @@
     if (!items.length) {
       grid.innerHTML =
         '<article class="news-card"><div class="news-card-body">' +
-        '<h3 class="news-card-title">No updates yet</h3>' +
-        '<p class="news-card-desc">Check back soon for the latest news and advisories from Albay.</p>' +
+        '<h3 class="news-card-title">Verified Albay news is not yet available</h3>' +
+        '<p class="news-card-desc">Consult the official Albay government website for current announcements.</p>' +
         '</div></article>';
       return;
     }
@@ -169,14 +173,30 @@
     xhr.open('GET', NEWS_DATA_URL, true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
+        if (xhr.status !== 200) {
+          renderHomeNews([]);
+          renderNewsPage([]);
+          return;
+        }
         if (xhr.status === 200) {
           try {
             var data = JSON.parse(xhr.responseText);
-            var articles = (data && data.news) || [];
+            var articles =
+              data &&
+              data._status !== 'draft' &&
+              data._status !== 'unverified' &&
+              Array.isArray(data.news)
+                ? data.news.filter(function (article) {
+                    return (
+                      article && article._status !== 'draft' && article._status !== 'unverified'
+                    );
+                  })
+                : [];
             renderHomeNews(articles);
             renderNewsPage(articles);
           } catch (e) {
-            // Silent fail - placeholder content remains
+            renderHomeNews([]);
+            renderNewsPage([]);
           }
         }
       }

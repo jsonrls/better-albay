@@ -1,56 +1,5 @@
 {
-  "_schema_version": "2.0",
-  "_source": "COMELEC-certified 2025 election results; cross-checked with Wikipedia (Albay Provincial Board)",
-  "_note": "Executive officials reflect the 2025-2028 term (COMELEC-certified results). Ex-officio SP seats: Hisham B. Ismail was provincial Liga ng mga Barangay president but assumed the Legazpi City mayoralty on June 30, 2025 (Wikipedia, Legazpi mayoral succession); his provincial LnB seat is therefore presumed vacated and the current holder is pending verification. Regular district SP members also pending verification.",
-  "governor": {
-    "name": "Hon. Noel E. Rosal",
-    "title": "Provincial Governor",
-    "image": "assets/images/officials/governor.jpg"
-  },
-  "vice_governor": {
-    "name": "Hon. Farida 'Diday' Co",
-    "title": "Provincial Vice Governor",
-    "image": "assets/images/officials/vice-governor.jpg"
-  },
-  "sangguniang_panlalawigan_ex_officio": [
-    {
-      "name": "Hon. Carlos Matthew Gamboa",
-      "title": "SP Member — Sangguniang Kabataan Federation President (ex officio)",
-      "image": "assets/images/officials/sp-sk.jpg"
-    },
-    {
-      "name": "Hon. Juan Miguel Ricardo Salceda",
-      "title": "SP Member — Philippine Councilors League President (ex officio)",
-      "image": "assets/images/officials/sp-pcl.jpg"
-    }
-  ],
-  "mayor": {
-    "name": "Hon. Noel E. Rosal",
-    "title": "Provincial Governor",
-    "image": "assets/images/officials/governor.jpg"
-  },
-  "vice_mayor": {
-    "name": "Hon. Farida 'Diday' Co",
-    "title": "Provincial Vice Governor",
-    "image": "assets/images/officials/vice-governor.jpg"
-  },
-  "councilors": [
-    {
-      "name": "Hon. Carlos Matthew Gamboa",
-      "title": "SP Member — SK Federation President (ex officio)",
-      "image": "assets/images/officials/sp-sk.jpg"
-    },
-    {
-      "name": "Hon. Juan Miguel Ricardo Salceda",
-      "title": "SP Member — PCL President (ex officio)",
-      "image": "assets/images/officials/sp-pcl.jpg"
-    }
-  ],
-  "_vacated_seats": {
-    "lnb_president_sp_member": {
-      "former": "Hon. Hisham B. Ismail",
-      "reason": "Elected Mayor of Legazpi City effective June 30, 2025",
-      "status": "Successor pending verification from Albay Provincial Board / Liga ng mga Barangay"
-    }
-  }
+  "_status": "unverified",
+  "_source": "https://albay.gov.ph/",
+  "officials": []
 }

@@ -40,9 +40,20 @@ export default function InfoBar() {
 
   useEffect(() => {
     fetch('https://open.er-api.com/v6/latest/USD')
-      .then((r) => r.json())
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
       .then((data) => {
-        if (data?.rates?.PHP) setRate(`1 USD = ₱ ${data.rates.PHP.toFixed(2)}`);
+        if (
+          data?.result === 'success' &&
+          data.base_code === 'USD' &&
+          typeof data.rates?.PHP === 'number' &&
+          Number.isFinite(data.rates.PHP) &&
+          data.rates.PHP > 0
+        ) {
+          setRate(`1 USD = ₱ ${data.rates.PHP.toFixed(2)}`);
+        }
       })
       .catch(() => {});
 
@@ -61,7 +72,12 @@ export default function InfoBar() {
   return (
     <div className="info-bar" role="complementary" aria-label="Real-time information">
       <div className="container">
-        <div className="info-bar-inner" aria-live="polite" aria-atomic="false">
+        <div
+          className="info-bar-inner"
+          style={{ flexWrap: 'wrap' }}
+          aria-live="polite"
+          aria-atomic="false"
+        >
           <div className="info-bar-item info-bar-rates" aria-label="Exchange rates">
             <i className="bi bi-currency-exchange" aria-hidden="true" />
             <span className="rate-rotator">
@@ -83,6 +99,9 @@ export default function InfoBar() {
             <span className="time-value">{timeStr}</span>
             <span className="time-label">PHT</span>
           </div>
+          <a href="https://www.exchangerate-api.com" style={{ color: 'inherit' }}>
+            Rates by ExchangeRate-API
+          </a>
         </div>
       </div>
     </div>

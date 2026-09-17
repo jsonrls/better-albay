@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v4';
+var CACHE_VERSION = 'v5';
 var STATIC_CACHE = 'betteralbay-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betteralbay-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';

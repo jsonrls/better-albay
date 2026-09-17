@@ -390,7 +390,7 @@
                 scrolling="no" 
                 marginheight="0" 
                 marginwidth="0" 
-                src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=13.1391%2C123.7434"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=123.4%2C12.9%2C124.0%2C13.6&layer=mapnik&marker=13.1391%2C123.7434"
                 style="border:0;display:block;"
                 title="Map of Albay, Philippines"
                 loading="lazy">
@@ -464,7 +464,7 @@
 
         // Add marker
         const marker = L.marker(this.ALBAY_CENTER).addTo(this.map);
-        marker.bindPopup('<strong>Albay Municipal Hall</strong><br>Bicol Region 3708');
+        marker.bindPopup('<strong>Albay, Bicol Region</strong>');
 
         container.setAttribute('data-map-loaded', 'leaflet');
 

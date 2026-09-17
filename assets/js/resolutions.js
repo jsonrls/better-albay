@@ -11,7 +11,12 @@ async function fetchResolutions() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    return data.resolutions || [];
+    if (data._status === 'draft' || data._status === 'unverified') return [];
+    return Array.isArray(data.resolutions)
+      ? data.resolutions.filter(
+          (record) => record && record._status !== 'draft' && record._status !== 'unverified'
+        )
+      : [];
   } catch (error) {
     console.error('Error fetching resolutions:', error);
     return [];
@@ -98,7 +103,7 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
             <td colspan="3" class="text-center text-muted">
-                No resolutions found for ${year}
+                Verified Albay resolution records for ${year} are not yet available.
             </td>
         `;
     tableBody.appendChild(emptyRow);

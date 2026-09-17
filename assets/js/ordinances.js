@@ -11,7 +11,12 @@ async function fetchOrdinances() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    return data.ordinances || [];
+    if (data._status === 'draft' || data._status === 'unverified') return [];
+    return Array.isArray(data.ordinances)
+      ? data.ordinances.filter(
+          (record) => record && record._status !== 'draft' && record._status !== 'unverified'
+        )
+      : [];
   } catch (error) {
     console.error('Error fetching ordinances:', error);
     return [];
@@ -84,7 +89,7 @@ function renderOrdinanceTable(ordinances) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
             <td colspan="3" class="text-center text-muted">
-                No ordinances found for 2025
+                Verified Albay ordinance records are not yet available.
             </td>
         `;
     tableBody.appendChild(emptyRow);

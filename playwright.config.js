@@ -4,9 +4,9 @@ const { defineConfig, devices } = require('@playwright/test');
 /**
  * Cross-browser validation harness.
  *
- * Chrome and Edge run as real installed channels (not bundled Chromium) so the
- * results reflect the shipping browsers; Firefox uses Gecko and WebKit is the
- * engine behind Safari on both macOS and iOS.
+ * Bundled Chromium provides a portable test target. Chrome and Edge use installed
+ * browser channels; Firefox uses Gecko and WebKit is the engine behind Safari
+ * on both macOS and iOS.
  */
 module.exports = defineConfig({
   testDir: './tests',
@@ -29,6 +29,7 @@ module.exports = defineConfig({
   },
 
   projects: [
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'chrome', use: { ...devices['Desktop Chrome'], channel: 'chrome' } },
     { name: 'edge', use: { ...devices['Desktop Edge'], channel: 'msedge' } },
     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },

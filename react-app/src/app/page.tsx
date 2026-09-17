@@ -57,43 +57,16 @@ export default function HomePage() {
       </section>
 
       {/* Appointment Services CTA */}
-      <section className="appointment-cta-section" aria-label="Mayor's Office Appointment Services">
+      <section className="appointment-cta-section">
         <div className="container">
-          <div className="appointment-cta-inner">
-            <div className="appointment-cta-animation" aria-hidden="true">
-              <dotlottie-player
-                src="/assets/animation/ramonloganjr-booking.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></dotlottie-player>
-            </div>
-            <div className="appointment-cta-content">
-              <h2 className="appointment-cta-heading">{t('appointment-cta-heading')}</h2>
-              <p className="appointment-cta-subtitle">{t('appointment-cta-subtitle')}</p>
-              <div className="appointment-cta-actions">
-                <a
-                  href="https://albaymayorsoffice-oasys.com/user/auth/login.php"
-                  className="appointment-cta-btn appointment-cta-btn--primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="bi bi-calendar-check" aria-hidden="true"></i>{' '}
-                  {t('appointment-schedule-btn')}
-                </a>
-                <a
-                  href="https://albaymayorsoffice-oasys.com/user/auth/register.php"
-                  className="appointment-cta-btn appointment-cta-btn--outline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="bi bi-person-plus" aria-hidden="true"></i>{' '}
-                  {t('appointment-create-btn')}
-                </a>
-              </div>
-            </div>
-          </div>
+          <h2>Appointments</h2>
+          <p>
+            Online appointment booking is not available through this site. Consult the official
+            government website for current options.
+          </p>
+          <p>
+            <a href="https://albay.gov.ph/">Visit the official Albay government website</a>
+          </p>
         </div>
       </section>
 
@@ -172,54 +145,12 @@ export default function HomePage() {
       {/* Quick Stats */}
       <section className="home-stats-v2">
         <div className="container">
-          <div className="home-stats-v2-header">
-            <h2>{t('stats-at-a-glance')}</h2>
-            <Link href="/statistics" className="home-section-link">
-              {t('stats-view-statistics')} <i className="bi bi-arrow-right"></i>
-            </Link>
-          </div>
-          <div className="home-stats-v2-grid">
-            <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-people-fill"></i>
-              </div>
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">1,374,768</span>
-                <span className="home-stat-card-label">{t('stats-population-label')}</span>
-                <span className="home-stat-card-source">{t('stats-population-source')}</span>
-              </div>
-            </Link>
-            <Link href="/government" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-geo-alt-fill"></i>
-              </div>
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">720</span>
-                <span className="home-stat-card-label">{t('stats-barangays-label')}</span>
-                <span className="home-stat-card-source">{t('stats-barangays-source')}</span>
-              </div>
-            </Link>
-            <Link href="/budget" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-award-fill"></i>
-              </div>
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">1st Class</span>
-                <span className="home-stat-card-label">{t('stats-municipality-label')}</span>
-                <span className="home-stat-card-source">{t('stats-municipality-source')}</span>
-              </div>
-            </Link>
-            <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-rulers"></i>
-              </div>
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">2,574.91 km²</span>
-                <span className="home-stat-card-label">{t('stats-land-area-label')}</span>
-                <span className="home-stat-card-source">{t('stats-land-area-source')}</span>
-              </div>
-            </Link>
-          </div>
+          <h2>Albay population</h2>
+          <p className="home-stat-card-value">1,374,768</p>
+          <p>2020 Census of Population and Housing — province of Albay.</p>
+          <a href="https://psa.gov.ph/content/highlights-region-v-bicol-region-population-2020-census-population-and-housing-2020-cph">
+            Source: Philippine Statistics Authority, 2020 Census
+          </a>
         </div>
       </section>
 
@@ -232,11 +163,7 @@ export default function HomePage() {
           <div className="weather-map-grid">
             <div className="weather-column">
               <div id="weather-container" aria-live="polite">
-                <div
-                  className="weather-widget"
-                  role="region"
-                  aria-label="Current weather in Albay"
-                >
+                <div className="weather-widget" role="region" aria-label="Current weather in Albay">
                   <div className="weather-current">
                     <div className="weather-current-icon">
                       <i className="bi bi-cloud-sun-fill"></i>
@@ -264,24 +191,9 @@ export default function HomePage() {
             </div>
             <div className="map-column">
               <div className="map-card">
-                <div
-                  id="map-container"
-                  role="application"
-                  aria-label="Interactive map of Albay, Philippines"
-                  data-map-loaded="iframe"
-                >
-                  <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=121.1633%2C16.5017%2C121.2033%2C16.5317&layer=mapnik&marker=16.5167%2C121.1833"
-                    className="map-iframe"
-                    title="Map of Albay, Philippines"
-                    aria-label="OpenStreetMap showing Albay Municipal Hall, Bicol Region"
-                    loading="lazy"
-                  ></iframe>
-                </div>
-                <p className="map-attribution">
-                  <i className="bi bi-geo-alt" aria-hidden="true"></i> Albay Municipal Hall, Nueva
-                  Vizcaya 3708
-                </p>
+                <h2>Albay location</h2>
+                <p>The embedded map is unavailable while its location details are verified.</p>
+                <a href="https://albay.gov.ph/">Official Albay website</a>
               </div>
             </div>
           </div>
@@ -291,287 +203,12 @@ export default function HomePage() {
       {/* Brief History of Albay */}
       <section className="section history-section">
         <div className="container">
-          <div className="home-stats-v2-header">
-            <h2>
-              <i className="bi bi-book" aria-hidden="true"></i> {t('history-title')}
-            </h2>
-          </div>
-          <div className="history-content">
-            <div className="history-timeline">
-              <div className="timeline-item" data-year="1569">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1569</span>
-                  <p>{t('history-1569')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1574">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1814</span>
-                  <p>{t('history-1574')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1834">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1834</span>
-                  <p>{t('history-1834')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1898">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1898</span>
-                  <p>{t('history-1898')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1901">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">1945</span>
-                  <p>{t('history-1901')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1941">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">2006</span>
-                  <p>{t('history-1941')}</p>
-                </div>
-              </div>
-              <div className="timeline-item" data-year="1946">
-                <div className="timeline-marker"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">2020</span>
-                  <p>{t('history-1946')}</p>
-                </div>
-              </div>
-            </div>
-            <div className="history-summary">
-              <div className="history-card">
-                <div className="history-card-icon">
-                  <i className="bi bi-geo-alt-fill"></i>
-                </div>
-                <div className="history-card-content">
-                  <h4>{t('history-once-largest-title')}</h4>
-                  <p>{t('history-once-largest-desc')}</p>
-                </div>
-              </div>
-              <div className="history-card">
-                <div className="history-card-icon">
-                  <i className="bi bi-grid-3x3"></i>
-                </div>
-                <div className="history-card-content">
-                  <h4>{t('history-urban-planning-title')}</h4>
-                  <p>{t('history-urban-planning-desc')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2>History of Albay</h2>
+          <p>A source-checked history of Albay is not yet available on this site.</p>
+          <p>
+            <a href="https://albay.gov.ph/">Visit the official Albay government website</a>
+          </p>
         </div>
-        <style jsx>{`
-          .history-section {
-            background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
-          }
-          .history-section .home-stats-v2-header h2 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-          }
-          .history-section .home-stats-v2-header h2 i {
-            color: var(--color-primary);
-          }
-          .history-content {
-            display: grid;
-            grid-template-columns: 1fr 340px;
-            gap: 32px;
-            align-items: start;
-          }
-          .history-timeline {
-            position: relative;
-            padding-left: 28px;
-          }
-          .history-timeline::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 8px;
-            bottom: 8px;
-            width: 2px;
-            background: linear-gradient(
-              180deg,
-              var(--color-primary) 0%,
-              rgba(0, 50, 160, 0.2) 100%
-            );
-            border-radius: 2px;
-          }
-          .timeline-item {
-            position: relative;
-            padding-bottom: 20px;
-            opacity: 0;
-            animation: fadeInUp 0.5s ease forwards;
-          }
-          .timeline-item:nth-child(1) {
-            animation-delay: 0.1s;
-          }
-          .timeline-item:nth-child(2) {
-            animation-delay: 0.2s;
-          }
-          .timeline-item:nth-child(3) {
-            animation-delay: 0.3s;
-          }
-          .timeline-item:nth-child(4) {
-            animation-delay: 0.4s;
-          }
-          .timeline-item:nth-child(5) {
-            animation-delay: 0.5s;
-          }
-          .timeline-item:nth-child(6) {
-            animation-delay: 0.6s;
-          }
-          .timeline-item:nth-child(7) {
-            animation-delay: 0.7s;
-          }
-          .timeline-item:last-child {
-            padding-bottom: 0;
-          }
-          .timeline-marker {
-            position: absolute;
-            left: -28px;
-            top: 4px;
-            width: 14px;
-            height: 14px;
-            background: var(--color-bg);
-            border: 3px solid var(--color-primary);
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            z-index: 1;
-          }
-          .timeline-item:hover .timeline-marker {
-            background: var(--color-primary);
-            transform: scale(1.2);
-            box-shadow: 0 0 0 4px rgba(0, 50, 160, 0.15);
-          }
-          .timeline-content {
-            background: var(--color-bg);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 10px;
-            padding: 16px 18px;
-            transition: all 0.3s ease;
-          }
-          .timeline-item:hover .timeline-content {
-            border-color: var(--color-primary);
-            box-shadow: 0 4px 16px rgba(0, 50, 160, 0.1);
-            transform: translateX(4px);
-          }
-          .timeline-year {
-            display: inline-block;
-            background: var(--color-primary);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-bottom: 8px;
-          }
-          .timeline-content p {
-            font-size: 0.875rem;
-            color: var(--color-text);
-            margin: 0;
-            line-height: 1.6;
-          }
-          .timeline-content p strong {
-            color: var(--color-primary);
-          }
-          .timeline-content p em {
-            font-style: italic;
-            color: var(--color-text-light);
-          }
-          .history-summary {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            position: sticky;
-            top: 100px;
-          }
-          .history-card {
-            background: var(--color-bg);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-            transition: all 0.3s ease;
-          }
-          .history-card:hover {
-            border-color: var(--color-primary);
-            box-shadow: 0 4px 16px rgba(0, 50, 160, 0.1);
-            transform: translateY(-2px);
-          }
-          .history-card-icon {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(
-              135deg,
-              var(--color-primary) 0%,
-              var(--color-secondary) 100%
-            );
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-          }
-          .history-card-icon i {
-            color: white;
-            font-size: 1.25rem;
-          }
-          .history-card-content h4 {
-            font-size: 0.9375rem;
-            font-weight: 600;
-            color: var(--color-text);
-            margin: 0 0 6px 0;
-          }
-          .history-card-content p {
-            font-size: 0.8125rem;
-            color: var(--color-text-light);
-            margin: 0;
-            line-height: 1.5;
-          }
-          @keyframes fadeInUp {
-            from {
-              opacity: 0;
-              transform: translateY(16px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          @media (max-width: 900px) {
-            .history-content {
-              grid-template-columns: 1fr;
-            }
-            .history-summary {
-              position: static;
-              flex-direction: row;
-              flex-wrap: wrap;
-            }
-            .history-card {
-              flex: 1 1 280px;
-            }
-          }
-          @media (max-width: 575px) {
-            .history-summary {
-              flex-direction: column;
-            }
-            .history-card {
-              flex: 1 1 100%;
-            }
-          }
-        `}</style>
       </section>
 
       {/* Latest Updates */}
@@ -584,42 +221,10 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="home-news-grid">
-            <article className="home-news-card">
-              <div className="home-news-meta">
-                <span className="home-news-badge home-news-badge--info">
-                  {t('news-announcement')}
-                </span>
-                <span className="home-news-date">Nov 28, 2025</span>
-              </div>
-              <h3>
-                <Link href="/news">{t('news-business-permit-title')}</Link>
-              </h3>
-              <p>{t('news-business-permit-desc')}</p>
-            </article>
-            <article className="home-news-card">
-              <div className="home-news-meta">
-                <span className="home-news-badge home-news-badge--success">
-                  {t('news-project')}
-                </span>
-                <span className="home-news-date">Nov 15, 2025</span>
-              </div>
-              <h3>
-                <Link href="/news">{t('news-market-title')}</Link>
-              </h3>
-              <p>{t('news-market-desc')}</p>
-            </article>
-            <article className="home-news-card">
-              <div className="home-news-meta">
-                <span className="home-news-badge home-news-badge--warning">
-                  {t('news-advisory')}
-                </span>
-                <span className="home-news-date">Nov 10, 2025</span>
-              </div>
-              <h3>
-                <Link href="/news">{t('news-power-title')}</Link>
-              </h3>
-              <p>{t('news-power-desc')}</p>
-            </article>
+            <p>
+              Verified Albay news is not yet available.{' '}
+              <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </p>
           </div>
         </div>
       </section>
@@ -627,112 +232,30 @@ export default function HomePage() {
       {/* Municipal Leadership */}
       <section className="section home-leadership-section">
         <div className="container">
-          <div className="home-section-header">
-            <h2>{t('section-leadership')}</h2>
-            <Link href="/government" className="home-section-link">
-              <span>{t('btn-view-officials')}</span> <i className="bi bi-arrow-right"></i>
-            </Link>
-          </div>
-          <div className="home-leadership-grid">
-            <div className="home-leader-card">
-              <div className="home-leader-badge">{t('title-mayor')}</div>
-              <h3>Hon. Noel E. Rosal</h3>
-              <div className="home-leader-contacts">
-                <a href="mailto:pgasecretariat@gmail.com">
-                  <i className="bi bi-envelope"></i> pgasecretariat@gmail.com
-                </a>
-                <a href="tel:0527426377">
-                  <i className="bi bi-telephone"></i> (052) 742-6377
-                </a>
-              </div>
-            </div>
-            <div className="home-leader-card">
-              <div className="home-leader-badge">{t('title-vice-mayor')}</div>
-              <h3>Hon. Farida &apos;Diday&apos; Co</h3>
-              <div className="home-leader-contacts">
-                <a href="mailto:pgasecretariat@gmail.com">
-                  <i className="bi bi-envelope"></i> pgasecretariat@gmail.com
-                </a>
-                <a href="tel:09268284392">
-                  <i className="bi bi-telephone"></i> (0926) 828-4392
-                </a>
-              </div>
-            </div>
-          </div>
+          <h2>Albay officials</h2>
+          <p>An up-to-date Albay officials directory is not available on this site yet.</p>
+          <p>
+            <a href="https://albay.gov.ph/">Visit the official Albay government website</a>
+          </p>
         </div>
       </section>
 
-      {/* Contact Information */}
       <section className="section">
         <div className="container">
-          <div className="home-section-header">
-            <h2>{t('section-contact')}</h2>
-            <Link href="/contact" className="home-section-link">
-              {t('btn-view-all')} <i className="bi bi-arrow-right"></i>
-            </Link>
-          </div>
-          <div className="home-contact-v2-grid">
-            <a href="tel:0527426377" className="home-contact-v2-card">
-              <div className="home-contact-v2-icon">
-                <i className="bi bi-telephone-fill"></i>
-              </div>
-              <div className="home-contact-v2-content">
-                <h3>{t('contact-phone')}</h3>
-                <p className="home-contact-v2-value">(052) 742-6377</p>
-                <span className="home-contact-v2-note">{t('contact-hours')}</span>
-              </div>
-            </a>
-            <a href="mailto:pgasecretariat@gmail.com" className="home-contact-v2-card">
-              <div className="home-contact-v2-icon">
-                <i className="bi bi-envelope-fill"></i>
-              </div>
-              <div className="home-contact-v2-content">
-                <h3>{t('contact-email')}</h3>
-                <p className="home-contact-v2-value">pgasecretariat@gmail.com</p>
-                <span className="home-contact-v2-note">{t('contact-response')}</span>
-              </div>
-            </a>
-            <div className="home-contact-v2-card">
-              <div className="home-contact-v2-icon">
-                <i className="bi bi-geo-alt-fill"></i>
-              </div>
-              <div className="home-contact-v2-content">
-                <h3>{t('contact-address')}</h3>
-                <p className="home-contact-v2-value">{t('contact-municipal-hall')}</p>
-                <span className="home-contact-v2-note">Legazpi City, Albay 4500</span>
-              </div>
-            </div>
-          </div>
+          <h2>Contact information</h2>
+          <p>Current office contacts and hours are not verified on this site.</p>
+          <a href="https://albay.gov.ph/">Visit the official Albay government website</a>
         </div>
       </section>
 
       {/* Albay Quiz CTA */}
-      <section className="quiz-cta-section" aria-label="Albay Quiz">
+      <section className="quiz-cta-section">
         <div className="container">
-          <div className="quiz-cta-inner">
-            <div className="quiz-cta-animation" aria-hidden="true">
-              <dotlottie-player
-                src="/assets/animation/ramonloganjr-exam.json"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-              ></dotlottie-player>
-            </div>
-            <div className="quiz-cta-content">
-              <h2 className="quiz-cta-heading">{t('quiz-title')}</h2>
-              <p className="quiz-cta-subtitle">{t('quiz-subtitle')}</p>
-              <p className="quiz-cta-description">{t('quiz-description')}</p>
-              <a
-                href="https://quiz.betteralbay.org/"
-                className="quiz-cta-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="bi bi-play-circle-fill" aria-hidden="true"></i> {t('quiz-take')}
-              </a>
-            </div>
-          </div>
+          <h2>Albay Quiz</h2>
+          <p>The quiz is unavailable while its questions are verified.</p>
+          <p>
+            <a href="https://albay.gov.ph/">Visit the official Albay government website</a>
+          </p>
         </div>
       </section>
     </>

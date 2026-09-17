@@ -5,32 +5,37 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 // Translation data
 const translations: Record<string, Record<string, string>> = {
   en: {
-    'history-1946': 'The United States granted Philippine independence on July 4, 1946 through the Treaty of Manila, closing 377 years of colonial rule in Albay.',
-    'history-1941': 'Japanese Imperial Forces occupied Legazpi on December 12, 1941. Bikol guerrilla forces resisted throughout the war until the country’s liberation in 1945.',
-    'history-1901': 'A civil government was established in Albay on April 26, 1901. General Simeon Ola carried on the resistance until 1903 — the last Filipino general to surrender to American forces.',
-    'history-1574': 'The place called “Baybayon” became an encomienda assigned to Juan Guerra. The name evolved into “Baybay,” then “Al Baybay,” and was later shortened to “Albay.”',
-    'health-network-6': 'Health emergency and disaster response, including Mayon eruption preparedness',
+    'history-1946': 'Information pending verification.',
+    'history-1941': 'Information pending verification.',
+    'history-1901': 'Information pending verification.',
+    'history-1574': 'Information pending verification.',
+    'health-network-6':
+      'Health emergency and disaster response, including Mayon eruption preparedness',
     'health-network-5': 'PhilHealth enrollment and universal health care assistance',
-    'health-network-4': 'Provincial Health Office public health programs — immunization, maternal care, TB-DOTS',
+    'health-network-4':
+      'Provincial Health Office public health programs — immunization, maternal care, TB-DOTS',
     'health-network-3': 'District health offices covering the 1st, 2nd, and 3rd districts of Albay',
     'health-network-2': 'Barangay Health Stations and Barangay Health Workers across 720 barangays',
     'health-network-1': 'Rural Health Units in all 15 municipalities and 3 component cities',
     'health-hospital-ziga-address': 'Tabaco City',
-    'health-hospital-ziga-desc': 'A provincial hospital serving the communities of northern Albay from Tabaco City.',
+    'health-hospital-ziga-desc':
+      'A provincial hospital serving the communities of northern Albay from Tabaco City.',
     'health-hospital-ziga': 'Ziga Memorial Hospital',
     'health-hospital-provincial-address': 'Legazpi City',
-    'health-hospital-provincial-desc': 'Provincial government hospital services based in Legazpi City — the institution from which the Bicol Regional Training and Teaching Hospital grew before its turnover to the Department of Health.',
+    'health-hospital-provincial-desc':
+      'Provincial government hospital services based in Legazpi City — the institution from which the Bicol Regional Training and Teaching Hospital grew before its turnover to the Department of Health.',
     'health-hospital-provincial': 'Albay Provincial Hospital',
     'health-hospital-brtth-address': 'Legazpi City',
-    'health-hospital-brtth-desc': 'Founded in 1918 during the American period, it began as the Albay Provincial Hospital before its turnover to the DOH. Designated a training and teaching hospital in February 1973, it was upgraded in 1994 to the tertiary regional hospital it is today.',
+    'health-hospital-brtth-desc':
+      'Founded in 1918 during the American period, it began as the Albay Provincial Hospital before its turnover to the DOH. Designated a training and teaching hospital in February 1973, it was upgraded in 1994 to the tertiary regional hospital it is today.',
     'health-hospital-brtth': 'Bicol Regional Training and Teaching Hospital (BRTTH)',
-    'history-2020': 'Supertyphoon Rolly (Goni), the world’s strongest landfalling tropical cyclone of 2020, struck Albay — a test of the Albayanos’ renowned resilience.',
-    'history-2006': 'Typhoon Reming (Durian) devastated the province, prompting Albay to build one of the country’s strongest disaster-risk-reduction systems.',
-    'history-1945': 'The province was liberated from Japanese occupation during World War II, beginning postwar reconstruction.',
-    'history-1898': 'Sovereignty passed to the United States through the Treaty of Paris, and American forces under Brigadier General William Kobbe landed in Legazpi.',
-    'history-1834': 'José María Peñaranda, governor of Albay from 1834 to 1843, drove much of the province’s development. His monument stands in the plaza bearing his name in front of the Provincial Capitol.',
-    'history-1814': 'Mayon Volcano’s most destructive eruption buried the town of Cagsawa under lava and lahar; only the church belfry survives today as the iconic Cagsawa Ruins.',
-    'history-1569': 'In July 1569, Luis Enriquez de Guzmán and Fray Alonso Jiménez of the Legazpi expedition landed in southeastern Bikol and reached Camalig at the foot of Mayon Volcano — the same year Catholicism was first introduced to the Bikolanos.',
+    'history-2020': 'Information pending verification.',
+    'history-2006': 'Information pending verification.',
+    'history-1945': 'Information pending verification.',
+    'history-1898': 'Information pending verification.',
+    'history-1834': 'Information pending verification.',
+    'history-1814': 'Information pending verification.',
+    'history-1569': 'Information pending verification.',
     'nav-home': 'Home',
     'nav-services': 'Services',
     'nav-government': 'Government',
@@ -40,7 +45,8 @@ const translations: Record<string, Record<string, string>> = {
     'nav-contact': 'Contact',
 
     // Appointment CTA
-    'appointment-cta-heading': 'Enhancing Appointment Services of the Office of the Provincial Governor of Albay',
+    'appointment-cta-heading':
+      'Enhancing Appointment Services of the Office of the Provincial Governor of Albay',
     'appointment-cta-subtitle': 'No lines. No back-and-forth. Just efficient appointments.',
     'appointment-schedule-btn': 'Schedule Appointment',
     'appointment-create-btn': 'Create Account',
@@ -177,9 +183,11 @@ const translations: Record<string, Record<string, string>> = {
     'health-stat-mho': 'Provincial Health Office',
     'health-section-hospitals': 'Public Hospitals in Albay',
     'health-section-mho': 'Provincial Health Office',
-    'health-bhs-subtitle': 'Provincial hospitals and rural health units serving all 18 LGUs and 720 barangays of Albay.',
+    'health-bhs-subtitle':
+      'Provincial hospitals and rural health units serving all 18 LGUs and 720 barangays of Albay.',
     'health-mho-title': 'Albay Provincial Health Office (PHO)',
-    'health-mho-desc': 'The Provincial Health Office oversees public health programs, district hospitals, and rural health units across the province’s three districts.',
+    'health-mho-desc':
+      'The Provincial Health Office oversees public health programs, district hospitals, and rural health units across the province’s three districts.',
     'health-service-lying-in': 'Lying-in Facility',
     'health-service-laboratory': 'Laboratory Services',
     'health-service-immunization': 'Immunization',
@@ -226,7 +234,8 @@ const translations: Record<string, Record<string, string>> = {
     'ord-cat-traffic': 'Traffic & Transportation',
     'ord-cat-zoning': 'Zoning & Land Use',
     'ord-2025-title': '2025 Ordinances',
-    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Panlalawigan ng Albay in 2025',
+    'ord-2025-subtitle':
+      'Official ordinances enacted by the Sangguniang Panlalawigan ng Albay in 2025',
     'ord-table-number': 'Ordinance No.',
     'ord-table-title': 'Title',
     'ord-table-date': 'Session Date',
@@ -249,9 +258,11 @@ const translations: Record<string, Record<string, string>> = {
     'reso-type-authorization': 'Authorization',
     'reso-type-appropriation': 'Appropriation',
     'reso-2026-title': '2026 Resolutions',
-    'reso-2026-subtitle': 'Official resolutions passed by the Sangguniang Panlalawigan ng Albay in 2026',
+    'reso-2026-subtitle':
+      'Official resolutions passed by the Sangguniang Panlalawigan ng Albay in 2026',
     'reso-2025-title': '2025 Resolutions',
-    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Panlalawigan ng Albay in 2025',
+    'reso-2025-subtitle':
+      'Official resolutions passed by the Sangguniang Panlalawigan ng Albay in 2025',
     'reso-table-number': 'Resolution No.',
     'reso-table-title': 'Title',
     'reso-table-date': 'Session Date',
@@ -381,34 +392,30 @@ const translations: Record<string, Record<string, string>> = {
     'weather-map-title': 'Weather and Map of Albay',
     'weather-mainly-clear': 'Mainly clear',
     'weather-location': 'Legazpi City, Albay',
-    'history-title': 'Brief History of Albay',
-    'history-1760':
-      'The original name of the town was Bintauan, then a Gaddang settlement that is now a barangay of Villaverde.',
-    'history-1767':
-      'The town was formally founded by Father Alejandro Vidal, a Dominican priest who led a Spanish mission.',
-    'history-1768':
-      'Named Lungabang, from the Gaddang word for cave, lungab. Later changed to Lumabang by the Spaniards.',
-    'history-1851':
-      'Governor General Antonio Urbiztondo declared Lumabang a barrio of Bayombong for insufficient inhabitants and revenue.',
-    'history-1853':
-      'The first Ilocanos arrived, brought by Don Diego Lumicao, a former gobernadorcillo.',
-    'history-1889':
-      'Renamed Albay in honor of Governor General Ramon Albay y Llanderal. The town was redeveloped by Father Juan Villaverde with 14 parallel wide streets, each 20 meters wide, forming 100 square blocks.',
-    'history-1957':
-      "The barrios of Ibung and Bintawan were separated to form the town of Ibung, later renamed as Villaverde. Albay's land area was reduced to 13,980 hectares.",
-    'history-once-largest-title': 'Home of Mayon Volcano',
-    'history-once-largest-desc': 'Mayon, the Philippines’ most active volcano at 2,463 meters, is famed worldwide for its near-perfect conical shape.',
-    'history-urban-planning-title': 'Gateway to Bicol',
-    'history-urban-planning-desc': 'With Legazpi City as the regional hub, Albay is the administrative, educational, and transportation center of the Bicol Region.',
+    'history-title': 'Information pending verification.',
+    'history-1760': 'Information pending verification.',
+    'history-1767': 'Information pending verification.',
+    'history-1768': 'Information pending verification.',
+    'history-1851': 'Information pending verification.',
+    'history-1853': 'Information pending verification.',
+    'history-1889': 'Information pending verification.',
+    'history-1957': 'Information pending verification.',
+    'history-once-largest-title': 'Information pending verification.',
+    'history-once-largest-desc': 'Information pending verification.',
+    'history-urban-planning-title': 'Information pending verification.',
+    'history-urban-planning-desc': 'Information pending verification.',
     'news-announcement': 'Announcement',
     'news-project': 'Project',
     'news-advisory': 'Advisory',
     'news-business-permit-title': 'BetterAlbay.org Is Now Online',
-    'news-business-permit-desc': 'The community-built transparency portal for Albay Province has launched its first release.',
+    'news-business-permit-desc':
+      'The community-built transparency portal for Albay Province has launched its first release.',
     'news-market-title': 'Community Volunteers Welcome',
-    'news-market-desc': 'Developers, researchers, and writers can help gather and verify public data for the portal.',
+    'news-market-desc':
+      'Developers, researchers, and writers can help gather and verify public data for the portal.',
     'news-power-title': 'Official Data Sources Being Compiled',
-    'news-power-desc': 'Officials, demographics, and services data are being compiled from official government portals.',
+    'news-power-desc':
+      'Officials, demographics, and services data are being compiled from official government portals.',
     'quiz-title': 'Albay Quiz',
     'quiz-subtitle': 'How well do you know Albay, Philippines?',
     'quiz-description':
@@ -439,14 +446,14 @@ const translations: Record<string, Record<string, string>> = {
     'footer-contribute': 'Contribute code with us',
     'footer-copyright-text': 'BetterAlbay.org',
     'footer-copyright-disclaimer':
-      'All public information sourced from official government portals.',
+      'Verify current information with the responsible government office.',
     'footer-skip-to-main': 'Skip to main content',
   },
   fil: {
-    'history-1946': 'Kinalooban ng kalayaan ng Estados Unidos ang Pilipinas noong Hulyo 4, 1946 sa pamamagitan ng Treaty of Manila — wakas ng 377 taon ng pananakop sa Albay.',
-    'history-1941': 'Sinakop ng mga Hapones ang Legazpi noong Disyembre 12, 1941. Nanindigan ang mga gerilyang Bikol hanggang sa pagpapalaya noong 1945.',
-    'history-1901': 'Itinatag ang sibil na pamahalaan ng Albay noong Abril 26, 1901. Pinatuloy ni Heneral Simeon Ola ang paglaban hanggang 1903 — huling heneral na sumuko sa mga Amerikano.',
-    'history-1574': 'Naging encomienda kay Juan Guerra ang lugar na “Baybayon.” Naging “Baybay,” pagkatapos “Al Baybay,” hanggang paikliin bilang “Albay.”',
+    'history-1946': 'Information pending verification.',
+    'history-1941': 'Information pending verification.',
+    'history-1901': 'Information pending verification.',
+    'history-1574': 'Information pending verification.',
     'health-hospital-ziga-address': 'Lungsod ng Tabaco',
     'health-hospital-ziga': 'Ziga Memorial Hospital',
     'health-hospital-provincial-address': 'Lungsod ng Legazpi',
@@ -454,13 +461,13 @@ const translations: Record<string, Record<string, string>> = {
     'health-hospital-brtth-address': 'Lungsod ng Legazpi',
     'health-hospital-brtth': 'Bicol Regional Training and Teaching Hospital (BRTTH)',
     'health-section-bhs': 'Panlalawigang Network ng Kalusugan',
-    'history-2020': 'Tumama sa Albay ang Supertyphoon Rolly (Goni), pinakamalakas na bagyong tumama sa mundo noong 2020 — pagsubok sa kilalang katatagan ng mga Albayano.',
-    'history-2006': 'Winasak ng Typhoon Reming (Durian) ang lalawigan, na nagtulak sa Albay na buuin ang isa sa pinakamalalim na disaster-risk-reduction system sa bansa.',
-    'history-1945': 'Napalaya ang lalawigan mula sa pananakop ng mga Hapones noong Ikalawang Digmaang Pandaigdig, sinimulan ang muling pagtatayo.',
-    'history-1898': 'Ipinasa sa Estados Unidos ang soberanya sa pamamagitan ng Treaty of Paris, at dumaong sa Legazpi ang puwersang Amerikano sa ilalim ni Brigadier General William Kobbe.',
-    'history-1834': 'Si José María Peñaranda, gobernador ng Albay mula 1834 hanggang 1843, ang nagsulong ng malaking bahagi ng pag-unlad ng lalawigan. Nakatayo ang kanyang monumento sa liwasan sa harap ng Provincial Capitol.',
-    'history-1814': 'Ang pinakanakamamatay na pagsabog ng Bulkang Mayon ay nalibing sa bayan ng Cagsawa sa lahar at lava; tanging kampanaryo ng simbahan ang natira ngayon — ang sikat na Cagsawa Ruins.',
-    'history-1569': 'Hulyo 1569: dumaong sina Luis Enriquez de Guzmán at Fray Alonso Jiménez ng ekspedisyon ni Legazpi sa timog-silangang Bikol at umabot sa Camalig sa paanan ng Bulkang Mayon — taon ring unang ipinakilala ang Katolisismo sa mga Bikolano.',
+    'history-2020': 'Information pending verification.',
+    'history-2006': 'Information pending verification.',
+    'history-1945': 'Information pending verification.',
+    'history-1898': 'Information pending verification.',
+    'history-1834': 'Information pending verification.',
+    'history-1814': 'Information pending verification.',
+    'history-1569': 'Information pending verification.',
     'nav-home': 'Tahanan',
     'nav-services': 'Mga Serbisyo',
     'nav-government': 'Pamahalaan',
@@ -470,7 +477,8 @@ const translations: Record<string, Record<string, string>> = {
     'nav-contact': 'Makipag-ugnayan',
 
     // Appointment CTA
-    'appointment-cta-heading': 'Pagpapahusay ng Serbisyo sa Appointment ng Tanggapan ng Gubernador ng Lalawigan ng Albay',
+    'appointment-cta-heading':
+      'Pagpapahusay ng Serbisyo sa Appointment ng Tanggapan ng Gubernador ng Lalawigan ng Albay',
     'appointment-cta-subtitle': 'Walang pila. Walang pabalik-balik. Mahusay na appointment lang.',
     'appointment-schedule-btn': 'Mag-iskedyul ng Appointment',
     'appointment-create-btn': 'Gumawa ng Account',
@@ -613,7 +621,8 @@ const translations: Record<string, Record<string, string>> = {
     'health-stat-mho': 'Opisina ng Kalusugan ng Munisipalidad',
     'health-section-hospitals': 'Mga Pampublikong Ospital sa Albay',
     'health-section-mho': 'Panlalawigang Opisina ng Kalusugan',
-    'health-bhs-subtitle': 'Mga panlalawigang ospital at rural health units na naglilingkod sa 18 LGU at 720 barangay ng Albay.',
+    'health-bhs-subtitle':
+      'Mga panlalawigang ospital at rural health units na naglilingkod sa 18 LGU at 720 barangay ng Albay.',
     'health-mho-title': 'Albay Provincial Health Office (PHO)',
     'health-mho-desc':
       'Ang Municipal Health Office ay nagbibigay ng pangunahing serbisyo sa kalusugan kabilang ang lying-in facility at laboratory services. Ito ang pangunahing public health center ng munisipalidad.',
@@ -835,34 +844,30 @@ const translations: Record<string, Record<string, string>> = {
     'weather-map-title': 'Panahon at Mapa ng Albay',
     'weather-mainly-clear': 'Halos maaliwalas',
     'weather-location': 'Lungsod ng Legazpi, Albay',
-    'history-title': 'Maikling Kasaysayan ng Albay',
-    'history-1760':
-      'Ang orihinal na pangalan ng bayan ay Bintauan, isang pamayanan ng Gaddang na ngayon ay barangay ng Villaverde.',
-    'history-1767':
-      'Ang bayan ay pormal na itinatag ni Padre Alejandro Vidal, isang paring Dominikano na namuno sa isang misyong Espanyol.',
-    'history-1768':
-      'Pinangalanang Lungabang, mula sa salitang Gaddang na lungab na nangangahulugang kuweba. Kalaunan ay binago ng mga Espanyol sa Lumabang.',
-    'history-1851':
-      'Idineklara ni Gobernador Heneral Antonio Urbiztondo ang Lumabang bilang baryo ng Bayombong dahil sa kakulangan ng mga naninirahan at kita.',
-    'history-1853':
-      'Dumating ang mga unang Ilocano, dinala ni Don Diego Lumicao, isang dating gobernadorcillo.',
-    'history-1889':
-      'Pinalitan ang pangalan ng Albay bilang parangal kay Gobernador Heneral Ramon Albay y Llanderal. Ang bayan ay muling binuo ni Padre Juan Villaverde na may 14 na magkakahanay na malapad na kalye, bawat isa ay 20 metro ang lapad, na bumubuo ng 100 parisukat na bloke.',
-    'history-1957':
-      'Ang mga baryo ng Ibung at Bintawan ay pinaghiwalay upang bumuo ng bayan ng Ibung, na kalaunan ay pinalitan ng pangalang Villaverde. Ang lawak ng lupa ng Albay ay nabawasan sa 13,980 ektarya.',
-    'history-once-largest-title': 'Tahanan ng Bulkang Mayon',
-    'history-once-largest-desc': 'Ang Mayon, pinakamaktibong bulkan ng Pilipinas sa taas na 2,463 metro, ay kilala sa buong mundo halos perpektong hugis-cone.',
-    'history-urban-planning-title': 'Tarangkapan ng Bicol',
-    'history-urban-planning-desc': 'Bilang rehiyonal na sentro ang Lungsod ng Legazpi, ang Albay ang sentrong administratibo, edukasyon, at transportasyon ng Rehiyon Bicol.',
+    'history-title': 'Information pending verification.',
+    'history-1760': 'Information pending verification.',
+    'history-1767': 'Information pending verification.',
+    'history-1768': 'Information pending verification.',
+    'history-1851': 'Information pending verification.',
+    'history-1853': 'Information pending verification.',
+    'history-1889': 'Information pending verification.',
+    'history-1957': 'Information pending verification.',
+    'history-once-largest-title': 'Information pending verification.',
+    'history-once-largest-desc': 'Information pending verification.',
+    'history-urban-planning-title': 'Information pending verification.',
+    'history-urban-planning-desc': 'Information pending verification.',
     'news-announcement': 'Anunsyo',
     'news-project': 'Proyekto',
     'news-advisory': 'Abiso',
     'news-business-permit-title': 'Online Na Ang BetterAlbay.org',
-    'news-business-permit-desc': 'Inilunsad na ang unang release ng transparency portal para sa Lalawigan ng Albay, binuo ng komunidad.',
+    'news-business-permit-desc':
+      'Inilunsad na ang unang release ng transparency portal para sa Lalawigan ng Albay, binuo ng komunidad.',
     'news-market-title': 'Welcome Mga Boluntaryo',
-    'news-market-desc': 'Maaaring tumulong ang mga developer, mananaliksik, at manunulat sa pangangalap at pagpapatunay ng pampublikong datos.',
+    'news-market-desc':
+      'Maaaring tumulong ang mga developer, mananaliksik, at manunulat sa pangangalap at pagpapatunay ng pampublikong datos.',
     'news-power-title': 'Binubuo ang mga Opisyal na Pinagkukunan ng Datos',
-    'news-power-desc': 'Kinokolekta ang datos ng mga opisyal, demograpiya, at serbisyo mula sa mga opisyal na portal ng gobyerno.',
+    'news-power-desc':
+      'Kinokolekta ang datos ng mga opisyal, demograpiya, at serbisyo mula sa mga opisyal na portal ng gobyerno.',
     'quiz-title': 'Albay Quiz',
     'quiz-subtitle': 'Gaano mo kakilala ang Albay, Philippines?',
     'quiz-description':
@@ -893,7 +898,7 @@ const translations: Record<string, Record<string, string>> = {
     'footer-contribute': 'Mag-ambag ng code sa amin',
     'footer-copyright-text': 'BetterAlbay.org',
     'footer-copyright-disclaimer':
-      'Lahat ng pampublikong impormasyon ay mula sa mga opisyal na portal ng pamahalaan.',
+      'Kumpirmahin ang kasalukuyang impormasyon sa tanggapan ng pamahalaang may pananagutan.',
     'footer-skip-to-main': 'Lumaktaw sa pangunahing nilalaman',
   },
   bik: {
@@ -948,7 +953,7 @@ const translations: Record<string, Record<string, string>> = {
     'stats-land-area-label': 'Hiwas nin Daga',
     'weather-map-title': 'Panahon asin Mapa kan Albay',
     'weather-location': 'Syudad nin Legazpi, Albay',
-    'history-title': 'Halipot na Kasaysayan kan Albay',
+    'history-title': 'Information pending verification.',
 
     // Municipal/Provincial Leadership
     'section-leadership': 'Mga Lider kan Probinsya',
@@ -988,16 +993,23 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
 
   useEffect(() => {
-    // Load saved language from localStorage
-    const savedLang = localStorage.getItem('betteralbay_lang') as Language;
-    if (savedLang && ['en', 'fil', 'bik'].includes(savedLang)) {
-      setLanguageState(savedLang);
+    try {
+      const savedLang = localStorage.getItem('betteralbay_lang') as Language;
+      if (savedLang && ['en', 'fil', 'bik'].includes(savedLang)) {
+        setLanguageState(savedLang);
+      }
+    } catch {
+      // Browser privacy settings may disable storage; keep the default language.
     }
   }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('betteralbay_lang', lang);
+    try {
+      localStorage.setItem('betteralbay_lang', lang);
+    } catch {
+      // Language selection still works for this session when storage is blocked.
+    }
   };
 
   // Falls back to English for any key not yet translated into the active language

@@ -62,8 +62,8 @@ export default function Footer() {
             <h4>{t('footer-quick-links')}</h4>
             <ul className="footer-links-new">
               <li>
-                <a href="https://quiz.betteralbay.org/" target="_blank" rel="noopener noreferrer">
-                  {t('footer-albay-quiz')}
+                <a href="https://albay.gov.ph/" target="_blank" rel="noopener noreferrer">
+                  Official Albay government website
                 </a>
               </li>
               <li>
@@ -111,12 +111,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://sangguniangbayan.albay.gov.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t('footer-sb')}
+                <a href="https://albay.gov.ph/" target="_blank" rel="noopener noreferrer">
+                  Official Albay government website
                 </a>
               </li>
               <li>
@@ -152,7 +148,7 @@ export default function Footer() {
               <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
             </a>
             <a
-              href="https://github.com/BetterAlbay/betteralbay"
+              href="https://github.com/jsonrls/betteralbay"
               className="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"

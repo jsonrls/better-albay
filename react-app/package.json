@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.5.19",
+    "next": "^15.5.25",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -19,6 +19,6 @@
     "typescript": "^5.4.5"
   },
   "overrides": {
-    "postcss": "^8.5.10"
+    "postcss": "^8.5.28"
   }
 }

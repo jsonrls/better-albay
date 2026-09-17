@@ -6,7 +6,7 @@
 #   bash build.sh minor      — bump minor, build everything
 #   bash build.sh major      — bump major, build everything
 
-set -e
+set -euo pipefail
 
 BUMP_TYPE="patch"
 SKIP_BUMP=false
@@ -36,6 +36,12 @@ if [ -f .env ]; then
     echo ""
     echo "▶ [0/6] Loaded .env (SITE_URL=${SITE_URL:-unset})"
 fi
+
+# Validate JavaScript before changing the release version or creating output.
+while IFS= read -r -d '' file; do
+    node --check "$file"
+done < <(find assets/js -name '*.js' -type f -print0)
+node --check sw.js
 
 # ── 1. Version (single source of truth: version.json) ────────────────────────
 echo ""
@@ -108,7 +114,7 @@ if [ "$REACT_BUILD" = true ] && [ -f "react-app/package.json" ]; then
     (
         cd react-app
         echo "  Installing dependencies..."
-        npm ci --prefer-offline 2>/dev/null || npm install --silent
+        npm ci --prefer-offline
         echo "  Running next build..."
         npm run build
     )
@@ -139,7 +145,11 @@ echo "▶ [5/6] Minifying assets..."
 
 echo "  HTML..."
 find dist -name "*.html" -not -path "dist/_next/*" -type f | while read -r file; do
-    npx --yes html-minifier-terser \
+    # Next's exported markup includes hydration markers that HTML minifiers remove.
+    if [ "$REACT_BUILD" = true ] && [ "$file" = "dist/services/health.html" ]; then
+        continue
+    fi
+    npx --no-install html-minifier-terser \
         --collapse-whitespace \
         --remove-comments \
         --remove-optional-tags \
@@ -148,18 +158,18 @@ find dist -name "*.html" -not -path "dist/_next/*" -type f | while read -r file;
         --remove-style-link-type-attributes \
         --minify-css true \
         --minify-js true \
-        -o "$file" "$file" 2>/dev/null || true
+        -o "$file" "$file"
 done
 
 echo "  CSS..."
 find dist/assets/css -name "*.css" -type f 2>/dev/null | while read -r file; do
-    npx --yes cleancss -o "$file" "$file" 2>/dev/null || true
+    npx --no-install cleancss -o "$file" "$file"
 done
 
 echo "  JavaScript (transpile + minify)..."
 find dist/assets/js -name "*.js" -type f 2>/dev/null | while read -r file; do
-    npx --yes babel "$file" --out-file "$file" 2>/dev/null || true
-    npx --yes terser "$file" -o "$file" --compress --mangle 2>/dev/null || true
+    npx --no-install babel "$file" --out-file "$file"
+    npx --no-install terser "$file" -o "$file" --compress --mangle
 done
 
 echo "  Assets minified."
@@ -172,7 +182,7 @@ find dist -type f -exec chmod 644 {} \;
 echo "  Directories: 755 | Files: 644"
 
 # ── Summary ───────────────────────────────────────────────────────────────────
-ORIG_SIZE=$(du -sh . --exclude=node_modules --exclude=dist --exclude=.git --exclude="react-app/node_modules" 2>/dev/null | cut -f1 || echo "N/A")
+ORIG_SIZE=$(du -sh . --exclude=node_modules --exclude=dist --exclude=.git --exclude="react-app/node_modules" 2>/dev/null | cut -f1) || ORIG_SIZE="N/A"
 DIST_SIZE=$(du -sh dist 2>/dev/null | cut -f1 || echo "N/A")
 
 echo ""

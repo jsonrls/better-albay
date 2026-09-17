@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Fix footer across all HTML files:
-1. Add Albay Quiz link before Sitemap in Quick Links
+1. Preserve the unavailable quiz state
 2. Update copyright to 3-span format with 2026 year
-3. Add Albay Quiz entry to sitemap page
-4. Add Quiz CTA section to index.html (before closing </> after contact section)
+3. Preserve existing sitemap navigation
+Quiz link generation remains disabled until verified.
 """
 
 import os
@@ -124,37 +124,7 @@ def get_page_prefix(filepath):
 
 
 def fix_footer_quiz_link(content, filepath):
-    """Add Albay Quiz link before Sitemap in footer Quick Links."""
-    # Check if quiz link already exists
-    if 'quiz.betteralbay.org' in content:
-        return content, False
-    
-    prefix = get_page_prefix(filepath)
-    
-    # Determine the relative path prefix for internal links
-    if filepath == 'index.html' or filepath in ['403.html', '404.html', '500.html', 'offline.html']:
-        rel = ''
-    else:
-        rel = '../'
-    
-    # Find the Sitemap link in footer Quick Links and add Quiz before it
-    # Pattern: <li><a href="...sitemap..." ...>Sitemap</a></li>
-    sitemap_pattern = r'(<li><a href="' + re.escape(rel) + r'sitemap/[^"]*"[^>]*>)'
-    
-    quiz_link = f'<li><a href="https://quiz.betteralbay.org/" target="_blank" rel="noopener noreferrer" data-i18n="{prefix}-albay-quiz">Albay Quiz</a></li>\n                        '
-    
-    match = re.search(sitemap_pattern, content)
-    if match:
-        content = content[:match.start()] + quiz_link + content[match.start():]
-        return content, True
-    
-    # Fallback: look for any Sitemap link in footer
-    sitemap_pattern2 = r'(<li><a href="[^"]*sitemap[^"]*"[^>]*>)'
-    match2 = re.search(sitemap_pattern2, content)
-    if match2:
-        content = content[:match2.start()] + quiz_link + content[match2.start():]
-        return content, True
-    
+    """Quiz publishing is disabled until its destination and content are verified."""
     return content, False
 
 
@@ -168,7 +138,7 @@ def fix_copyright(content, filepath):
     new_copyright = '''<div class="footer-copyright">
                     <span class="footer-copyright-text">&copy; 2026 BetterAlbay.org.</span>
                     <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-                    <span class="footer-copyright-disclaimer">All public information sourced from official government portals.</span>
+                    <span class="footer-copyright-disclaimer">Verify current information with the responsible government office.</span>
                     <span class="footer-version">'''
     
     match = re.search(old_pattern1, content, re.DOTALL)
@@ -190,27 +160,7 @@ def fix_copyright(content, filepath):
 
 
 def add_quiz_to_sitemap(content):
-    """Add Albay Quiz entry to sitemap page content."""
-    if 'quiz.betteralbay.org' in content:
-        return content, False
-    
-    # Find the External Resources section and add quiz there
-    # Or add it to Main Navigation section
-    main_nav_end = content.find('</div>\n                </div>\n\n                <!-- Service Categories -->')
-    if main_nav_end == -1:
-        # Try alternate: find after the last link in main navigation
-        main_nav_end = content.find('</div>\n                </div>\n\n                <!--')
-    
-    # Add quiz link in the main navigation grid
-    # Find the News link and add Quiz after it
-    news_pattern = r'(<a href="\.\./news/"[^>]*>.*?News.*?</a>)'
-    match = re.search(news_pattern, content)
-    if match:
-        quiz_entry = '\n                        <a href="https://quiz.betteralbay.org/" target="_blank" rel="noopener noreferrer" class="sitemap-link-item sitemap-link-item--external"><i class="bi bi-box-arrow-up-right"></i> <span data-i18n="sitemap-albay-quiz">Albay Quiz</span></a>'
-        insert_pos = match.end()
-        content = content[:insert_pos] + quiz_entry + content[insert_pos:]
-        return content, True
-    
+    """Do not regenerate links to the unavailable quiz."""
     return content, False
 
 

@@ -29,7 +29,7 @@ For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md
 #### Setup
 
 ```bash
-git clone https://github.com/BetterAlbay/betteralbay.git
+git clone https://github.com/jsonrls/betteralbay.git
 cd betteralbay
 npm install
 npm run dev
@@ -48,7 +48,7 @@ Open http://localhost:8000 in your browser.
 #### Setup
 
 ```bash
-git clone https://github.com/BetterAlbay/betteralbay.git
+git clone https://github.com/jsonrls/betteralbay.git
 cd betteralbay
 git checkout react-typescript
 cd react-app
@@ -62,7 +62,7 @@ Open http://localhost:3000 in your browser.
 
 ### Reporting Bugs
 
-1. Check existing [issues](https://github.com/BetterAlbay/betteralbay/issues) to avoid duplicates
+1. Check existing [issues](https://github.com/jsonrls/betteralbay/issues) to avoid duplicates
 2. Create a new issue with:
    - Clear, descriptive title
    - Steps to reproduce

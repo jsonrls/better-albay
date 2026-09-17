@@ -34,39 +34,61 @@ export default function PWAManager() {
       const isStandalone =
         window.matchMedia('(display-mode: standalone)').matches ||
         (navigator as unknown as { standalone?: boolean }).standalone;
-      if (!isStandalone && !sessionStorage.getItem('pwa-install-dismissed')) {
+      let dismissed = false;
+      try {
+        dismissed = sessionStorage.getItem('pwa-install-dismissed') === '1';
+      } catch {}
+      if (!isStandalone && !dismissed) {
         setShowInstall(true);
       }
     };
     window.addEventListener('beforeinstallprompt', onBeforeInstall);
 
+    let updateInterval: ReturnType<typeof setInterval> | undefined;
+    let disposed = false;
+    let refreshing = false;
+    const onControllerChange = () => {
+      if (refreshing) return;
+      refreshing = true;
+      window.location.reload();
+    };
+
     // Service worker registration + update detection
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then((reg) => {
-        setInterval(() => reg.update(), 30 * 60 * 1000);
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((reg) => {
+          if (!reg || disposed) return;
+          updateInterval = setInterval(
+            () => {
+              reg.update().catch((error) => console.warn('Service worker update failed', error));
+            },
+            30 * 60 * 1000
+          );
 
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          if (!newWorker) return;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              waitingWorker.current = newWorker;
-              setShowUpdate(true);
-            }
+          reg.addEventListener('updatefound', () => {
+            const newWorker = reg.installing;
+            if (!newWorker) return;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                waitingWorker.current = newWorker;
+                setShowUpdate(true);
+              }
+            });
           });
-        });
-      });
+        })
+        .catch((error) => console.warn('Service worker registration unavailable', error));
 
       // Seamless reload on controller change
-      let refreshing = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (refreshing) return;
-        refreshing = true;
-        window.location.reload();
-      });
+      navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
     }
 
-    return () => window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+    return () => {
+      disposed = true;
+      if (updateInterval) clearInterval(updateInterval);
+      window.removeEventListener('beforeinstallprompt', onBeforeInstall);
+      navigator.serviceWorker?.removeEventListener('controllerchange', onControllerChange);
+    };
   }, []);
 
   return (
@@ -78,13 +100,19 @@ export default function PWAManager() {
             <span>Install BetterAlbay for quick access to services.</span>
           </div>
           <div className="pwa-install-actions">
-            <button className="pwa-install-btn" onClick={handleInstall} aria-label="Install BetterAlbay app">
+            <button
+              className="pwa-install-btn"
+              onClick={handleInstall}
+              aria-label="Install BetterAlbay app"
+            >
               Install
             </button>
             <button
               className="pwa-install-dismiss"
               onClick={() => {
-                sessionStorage.setItem('pwa-install-dismissed', '1');
+                try {
+                  sessionStorage.setItem('pwa-install-dismissed', '1');
+                } catch {}
                 setShowInstall(false);
               }}
               aria-label="Dismiss install prompt"

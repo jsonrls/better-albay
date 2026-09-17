@@ -1,35 +1,9 @@
 {
-  "_schema_version": "1.0",
-  "_source": "https://albay.gov.ph/ (site footer emergency hotlines)",
+  "_source": "https://ehotlines.e.gov.ph/",
   "hotlines": [
     {
-      "office": "OCD/RDRRMC",
-      "number": "0917 574 7880"
-    },
-    {
-      "office": "PAGASA Albay",
-      "number": "(052) 481 4472 / (052) 481 4454-55"
-    },
-    {
-      "office": "Albay EMS",
-      "number": "0918 911 9911"
-    },
-    {
-      "office": "PNP Albay",
-      "number": "0998 598 5926 / 0926 625 6247"
-    },
-    {
-      "office": "BRTTH HEMS",
-      "number": "(052) 732 5555 / (052) 732 5501"
-    },
-    {
-      "office": "BFP Albay",
-      "number": "0919 992 5484 / 0917 893 2416"
+      "office": "National emergency",
+      "number": "911"
     }
-  ],
-  "contact": {
-    "email": "pgasecretariat@gmail.com",
-    "office_of_the_governor": "(052) 742-6377 / 742-6766",
-    "office_of_the_vice_governor": "0926 828 4392"
-  }
+  ]
 }
