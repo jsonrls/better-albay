@@ -773,7 +773,7 @@ body.mobile-menu-open {
   position: absolute;
   top: -40px;
   left: 0;
-  background: #ff0000;
+  background: var(--color-danger);
   color: white;
   padding: 8px;
   z-index: 1001;

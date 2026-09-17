@@ -87,6 +87,7 @@ ter Columns */
 
 .footer-links-new a {
   display: block;
+  min-height: 24px;
   font-size: 0.8125rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.8);
