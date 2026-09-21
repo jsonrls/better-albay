@@ -47,52 +47,52 @@ Visit the live website: [https://betteralbay.org](https://betteralbay.org)
 
 ## Technology Stack
 
-| Category            | Technologies                                                           |
-| ------------------- | ---------------------------------------------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                         |
-| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design        |
-| **Icons**           | Bootstrap Icons (CDN)                                                  |
-| **Fonts**           | Google Fonts (Inter)                                                   |
-| **Maps**            | Leaflet.js, OpenStreetMap                                              |
-| **Charts**          | Chart.js (Canvas-based)                                                |
-| **Animations**      | Lottie (dotlottie-player web component)                                |
-| **Data Format**     | JSON                                                                   |
-| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                      |
-| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                          |
-| **Minification**    | html-minifier-terser, clean-css-cli, terser                            |
-| **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)               |
-| **Version Control** | Git, GitHub                                                            |
-| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                           |
-| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                  |
+| Category            | Technologies                                                                                             |
+| ------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Frontend**        | HTML5, CSS3, JavaScript (ES6+)                                                                           |
+| **Styling**         | Custom CSS, CSS Variables, Flexbox, CSS Grid, Responsive Design                                          |
+| **Icons**           | Bootstrap Icons (CDN)                                                                                    |
+| **Fonts**           | Google Fonts (Inter)                                                                                     |
+| **Maps**            | Leaflet.js, OpenStreetMap                                                                                |
+| **Charts**          | Chart.js (Canvas-based)                                                                                  |
+| **Animations**      | Lottie (dotlottie-player web component)                                                                  |
+| **Data Format**     | JSON                                                                                                     |
+| **APIs**            | Open-Meteo (Weather), ExchangeRate API (Currency)                                                        |
+| **Build Tools**     | Node.js, npm, Bash, Babel (@babel/preset-env)                                                            |
+| **Minification**    | html-minifier-terser, clean-css-cli, terser                                                              |
+| **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)                                                 |
+| **Version Control** | Git, GitHub                                                                                              |
+| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                                                             |
+| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                                                    |
 | **PWA**             | Service Worker (versioned caching, install prompt, seamless updates), Web App Manifest, offline fallback |
-| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                     |
-| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                              |
-| **Analytics**       | Google Analytics (gtag.js)                                             |
-| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                          |
-| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                  |
+| **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                                                       |
+| **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                                                                |
+| **Analytics**       | Google Analytics (gtag.js)                                                                               |
+| **Accessibility**   | WCAG 2.1, ARIA, Semantic HTML                                                                            |
+| **Performance**     | GZIP Compression, Browser Caching, Asset Minification                                                    |
 
 ## Key Features
 
-| Feature                          | Description                                                                                                                                                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                             |
-| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                      |
-| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                     |
-| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                          |
-| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                       |
-| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                     |
-| **Albay Quiz**                  | Interactive quiz about Albay history and culture, linked from homepage CTA and footer across all pages                                                                                                           |
-| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                |
-| **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                        |
+| Feature                          | Description                                                                                                                                                                                                                            |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Municipal Services Directory** | Comprehensive guide to all LGU services with requirements, fees, and processing times                                                                                                                                                  |
+| **Government Officials**         | Directory of elected officials and department heads with contact information                                                                                                                                                           |
+| **Budget Transparency**          | Financial reports, income/expenditure breakdowns, and infrastructure projects                                                                                                                                                          |
+| **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                                               |
+| **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                                            |
+| **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                                          |
+| **Albay Quiz**                   | Interactive quiz about Albay history and culture, linked from homepage CTA and footer across all pages                                                                                                                                 |
+| **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                                     |
+| **Emergency Hotline Directory**  | Static, wrapping critical contacts plus a searchable Albay directory, generated from `data/emergency_hotlines.json` and usable without JavaScript                                                                                      |
 | **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
-| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                 |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                |
-| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                       |
-| **Brief History of Albay**      | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                               |
-| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap |
-| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                           |
-| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                            |
-| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                              |
+| **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                                      |
+| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Central Bikol (5,639 keys per language with perfect parity)                                                                                                                               |
+| **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                                            |
+| **Brief History of Albay**       | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                                                    |
+| **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap                      |
+| **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                                                |
+| **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                                                 |
+| **Performance**                  | 90%+ size reduction through minification, GZIP compression, Babel transpilation, and browser caching                                                                                                                                   |
 
 ## Quick Start
 
@@ -195,13 +195,15 @@ npm run build
 
 The site supports three languages with full translation coverage:
 
-| Language | Code  | Status                |
-| -------- | ----- | --------------------- |
-| English  | `en`  | Complete (5,546 keys) |
-| Filipino | `fil` | Complete (5,546 keys) |
-| Ilocano  | `ilo` | Complete (5,546 keys) |
+| Language      | Code  | Status                |
+| ------------- | ----- | --------------------- |
+| English       | `en`  | Complete (5,639 keys) |
+| Filipino      | `fil` | Complete (5,639 keys) |
+| Central Bikol | `bcl` | Complete (5,639 keys) |
 
 The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
+
+> **Translation provenance:** all three columns were authored **by hand** from the English source — no translation API or certified translator was used. The Filipino and Central Bikol columns are therefore **best effort**: useful and complete, but worth a native-speaker review pass before launch. Only the English column should be treated as authoritative. `tests/unit/render-i18n.test.cjs` guards key parity, interpolation parity, and escaping artefacts.
 
 ## Three-Version Architecture
 
@@ -290,7 +292,7 @@ betteralbay/
 
 - Standardized header vertical spacing (padding, min-height, logo size) across desktop (12px/48px), tablet (10px/40px), mobile (8px/36px), and small mobile (6px/32px) breakpoints
 - Raised tablet breakpoint from 991px to 1024px to properly capture iPad Pro portrait (1024px) and iPad Air landscape
-- Converted emergency hotline bar into a clickable scrolling marquee on all tablet and mobile viewports (≤1024px) with pause-on-hover/focus for accessibility
+- Emergency hotline bars wrap without scrolling or duplicated links. The contact directory and offline critical contacts are generated during builds from `data/emergency_hotlines.json`.
 - Centered hamburger menu icon between logo and language toggle on tablet viewports using flexbox ordering (logo → hamburger → lang toggle)
 - Tablet footer: left-aligned BetterAlbay logo, tagline, and social icons to match the visual hierarchy of the brand column
 
@@ -314,7 +316,7 @@ betteralbay/
 
 #### React App Sync
 
-- Created `HotlineBar.tsx` component with tablet/mobile marquee matching static site behavior
+- `HotlineBar.tsx` is generated from the same emergency data as the static site's wrapping hotline bar.
 - Created `InfoBar.tsx` component with live exchange rates, weather, and Philippine time
 - Created `SearchAutocomplete.tsx` component with service search dropdown
 - Created `PWAManager.tsx` component handling install prompt and seamless SW updates
@@ -410,7 +412,7 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 | **Bug Fixes**          | Report issues or submit fixes for existing bugs               |
 | **Features**           | Propose or implement new functionality                        |
 | **Content**            | Update service information, add missing municipal data        |
-| **Translations**       | Help translate content to Filipino or Ilocano                 |
+| **Translations**       | Help translate content to Filipino or Central Bikol           |
 | **Design**             | Improve UI/UX, accessibility, and visual consistency          |
 | **Data**               | Verify and update municipal statistics and records            |
 | **Documentation**      | Enhance README, code comments, and guides                     |
@@ -436,13 +438,13 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 All public information is sourced from official government portals:
 
-| Source                             | URL                                                                       | Data Type                 |
-| ---------------------------------- | ------------------------------------------------------------------------- | ------------------------- |
-| LGU Albay Official Website        | [albay.gov.ph](https://albay.gov.ph/)                                   | Services, Officials       |
-| Sangguniang Panlalawigan ng Albay        | [sangguniangbayan.albay.gov.ph](https://sangguniangbayan.albay.gov.ph/) | Ordinances, Resolutions   |
-| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                       | Budget, Financial Reports |
-| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                         | Demographics, Census      |
-| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                               | Competitive Index         |
+| Source                             | URL                                                                     | Data Type                 |
+| ---------------------------------- | ----------------------------------------------------------------------- | ------------------------- |
+| LGU Albay Official Website         | [albay.gov.ph](https://albay.gov.ph/)                                   | Services, Officials       |
+| Sangguniang Panlalawigan ng Albay  | [sangguniangbayan.albay.gov.ph](https://sangguniangbayan.albay.gov.ph/) | Ordinances, Resolutions   |
+| Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                     | Budget, Financial Reports |
+| Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                       | Demographics, Census      |
+| DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                             | Competitive Index         |
 
 ## License
 
@@ -457,13 +459,13 @@ See [LICENSE](LICENSE) for full details.
 
 ## Contact
 
-| Channel  | Link                                                                      |
-| -------- | ------------------------------------------------------------------------- |
-| Website  | [betteralbay.org](https://betteralbay.org)                              |
-| Email    | <volunteer@betteralbay.org>                                                |
-| Facebook | [@betteralbay.org](https://www.facebook.com/pioalbay2023)            |
-| LinkedIn | [BetterAlbay](https://www.linkedin.com/company/betteralbay/)            |
-| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
+| Channel  | Link                                                            |
+| -------- | --------------------------------------------------------------- |
+| Website  | [betteralbay.org](https://betteralbay.org)                      |
+| Email    | <volunteer@betteralbay.org>                                     |
+| Facebook | [@betteralbay.org](https://www.facebook.com/pioalbay2023)       |
+| LinkedIn | [BetterAlbay](https://www.linkedin.com/company/betteralbay/)    |
+| Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)         |
 | GitHub   | [jsonrls/better-albay](https://github.com/jsonrls/better-albay) |
 
 ## Acknowledgments
@@ -482,3 +484,7 @@ Made for the people of Albay, Philippines
 ## Developer
 
 [Jayson (jsonrls)](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterAlbay.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
+
+### Updating emergency hotlines
+
+Edit `data/emergency_hotlines.json`, including its supplied update date and notes, then run `python3 scripts/sync-verified-content.py` (also part of `build.sh`). Validation completes before generated files are written. The generator updates every legacy hotline bar, the contact directory, offline critical contacts, and the React hotline bar. Preserve supplied display formatting and duplicate office records; telephone links are normalized separately.

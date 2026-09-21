@@ -1,9 +1,225 @@
 {
-  "_schema_version": "2.0",
-  "_status": "draft",
-  "_source": "Bureau of Local Government Finance (BLGF) / Albay Provincial Budget Office / COA Local Audit Reports",
-  "_note": "Awaiting official FY 2026 provincial budget and statement of income/expenditure figures. Do not display estimated values.",
-  "municipality": "Albay",
-  "province": "Albay",
-  "fiscal_years": []
+  "_status": "final",
+  "_units": "PHP millions, rounded to two decimal places.",
+  "_source": "Bureau of Local Government Finance (BLGF) electronic Statements of Receipts and Expenditures (eSRE) for the Provincial Government of Albay, signed by the Provincial Treasurer.",
+  "_retrieved": "2026-09-17",
+  "_latest_period": "Q2 2021",
+  "_sources": [
+    {
+      "period": "FY 2016",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20210123165829/http://albay.gov.ph/wp-content/uploads/2020/02/2016-statement-of-receipts-and-expenditures.pdf"
+    },
+    {
+      "period": "FY 2017",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20210123173015/http://albay.gov.ph/wp-content/uploads/2020/02/2017-statement-of-receipts-and-expenditures.pdf"
+    },
+    {
+      "period": "FY 2018",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20210123180850/http://albay.gov.ph/wp-content/uploads/2020/02/2018-statement-of-receipts-and-expenditures.pdf"
+    },
+    {
+      "period": "FY 2019",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20220802222352/http://albay.gov.ph/wp-content/uploads/2021/07/eSRE-ALBAY-2019.pdf"
+    },
+    {
+      "period": "FY 2020",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20220802222349/http://albay.gov.ph/wp-content/uploads/2021/07/eSRE-ALBAY-2020.pdf"
+    },
+    {
+      "period": "Q1 2021",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20220802222347/http://albay.gov.ph/wp-content/uploads/2021/07/eSRE-ALBAY-Q1-2021.pdf"
+    },
+    {
+      "period": "Q2 2021",
+      "document": "BLGF eSRE, Provincial Government of Albay",
+      "archived": "https://web.archive.org/web/20220802222345/http://albay.gov.ph/wp-content/uploads/2021/07/eSRE-ALBAY-Q2-2021.pdf"
+    }
+  ],
+  "_caveats": [
+    "Every figure is transcribed from a signed BLGF eSRE filing and reconciled: local and external sources sum to total income, the four expenditure buckets sum to total current operating expenditure, and income less expenditure equals net operating income.",
+    "Figures follow the Total column of each statement, which combines the General Fund, the Special Education Fund and the Trust Fund for the whole provincial government.",
+    "Filings are year-to-date cumulative from 1 January. Q2 2021 therefore covers January to June 2021 and is not a stand-alone April to June figure.",
+    "The Q4 filing of each year states the full-year position and is published here as FY of that year with the range Jan - Dec.",
+    "Expenditure buckets group the statement functional classification. Social services is Education, Culture & Sports plus Health, Nutrition & Population Control plus Labor and Employment plus Housing and Community Development plus Social Services and Social Welfare. Debt service is interest expense and other charges only, because loan principal is a non-operating expenditure and sits outside the operating totals.",
+    "Amounts are rounded to two decimal places of a million. Components are adjusted by at most 0.01 M so that the published breakdowns sum exactly to the published totals.",
+    "The most recent statement the province has published is Q2 2021. No later filing exists, so this dashboard does not extend beyond it."
+  ],
+  "fiscal_years": [
+    {
+      "year": 2016,
+      "quarters": {
+        "q4": {
+          "period": "FY 2016",
+          "periodLabel": "Jan - Dec",
+          "code": "FY",
+          "cumulative": true,
+          "income": {
+            "local": 209.18,
+            "external": 1611.37,
+            "total": 1820.55
+          },
+          "expenditures": {
+            "gps": 551.24,
+            "social": 424.77,
+            "economic": 192.54,
+            "debt": 40.16,
+            "total": 1208.71
+          },
+          "netIncome": 611.84,
+          "fundBalance": 1489.05
+        }
+      }
+    },
+    {
+      "year": 2017,
+      "quarters": {
+        "q4": {
+          "period": "FY 2017",
+          "periodLabel": "Jan - Dec",
+          "code": "FY",
+          "cumulative": true,
+          "income": {
+            "local": 236.45,
+            "external": 1747.43,
+            "total": 1983.88
+          },
+          "expenditures": {
+            "gps": 406.14,
+            "social": 339.6,
+            "economic": 213.55,
+            "debt": 40.37,
+            "total": 999.66
+          },
+          "netIncome": 984.22,
+          "fundBalance": 1982.18
+        }
+      }
+    },
+    {
+      "year": 2018,
+      "quarters": {
+        "q4": {
+          "period": "FY 2018",
+          "periodLabel": "Jan - Dec",
+          "code": "FY",
+          "cumulative": true,
+          "income": {
+            "local": 347.35,
+            "external": 4040.45,
+            "total": 4387.8
+          },
+          "expenditures": {
+            "gps": 1621.75,
+            "social": 408.63,
+            "economic": 265.66,
+            "debt": 36.96,
+            "total": 2333.0
+          },
+          "netIncome": 2054.8,
+          "fundBalance": 3494.53
+        }
+      }
+    },
+    {
+      "year": 2019,
+      "quarters": {
+        "q4": {
+          "period": "FY 2019",
+          "periodLabel": "Jan - Dec",
+          "code": "FY",
+          "cumulative": true,
+          "income": {
+            "local": 339.43,
+            "external": 4857.69,
+            "total": 5197.12
+          },
+          "expenditures": {
+            "gps": 2014.67,
+            "social": 499.32,
+            "economic": 382.57,
+            "debt": 36.51,
+            "total": 2933.07
+          },
+          "netIncome": 2264.05,
+          "fundBalance": 5012.47
+        }
+      }
+    },
+    {
+      "year": 2020,
+      "quarters": {
+        "q4": {
+          "period": "FY 2020",
+          "periodLabel": "Jan - Dec",
+          "code": "FY",
+          "cumulative": true,
+          "income": {
+            "local": 361.09,
+            "external": 3268.57,
+            "total": 3629.66
+          },
+          "expenditures": {
+            "gps": 694.63,
+            "social": 435.19,
+            "economic": 271.85,
+            "debt": 25.7,
+            "total": 1427.37
+          },
+          "netIncome": 2202.29,
+          "fundBalance": 3623.85
+        }
+      }
+    },
+    {
+      "year": 2021,
+      "quarters": {
+        "q1": {
+          "period": "Q1 2021",
+          "periodLabel": "Jan - Mar",
+          "code": "Q1",
+          "cumulative": true,
+          "income": {
+            "local": 74.19,
+            "external": 535.99,
+            "total": 610.18
+          },
+          "expenditures": {
+            "gps": 179.52,
+            "social": 245.24,
+            "economic": 39.71,
+            "debt": 6.51,
+            "total": 470.98
+          },
+          "netIncome": 139.2,
+          "fundBalance": 2560.44
+        },
+        "q2": {
+          "period": "Q2 2021",
+          "periodLabel": "Jan - Jun",
+          "code": "Q2",
+          "cumulative": true,
+          "income": {
+            "local": 151.45,
+            "external": 1071.98,
+            "total": 1223.43
+          },
+          "expenditures": {
+            "gps": 290.97,
+            "social": 325.26,
+            "economic": 95.15,
+            "debt": 12.75,
+            "total": 724.13
+          },
+          "netIncome": 499.3,
+          "fundBalance": 2802.6
+        }
+      }
+    }
+  ]
 }

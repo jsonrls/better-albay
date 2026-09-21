@@ -82,16 +82,33 @@ function formatSessionDate(dateString) {
 }
 
 /**
- * Renders a resolution table to the DOM
- * @param {Array} resolutions - Array of resolution objects
- * @param {string} tableBodyId - The id of the tbody element to populate
- * @param {number} year - The year represented by this table (for the empty-state message)
+ * Escapes a value for safe insertion into HTML.
+ * @param {*} value - Any value
+ * @returns {string} HTML-escaped string
  */
-function renderResolutionTable(resolutions, tableBodyId, year) {
+function escapeHtml(value) {
+  return String(value === null || value === undefined ? '' : value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/**
+ * Renders the resolution table to the DOM.
+ *
+ * There is a single table on purpose. The page previously split records into
+ * hardcoded 2026 and 2025 tables, which silently discarded any resolution
+ * numbered outside those two years.
+ * @param {Array} resolutions - Array of resolution objects
+ * @param {string} [tableBodyId] - The id of the tbody element to populate
+ */
+function renderResolutionTable(resolutions, tableBodyId = 'resolution-table-body') {
   const tableBody = document.getElementById(tableBodyId);
 
   if (!tableBody) {
-    console.error('Resolution table body element not found:', tableBodyId);
+    // Not an error: the table is optional on pages that only show the note.
     return;
   }
 
@@ -102,8 +119,8 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
   if (!resolutions || resolutions.length === 0) {
     const emptyRow = document.createElement('tr');
     emptyRow.innerHTML = `
-            <td colspan="3" class="text-center text-muted">
-                Verified Albay resolution records for ${year} are not yet available.
+            <td colspan="4" class="text-center text-muted">
+                No Albay resolution has been recorded from a retrievable source.
             </td>
         `;
     tableBody.appendChild(emptyRow);
@@ -112,17 +129,36 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
 
   // Render each resolution
   resolutions.forEach((resolution) => {
-    // Skip invalid records
-    if (!resolution.resolutionNo || !resolution.title || !resolution.sessionDate) {
+    // A session date is optional: where the source cites a resolution without
+    // naming the session, an inferred date would be a fabrication.
+    if (!resolution.resolutionNo || !resolution.title) {
       console.warn('Skipping invalid resolution record:', resolution);
       return;
     }
 
+    const dateCell = resolution.sessionDate
+      ? escapeHtml(formatSessionDate(resolution.sessionDate)) +
+        (resolution.session
+          ? `<div class="text-muted" style="font-size: 0.8125rem; margin-top: 4px">${escapeHtml(
+              resolution.session
+            )}</div>`
+          : '')
+      : '<span class="text-muted">Not published</span>';
+    const sourceCell =
+      resolution.sourceUrl && resolution.sourceLabel
+        ? `<a href="${escapeHtml(resolution.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(
+            resolution.sourceLabel
+          )} <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>`
+        : '<span class="text-muted">Not published</span>';
+
     const row = document.createElement('tr');
     row.innerHTML = `
-            <td data-label="Resolution">${formatResolutionNo(resolution.resolutionNo)}</td>
-            <td data-label="Title">${resolution.title}</td>
-            <td data-label="Session Date">${formatSessionDate(resolution.sessionDate)}</td>
+            <td data-label="Resolution">${escapeHtml(
+              formatResolutionNo(resolution.resolutionNo)
+            )}</td>
+            <td data-label="Title">${escapeHtml(resolution.title)}</td>
+            <td data-label="Session Date">${dateCell}</td>
+            <td data-label="Source">${sourceCell}</td>
         `;
     tableBody.appendChild(row);
   });
@@ -134,41 +170,32 @@ function renderResolutionTable(resolutions, tableBodyId, year) {
 async function initResolutionTable() {
   try {
     const resolutions = await fetchResolutions();
-    const sortedResolutions = sortResolutionsByNumber(resolutions);
-
-    const resolutions2026 = sortedResolutions.filter(
-      (resolution) => getResolutionYear(resolution.resolutionNo) === 2026
-    );
-    const resolutions2025 = sortedResolutions.filter(
-      (resolution) => getResolutionYear(resolution.resolutionNo) === 2025
-    );
-
-    renderResolutionTable(resolutions2026, 'resolution-table-body-2026', 2026);
-    renderResolutionTable(resolutions2025, 'resolution-table-body', 2025);
+    renderResolutionTable(sortResolutionsByNumber(resolutions));
   } catch (error) {
     console.error('Error initializing resolution table:', error);
-    ['resolution-table-body-2026', 'resolution-table-body'].forEach((id) => {
-      const tableBody = document.getElementById(id);
-      if (tableBody) {
-        tableBody.innerHTML = `
+    const tableBody = document.getElementById('resolution-table-body');
+    if (tableBody) {
+      tableBody.innerHTML = `
                 <tr>
-                    <td colspan="3" class="text-center text-muted">
+                    <td colspan="4" class="text-center text-muted">
                         Unable to load resolutions. Please try again later.
                     </td>
                 </tr>
             `;
-      }
-    });
+    }
   }
 }
 
 // Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', initResolutionTable);
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', initResolutionTable);
+}
 
 // Export functions for testing (if module system is available)
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
     fetchResolutions,
+    escapeHtml,
     getResolutionYear,
     sortResolutionsByNumber,
     formatResolutionNo,

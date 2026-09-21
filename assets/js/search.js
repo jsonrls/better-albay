@@ -57,6 +57,37 @@
     return '';
   }
 
+  /**
+   * Turn a service's stored `url` into one that resolves from the page the
+   * search box sits on.
+   *
+   * `data/services.json` stores two shapes: nineteen entries point at
+   * `../service-details/...`, and the rest are bare category filenames such as
+   * `certificates.html`. Both are relative to the *services* folder, not to
+   * whatever page happens to host the search box.
+   *
+   * The old code hardcoded that assumption: it skipped rewriting inside
+   * `/services/` and otherwise prefixed a literal `services/`. That produced
+   * `/legislative/services/certificates.html` - a 404 - as soon as the search
+   * box reached any page outside the services folder, which is every
+   * legislative page. Re-anchoring on getBasePath() instead keeps the two
+   * shapes correct wherever the box is placed.
+   *
+   * @param {string} url - Raw `url` from `data/services.json`
+   * @returns {string} A url that resolves from the current page
+   */
+  function resolveResultUrl(url) {
+    if (typeof url !== 'string' || url === '') return '';
+    // Absolute, protocol-relative, root-relative and in-page links need no help.
+    if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|\/|#)/i.test(url)) return url;
+
+    const base = getBasePath();
+    if (url.startsWith('../')) return base + url.slice(3);
+    if (url.startsWith('./')) return base + url.slice(2);
+    if (url.startsWith('services/')) return base + url;
+    return base + 'services/' + url;
+  }
+
   // ==================== SEARCH INDEX ====================
 
   // Build search index for faster lookups
@@ -612,14 +643,7 @@
     // Render results
     html += results
       .map((result, index) => {
-        let url = result.url;
-        if (!url.startsWith('http') && !url.startsWith('/')) {
-          if (window.location.pathname.includes('/services/')) {
-            // Already in services folder
-          } else if (!url.startsWith('../') && !url.startsWith('services/')) {
-            url = 'services/' + url;
-          }
-        }
+        const url = resolveResultUrl(result.url);
 
         return `
                 <a href="${url}" class="search-result-item" role="option" data-index="${index}">
@@ -837,18 +861,7 @@
         const query = input.value.trim();
         if (query.length >= 2 && currentResults.length > 0) {
           addRecentSearch(query);
-          let url = currentResults[0].url;
-          if (
-            !url.startsWith('http') &&
-            !url.startsWith('/') &&
-            !url.startsWith('../') &&
-            !url.startsWith('services/')
-          ) {
-            if (!window.location.pathname.includes('/services/')) {
-              url = 'services/' + url;
-            }
-          }
-          window.location.href = url;
+          window.location.href = resolveResultUrl(currentResults[0].url);
         }
       });
     }
@@ -882,25 +895,25 @@
                 margin-top: 8px;
                 animation: searchDropdownFadeIn 0.2s ease;
             }
-            
+
             @keyframes searchDropdownFadeIn {
                 from { opacity: 0; transform: translateY(-8px); }
                 to { opacity: 1; transform: translateY(0); }
             }
-            
+
             .search-autocomplete::-webkit-scrollbar {
                 width: 6px;
             }
-            
+
             .search-autocomplete::-webkit-scrollbar-track {
                 background: transparent;
             }
-            
+
             .search-autocomplete::-webkit-scrollbar-thumb {
                 background: rgba(0, 50, 160, 0.2);
                 border-radius: 3px;
             }
-            
+
             .search-loading {
                 display: flex;
                 align-items: center;
@@ -909,7 +922,7 @@
                 color: #666;
                 font-size: 0.875rem;
             }
-            
+
             .search-loading-spinner {
                 width: 20px;
                 height: 20px;
@@ -919,11 +932,11 @@
                 animation: searchSpin 0.8s linear infinite;
                 margin-right: 10px;
             }
-            
+
             @keyframes searchSpin {
                 to { transform: rotate(360deg); }
             }
-            
+
             .search-filters {
                 display: flex;
                 gap: 6px;
@@ -934,11 +947,11 @@
                 background: linear-gradient(180deg, #fafbfc 0%, #fff 100%);
                 border-radius: 16px 16px 0 0;
             }
-            
+
             .search-filters::-webkit-scrollbar {
                 height: 0;
             }
-            
+
             .search-filter-btn {
                 padding: 6px 14px;
                 border: 1px solid rgba(0, 50, 160, 0.15);
@@ -951,28 +964,28 @@
                 white-space: nowrap;
                 transition: all 0.2s ease;
             }
-            
+
             .search-filter-btn:hover {
                 border-color: #0032a0;
                 color: #0032a0;
                 background: rgba(0, 50, 160, 0.04);
             }
-            
+
             .search-filter-btn.active {
                 background: linear-gradient(135deg, #0032a0 0%, #0044cc 100%);
                 border-color: #0032a0;
                 color: #fff;
                 box-shadow: 0 2px 8px rgba(0, 50, 160, 0.3);
             }
-            
+
             .search-section {
                 border-bottom: 1px solid rgba(0, 50, 160, 0.06);
             }
-            
+
             .search-section:last-child {
                 border-bottom: none;
             }
-            
+
             .search-section-header {
                 display: flex;
                 justify-content: space-between;
@@ -984,12 +997,12 @@
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
             }
-            
+
             .search-section-header i {
                 margin-right: 5px;
                 color: #0032a0;
             }
-            
+
             .search-clear-recent {
                 background: none;
                 border: none;
@@ -1001,11 +1014,11 @@
                 border-radius: 4px;
                 transition: background 0.15s ease;
             }
-            
+
             .search-clear-recent:hover {
                 background: rgba(0, 50, 160, 0.08);
             }
-            
+
             .search-suggestion-item {
                 display: flex;
                 align-items: center;
@@ -1017,14 +1030,14 @@
                 text-align: left;
                 border-left: 3px solid transparent;
             }
-            
+
             .search-suggestion-item i {
                 color: #999;
                 margin-right: 10px;
                 font-size: 0.8125rem;
                 transition: color 0.15s ease;
             }
-            
+
             .search-suggestion-item:hover,
             .search-suggestion-item.selected {
                 background: linear-gradient(90deg, rgba(0, 50, 160, 0.06) 0%, rgba(0, 50, 160, 0.02) 100%);
@@ -1032,12 +1045,12 @@
                 text-decoration: none;
                 color: #0032a0;
             }
-            
+
             .search-suggestion-item:hover i,
             .search-suggestion-item.selected i {
                 color: #0032a0;
             }
-            
+
             .search-result-item {
                 display: block;
                 padding: 14px 16px;
@@ -1048,18 +1061,18 @@
                 text-align: left;
                 border-left: 3px solid transparent;
             }
-            
+
             .search-result-item:last-child {
                 border-bottom: none;
             }
-            
+
             .search-result-item:hover,
             .search-result-item.selected {
                 background: linear-gradient(90deg, rgba(0, 50, 160, 0.06) 0%, rgba(0, 50, 160, 0.02) 100%);
                 border-left-color: #0032a0;
                 text-decoration: none;
             }
-            
+
             .search-result-title {
                 font-weight: 600;
                 color: #0032a0;
@@ -1069,14 +1082,14 @@
                 align-items: center;
                 gap: 8px;
             }
-            
+
             .search-result-title mark {
                 background: linear-gradient(180deg, transparent 60%, rgba(0, 50, 160, 0.15) 60%);
                 color: inherit;
                 padding: 0;
                 border-radius: 0;
             }
-            
+
             .search-result-badge {
                 font-size: 0.625rem;
                 font-weight: 600;
@@ -1087,7 +1100,7 @@
                 text-transform: uppercase;
                 letter-spacing: 0.3px;
             }
-            
+
             .search-result-meta {
                 display: flex;
                 flex-wrap: wrap;
@@ -1095,34 +1108,34 @@
                 font-size: 0.75rem;
                 margin-bottom: 6px;
             }
-            
+
             .search-result-meta span {
                 display: inline-flex;
                 align-items: center;
                 gap: 5px;
             }
-            
+
             .search-result-meta i {
                 font-size: 0.6875rem;
                 opacity: 0.8;
             }
-            
+
             .search-result-category {
                 color: #666;
                 background: rgba(0, 0, 0, 0.04);
                 padding: 2px 8px;
                 border-radius: 4px;
             }
-            
+
             .search-result-fee {
                 color: #06a77d;
                 font-weight: 600;
             }
-            
+
             .search-result-time {
                 color: #0066cc;
             }
-            
+
             .search-result-office {
                 font-size: 0.75rem;
                 color: #777;
@@ -1130,13 +1143,13 @@
                 display: flex;
                 align-items: center;
             }
-            
+
             .search-result-office i {
                 margin-right: 6px;
                 font-size: 0.6875rem;
                 color: #0032a0;
             }
-            
+
             .search-result-desc {
                 font-size: 0.8125rem;
                 color: #666;
@@ -1145,31 +1158,31 @@
                 text-overflow: ellipsis;
                 line-height: 1.4;
             }
-            
+
             .search-no-results {
                 padding: 32px 24px;
                 text-align: center;
                 color: #666;
             }
-            
+
             .search-no-results i {
                 font-size: 2.5rem;
                 color: rgba(0, 50, 160, 0.2);
                 margin-bottom: 12px;
                 display: block;
             }
-            
+
             .search-no-results p {
                 margin: 0 0 6px;
                 font-weight: 600;
                 color: #333;
             }
-            
+
             .search-no-results small {
                 color: #888;
                 font-size: 0.8125rem;
             }
-            
+
             .search-keyboard-hint {
                 display: flex;
                 align-items: center;
@@ -1182,7 +1195,7 @@
                 color: #888;
                 border-radius: 0 0 16px 16px;
             }
-            
+
             .search-keyboard-hint kbd {
                 display: inline-flex;
                 align-items: center;
@@ -1200,7 +1213,7 @@
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
                 margin: 0 2px;
             }
-            
+
             .search-footer {
                 display: flex;
                 align-items: center;
@@ -1212,54 +1225,54 @@
                 color: #888;
                 border-radius: 0 0 16px 16px;
             }
-            
+
             .search-footer-count {
                 font-weight: 500;
             }
-            
+
             .search-footer-powered {
                 display: flex;
                 align-items: center;
                 gap: 4px;
             }
-            
+
             .search-footer-powered i {
                 color: #0032a0;
             }
-            
+
             @media (max-width: 575px) {
                 .search-autocomplete {
                     border-radius: 12px;
                     margin-top: 6px;
                 }
-                
+
                 .search-filters {
                     padding: 10px 12px;
                     gap: 5px;
                     border-radius: 12px 12px 0 0;
                 }
-                
+
                 .search-filter-btn {
                     padding: 5px 12px;
                     font-size: 0.6875rem;
                 }
-                
+
                 .search-result-meta {
                     gap: 8px;
                 }
-                
+
                 .search-result-item {
                     padding: 12px 14px;
                 }
-                
+
                 .search-suggestion-item {
                     padding: 10px 14px;
                 }
-                
+
                 .search-keyboard-hint {
                     display: none;
                 }
-                
+
                 .search-footer {
                     border-radius: 0 0 12px 12px;
                 }
@@ -1293,6 +1306,7 @@
       getRecentSearches,
       getSearchAnalytics,
       trackSearch,
+      resolveResultUrl,
     };
   }
 
@@ -1305,6 +1319,7 @@
       getSearchAnalytics,
       trackSearch,
       clearRecentSearches,
+      resolveResultUrl,
     };
   }
 })();

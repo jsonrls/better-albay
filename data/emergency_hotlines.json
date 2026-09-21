@@ -1,9 +1,211 @@
 {
-  "_source": "https://ehotlines.e.gov.ph/",
-  "hotlines": [
-    {
-      "office": "National emergency",
-      "number": "911"
-    }
-  ]
+  "title": "ALBAY HOTLINES",
+  "updated_as_of": "2025-11-08",
+  "notes": [
+    "This is a running post; you may refresh this for an update.",
+    "In case your respective offices change numbers, kindly inform the Albay PIO for updating purposes"
+  ],
+  "hotlines": {
+    "PDRRMC": [
+      {
+        "name": "APSEMO",
+        "numbers": ["0954 419 9935"]
+      },
+      {
+        "name": "Albay EMS",
+        "numbers": ["0947 570 0332"]
+      },
+      {
+        "name": "PAGASA",
+        "numbers": ["0977 145 8474"]
+      },
+      {
+        "name": "Provincial Health Office",
+        "numbers": ["(052) 437 8150"]
+      },
+      {
+        "name": "Philippine Red Cross Albay- Legazpi City Chapter",
+        "numbers": ["(052) 742-2199"]
+      }
+    ],
+    "LGU_Quick_Response_Team": [
+      {
+        "municipality_or_city": "Tiwi",
+        "details": [
+          { "subdivision": "Centro", "number": "0917-850-3047" },
+          { "subdivision": "Upland", "number": "0917-849-2508" }
+        ]
+      },
+      {
+        "municipality_or_city": "Guinobatan",
+        "unit": "Ambulance",
+        "numbers": ["0960 339 0381", "0950 937 5110"]
+      },
+      {
+        "municipality_or_city": "Polangui",
+        "numbers": ["0985 212 2565", "0927 755 5625"]
+      },
+      {
+        "municipality_or_city": "Camalig",
+        "numbers": ["0915 621 5063", "0929 613 9296"]
+      },
+      {
+        "municipality_or_city": "Libon",
+        "numbers": ["0917 864 1084"]
+      },
+      {
+        "municipality_or_city": "Oas",
+        "numbers": ["0947 385 7183", "0916 689 0123"]
+      },
+      {
+        "municipality_or_city": "Malinao",
+        "numbers": ["0927 186 9927"]
+      },
+      {
+        "municipality_or_city": "Ligao City",
+        "numbers": ["0995 400 4711"]
+      },
+      {
+        "municipality_or_city": "Sto Domingo",
+        "numbers": ["0910 153 6047"]
+      },
+      {
+        "municipality_or_city": "Bacacay",
+        "numbers": ["0930 780 4057"]
+      },
+      {
+        "municipality_or_city": "Manito",
+        "numbers": ["0985 215 3692"]
+      }
+    ],
+    "Rural_Health_Unit": [
+      { "municipality_or_city": "Bacacay", "numbers": ["0908 571 5110"] },
+      { "municipality_or_city": "Polangui", "numbers": ["0915 262 5978"] },
+      { "municipality_or_city": "Camalig", "numbers": ["09097442937", "09701169393"] },
+      { "municipality_or_city": "Libon", "numbers": ["0927 465 0937"] },
+      { "municipality_or_city": "Daraga", "numbers": ["052 826 0405"] },
+      { "municipality_or_city": "Rapu-Rapu", "numbers": ["0976 340 0112"] },
+      { "municipality_or_city": "Malilipot", "numbers": ["0918 036 5264"] }
+    ],
+    "MDRRMO": [
+      { "municipality_or_city": "Bacacay", "numbers": ["0995 488 7681", "0928 1678 494"] },
+      {
+        "municipality_or_city": "Camalig",
+        "numbers": ["0927 974 4966", "0963 007 4854", "0920 234 0738"]
+      },
+      { "municipality_or_city": "Daraga", "numbers": ["0921 414 1927", "0927 490 1545"] },
+      { "municipality_or_city": "Jovellar", "numbers": ["0977 801 4045"] },
+      { "municipality_or_city": "Libon", "numbers": ["0977 840 1884"] },
+      { "municipality_or_city": "Malilipot", "numbers": ["0927 838 4310"] },
+      { "municipality_or_city": "Malinao", "numbers": ["0968 292 9228"] },
+      { "municipality_or_city": "Manito", "numbers": ["0970 491 3361"] },
+      { "municipality_or_city": "Oas", "numbers": ["0928 980 0909"] },
+      { "municipality_or_city": "Pioduran", "numbers": ["0966 395 6804"] },
+      { "municipality_or_city": "Polangui", "numbers": ["0961 951 2959"] },
+      { "municipality_or_city": "Rapu-rapu", "numbers": ["0907 363 0504"] },
+      { "municipality_or_city": "Sto. Domingo", "numbers": ["0997 996 8822"] },
+      { "municipality_or_city": "Guinobatan", "numbers": ["0950 937 5110"] },
+      { "municipality_or_city": "Tiwi", "numbers": ["0917-861-3176"] }
+    ],
+    "CDRRMO": [
+      { "city": "Legazpi City", "numbers": ["0977 772 3909", "911"] },
+      { "city": "Ligao City", "numbers": ["0956 635 2627", "0962 289 9037"] },
+      {
+        "city": "Tabaco City",
+        "numbers": ["0995 290 5288", "0939 782 9833", "0909 224 5858", "0999 475 8582"]
+      }
+    ],
+    "Office_of_the_City_Municipal_Mayor": [
+      { "municipality_or_city": "Guinobatan", "numbers": ["0936 999 6974", "0916 599 4377"] },
+      { "municipality_or_city": "Oas", "numbers": ["0919 605 1792"] },
+      { "municipality_or_city": "Daraga", "numbers": ["0962 314 0957", "0916 689 1413"] },
+      { "municipality_or_city": "Tabaco City", "numbers": ["0998 999 0135", "0977 824 6736"] },
+      { "municipality_or_city": "Sto. Domingo", "numbers": ["0927 443 1413"] },
+      { "municipality_or_city": "Malilipot", "numbers": ["0915 352 1064"] },
+      { "municipality_or_city": "Bacacay", "numbers": ["0947 836 4313", "0927 627 5161"] },
+      { "municipality_or_city": "Camalig", "numbers": ["0926 742 8548"] }
+    ],
+    "Hospitals": [
+      { "name": "ACE Medical Center - Legazpi", "numbers": ["0917 135 7907", "0920 960 6844"] },
+      {
+        "name": "Albay Doctors' Hospital, Inc.",
+        "numbers": ["(052) 480 8747", "0998 546 9453", "09453414732"]
+      },
+      { "name": "Bicol Regional Hospital and Medical Center", "numbers": ["(052) 732 5555"] },
+      { "name": "Daraga Doctors' Hospital", "numbers": ["0917 700 2950"] },
+      { "name": "Estevez Memorial Hospital, Inc.", "numbers": ["(052) 480 4021"] },
+      {
+        "name": "Josefina Belmonte Duran Albay Provincial Hospital",
+        "numbers": ["(052) 736 0503"]
+      },
+      { "name": "Tanchuling General Hospital", "numbers": ["(052) 480 6302", "0977 377 4791"] },
+      { "name": "UST - Legazpi Hospital", "numbers": ["0917 626 3621"] },
+      { "name": "Ziga Hospital", "numbers": ["(052) 487 5903"] }
+    ],
+    "BFP": [
+      { "station": "BFP Regional Office", "numbers": ["0917 113 9507"] },
+      { "station": "OPFM Albay", "numbers": ["0920 944 1582", "0997 772 4383"] },
+      { "station": "Bacacay", "numbers": ["0931 950 2490", "0945 478 5544"] },
+      { "station": "Camalig", "numbers": ["0917 118 4146", "0999 226 5345"] },
+      { "station": "Daraga", "numbers": ["0906 564 8793"] },
+      { "station": "Guinobatan", "numbers": ["0945 295 2906", "0963 041 5325"] },
+      { "station": "Jovellar", "numbers": ["0998 577 7022", "0920 944 2507"] },
+      { "station": "Polangui", "numbers": ["0954 182 0095", "0951 112 8688"] },
+      { "station": "Rapu-Rapu", "numbers": ["0917 113 0185"] },
+      { "station": "Sto. Domingo", "numbers": ["0927 846 8668", "0921 745 2459"] },
+      { "station": "Legazpi City", "numbers": ["0917 185 9984", "0919 992 5484"] },
+      { "station": "Tabaco City", "numbers": ["0948 850 6630", "0915 837 5720"] },
+      { "station": "Tiwi", "numbers": ["0920 984 3746", "0915 185 1417"] },
+      { "station": "Oas", "numbers": ["0917 701 7938", "0917 115 6518"] },
+      { "station": "Manito", "numbers": ["0918 317 7099"] },
+      { "station": "Malinao", "numbers": ["0977 382 2980", "0950 637 2491"] },
+      { "station": "Libon", "numbers": ["0933 814 6379"] },
+      { "station": "Malilipot", "numbers": ["0966 819 5333"] },
+      { "station": "Ligao City", "numbers": ["0963 702 6628", "0928 507 1914"] },
+      { "station": "Pio Duran", "numbers": ["0936 921 6586", "0931 929 3408"] }
+    ],
+    "PNP": [
+      { "station": "Albay PPO TOC", "numbers": ["0998 598 5925"] },
+      { "station": "Bacacay", "numbers": ["0998 598 5935"] },
+      { "station": "Camalig", "numbers": ["0998 598 5940"] },
+      { "station": "Legazpi", "numbers": ["0998 598 5926"] },
+      { "station": "Daraga", "numbers": ["0998 598 5937"] },
+      { "station": "Guinobatan", "numbers": ["0998 598 5941"] },
+      { "station": "Jovellar", "numbers": ["0998 598 5942"] },
+      { "station": "Libon", "numbers": ["0998 598 5945"] },
+      { "station": "Sto. Domingo", "numbers": ["0998 598 5936"] },
+      { "station": "Oas", "numbers": ["0998 598 5943"] },
+      { "station": "Ligao City", "numbers": ["0998 598 5928"] },
+      { "station": "Malilipot", "numbers": ["0998 598 5934"] },
+      { "station": "Manito", "numbers": ["0998 598 5939"] },
+      { "station": "Pio Duran", "numbers": ["0998 598 5946"] },
+      { "station": "Malinao", "numbers": ["0998 598 5933"] },
+      { "station": "Rapu-Rapu", "numbers": ["0998 598 5938"] },
+      { "station": "Polangui", "numbers": ["0998 598 5944"] },
+      { "station": "Tabaco City", "numbers": ["0998 598 5930"] },
+      { "station": "Tiwi", "numbers": ["0998 598 5932"] }
+    ],
+    "Coast_Guard": [
+      { "unit": "Coast Guard District Bicol", "numbers": ["0977 612 1237", "0929 524 2099"] },
+      { "unit": "Coast Guard Station Albay", "numbers": ["0927 564 0600"] },
+      { "unit": "Coast Guard Station Cam Norte", "numbers": ["0968 280 5965"] },
+      { "unit": "Coast Guard Station Cam Sur", "numbers": ["0946 353 9906"] },
+      { "unit": "Coast Guard Station Catanduanes", "numbers": ["0947 831 0880"] },
+      { "unit": "Coast Guard Station Masbate", "numbers": ["0963 777 7190"] },
+      { "unit": "Coast Guard Station Sorsogon", "numbers": ["0909 114 1877"] },
+      { "unit": "Coast Guard Sub-Station Bacacay", "numbers": ["09673509009"] },
+      { "unit": "Coast Guard Sub-Station Tabaco City", "numbers": ["0963 375 3396"] },
+      { "unit": "Coast Guard Sub-Station Rapu-Rapu", "numbers": ["0977-421-8993"] },
+      { "unit": "Coast Guard Sub-Station Sto. Domingo", "numbers": ["0927 670 1530"] },
+      { "unit": "Coast Guard Sub-Station Pio Duran", "numbers": ["09706675457"] }
+    ],
+    "C_MSWDO": [
+      { "municipality_or_city": "Daraga", "numbers": ["0907 480 3972", "0936 573 8653"] },
+      { "municipality_or_city": "Ligao City", "numbers": ["0954 346 3393", "0930 643 1778"] },
+      { "municipality_or_city": "Rapu-Rapu", "numbers": ["0908 178 8781"] },
+      { "municipality_or_city": "Polangui", "numbers": ["0995 861 3754"] },
+      { "municipality_or_city": "Camalig", "numbers": ["0995 585 6483", "0917 112 4971"] },
+      { "municipality_or_city": "Bacacay", "numbers": ["0916 743 8847"] }
+    ]
+  }
 }

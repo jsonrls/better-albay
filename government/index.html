@@ -15,14 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Community civic information for Albay, Philippines. Verify current government information with the responsible office."
+      content="Official government structure and leadership directory for the Province of Albay. Meet Governor Noel E. Rosal, Vice Governor Farida 'Diday' Co, Congressional Representatives, Sangguniang Panlalawigan members, and elected officials across 18 cities and municipalities."
     />
-
-    <!-- SEO Meta Tags -->
     <meta name="author" content="Jayson (jsonrls)" />
     <meta
       name="keywords"
-      content="Community civic information for Albay, Philippines. Verify current government information with the responsible office."
+      content="Albay provincial government, Albay officials, Governor Noel Rosal, Vice Governor Farida Co, Sangguniang Panlalawigan, Albay congress, Legazpi City, Ligao City, Tabaco City, Albay municipalities, Albay directory, 2025-2028 officials"
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://betteralbay.org/government/" />
@@ -30,10 +28,10 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betteralbay.org/government/" />
-    <meta property="og:title" content="Government Officials & Structure | BetterAlbay.org" />
+    <meta property="og:title" content="Government Structure & Officials | BetterAlbay.org" />
     <meta
       property="og:description"
-      content="Community civic information for Albay, Philippines. Verify current government information with the responsible office."
+      content="Official directory of the Province of Albay: Congressional Representatives, Governor Noel E. Rosal, Vice Governor Farida 'Diday' Co, Sangguniang Panlalawigan board members, and 18 cities and municipalities."
     />
     <meta
       property="og:image"
@@ -54,38 +52,320 @@
       name="twitter:image"
       content="https://betteralbay.org/assets/images/banners/opengraph.png"
     />
+    <meta name="twitter:title" content="Government Structure & Officials | BetterAlbay.org" />
+    <meta
+      name="twitter:description"
+      content="Official directory of the Province of Albay: Congressional Representatives, Governor Noel E. Rosal, Vice Governor Farida 'Diday' Co, Sangguniang Panlalawigan board members, and 18 cities and municipalities."
+    />
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#1a5f2a" />
+    <meta name="theme-color" content="#0032a0" />
 
-    <title>Government Officials & Structure | BetterAlbay.org</title>
+    <title>Government Structure &amp; Officials | BetterAlbay.org</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/logo/favicon.svg" />
+    <link rel="apple-touch-icon" href="../assets/images/logo/favicon.ico" />
 
-    <!-- Fonts -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://betteralbay.org/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Government"
+          }
+        ]
+      }
+    </script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/directory.css?v=d21ccc6184" />
+
+    <style>
+      :root {
+        --color-primary-solid: var(--color-primary, #0032a0);
+        --color-border: #e2e8f0;
+        --color-bg-muted: #f1f5f9;
+        --radius-pill: 50px;
+        --radius-md: 8px;
+        --radius-sm: 6px;
+        --fw-medium: 500;
+      }
+      .gov-section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--color-primary-solid);
+        color: #fff;
+        padding: 8px 20px;
+        border-radius: var(--radius-pill);
+        font-size: 0.875rem;
+        font-weight: var(--fw-medium);
+        margin-bottom: var(--spacing-sm);
+      }
+      .district-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-bottom: var(--spacing-lg);
+      }
+      .district-btn {
+        padding: 8px 18px;
+        border-radius: var(--radius-pill);
+        border: 1px solid var(--color-border);
+        background: var(--color-white);
+        color: var(--color-text);
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .district-btn:hover {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+      }
+      .district-btn.active {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+        color: #fff;
+      }
+      .appointed-strip {
+        margin-top: var(--spacing-lg);
+        padding: 16px 20px;
+        background: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .appointed-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .appointed-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(0, 50, 160, 0.08);
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+      }
+      .rep-card {
+        background: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: 16px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .rep-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+        border-color: rgba(0, 50, 160, 0.2);
+      }
+      .rep-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        background: rgba(0, 50, 160, 0.1);
+        color: var(--color-primary);
+      }
+      .rep-name {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+        color: var(--color-text);
+      }
+      .rep-jurisdiction {
+        font-size: 0.875rem;
+        color: var(--color-text-light);
+        line-height: 1.5;
+      }
+      .rep-verification {
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
+        padding-top: 8px;
+        margin-top: auto;
+      }
+      .councilors-collapse {
+        margin-top: 10px;
+        padding-top: 12px;
+        border-top: 1px dashed var(--color-border);
+        width: 100%;
+      }
+      details.councilors-collapse summary.council-toggle-btn {
+        list-style: none;
+        cursor: pointer;
+        user-select: none;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      details.councilors-collapse summary.council-toggle-btn::-webkit-details-marker,
+      details.councilors-collapse summary.council-toggle-btn::marker {
+        display: none;
+      }
+      details.councilors-collapse[open] .toggle-icon {
+        transform: rotate(180deg);
+      }
+      .toggle-icon {
+        transition: transform 0.2s ease;
+        margin-left: 2px;
+      }
+      .councilor-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 8px;
+      }
+      .councilor-tag {
+        font-size: 0.8125rem;
+        background: var(--color-bg-alt);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        padding: 4px 10px;
+        border-radius: 6px;
+        color: var(--color-text);
+      }
+      .councilor-tag.match {
+        background: #fef3c7;
+        border-color: #f59e0b;
+        font-weight: 600;
+      }
+      .council-toggle-btn {
+        background: var(--color-bg-alt);
+        border: 1px solid rgba(0, 50, 160, 0.18);
+        color: var(--color-primary);
+        padding: 9px 14px;
+        border-radius: 8px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        box-sizing: border-box;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+      }
+      .council-toggle-btn:hover {
+        background: rgba(0, 50, 160, 0.08);
+        border-color: var(--color-primary);
+      }
+      .lgu-links {
+        display: flex;
+        gap: 8px;
+        margin-top: auto;
+        width: 100%;
+      }
+      .lgu-links a {
+        flex: 1 1 0;
+        min-width: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: rgba(0, 50, 160, 0.07);
+        color: var(--color-primary);
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+      }
+      .lgu-links a:hover {
+        background: rgba(0, 50, 160, 0.14);
+      }
+      .lead-pair {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .lead-role {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.875rem;
+        color: var(--color-text);
+        background: var(--color-bg-alt);
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      .lead-role strong {
+        color: var(--color-text);
+      }
+      .sp-presiding {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 50, 160, 0.05) 0%,
+          rgba(0, 119, 190, 0.05) 100%
+        );
+        border: 1px solid rgba(0, 50, 160, 0.15);
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: var(--spacing-lg);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    </style>
   </head>
 
   <body>
@@ -97,7 +377,8 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <!-- prettier-ignore -->
+          <div class="hotline-items"><a href="tel:911" class="hotline-item"><span data-i18n="hotline-bar-national">National emergency: 911</span></a><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a><a href="/contact/#emergency-hotlines" class="hotline-item"><span data-i18n="hotline-bar-all">All Albay hotlines</span></a></div>
         </div>
       </div>
     </div>
@@ -111,6 +392,8 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Province of Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -119,7 +402,13 @@
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="gov-certificates">Certificates</a>
@@ -156,7 +445,13 @@
             <li><a href="./" class="active" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../legislative/ordinance-framework" data-i18n="gov-ordinance-framework"
@@ -177,15 +472,32 @@
 
         <div class="header-actions">
           <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
+            <button
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="en"
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="fil"
+              aria-label="Switch to Filipino"
+            >
+              FIL
+            </button>
+            <button
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="bcl"
+              aria-label="Switch to Bikol"
+            >
+              BCL
+            </button>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- Real-Time Info Bar -->
     <!-- Real-Time Info Bar -->
     <div class="info-bar" role="complementary" aria-label="Real-time information">
       <div class="container">
@@ -213,14 +525,2240 @@
       </div>
     </div>
 
-    <main id="main-content"><section class="section"><div class="container"><h1>Government Structure &amp; Officials</h1><p>An up-to-date Albay officials directory is not available on this site yet.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p><ul><li><a href="../service-details/municipal-civil-registrar">Municipal Civil Registrar</a></li><li><a href="../service-details/municipal-treasurer">Municipal Treasurer</a></li><li><a href="../service-details/municipal-engineering">Municipal Engineering</a></li><li><a href="../service-details/mswdo-services">Mswdo Services</a></li><li><a href="../service-details/municipal-agriculture">Municipal Agriculture</a></li><li><a href="../service-details/municipal-planning">Municipal Planning</a></li><li><a href="../service-details/municipal-assessor">Municipal Assessor</a></li><li><a href="../service-details/municipal-accounting">Municipal Accounting</a></li><li><a href="../service-details/municipal-budget">Municipal Budget</a></li><li><a href="../service-details/municipal-general-services">Municipal General Services</a></li><li><a href="../service-details/business-permits-licensing">Business Permits Licensing</a></li><li><a href="../service-details/human-resource-management">Human Resource Management</a></li><li><a href="../service-details/seedo-public-market">Seedo Public Market</a></li><li><a href="../service-details/seedo-slaughterhouse">Seedo Slaughterhouse</a></li></ul></div></section></main>
+    <main id="main-content">
+      <!-- Breadcrumbs -->
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../" data-i18n="nav-home">Home</a> <span>/</span>
+          <span aria-current="page" data-i18n="nav-government">Government</span>
+        </nav>
+      </div>
 
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-content">
+            <span class="page-header-badge">
+              <i class="bi bi-building-fill"></i>
+              <span data-i18n="gov-page-badge">Government Directory</span>
+            </span>
+            <h1 data-i18n="gov-page-title">Government Structure &amp; Officials</h1>
+            <p class="page-header-desc" data-i18n="gov-page-desc">
+              Meet the leadership and offices serving Albay
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stat Strip -->
+      <section class="section dir-stats-section" aria-label="Government coverage summary">
+        <div class="container">
+          <div class="dir-stats">
+            <div class="dir-stat">
+              <span class="dir-stat-value">3</span>
+              <span class="dir-stat-label" data-i18n="gov-stat-districts"
+                >Congressional Districts</span
+              >
+            </div>
+            <div class="dir-stat">
+              <span class="dir-stat-value">2</span>
+              <span class="dir-stat-label" data-i18n="gov-stat-execs">Provincial Executives</span>
+            </div>
+            <div class="dir-stat">
+              <span class="dir-stat-value">12</span>
+              <span class="dir-stat-label" data-i18n="gov-stat-sp">Provincial Board Members</span>
+            </div>
+            <div class="dir-stat">
+              <span class="dir-stat-value">18</span>
+              <span class="dir-stat-label" data-i18n="gov-stat-lgus"
+                >Cities &amp; Municipalities</span
+              >
+            </div>
+            <div class="dir-stat">
+              <span class="dir-stat-value">205+</span>
+              <span class="dir-stat-label" data-i18n="gov-stat-officials"
+                >Documented Officials</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scope and Limitations Note -->
+      <section class="section" style="padding-top: 0; padding-bottom: var(--spacing-md)">
+        <div class="container">
+          <div class="dir-note">
+            <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+            <div>
+              <strong>Scope &amp; Data Verification Notice (2026-09-19).</strong> This directory is
+              sourced from <code>data/officials.json</code>, consolidating the 20th Congress House
+              of Representatives roster, official reporting on the Provincial Government of Albay,
+              and local government rosters for the 2025–2028 term. For official COMELEC records and
+              gazetted appointments, verify directly with the respective local government unit, the
+              <a href="https://www.comelec.gov.ph/" target="_blank" rel="noopener noreferrer"
+                >Commission on Elections</a
+              >, or the
+              <a href="https://dilg.gov.ph/" target="_blank" rel="noopener noreferrer"
+                >Department of the Interior and Local Government (DILG)</a
+              >. Looking for village-level data? Visit the
+              <a href="barangays.html">Albay 720-Barangay Directory</a>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1: Provincial Executive Leadership -->
+      <section class="section" id="provincial-executive" style="background: var(--color-bg-alt)">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
+            <span class="gov-section-badge">
+              <i class="bi bi-star-fill"></i>
+              <span data-i18n="gov-section-exec">Executive Branch</span>
+            </span>
+            <h2
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov-section-exec-title"
+            >
+              Provincial Government Leadership
+            </h2>
+            <p style="color: var(--color-text-light)" data-i18n="gov-section-exec-desc">
+              The executive leadership steering the Provincial Government of Albay (PGA)
+            </p>
+          </div>
+
+          <div class="grid grid-2" style="gap: var(--spacing-lg)">
+            <div class="executive-card">
+              <div class="executive-card-header">
+                <span class="executive-badge">Provincial Governor</span>
+                <h3 class="executive-name">Hon. Noel E. Rosal</h3>
+              </div>
+              <div class="executive-card-body">
+                <div class="executive-contacts">
+                  <a href="mailto:pgasecretariat@gmail.com">
+                    <i class="bi bi-envelope"></i> <span>pgasecretariat@gmail.com</span>
+                  </a>
+                  <a href="tel:0527426377">
+                    <i class="bi bi-telephone"></i> <span>(052) 742-6377</span>
+                  </a>
+                  <span>
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Albay Provincial Capitol, Legazpi City</span>
+                  </span>
+                  <span> <i class="bi bi-clock"></i> <span>Mon–Fri: 8:00 AM – 5:00 PM</span> </span>
+                </div>
+                <div
+                  class="rep-verification"
+                  style="margin-top: 12px; font-size: 0.75rem; color: var(--color-text-light)"
+                >
+                  <i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified
+                  in reporting available by September 2026 in prior research.
+                </div>
+              </div>
+            </div>
+            <div class="executive-card">
+              <div class="executive-card-header">
+                <span class="executive-badge">Provincial Vice Governor</span>
+                <h3 class="executive-name">Hon. Farida “Diday” S. Co</h3>
+              </div>
+              <div class="executive-card-body">
+                <div class="executive-contacts">
+                  <a href="mailto:vicepgasecretariat@gmail.com">
+                    <i class="bi bi-envelope"></i> <span>vicepgasecretariat@gmail.com</span>
+                  </a>
+                  <a href="tel:09268284392">
+                    <i class="bi bi-phone"></i> <span>(0926) 828-4392</span>
+                  </a>
+                  <span>
+                    <i class="bi bi-geo-alt"></i> <span>Office of the Vice Governor, Capitol</span>
+                  </span>
+                  <span> <i class="bi bi-clock"></i> <span>Mon–Fri: 8:00 AM – 5:00 PM</span> </span>
+                </div>
+                <div
+                  class="rep-verification"
+                  style="margin-top: 12px; font-size: 0.75rem; color: var(--color-text-light)"
+                >
+                  <i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified
+                  in reporting available by September 2026 in prior research.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="appointed-strip">
+            <div class="appointed-item">
+              <div class="appointed-icon"><i class="bi bi-person-badge"></i></div>
+              <div>
+                <strong style="display: block; color: var(--color-text)"
+                  >Engr. Raul E. Rosal</strong
+                >
+                <span style="font-size: 0.8125rem; color: var(--color-text-light)"
+                  >Provincial Administrator</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.75rem;
+                    color: var(--color-text-light);
+                    margin-top: 2px;
+                  "
+                  ><i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified
+                  in January 2026 reporting; status as of September 19, 2026 not independently
+                  confirmed.</span
+                >
+              </div>
+            </div>
+            <div class="appointed-item">
+              <div class="appointed-icon"><i class="bi bi-person-badge"></i></div>
+              <div>
+                <strong style="display: block; color: var(--color-text)"
+                  >Dr. Karl Hegel M. Ante</strong
+                >
+                <span style="font-size: 0.8125rem; color: var(--color-text-light)"
+                  >Officer-in-Charge, Provincial Health Office</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 0.75rem;
+                    color: var(--color-text-light);
+                    margin-top: 2px;
+                  "
+                  ><i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified
+                  in September 2026 reporting.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Congressional Representatives -->
+      <section class="section" id="congressional-representatives">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
+            <span class="gov-section-badge">
+              <i class="bi bi-bank"></i>
+              <span data-i18n="gov-section-congress-badge">National Representation</span>
+            </span>
+            <h2
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov-section-congress-title"
+            >
+              Congressional Representatives
+            </h2>
+            <p style="color: var(--color-text-light)" data-i18n="gov-section-congress-desc">
+              Albay members of the House of Representatives (20th Congress of the Philippines)
+            </p>
+          </div>
+
+          <div class="grid grid-3" style="gap: var(--spacing-lg)">
+            <div class="rep-card">
+              <div>
+                <span class="rep-badge">District 1</span>
+                <h3 class="rep-name">Hon. Cielo Krisel Lagman</h3>
+                <span style="font-size: 0.875rem; font-weight: 600; color: var(--color-primary)"
+                  >Representative</span
+                >
+              </div>
+              <p class="rep-jurisdiction">
+                <i class="bi bi-geo-alt" style="color: var(--color-primary)"></i>
+                <strong>Coverage:</strong> Tiwi, Malinao, Tabaco City, Malilipot, Santo Domingo,
+                Bacacay
+              </p>
+              <div class="rep-verification">
+                <i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified in
+                the official House of Representatives directory for the 20th Congress in prior
+                research.
+              </div>
+            </div>
+            <div class="rep-card">
+              <div>
+                <span class="rep-badge">District 2</span>
+                <h3 class="rep-name">Hon. Carlos Andes Loria</h3>
+                <span style="font-size: 0.875rem; font-weight: 600; color: var(--color-primary)"
+                  >Representative</span
+                >
+              </div>
+              <p class="rep-jurisdiction">
+                <i class="bi bi-geo-alt" style="color: var(--color-primary)"></i>
+                <strong>Coverage:</strong> Legazpi City, Camalig, Daraga, Manito, Rapu-Rapu
+              </p>
+              <div class="rep-verification">
+                <i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified in
+                the official House of Representatives directory for the 20th Congress in prior
+                research.
+              </div>
+            </div>
+            <div class="rep-card">
+              <div>
+                <span class="rep-badge">District 3</span>
+                <h3 class="rep-name">Hon. Adrian E. Salceda</h3>
+                <span style="font-size: 0.875rem; font-weight: 600; color: var(--color-primary)"
+                  >Representative</span
+                >
+              </div>
+              <p class="rep-jurisdiction">
+                <i class="bi bi-geo-alt" style="color: var(--color-primary)"></i>
+                <strong>Coverage:</strong> Ligao City, Guinobatan, Jovellar, Libon, Oas, Pio Duran,
+                Polangui
+              </p>
+              <div class="rep-verification">
+                <i class="bi bi-shield-check" style="color: var(--color-success)"></i> Identified in
+                the official House of Representatives directory for the 20th Congress in prior
+                research.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Sangguniang Panlalawigan Members -->
+      <section class="section" id="provincial-board" style="background: var(--color-bg-alt)">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
+            <span class="gov-section-badge">
+              <i class="bi bi-people-fill"></i>
+              <span data-i18n="gov-section-leg">Legislative Branch</span>
+            </span>
+            <h2
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov-section-sp-heading"
+            >
+              Sangguniang Panlalawigan Members
+            </h2>
+            <p style="color: var(--color-text-light)" data-i18n="gov-section-sp-desc">
+              Provincial board members enacting ordinances, resolutions, and budgets for Albay
+            </p>
+          </div>
+
+          <div class="sp-presiding">
+            <div style="display: flex; align-items: center; gap: 12px">
+              <div class="appointed-icon" style="background: var(--color-primary); color: #fff">
+                <i class="bi bi-hammer"></i>
+              </div>
+              <div>
+                <strong style="font-size: 1.125rem; color: var(--color-text)"
+                  >Hon. Farida “Diday” S. Co</strong
+                >
+                <div
+                  style="font-size: 0.8125rem; color: var(--color-text-light)"
+                  data-i18n="gov-vgov-presiding-desc"
+                >
+                  Vice Governor &bull; Ex-officio Presiding Officer of the Sangguniang Panlalawigan
+                </div>
+              </div>
+            </div>
+            <span
+              class="pill pill-city"
+              style="background: var(--color-primary); color: #fff"
+              data-i18n="gov-badge-presiding-officer"
+              >Presiding Officer</span
+            >
+          </div>
+
+          <div class="district-nav" role="tablist" aria-label="Provincial board district filter">
+            <button
+              type="button"
+              class="district-btn active"
+              data-sp-filter="all"
+              role="tab"
+              aria-selected="true"
+              data-i18n="gov-sp-filter-all"
+            >
+              All Seats (12)
+            </button>
+            <button
+              type="button"
+              class="district-btn"
+              data-sp-filter="1"
+              role="tab"
+              aria-selected="false"
+              data-i18n="gov-sp-filter-1"
+            >
+              1st District (3)
+            </button>
+            <button
+              type="button"
+              class="district-btn"
+              data-sp-filter="2"
+              role="tab"
+              aria-selected="false"
+              data-i18n="gov-sp-filter-2"
+            >
+              2nd District (3)
+            </button>
+            <button
+              type="button"
+              class="district-btn"
+              data-sp-filter="3"
+              role="tab"
+              aria-selected="false"
+              data-i18n="gov-sp-filter-3"
+            >
+              3rd District (4)
+            </button>
+            <button
+              type="button"
+              class="district-btn"
+              data-sp-filter="ex"
+              role="tab"
+              aria-selected="false"
+              data-i18n="gov-sp-filter-ex"
+            >
+              Ex-Officio &amp; Others (2)
+            </button>
+          </div>
+
+          <div id="sp-grid" class="grid grid-3" style="gap: var(--spacing-md)">
+            <div class="councilor-card sp-card" data-district="1">
+              <span class="councilor-badge">District 1 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Sheina Marie Onrubia-Dela Cruz
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 1
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="1">
+              <span class="councilor-badge">District 1 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. John Gio Ong Bongao
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 1
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="1">
+              <span class="councilor-badge">District 1 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Marian Caroline Ziga-So
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 1
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="2">
+              <span class="councilor-badge">District 2 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Melissa Abadeza-Armedilla
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 2
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="2">
+              <span class="councilor-badge">District 2 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Glenn Casulla
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 2
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="2">
+              <span class="councilor-badge">District 2 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Harold O. Imperial
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 2
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="3">
+              <span class="councilor-badge">District 3 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Juan Miguel Ricardo Salceda
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 3
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="3">
+              <span class="councilor-badge">District 3 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Brayan Arandia
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 3
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="3">
+              <span class="councilor-badge">District 3 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Emmanuel Ribaya
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 3
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="3">
+              <span class="councilor-badge">District 3 Board Member</span>
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Wilfredo Maronilla
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; District 3
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in the
+                2025 election results and 2025–2028 provincial board roster; individual September
+                2026 incumbency not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="ex">
+              <span
+                class="councilor-badge"
+                style="background: rgba(13, 148, 136, 0.1); color: #0d9488"
+                >Philippine Councilors League representative</span
+              >
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Patricia Gonzales-Alsua
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; Philippine Councilors League representative
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Listed in
+                prior research; current seat holder not independently confirmed.
+              </div>
+            </div>
+            <div class="councilor-card sp-card" data-district="ex">
+              <span
+                class="councilor-badge"
+                style="background: rgba(13, 148, 136, 0.1); color: #0d9488"
+                >Provincial Board Member</span
+              >
+              <h3 class="councilor-name" style="font-size: 1.125rem; margin: 8px 0 4px">
+                Hon. Milagros B. Bal
+              </h3>
+              <p
+                class="councilor-committees"
+                style="font-size: 0.8125rem; color: var(--color-text-light)"
+              >
+                Sangguniang Panlalawigan &bull; Provincial Board Member
+              </p>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: var(--color-text-light);
+                  border-top: 1px solid rgba(0, 0, 0, 0.05);
+                  padding-top: 6px;
+                  margin-top: 8px;
+                "
+              >
+                <i class="bi bi-check-circle" style="color: var(--color-success)"></i> Identified in
+                September 2026 reporting; exact seat category not established in prior research.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Cities & Municipalities Directory -->
+      <section class="section" id="lgu-officials-directory">
+        <div class="container">
+          <div class="text-center" style="margin-bottom: var(--spacing-xl)">
+            <span class="gov-section-badge">
+              <i class="bi bi-diagram-3-fill"></i>
+              <span data-i18n="gov-badge-local-governance">Local Governance</span>
+            </span>
+            <h2
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov-section-lgu-heading"
+            >
+              Cities &amp; Municipalities Directory
+            </h2>
+            <p style="color: var(--color-text-light)" data-i18n="gov-section-lgu-desc">
+              Elected Mayors, Vice Mayors, and Councilors across all 18 local government units of
+              Albay
+            </p>
+          </div>
+
+          <div class="dir-toolbar">
+            <div class="dir-toolbar-row">
+              <div class="dir-field dir-search-field">
+                <label class="dir-field-label" for="lgu-search-input" data-i18n="gov-search-label"
+                  >Search Directory</label
+                >
+                <div class="dir-search-input-wrap">
+                  <i class="bi bi-search" aria-hidden="true"></i>
+                  <input
+                    class="dir-input"
+                    id="lgu-search-input"
+                    type="search"
+                    placeholder="City, municipality, mayor, vice mayor, or councilor name…"
+                    data-i18n-placeholder="gov-search-placeholder"
+                    autocomplete="off"
+                    aria-describedby="lgu-results-count"
+                  />
+                </div>
+              </div>
+              <div class="dir-field dir-field-type">
+                <label
+                  class="dir-field-label"
+                  for="lgu-type-select"
+                  data-i18n="gov-filter-class-label"
+                  >LGU Classification</label
+                >
+                <select class="dir-select" id="lgu-type-select">
+                  <option value="all" data-i18n="gov-filter-all-lgus">All LGUs (18)</option>
+                  <option value="city" data-i18n="gov-filter-cities-only">Cities only (3)</option>
+                  <option value="municipality" data-i18n="gov-filter-mun-only">
+                    Municipalities only (15)
+                  </option>
+                </select>
+              </div>
+              <div class="dir-field dir-field-district">
+                <label
+                  class="dir-field-label"
+                  for="lgu-district-select"
+                  data-i18n="gov-filter-district-label"
+                  >District</label
+                >
+                <select class="dir-select" id="lgu-district-select">
+                  <option value="all" data-i18n="gov-filter-all-districts">
+                    All Districts (3)
+                  </option>
+                  <option value="1" data-i18n="gov-filter-d1-lgus">1st District (6 LGUs)</option>
+                  <option value="2" data-i18n="gov-filter-d2-lgus">2nd District (5 LGUs)</option>
+                  <option value="3" data-i18n="gov-filter-d3-lgus">3rd District (7 LGUs)</option>
+                </select>
+              </div>
+              <div class="dir-field dir-field-action">
+                <button type="button" class="btn btn-secondary btn-compact" id="lgu-reset-btn">
+                  <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+                  <span data-i18n="gov-btn-reset">Reset</span>
+                </button>
+              </div>
+            </div>
+            <div class="dir-toolbar-foot">
+              <p class="dir-count" id="lgu-results-count" role="status" aria-live="polite">
+                Showing 18 of 18 LGUs
+              </p>
+              <div class="dir-actions">
+                <a href="barangays.html" class="btn btn-secondary btn-compact"
+                  ><i class="bi bi-signpost-split"></i>
+                  <span data-i18n="gov-link-barangays">Albay 720 Barangays</span></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="dir-empty" id="lgu-empty-notice" hidden>
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <p data-i18n="gov-empty-notice">
+              No local government unit or official matches your filter criteria. Try adjusting the
+              search term or resetting the filters.
+            </p>
+          </div>
+
+          <div id="lgu-grid" class="lgu-grid">
+            <article
+              class="lgu-card"
+              data-name="Legazpi City"
+              data-type="city"
+              data-district="2"
+              data-corpus="legazpi city legazpi city cities sangguniang panlungsod capital provincial capital mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad hisham b. ismail luis felipe l. gutierrez vicente f. baltazar iii lourence m. beltran ismael b. buban iv alexander u. jao roberto rafael n. lucila ii joseph philip l. lee charlton s. lajara maria paz c. imperial alan o. rañola renato a. valladolid district 2 district2 2nd second district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark capital"><i class="bi bi-building"></i></div>
+                <div>
+                  <h3 class="lgu-name">Legazpi City</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-city">City</span>
+                    <span class="pill pill-capital">Capital</span>
+                    <span class="pill pill-code">District 2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>City Mayor: <strong>Hon. Hisham B. Ismail</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Luis Felipe L. Gutierrez</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="10" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (10)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="vicente f. baltazar iii"
+                    >Hon. Vicente F. Baltazar III</span
+                  >
+                  <span class="councilor-tag" data-official="lourence m. beltran"
+                    >Hon. Lourence M. Beltran</span
+                  >
+                  <span class="councilor-tag" data-official="ismael b. buban iv"
+                    >Hon. Ismael B. Buban IV</span
+                  >
+                  <span class="councilor-tag" data-official="alexander u. jao"
+                    >Hon. Alexander U. Jao</span
+                  >
+                  <span class="councilor-tag" data-official="roberto rafael n. lucila ii"
+                    >Hon. Roberto Rafael N. Lucila II</span
+                  >
+                  <span class="councilor-tag" data-official="joseph philip l. lee"
+                    >Hon. Joseph Philip L. Lee</span
+                  >
+                  <span class="councilor-tag" data-official="charlton s. lajara"
+                    >Hon. Charlton S. Lajara</span
+                  >
+                  <span class="councilor-tag" data-official="maria paz c. imperial"
+                    >Hon. Maria Paz C. Imperial</span
+                  >
+                  <span class="councilor-tag" data-official="alan o. rañola"
+                    >Hon. Alan O. Rañola</span
+                  >
+                  <span class="councilor-tag" data-official="renato a. valladolid"
+                    >Hon. Renato A. Valladolid</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Legazpi"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Ligao City"
+              data-type="city"
+              data-district="3"
+              data-corpus="ligao city ligao city cities sangguniang panlungsod  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad fernando v. gonzalez jaypee m. david viktoria shaine m. chua patricia g. alsua arnold p. revilla ii amado v. manlangit jr. felipe o. alday teodorico a. residilla jr. rey noel t. salceda esteban m. gonzales ana p. manlangit jona l. peñalosa district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-building"></i></div>
+                <div>
+                  <h3 class="lgu-name">Ligao City</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-city">City</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>City Mayor: <strong>Hon. Fernando V. Gonzalez</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Jaypee M. David</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="10" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (10)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="viktoria shaine m. chua"
+                    >Hon. Viktoria Shaine M. Chua</span
+                  >
+                  <span class="councilor-tag" data-official="patricia g. alsua"
+                    >Hon. Patricia G. Alsua</span
+                  >
+                  <span class="councilor-tag" data-official="arnold p. revilla ii"
+                    >Hon. Arnold P. Revilla II</span
+                  >
+                  <span class="councilor-tag" data-official="amado v. manlangit jr."
+                    >Hon. Amado V. Manlangit Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="felipe o. alday"
+                    >Hon. Felipe O. Alday</span
+                  >
+                  <span class="councilor-tag" data-official="teodorico a. residilla jr."
+                    >Hon. Teodorico A. Residilla Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="rey noel t. salceda"
+                    >Hon. Rey Noel T. Salceda</span
+                  >
+                  <span class="councilor-tag" data-official="esteban m. gonzales"
+                    >Hon. Esteban M. Gonzales</span
+                  >
+                  <span class="councilor-tag" data-official="ana p. manlangit"
+                    >Hon. Ana P. Manlangit</span
+                  >
+                  <span class="councilor-tag" data-official="jona l. peñalosa"
+                    >Hon. Jona L. Peñalosa</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Ligao"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Tabaco City"
+              data-type="city"
+              data-district="1"
+              data-corpus="tabaco city tabaco city cities sangguniang panlungsod  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad reynaldo b. bragais glenda ong bongao salvacion e. balingbing luis renir b. burce ram b. dyangko arnold c. onrubia preciocisima b. tanggo noel s. bonaobra nestor t. san pablo dionisio p. ragodon jr. lourdes b. berces generoso i. bon district 1 district1 1st first district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-building"></i></div>
+                <div>
+                  <h3 class="lgu-name">Tabaco City</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-city">City</span>
+                    <span class="pill pill-code">District 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>City Mayor: <strong>Hon. Reynaldo B. Bragais</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Glenda Ong Bongao</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="10" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (10)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="salvacion e. balingbing"
+                    >Hon. Salvacion E. Balingbing</span
+                  >
+                  <span class="councilor-tag" data-official="luis renir b. burce"
+                    >Hon. Luis Renir B. Burce</span
+                  >
+                  <span class="councilor-tag" data-official="ram b. dyangko"
+                    >Hon. Ram B. Dyangko</span
+                  >
+                  <span class="councilor-tag" data-official="arnold c. onrubia"
+                    >Hon. Arnold C. Onrubia</span
+                  >
+                  <span class="councilor-tag" data-official="preciocisima b. tanggo"
+                    >Hon. Preciocisima B. Tanggo</span
+                  >
+                  <span class="councilor-tag" data-official="noel s. bonaobra"
+                    >Hon. Noel S. Bonaobra</span
+                  >
+                  <span class="councilor-tag" data-official="nestor t. san pablo"
+                    >Hon. Nestor T. San Pablo</span
+                  >
+                  <span class="councilor-tag" data-official="dionisio p. ragodon jr."
+                    >Hon. Dionisio P. Ragodon Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="lourdes b. berces"
+                    >Hon. Lourdes B. Berces</span
+                  >
+                  <span class="councilor-tag" data-official="generoso i. bon"
+                    >Hon. Generoso I. Bon</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Tabaco"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Bacacay"
+              data-type="municipality"
+              data-district="1"
+              data-corpus="bacacay bacacay municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad daniel jose “nookie” bombales robert hector “bob” arjona herbert bermas rimell faith torre nilda bermundo rodel belleza rodolfo cao jr. nicole denisse bercasio elenita bañares lara romano district 1 district1 1st first district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Bacacay</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Daniel Jose “Nookie” Bombales</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Robert Hector “Bob” Arjona</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="herbert bermas"
+                    >Hon. Herbert Bermas</span
+                  >
+                  <span class="councilor-tag" data-official="rimell faith torre"
+                    >Hon. Rimell Faith Torre</span
+                  >
+                  <span class="councilor-tag" data-official="nilda bermundo"
+                    >Hon. Nilda Bermundo</span
+                  >
+                  <span class="councilor-tag" data-official="rodel belleza"
+                    >Hon. Rodel Belleza</span
+                  >
+                  <span class="councilor-tag" data-official="rodolfo cao jr."
+                    >Hon. Rodolfo Cao Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="nicole denisse bercasio"
+                    >Hon. Nicole Denisse Bercasio</span
+                  >
+                  <span class="councilor-tag" data-official="elenita bañares"
+                    >Hon. Elenita Bañares</span
+                  >
+                  <span class="councilor-tag" data-official="lara romano">Hon. Lara Romano</span>
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Bacacay"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Camalig"
+              data-type="municipality"
+              data-district="2"
+              data-corpus="camalig camalig municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad carlos irwin “caloy” baldo jr. maria ahrdail “ding” baldo purisima nocedo sherwin ian buena felipe noe napa jr. abegail go millard moyo shellie may vibar dennise misolania sheila marie dino district 2 district2 2nd second district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Camalig</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Carlos Irwin “Caloy” Baldo Jr.</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Maria Ahrdail “Ding” Baldo</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="purisima nocedo"
+                    >Hon. Purisima Nocedo</span
+                  >
+                  <span class="councilor-tag" data-official="sherwin ian buena"
+                    >Hon. Sherwin Ian Buena</span
+                  >
+                  <span class="councilor-tag" data-official="felipe noe napa jr."
+                    >Hon. Felipe Noe Napa Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="abegail go">Hon. Abegail Go</span>
+                  <span class="councilor-tag" data-official="millard moyo">Hon. Millard Moyo</span>
+                  <span class="councilor-tag" data-official="shellie may vibar"
+                    >Hon. Shellie May Vibar</span
+                  >
+                  <span class="councilor-tag" data-official="dennise misolania"
+                    >Hon. Dennise Misolania</span
+                  >
+                  <span class="councilor-tag" data-official="sheila marie dino"
+                    >Hon. Sheila Marie Dino</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Camalig"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Daraga"
+              data-type="municipality"
+              data-district="2"
+              data-corpus="daraga daraga municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad victor “vic” perete fleur jazel “love” ruiz bobby magalona nelson nuñez jr. julius duran ian macasinag leonides teofilo de lumen ii warren sorsogon carlos baylon joey marcellana district 2 district2 2nd second district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Daraga</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Victor “Vic” Perete</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Fleur Jazel “Love” Ruiz</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="bobby magalona"
+                    >Hon. Bobby Magalona</span
+                  >
+                  <span class="councilor-tag" data-official="nelson nuñez jr."
+                    >Hon. Nelson Nuñez Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="julius duran">Hon. Julius Duran</span>
+                  <span class="councilor-tag" data-official="ian macasinag"
+                    >Hon. Ian Macasinag</span
+                  >
+                  <span class="councilor-tag" data-official="leonides teofilo de lumen ii"
+                    >Hon. Leonides Teofilo de Lumen II</span
+                  >
+                  <span class="councilor-tag" data-official="warren sorsogon"
+                    >Hon. Warren Sorsogon</span
+                  >
+                  <span class="councilor-tag" data-official="carlos baylon"
+                    >Hon. Carlos Baylon</span
+                  >
+                  <span class="councilor-tag" data-official="joey marcellana"
+                    >Hon. Joey Marcellana</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Daraga"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Guinobatan"
+              data-type="municipality"
+              data-district="3"
+              data-corpus="guinobatan guinobatan municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad ann ongjoco rogelio “doc butch” rivera kathleen mae padua marelen flores dominic amano julio tingzon iv ricky matza wilfredo arevalo sr. robert bañaga rolando palabrica district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Guinobatan</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Ann Ongjoco</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Rogelio “Doc Butch” Rivera</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="kathleen mae padua"
+                    >Hon. Kathleen Mae Padua</span
+                  >
+                  <span class="councilor-tag" data-official="marelen flores"
+                    >Hon. Marelen Flores</span
+                  >
+                  <span class="councilor-tag" data-official="dominic amano"
+                    >Hon. Dominic Amano</span
+                  >
+                  <span class="councilor-tag" data-official="julio tingzon iv"
+                    >Hon. Julio Tingzon IV</span
+                  >
+                  <span class="councilor-tag" data-official="ricky matza">Hon. Ricky Matza</span>
+                  <span class="councilor-tag" data-official="wilfredo arevalo sr."
+                    >Hon. Wilfredo Arevalo Sr.</span
+                  >
+                  <span class="councilor-tag" data-official="robert bañaga"
+                    >Hon. Robert Bañaga</span
+                  >
+                  <span class="councilor-tag" data-official="rolando palabrica"
+                    >Hon. Rolando Palabrica</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Guinobatan"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Jovellar"
+              data-type="municipality"
+              data-district="3"
+              data-corpus="jovellar jovellar municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad jorem arcangel cezar “nong” arellano esther gaile nobleza mercuria salomon melinda quirona alejandro enciso jr. joseph arcangel nadier tolosa jr. zandro gomez michael anzano district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Jovellar</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Jorem Arcangel</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Cezar “Nong” Arellano</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="esther gaile nobleza"
+                    >Hon. Esther Gaile Nobleza</span
+                  >
+                  <span class="councilor-tag" data-official="mercuria salomon"
+                    >Hon. Mercuria Salomon</span
+                  >
+                  <span class="councilor-tag" data-official="melinda quirona"
+                    >Hon. Melinda Quirona</span
+                  >
+                  <span class="councilor-tag" data-official="alejandro enciso jr."
+                    >Hon. Alejandro Enciso Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="joseph arcangel"
+                    >Hon. Joseph Arcangel</span
+                  >
+                  <span class="councilor-tag" data-official="nadier tolosa jr."
+                    >Hon. Nadier Tolosa Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="zandro gomez">Hon. Zandro Gomez</span>
+                  <span class="councilor-tag" data-official="michael anzano"
+                    >Hon. Michael Anzano</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Jovellar"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Libon"
+              data-type="municipality"
+              data-district="3"
+              data-corpus="libon libon municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad macgregor edward “mac” sayson jan saclag nestor ayo jr. nico freddie will lived maronilla daniel dycoco francis james velasco abegail velasco ramon ferdinand velasco mark ian cortes florian briones district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Libon</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Macgregor Edward “Mac” Sayson</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Jan Saclag</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="nestor ayo jr."
+                    >Hon. Nestor Ayo Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="nico freddie will lived maronilla"
+                    >Hon. Nico Freddie Will Lived Maronilla</span
+                  >
+                  <span class="councilor-tag" data-official="daniel dycoco"
+                    >Hon. Daniel Dycoco</span
+                  >
+                  <span class="councilor-tag" data-official="francis james velasco"
+                    >Hon. Francis James Velasco</span
+                  >
+                  <span class="councilor-tag" data-official="abegail velasco"
+                    >Hon. Abegail Velasco</span
+                  >
+                  <span class="councilor-tag" data-official="ramon ferdinand velasco"
+                    >Hon. Ramon Ferdinand Velasco</span
+                  >
+                  <span class="councilor-tag" data-official="mark ian cortes"
+                    >Hon. Mark Ian Cortes</span
+                  >
+                  <span class="councilor-tag" data-official="florian briones"
+                    >Hon. Florian Briones</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Libon"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Malilipot"
+              data-type="municipality"
+              data-district="1"
+              data-corpus="malilipot malilipot municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad cenon volante jose bolaños johanes ampig paterno brotamonte joey bides sandy balingbing josefina biñas joel bobis gilbert gonzales jr. joephil bien district 1 district1 1st first district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Malilipot</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Cenon Volante</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Jose Bolaños</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="johanes ampig"
+                    >Hon. Johanes Ampig</span
+                  >
+                  <span class="councilor-tag" data-official="paterno brotamonte"
+                    >Hon. Paterno Brotamonte</span
+                  >
+                  <span class="councilor-tag" data-official="joey bides">Hon. Joey Bides</span>
+                  <span class="councilor-tag" data-official="sandy balingbing"
+                    >Hon. Sandy Balingbing</span
+                  >
+                  <span class="councilor-tag" data-official="josefina biñas"
+                    >Hon. Josefina Biñas</span
+                  >
+                  <span class="councilor-tag" data-official="joel bobis">Hon. Joel Bobis</span>
+                  <span class="councilor-tag" data-official="gilbert gonzales jr."
+                    >Hon. Gilbert Gonzales Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="joephil bien">Hon. Joephil Bien</span>
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Malilipot"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Malinao"
+              data-type="municipality"
+              data-district="1"
+              data-corpus="malinao malinao municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad sheryl capus-bilo abner “abe” cargullo reymond mahinay irene fajut edwin giovanni alcala ernalyn solisa joel ceriola evelyn cellona adele albano myrla aperin district 1 district1 1st first district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Malinao</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Sheryl Capus-Bilo</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Abner “Abe” Cargullo</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="reymond mahinay"
+                    >Hon. Reymond Mahinay</span
+                  >
+                  <span class="councilor-tag" data-official="irene fajut">Hon. Irene Fajut</span>
+                  <span class="councilor-tag" data-official="edwin giovanni alcala"
+                    >Hon. Edwin Giovanni Alcala</span
+                  >
+                  <span class="councilor-tag" data-official="ernalyn solisa"
+                    >Hon. Ernalyn Solisa</span
+                  >
+                  <span class="councilor-tag" data-official="joel ceriola">Hon. Joel Ceriola</span>
+                  <span class="councilor-tag" data-official="evelyn cellona"
+                    >Hon. Evelyn Cellona</span
+                  >
+                  <span class="councilor-tag" data-official="adele albano">Hon. Adele Albano</span>
+                  <span class="councilor-tag" data-official="myrla aperin">Hon. Myrla Aperin</span>
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Malinao"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Manito"
+              data-type="municipality"
+              data-district="2"
+              data-corpus="manito manito municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad jerry arizapa “jun” solinap erwin daz william daen eleuterio daep jr. arly guiriba lorris jan balitaon nelia abellano mia asejo randolf madrid district 2 district2 2nd second district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Manito</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Jerry Arizapa</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. “Jun” Solinap</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="erwin daz">Hon. Erwin Daz</span>
+                  <span class="councilor-tag" data-official="william daen">Hon. William Daen</span>
+                  <span class="councilor-tag" data-official="eleuterio daep jr."
+                    >Hon. Eleuterio Daep Jr.</span
+                  >
+                  <span class="councilor-tag" data-official="arly guiriba">Hon. Arly Guiriba</span>
+                  <span class="councilor-tag" data-official="lorris jan balitaon"
+                    >Hon. Lorris Jan Balitaon</span
+                  >
+                  <span class="councilor-tag" data-official="nelia abellano"
+                    >Hon. Nelia Abellano</span
+                  >
+                  <span class="councilor-tag" data-official="mia asejo">Hon. Mia Asejo</span>
+                  <span class="councilor-tag" data-official="randolf madrid"
+                    >Hon. Randolf Madrid</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Manito"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Oas"
+              data-type="municipality"
+              data-district="3"
+              data-corpus="oas oas municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad john kenneth trinidad domingo “ging” escoto jr. allen rivera christian bryan bustamante antonio yuchongco ii robert arevalo roman rendor iii nensus reblando arvin gregg ricate noel brijuega district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Oas</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. John Kenneth Trinidad</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Domingo “Ging” Escoto Jr.</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="allen rivera">Hon. Allen Rivera</span>
+                  <span class="councilor-tag" data-official="christian bryan bustamante"
+                    >Hon. Christian Bryan Bustamante</span
+                  >
+                  <span class="councilor-tag" data-official="antonio yuchongco ii"
+                    >Hon. Antonio Yuchongco II</span
+                  >
+                  <span class="councilor-tag" data-official="robert arevalo"
+                    >Hon. Robert Arevalo</span
+                  >
+                  <span class="councilor-tag" data-official="roman rendor iii"
+                    >Hon. Roman Rendor III</span
+                  >
+                  <span class="councilor-tag" data-official="nensus reblando"
+                    >Hon. Nensus Reblando</span
+                  >
+                  <span class="councilor-tag" data-official="arvin gregg ricate"
+                    >Hon. Arvin Gregg Ricate</span
+                  >
+                  <span class="councilor-tag" data-official="noel brijuega"
+                    >Hon. Noel Brijuega</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Oas"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Pio Duran"
+              data-type="municipality"
+              data-district="3"
+              data-corpus="pio duran pio duran municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad evangeline “vangie” arandia henry “itay” callope mercedes napa mary june malgapo pedro de luna marvin thomas quiroz mark lyndon ariate karen joy navarro bon edward barnido ernesto alano district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Pio Duran</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Evangeline “Vangie” Arandia</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Henry “Itay” Callope</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="mercedes napa"
+                    >Hon. Mercedes Napa</span
+                  >
+                  <span class="councilor-tag" data-official="mary june malgapo"
+                    >Hon. Mary June Malgapo</span
+                  >
+                  <span class="councilor-tag" data-official="pedro de luna"
+                    >Hon. Pedro de Luna</span
+                  >
+                  <span class="councilor-tag" data-official="marvin thomas quiroz"
+                    >Hon. Marvin Thomas Quiroz</span
+                  >
+                  <span class="councilor-tag" data-official="mark lyndon ariate"
+                    >Hon. Mark Lyndon Ariate</span
+                  >
+                  <span class="councilor-tag" data-official="karen joy navarro"
+                    >Hon. Karen Joy Navarro</span
+                  >
+                  <span class="councilor-tag" data-official="bon edward barnido"
+                    >Hon. Bon Edward Barnido</span
+                  >
+                  <span class="councilor-tag" data-official="ernesto alano"
+                    >Hon. Ernesto Alano</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Pio Duran"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Polangui"
+              data-type="municipality"
+              data-district="3"
+              data-corpus="polangui polangui municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad jesciel salceda cherilie “cherry” mella-sampal kristel louise pasia eugene arive mark thet sabando bernie broncano niño adonis rebeta william buendia rizaldy recierdo edna siguenza district 3 district3 3rd third district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Polangui</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 3</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Jesciel Salceda</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Cherilie “Cherry” Mella-Sampal</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="kristel louise pasia"
+                    >Hon. Kristel Louise Pasia</span
+                  >
+                  <span class="councilor-tag" data-official="eugene arive">Hon. Eugene Arive</span>
+                  <span class="councilor-tag" data-official="mark thet sabando"
+                    >Hon. Mark Thet Sabando</span
+                  >
+                  <span class="councilor-tag" data-official="bernie broncano"
+                    >Hon. Bernie Broncano</span
+                  >
+                  <span class="councilor-tag" data-official="niño adonis rebeta"
+                    >Hon. Niño Adonis Rebeta</span
+                  >
+                  <span class="councilor-tag" data-official="william buendia"
+                    >Hon. William Buendia</span
+                  >
+                  <span class="councilor-tag" data-official="rizaldy recierdo"
+                    >Hon. Rizaldy Recierdo</span
+                  >
+                  <span class="councilor-tag" data-official="edna siguenza"
+                    >Hon. Edna Siguenza</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Polangui"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Rapu-Rapu"
+              data-type="municipality"
+              data-district="2"
+              data-corpus="rapu-rapu rapu-rapu municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad romel “otoy” galicia “tom” galicia samuel batas retchell bajaro napoleon bello kennedy bertumen jose rommel villalba jerick jay arienda christopher santillan ronald galicia jr. district 2 district2 2nd second district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Rapu-Rapu</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 2</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Romel “Otoy” Galicia</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. “Tom” Galicia</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="samuel batas">Hon. Samuel Batas</span>
+                  <span class="councilor-tag" data-official="retchell bajaro"
+                    >Hon. Retchell Bajaro</span
+                  >
+                  <span class="councilor-tag" data-official="napoleon bello"
+                    >Hon. Napoleon Bello</span
+                  >
+                  <span class="councilor-tag" data-official="kennedy bertumen"
+                    >Hon. Kennedy Bertumen</span
+                  >
+                  <span class="councilor-tag" data-official="jose rommel villalba"
+                    >Hon. Jose Rommel Villalba</span
+                  >
+                  <span class="councilor-tag" data-official="jerick jay arienda"
+                    >Hon. Jerick Jay Arienda</span
+                  >
+                  <span class="councilor-tag" data-official="christopher santillan"
+                    >Hon. Christopher Santillan</span
+                  >
+                  <span class="councilor-tag" data-official="ronald galicia jr."
+                    >Hon. Ronald Galicia Jr.</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Rapu-Rapu"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Santo Domingo"
+              data-type="municipality"
+              data-district="1"
+              data-corpus="santo domingo santo domingo municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad nomar “bong” banda “mark” aguas raquel sto. tomas dino jose surtida marvin baloloy paul clinton chan carlo baloloy jose maristela lyra gregorio patrick glenn chan district 1 district1 1st first district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Santo Domingo</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Nomar “Bong” Banda</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. “Mark” Aguas</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="raquel sto. tomas"
+                    >Hon. Raquel Sto. Tomas</span
+                  >
+                  <span class="councilor-tag" data-official="dino jose surtida"
+                    >Hon. Dino Jose Surtida</span
+                  >
+                  <span class="councilor-tag" data-official="marvin baloloy"
+                    >Hon. Marvin Baloloy</span
+                  >
+                  <span class="councilor-tag" data-official="paul clinton chan"
+                    >Hon. Paul Clinton Chan</span
+                  >
+                  <span class="councilor-tag" data-official="carlo baloloy"
+                    >Hon. Carlo Baloloy</span
+                  >
+                  <span class="councilor-tag" data-official="jose maristela"
+                    >Hon. Jose Maristela</span
+                  >
+                  <span class="councilor-tag" data-official="lyra gregorio"
+                    >Hon. Lyra Gregorio</span
+                  >
+                  <span class="councilor-tag" data-official="patrick glenn chan"
+                    >Hon. Patrick Glenn Chan</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Santo Domingo"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+            <article
+              class="lgu-card"
+              data-name="Tiwi"
+              data-type="municipality"
+              data-district="1"
+              data-corpus="tiwi tiwi municipality municipalities town sangguniang bayan  mayor vice mayor city mayor municipal mayor councilor councilors city councilor municipal councilor sanggunian member kagawad jose morel “jojo” climaco jaime “ami” villanueva ma. theresa ciocson jerahmeel clerigo edgardo capa aiken villanueva cherry ann colina katherine salcedo rey kallos ryan kevin carlet district 1 district1 1st first district"
+            >
+              <div class="lgu-head">
+                <div class="lgu-mark"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <h3 class="lgu-name">Tiwi</h3>
+                  <div class="lgu-pills">
+                    <span class="pill pill-municipality">Municipality</span>
+                    <span class="pill pill-code">District 1</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lead-pair">
+                <div class="lead-role">
+                  <i class="bi bi-person-badge" style="color: var(--color-primary)"></i>
+                  <span>Municipal Mayor: <strong>Hon. Jose Morel “Jojo” Climaco</strong></span>
+                </div>
+                <div class="lead-role">
+                  <i class="bi bi-person" style="color: var(--color-primary)"></i>
+                  <span>Vice Mayor: <strong>Hon. Jaime “Ami” Villanueva</strong></span>
+                </div>
+              </div>
+
+              <details class="councilors-collapse">
+                <summary class="council-toggle-btn" data-count="8" aria-expanded="false">
+                  <i class="bi bi-people"></i> <span>View Councilors (8)</span>
+                  <i class="bi bi-chevron-down toggle-icon"></i>
+                </summary>
+                <div class="councilor-tag-list">
+                  <span class="councilor-tag" data-official="ma. theresa ciocson"
+                    >Hon. Ma. Theresa Ciocson</span
+                  >
+                  <span class="councilor-tag" data-official="jerahmeel clerigo"
+                    >Hon. Jerahmeel Clerigo</span
+                  >
+                  <span class="councilor-tag" data-official="edgardo capa">Hon. Edgardo Capa</span>
+                  <span class="councilor-tag" data-official="aiken villanueva"
+                    >Hon. Aiken Villanueva</span
+                  >
+                  <span class="councilor-tag" data-official="cherry ann colina"
+                    >Hon. Cherry Ann Colina</span
+                  >
+                  <span class="councilor-tag" data-official="katherine salcedo"
+                    >Hon. Katherine Salcedo</span
+                  >
+                  <span class="councilor-tag" data-official="rey kallos">Hon. Rey Kallos</span>
+                  <span class="councilor-tag" data-official="ryan kevin carlet"
+                    >Hon. Ryan Kevin Carlet</span
+                  >
+                </div>
+              </details>
+
+              <div class="lgu-links">
+                <a href="barangays.html?lgu=Tiwi"
+                  ><i class="bi bi-diagram-3"></i>
+                  <span data-i18n="gov-btn-barangays">Barangays</span></a
+                >
+                <a href="../statistics/"
+                  ><i class="bi bi-graph-up"></i>
+                  <span data-i18n="gov-btn-stats">Statistics</span></a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Sources & Verification -->
+      <section class="section" id="transparency-provenance" style="background: var(--color-bg-alt)">
+        <div class="container">
+          <div class="text-center" style="max-width: 860px; margin: 0 auto var(--spacing-lg)">
+            <span class="gov-section-badge"
+              ><i class="bi bi-shield-check"></i>
+              <span data-i18n="gov-sources-heading">Official Sources &amp; Transparency</span></span
+            >
+            <h2
+              style="font-size: 1.75rem; margin-bottom: var(--spacing-xs)"
+              data-i18n="gov-sources-title"
+            >
+              Information Transparency &amp; Provenance
+            </h2>
+            <p
+              style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.6"
+              data-i18n="gov-sources-desc"
+            >
+              Data on this page is compiled from public directories and verifiable government
+              records. BetterAlbay is an independent civic tech project under
+              <a href="https://bettergov.ph/" target="_blank" rel="noopener noreferrer"
+                >BetterGov.ph</a
+              >.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-2"
+            style="gap: var(--spacing-lg); max-width: 1060px; margin: 0 auto"
+          >
+            <div class="rep-card" style="padding: 24px">
+              <h3
+                style="
+                  font-size: 1.125rem;
+                  margin-top: 0;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <i class="bi bi-link-45deg" style="color: var(--color-primary)"></i>
+                <span data-i18n="gov-source-pointers">Official Source Pointers</span>
+              </h3>
+              <ul
+                style="
+                  font-size: 0.875rem;
+                  color: var(--color-text);
+                  line-height: 1.7;
+                  padding-left: 1.25rem;
+                  margin-bottom: 0;
+                "
+              >
+                <li>
+                  <a href="https://www.congress.gov.ph/" target="_blank" rel="noopener noreferrer"
+                    >House of Representatives (20th Congress)</a
+                  >
+                  — Congressional district representatives.
+                </li>
+                <li>
+                  <a href="https://albay.gov.ph/" target="_blank" rel="noopener noreferrer"
+                    >Provincial Government of Albay</a
+                  >
+                  — Provincial Governor, Vice Governor, and Provincial Board.
+                </li>
+                <li>
+                  <a
+                    href="https://dilg.gov.ph/barangay-officials-directory"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DILG Barangay Officials Directory</a
+                  >
+                  — Village-level leadership listings.
+                </li>
+                <li>
+                  <a
+                    href="https://drive.google.com/drive/folders/1fcyeVj_aNF3mdcnDq8rvL8Zj9r77oLZw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DILG Local Officials Archive</a
+                  >
+                  — Municipal and city official profiles.
+                </li>
+                <li>
+                  <a href="https://www.comelec.gov.ph/" target="_blank" rel="noopener noreferrer"
+                    >Commission on Elections (COMELEC)</a
+                  >
+                  — Official election returns and proclamations.
+                </li>
+              </ul>
+            </div>
+            <div class="rep-card" style="padding: 24px">
+              <h3
+                style="
+                  font-size: 1.125rem;
+                  margin-top: 0;
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                "
+              >
+                <i class="bi bi-info-circle" style="color: #0284c7"></i>
+                <span data-i18n="gov-scope-limitations">Scope &amp; Limitations Notice</span>
+              </h3>
+              <ul
+                style="
+                  font-size: 0.875rem;
+                  color: var(--color-text-light);
+                  line-height: 1.6;
+                  padding-left: 1.25rem;
+                  margin-bottom: 0;
+                "
+              >
+                <li>This is not a complete list of all government officials in Albay.</li>
+                <li>
+                  Barangay officials, SK officials, most ex officio members, judges, and most
+                  appointed national- and local-government personnel are not included.
+                </li>
+                <li>
+                  The 2025 election returns cited for municipality mayors and vice mayors were
+                  labeled partial and unofficial, despite 100% precinct reporting.
+                </li>
+                <li>
+                  Most councilors come from a temporary 2025–2028 roster; changes through September
+                  19, 2026 were not individually checked.
+                </li>
+                <li>
+                  Names and spellings are transcribed from the previous response and may need
+                  validation against original government records before formal use.
+                </li>
+                <li>
+                  Looking for village data? Explore our dedicated
+                  <a href="barangays.html">Albay Barangay Directory</a>.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -261,8 +2799,7 @@
           <div class="footer-column">
             <h4 data-i18n="gov-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+              <li><a href="https://albay.gov.ph/">Official Albay government website</a></li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -299,34 +2836,77 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              <li><a href="barangays.html">Barangay Directory</a></li>
+              <li><a href="officials.html">Elected Officials (CMCI)</a></li>
+              <li><a href="../statistics/">Statistics &amp; Demographics</a></li>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="gov-volunteer-with-us">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i> <span>Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -335,17 +2915,19 @@
             <span class="footer-copyright-text">&copy; 2026 BetterAlbay.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
             <span class="footer-copyright-disclaimer"
-              >Verify current information with the responsible government office.</span
+              >An independent civic tech project. A member of BetterGov.ph. For official records,
+              visit albay.gov.ph.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/js/government.js?v=c3636df3a8"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
   </body>
 </html>

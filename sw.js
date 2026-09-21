@@ -3,7 +3,7 @@
  * Enterprise-grade PWA with versioned caching, runtime strategies, and offline resilience.
  */
 
-var CACHE_VERSION = 'v5';
+var CACHE_VERSION = '1.1.30';
 var STATIC_CACHE = 'betteralbay-static-' + CACHE_VERSION;
 var RUNTIME_CACHE = 'betteralbay-runtime-' + CACHE_VERSION;
 var OFFLINE_URL = '/offline.html';
@@ -17,11 +17,17 @@ var PRECACHE_URLS = [
   '/assets/css/footer.css',
   '/assets/css/accessibility.css',
   '/assets/js/main.js',
-  '/assets/js/translations.js',
+  // translations.js is deliberately absent from this list. The pages request it
+  // with a content-derived ?v= stamp (see scripts/stamp-assets.js), so a
+  // precached version-less entry could never satisfy that request - and worse,
+  // it would still be handed to anything that asked for the bare URL, which is
+  // exactly the stale-table bug the stamp exists to prevent. The runtime
+  // static-asset cache keeps it under its stamped URL, so offline visits still
+  // get their translations.
   '/assets/js/info-bar.js',
   '/assets/images/logo/better-albay-logo.svg',
-  '/assets/images/logo/better-albay-logo-white.svg',
-  '/assets/images/logo/favicon.svg',
+  '/assets/images/logo/better-albay-logo-text-white.svg',
+  '/assets/images/logo/favicon.ico',
   '/assets/images/logo/favicon.ico',
   '/manifest.webmanifest',
 ];
@@ -238,8 +244,8 @@ self.addEventListener('push', function (event) {
   event.waitUntil(
     self.registration.showNotification(data.title || 'BetterAlbay', {
       body: data.body || '',
-      icon: '/assets/images/logo/favicon.svg',
-      badge: '/assets/images/logo/favicon.svg',
+      icon: '/assets/images/logo/favicon.ico',
+      badge: '/assets/images/logo/favicon.ico',
       tag: data.tag || 'betteralbay-notification',
       data: { url: data.url || '/' },
     })

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import HotlineBar from '@/components/layout/HotlineBar';
 import Header from '@/components/layout/Header';
 import InfoBar from '@/components/layout/InfoBar';
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: { card: 'summary_large_image' },
-  icons: { icon: '/assets/images/logo/favicon.svg', apple: '/assets/images/logo/favicon.svg' },
+  icons: { icon: '/assets/images/logo/favicon.ico', apple: '/assets/images/logo/favicon.ico' },
   manifest: '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
@@ -73,6 +74,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main-content">{children}</main>
           <Footer />
           <PWAManager />
+          <Script
+            src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+            type="module"
+            strategy="lazyOnload"
+          />
         </LanguageProvider>
       </body>
     </html>

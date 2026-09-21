@@ -86,6 +86,52 @@
   margin: 0;
 }
 
+.sre-period-caption {
+  margin-top: 6px !important;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Year selector + period toggle stack */
+.sre-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.sre-year-select {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.sre-year-btn {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  color: var(--color-text);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sre-year-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.sre-year-btn.active,
+.sre-year-btn.active:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
 /* Period Toggle */
 .sre-period-toggle {
   display: flex;
@@ -204,6 +250,7 @@
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.2;
+  font-variant-numeric: tabular-nums;
   transition:
     opacity 0.15s ease,
     transform 0.15s ease;
@@ -212,6 +259,28 @@
 .sre-metric-value.updating {
   opacity: 0.5;
   transform: scale(0.98);
+}
+
+@keyframes textRollIn {
+  0% {
+    opacity: 0.3;
+    transform: translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-roll,
+.text-rolling,
+.sre-metric-value.rolling,
+.sre-item-amount.rolling,
+.sre-item-pct.rolling,
+.dpwh-summary-value.rolling {
+  display: inline-block;
+  animation: textRollIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
 }
 
 .sre-metric-label {
@@ -298,18 +367,23 @@
 .sre-indicator-local {
   background: #10b981;
 }
+
 .sre-indicator-external {
   background: #0ea5e9;
 }
+
 .sre-indicator-gps {
   background: #3b82f6;
 }
+
 .sre-indicator-social {
   background: #8b5cf6;
 }
+
 .sre-indicator-economic {
   background: #f59e0b;
 }
+
 .sre-indicator-debt {
   background: #ef4444;
 }
@@ -344,6 +418,7 @@
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--color-text);
+  font-variant-numeric: tabular-nums;
 }
 
 .sre-item-pct {
@@ -352,6 +427,7 @@
   background: rgba(0, 0, 0, 0.04);
   padding: 2px 6px;
   border-radius: 4px;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Download Actions */
@@ -398,6 +474,35 @@
 
 .sre-source a {
   color: var(--color-primary);
+}
+
+.sre-source-doc::before {
+  content: '· ';
+  color: var(--color-text-light);
+}
+
+/* Statement of Receipts & Expenditures — no verified figures published yet */
+.sre-unavailable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--color-text-light);
+  background: var(--color-surface, #f8fafc);
+  border: 1px dashed var(--color-border, #e2e8f0);
+  border-radius: 12px;
+}
+
+.sre-unavailable i {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+}
+
+.sre-unavailable p {
+  margin: 0;
+  font-size: 0.9375rem;
 }
 
 /* Infrastructure Section V5 - Minimal Professional Design */
@@ -725,6 +830,17 @@
   }
 }
 
+@media (max-width: 991px) {
+  .sre-controls {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .sre-year-select {
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 767px) {
   .infra-project-tags {
     flex-wrap: wrap;
@@ -769,10 +885,11 @@
 
   .sre-period-toggle {
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .sre-period-btn {
-    flex: 1;
+    flex: 1 1 40%;
     padding: 10px 16px;
   }
 
@@ -834,6 +951,14 @@
   margin-top: 24px;
 }
 
+.dpwh-portal-note {
+  max-width: 720px;
+  margin: 0 0 12px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
 /* DPWH Projects - Progressive Loading Design */
 
 /* Summary Bar */
@@ -872,6 +997,11 @@
 
 /* Filter Tabs */
 .dpwh-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 16px;
 }
 
@@ -925,6 +1055,40 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Contract search */
+.dpwh-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 260px;
+  max-width: 340px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.dpwh-search-wrap i {
+  color: var(--color-text-light);
+  font-size: 0.8125rem;
+}
+
+.dpwh-search-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  color: var(--color-text);
+}
+
+.dpwh-search-wrap:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 50, 160, 0.08);
+}
+
 /* Table Wrapper */
 .dpwh-table-wrap {
   background: white;
@@ -939,6 +1103,22 @@
   border-collapse: collapse;
   font-size: 0.8125rem;
   table-layout: fixed;
+}
+
+.dpwh-caption {
+  caption-side: top;
+  padding: 12px 16px 0;
+  text-align: left;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.dpwh-no-match {
+  padding: 24px 14px;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
 }
 
 .dpwh-table thead {
@@ -972,15 +1152,19 @@
 .dpwh-table .col-desc {
   width: 38%;
 }
+
 .dpwh-table .col-contractor {
   width: 22%;
 }
+
 .dpwh-table .col-cost {
   width: 16%;
 }
+
 .dpwh-table .col-status {
   width: 12%;
 }
+
 .dpwh-table .col-date {
   width: 12%;
 }
@@ -1053,6 +1237,16 @@
   color: #0891b2;
 }
 
+.dpwh-cat-badge.bridges {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
+.dpwh-cat-badge.other {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-light);
+}
+
 .dpwh-proj-title {
   display: block;
   font-weight: 600;
@@ -1094,6 +1288,12 @@
   margin-top: 2px;
 }
 
+.dpwh-contractor-none {
+  color: var(--color-text-light);
+  font-weight: 400;
+  font-style: italic;
+}
+
 /* Cost Cell */
 .dpwh-table td.col-cost {
   font-weight: 600;
@@ -1126,6 +1326,19 @@
 .dpwh-badge.ongoing {
   background: #fef3c7;
   color: #92400e;
+}
+
+.dpwh-badge.neutral {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-light);
+}
+
+.dpwh-progress {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--color-text-light);
 }
 
 /* Date Cell */
@@ -1188,6 +1401,7 @@
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -1234,6 +1448,11 @@
     gap: 4px;
   }
 
+  .dpwh-search-wrap {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
   .dpwh-tab {
     padding: 6px 10px;
     font-size: 0.75rem;
@@ -1257,5 +1476,19 @@
   .dpwh-load-btn {
     padding: 8px 16px;
     font-size: 0.75rem;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .text-roll,
+  .text-rolling,
+  .sre-metric-value.rolling,
+  .sre-item-amount.rolling,
+  .sre-item-pct.rolling,
+  .dpwh-summary-value.rolling {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }

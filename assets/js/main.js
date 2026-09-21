@@ -67,9 +67,12 @@ if ('serviceWorker' in navigator) {
       .register('/sw.js')
       .then(function (reg) {
         // Check for updates every 30 minutes
-        setInterval(function () {
-          reg.update();
-        }, 30 * 60 * 1000);
+        setInterval(
+          function () {
+            reg.update();
+          },
+          30 * 60 * 1000
+        );
 
         reg.addEventListener('updatefound', function () {
           var newWorker = reg.installing;
@@ -167,63 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return window.matchMedia('(max-width: 1024px)').matches;
   };
 
-  // Hotline Marquee (tablet + mobile)
-  var initHotlineMarquee = function () {
-    var isTabletOrBelow = function () {
-      return window.matchMedia('(max-width: 1024px)').matches;
-    };
-    var hotlineItems = document.querySelector('.hotline-items');
-    if (!hotlineItems) return;
-
-    var track = null;
-    var originalItems = Array.from(hotlineItems.children);
-
-    var buildMarquee = function () {
-      if (!isTabletOrBelow() || track) return;
-      track = document.createElement('div');
-      track.className = 'hotline-items-track';
-      track.setAttribute('aria-label', 'Emergency contacts scrolling');
-      while (hotlineItems.firstChild) {
-        track.appendChild(hotlineItems.firstChild);
-      }
-      originalItems.forEach(function (item) {
-        var clone = item.cloneNode(true);
-        clone.setAttribute('aria-hidden', 'true');
-        clone.setAttribute('tabindex', '-1');
-        track.appendChild(clone);
-      });
-      hotlineItems.appendChild(track);
-    };
-
-    var destroyMarquee = function () {
-      if (!track) return;
-      while (hotlineItems.firstChild) {
-        hotlineItems.removeChild(hotlineItems.firstChild);
-      }
-      originalItems.forEach(function (item) {
-        hotlineItems.appendChild(item);
-      });
-      track = null;
-    };
-
-    var handleResize = function () {
-      if (isTabletOrBelow()) {
-        buildMarquee();
-      } else {
-        destroyMarquee();
-      }
-    };
-
-    handleResize();
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(handleResize, 150);
-    });
-  };
-
-  initHotlineMarquee();
-
   // Mobile Menu Toggle
   var createMobileMenu = function () {
     var headerInner = document.querySelector('.header-inner');
@@ -245,6 +191,17 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       headerInner.appendChild(toggleBtn);
     }
+
+    var syncLanguageActionsLocation = function () {
+      if (!actions) return;
+      if (isMobileNav()) {
+        if (actions.parentElement !== nav) nav.appendChild(actions);
+      } else if (actions.parentElement !== headerInner) {
+        headerInner.appendChild(actions);
+      }
+    };
+
+    syncLanguageActionsLocation();
 
     // Get focusable elements within menu for focus trap
     var getFocusableElements = function () {
@@ -327,7 +284,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!link) return;
       // If it's a dropdown trigger, don't close menu (handled by dropdown init)
       if (link.getAttribute('aria-haspopup') === 'true') return;
-      if (link.parentElement && link.parentElement.classList.contains('has-dropdown') && link.parentElement.querySelector('.dropdown-menu')) return;
+      if (
+        link.parentElement &&
+        link.parentElement.classList.contains('has-dropdown') &&
+        link.parentElement.querySelector('.dropdown-menu')
+      )
+        return;
       closeMobileMenu();
     });
 
@@ -367,6 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
           isAnimating = false; // force allow close on resize
           closeMobileMenu();
         }
+        syncLanguageActionsLocation();
       }, 150);
     });
   };
@@ -583,4 +546,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   initEduAccordion();
+
+  // Hero Background Video Controller
+  var heroVideo = document.querySelector('.home-hero-video');
+  if (heroVideo) {
+    var onVideoReady = function () {
+      heroVideo.classList.add('is-playing');
+    };
+    if (heroVideo.readyState >= 3) {
+      onVideoReady();
+    } else {
+      heroVideo.addEventListener('playing', onVideoReady, { once: true });
+      heroVideo.addEventListener('canplay', onVideoReady, { once: true });
+    }
+  }
 });

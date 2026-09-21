@@ -62,7 +62,7 @@
     <title>News & Updates | BetterAlbay.org</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
 
     <!-- Fonts -->
@@ -99,7 +99,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +121,8 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Province of Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -195,7 +205,7 @@
           <div class="lang-selector">
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
             <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
+            <button class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">BCL</button>
           </div>
         </div>
       </div>
@@ -260,47 +270,113 @@
       <section class="section">
         <div class="container">
           <div class="news-card-grid" id="news-grid" role="feed" aria-label="News articles">
-            <!-- Dynamic content loaded by news.js -->
-            <article class="news-card"><div class="news-card-body"><h3 class="news-card-title">Verified Albay news is not yet available</h3><p><a href="https://albay.gov.ph/">Official Albay government website</a></p></div></article>
+            <!--
+              Deliberately left empty for readers who have JavaScript: news.js
+              replaces the whole container once data/news.json resolves, and it
+              owns the "no verified stories yet" message. Hardcoding that message
+              here would show it while the request is still in flight, so a slow
+              connection would briefly read as "we have no news".
+
+              With JavaScript off there is nothing to render at all, and a
+              <noscript> is the honest answer: the browser drops it entirely when
+              scripting is on, so it cannot flash and cannot mask a failed fetch.
+            -->
+            <noscript>
+              <div class="news-card">
+                <div class="news-card-body">
+                  <h3 class="news-card-title">JavaScript is needed to load the news list</h3>
+                  <p>
+                    You can still read verified updates on the
+                    <a href="https://albay.gov.ph/">Official Albay government website</a>
+                    or the
+                    <a href="https://www.facebook.com/pioalbay2023/"
+                      >Official LGU Albay Facebook Page</a
+                    >.
+                  </p>
+                </div>
+              </div>
+            </noscript>
           </div>
         </div>
       </section>
 
       <!--
-        Live feed from the official LGU Albay Facebook Page (auto-updating,
-        no API token required). REPLACE the page URL in BOTH places below
-        (the iframe `href=` value and the fallback link) with the exact
-        official page URL, e.g. https://www.facebook.com/YourPageName
+        Live feed from the official LGU Albay Facebook Page (auto-updating, no
+        API token required). Progressive enhancement (assets/js/fb-feed.js):
+        this block shows the newest verified updates from data/news.json, then
+        reveals the live Facebook timeline only if the embed proves it loaded,
+        so the page never leaves an empty white box when third-party storage is
+        blocked. Without JavaScript the link below is the fallback.
       -->
       <section class="section fb-feed-section" aria-label="Facebook updates">
         <div class="container">
           <div class="fb-feed-head">
-            <h2>From our Facebook Page</h2>
-            <p>The latest posts published by the Official LGU Albay Facebook Page.</p>
+            <h2 data-i18n="fb-page-heading">From our Facebook Page</h2>
+            <p data-i18n="fb-page-blurb">
+              Announcements, advisories and events from the Official LGU Albay Facebook Page.
+            </p>
           </div>
-          <div class="fb-feed-embed">
-            <iframe
-              title="Latest posts from the Official LGU Albay Facebook Page"
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialLGUAlbay&tabs=timeline&width=500&height=720&small_header=false&adapt_container_width=true&hide_cover=false&show_facecount=true"
-              width="500"
-              height="720"
-              scrolling="no"
-              frameborder="0"
-              allowfullscreen="true"
-              loading="lazy"
-              allow="encrypted-media; clipboard-write; web-share"
-            ></iframe>
+          <div
+            class="fb-feed-embed fb-plugin-wrap"
+            id="fb-feed"
+            data-fb-page="https://www.facebook.com/pioalbay2023"
+          >
+            <div class="fb-card-header">
+              <div class="fb-card-avatar-wrap">
+                <img
+                  src="../assets/images/logo/albay-pio.jpg"
+                  class="fb-card-avatar"
+                  alt="Albay PIO Logo"
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="fb-card-meta">
+                <a
+                  href="https://www.facebook.com/pioalbay2023"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="fb-card-title"
+                  data-i18n="fb-page-title"
+                  >Albay Provincial Information Office</a
+                >
+                <span class="fb-card-followers" data-i18n="fb-followers-count"
+                  >204,293 followers</span
+                >
+              </div>
+            </div>
+            <noscript>
+              <p class="fb-feed-fallback">
+                <a
+                  data-i18n="fb-open-page"
+                  href="https://www.facebook.com/pioalbay2023/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open the Official LGU Albay Facebook Page</a
+                >
+              </p>
+            </noscript>
           </div>
           <p class="fb-feed-fallback">
-            Can't see the feed?
+            <span data-i18n="fb-cant-see">Can't see the feed?</span>
             <a
               href="https://www.facebook.com/pioalbay2023"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit the Official LGU Albay Facebook Page
+              <span data-i18n="fb-visit-page">Visit the Official LGU Albay Facebook Page</span>
               <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
             </a>
+          </p>
+          <!--
+            Revealed by CSS whenever fb-feed.js is serving the self-hosted
+            fallback, and hidden the moment the live timeline proves it loaded,
+            so the note never contradicts what is on screen.
+          -->
+          <p class="home-fb-note" data-i18n="fb-live-note">
+            The live Facebook timeline isn't loading, so we're showing the most recent verified
+            Albay news coverage instead. Every story links to its original publisher.
           </p>
         </div>
       </section>
@@ -311,7 +387,7 @@
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -353,7 +429,8 @@
             <h4 data-i18n="news-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -390,34 +467,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -428,16 +546,17 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/news.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="../assets/js/news.js?v=aae320a8d8"></script>
+    <script defer src="../assets/js/fb-feed.js?v=f69bac88f4"></script>
   </body>
 </html>

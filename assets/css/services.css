@@ -1,0 +1,337 @@
+/* Shared directory, category and guide presentation. */
+.services-page {
+  color: #18243b;
+  background: #fff;
+}
+.services-page .container {
+  max-width: 1152px;
+}
+.services-page .breadcrumbs {
+  padding: 20px 0;
+  margin: 0;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+.services-page .page-header {
+  background: linear-gradient(115deg, #08296c, #0047bf);
+  color: white;
+  padding: 46px 0 44px;
+  text-align: center;
+}
+.services-page .page-header-content {
+  max-width: 820px;
+  margin: auto;
+}
+.services-page .page-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ffffff40;
+  background: #ffffff17;
+  color: white;
+  border-radius: 30px;
+  padding: 7px 14px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.services-page .page-header h1 {
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.22;
+  letter-spacing: -0.7px;
+  color: white;
+  margin: 0 0 14px;
+}
+.services-page .page-header-desc {
+  color: #e0eaff;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.services-page .page-header-search {
+  max-width: 580px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+.services-page .service-search-input {
+  background: #fff;
+  color: #18243b;
+  min-height: 50px;
+  border-radius: 8px;
+}
+.services-page .section {
+  padding: 40px 0;
+}
+.services-page .grid-3,
+.services-page .guide-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.services-page .service-notice {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  background: #f0f5ff;
+  border: 1px solid #dce6f8;
+  border-radius: 8px;
+  color: #43546e;
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+.services-page .service-notice i {
+  color: #0032a0;
+}
+.services-page .service-item-card,
+.services-page .service-category-card {
+  padding: 24px;
+  border: 1px solid #dfe5ee;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 5px #13294b04;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  text-decoration: none;
+  height: 100%;
+}
+.services-page .service-item-link:hover,
+.services-page .service-category-card:hover {
+  border-color: #0032a0;
+  box-shadow: 0 6px 18px #0032a010;
+  transform: translateY(-2px);
+}
+.services-page .service-item-title {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #142d55;
+  margin: 0;
+}
+.services-page .service-item-title i {
+  color: #0032a0;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+.services-page .service-item-desc,
+.services-page .service-category-desc {
+  color: #5a687d;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+.services-page .service-card-action {
+  border-top: 1px solid #edf0f5;
+  padding-top: 16px;
+  margin-top: auto;
+  font-size: 13px;
+  color: #0032a0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.services-page .service-item-card:not(a) .service-card-action {
+  color: #68758a;
+  font-weight: 400;
+}
+.services-page .service-category-icon {
+  width: 48px;
+  height: 48px;
+  background: #edf3ff;
+  color: #0032a0;
+  border-radius: 10px;
+  font-size: 24px;
+}
+.services-page .service-category-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+}
+.services-page .service-category-title {
+  font-size: 18px;
+  margin: 0;
+}
+.services-page .service-category-link {
+  margin-top: auto;
+  padding-top: 12px;
+}
+.services-page .bg-alt,
+.services-page .guide-preparation {
+  background: #f5f7fa;
+}
+.services-page h2 {
+  font-size: 23px;
+  line-height: 1.35;
+  margin: 0 0 18px;
+}
+.services-page .office-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.services-page .office-card {
+  padding: 22px;
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  background: white;
+}
+.services-page .guide-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+.services-page .guide-summary > div {
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  padding: 22px 16px;
+  text-align: center;
+}
+.services-page .guide-summary i {
+  color: #0032a0;
+  font-size: 22px;
+}
+.services-page .guide-summary dt {
+  color: #65738a;
+  font-size: 12px;
+  margin: 10px 0 7px;
+}
+.services-page .guide-summary dd {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+.services-page .section-intro {
+  color: #5a687d;
+  margin: -8px 0 24px;
+  font-size: 14px;
+}
+.services-page .guide-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.services-page .guide-steps li,
+.services-page .guide-panel {
+  background: #fff;
+  border: 1px solid #dfe5ee;
+  border-radius: 10px;
+  padding: 24px;
+}
+.services-page .step-number {
+  display: inline-grid;
+  place-items: center;
+  background: #0032a0;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.services-page .guide-steps h3 {
+  font-size: 17px;
+  margin: 0 0 10px;
+}
+.services-page .guide-steps p,
+.services-page .guide-panel p {
+  color: #5a687d;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+.services-page .guide-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 28px;
+}
+.services-page .guide-panel {
+  margin-bottom: 24px;
+}
+.services-page .guide-panel h2 {
+  font-size: 19px;
+}
+.services-page .guide-checklist {
+  padding-left: 20px;
+  margin: 0;
+}
+.services-page .guide-checklist li {
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.services-page .guide-faq {
+  border: 1px solid #dfe5ee;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.services-page .guide-faq summary {
+  padding: 18px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.services-page .guide-faq p {
+  padding: 0 20px 20px;
+  color: #5a687d;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.services-page .guide-resource {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.services-page :is(a, button, input, summary):focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 4px;
+}
+.services-page .service-grid-status {
+  grid-column: 1/-1;
+  padding: 24px;
+}
+@media (max-width: 900px) {
+  .services-page .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .services-page .guide-columns {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .services-page .page-header {
+    padding: 32px 0;
+  }
+  .services-page .section {
+    padding: 28px 0;
+  }
+  .services-page .grid-3,
+  .services-page .guide-steps,
+  .services-page .office-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-page .guide-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .services-page .guide-summary > div {
+    padding: 18px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-page a {
+    transition: none;
+    transform: none !important;
+  }
+}

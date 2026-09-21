@@ -1,7 +1,7 @@
 # Release Notes: React + TypeScript Version
 
-**Version:** 1.0.0-react  
-**Branch:** react-typescript  
+**Version:** 1.0.0-react
+**Branch:** react-typescript
 **Date:** January 2026
 
 ## Overview
@@ -30,7 +30,7 @@ All features from the static HTML version are available:
 - Legislative documents (Ordinances and Resolutions)
 - Municipal Statistics and demographic data
 - Real-time weather and currency information
-- Multi-language support (English, Filipino, Ilocano)
+- Multi-language support (English, Filipino, Central Bikol)
 - WCAG 2.1 accessibility compliance
 
 ## New Capabilities
@@ -76,7 +76,7 @@ Report issues or provide feedback:
 
 - GitHub Issues with `react` label
 - Discord community
-- Email: volunteer@betteralbay.org
+- Email: <volunteer@betteralbay.org>
 
 ## Contributors
 

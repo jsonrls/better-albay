@@ -1,0 +1,521 @@
+{
+  "title": "Albay Province Comprehensive Quiz",
+  "total_items": 50,
+  "difficulty_breakdown": {
+    "easy": 15,
+    "medium": 20,
+    "hard": 15
+  },
+  "questions": [
+    {
+      "id": 1,
+      "difficulty": "Easy",
+      "category": "Geography",
+      "question": "What is the capital city of Albay Province?",
+      "options": ["Naga City", "Legazpi City", "Ligao City", "Tabaco City"],
+      "answer": "Legazpi City"
+    },
+    {
+      "id": 2,
+      "difficulty": "Easy",
+      "category": "Geography & Landmarks",
+      "question": "Which world-famous stratovolcano is known for its near-perfect conical shape and is located in Albay?",
+      "options": ["Mount Pinatubo", "Mount Taal", "Mount Mayon", "Mount Bulusan"],
+      "answer": "Mount Mayon"
+    },
+    {
+      "id": 3,
+      "difficulty": "Easy",
+      "category": "Landmarks & History",
+      "question": "What famous historic ruins feature a bell tower that survived the devastating 1814 eruption of Mayon Volcano?",
+      "options": ["Daraga Church Ruins", "Cagsawa Ruins", "Budiao Ruins", "Camalig Church Ruins"],
+      "answer": "Cagsawa Ruins"
+    },
+    {
+      "id": 4,
+      "difficulty": "Easy",
+      "category": "Culinary Heritage",
+      "question": "Which famous traditional dish is made from taro (gabi) leaves, coconut milk, meat or shrimp, and chili, strongly associated with Camalig, Albay?",
+      "options": ["Bicol Express", "Laing (Pinangat)", "Kinunot", "Sinantol"],
+      "answer": "Laing (Pinangat)"
+    },
+    {
+      "id": 5,
+      "difficulty": "Easy",
+      "category": "Culinary Heritage",
+      "question": "Which indigenous nut tree is widely cultivated in Albay and used to make candies, pastries, and savory dishes?",
+      "options": ["Cashew", "Macadamia", "Pili Nut", "Chestnut"],
+      "answer": "Pili Nut"
+    },
+    {
+      "id": 6,
+      "difficulty": "Easy",
+      "category": "Administrative Geography",
+      "question": "Albay belongs to which administrative region of the Philippines?",
+      "options": [
+        "Region IV-A (CALABARZON)",
+        "Region V (Bicol Region)",
+        "Region VI (Western Visayas)",
+        "Region VIII (Eastern Visayas)"
+      ],
+      "answer": "Region V (Bicol Region)"
+    },
+    {
+      "id": 7,
+      "difficulty": "Easy",
+      "category": "Landmarks & Tourism",
+      "question": "Which elevated hill in Legazpi City features a shrine to Our Lady of the Gate and provides a panoramic 360-degree view of Mayon Volcano and Albay Gulf?",
+      "options": ["Lignon Hill", "Quitinday Hills", "Kawa-Kawa Hill", "Hoyop-Hoyopan"],
+      "answer": "Lignon Hill"
+    },
+    {
+      "id": 8,
+      "difficulty": "Easy",
+      "category": "Folklore & Mythology",
+      "question": "According to Bicolano legend, Mount Mayon was formed from the burial mound of which tragic maiden?",
+      "options": ["Daragang Magayon", "Maria Makiling", "Princess Urduja", "Gugurang"],
+      "answer": "Daragang Magayon"
+    },
+    {
+      "id": 9,
+      "difficulty": "Easy",
+      "category": "Festivals & Culture",
+      "question": "What is the name of Albay's premier provincial festival held annually in May to celebrate its culture and the legend of Mount Mayon?",
+      "options": [
+        "Ibalong Festival",
+        "Magayon Festival",
+        "Peñafrancia Festival",
+        "Kasanggayahan Festival"
+      ],
+      "answer": "Magayon Festival"
+    },
+    {
+      "id": 10,
+      "difficulty": "Easy",
+      "category": "Transportation & Infrastructure",
+      "question": "What is the international-standard airport located in Daraga, serving the province of Albay and the wider Bicol Region?",
+      "options": [
+        "Naga Airport",
+        "Bicol International Airport",
+        "Legazpi Domestic Airfield",
+        "Masbate Regional Airport"
+      ],
+      "answer": "Bicol International Airport"
+    },
+    {
+      "id": 11,
+      "difficulty": "Easy",
+      "category": "Culinary Heritage",
+      "question": "A famous novelty dessert originating in Albay features ice cream flavored with which spicy ingredient?",
+      "options": ["Black Pepper", "Ginger", "Sili (Chili)", "Wasabi"],
+      "answer": "Sili (Chili)"
+    },
+    {
+      "id": 12,
+      "difficulty": "Easy",
+      "category": "Agriculture & Industry",
+      "question": "Which natural plant fiber, historically known as Manila Hemp, is extensively cultivated and woven into handicrafts in Albay?",
+      "options": ["Jute", "Abaca", "Ramie", "Sisal"],
+      "answer": "Abaca"
+    },
+    {
+      "id": 13,
+      "difficulty": "Easy",
+      "category": "Folklore & Mythology",
+      "question": "In the legend of Daragang Magayon, who was her brave warrior lover from another tribe?",
+      "options": ["Pagtuga", "Handyong", "Panganoron", "Baltog"],
+      "answer": "Panganoron"
+    },
+    {
+      "id": 14,
+      "difficulty": "Easy",
+      "category": "Religion & Architecture",
+      "question": "Which church in Albay, constructed in 1773 atop a hill, is renowned for its Churrigueresque/Baroque architecture made of volcanic rocks?",
+      "options": [
+        "Daraga Church (Nuestra Señora de la Porteria)",
+        "St. Gregory the Great Cathedral",
+        "Camalig Church",
+        "Tabaco Church"
+      ],
+      "answer": "Daraga Church (Nuestra Señora de la Porteria)"
+    },
+    {
+      "id": 15,
+      "difficulty": "Easy",
+      "category": "Landmarks & Tourism",
+      "question": "What is the name of the prominent open-air seaside commercial strip and boulevard along Legazpi port overlooking Albay Gulf?",
+      "options": [
+        "Embarcadero de Legazpi",
+        "Puro Seaside Walk",
+        "Mayon Riviera",
+        "Albay Boardwalk"
+      ],
+      "answer": "Embarcadero de Legazpi"
+    },
+    {
+      "id": 16,
+      "difficulty": "Medium",
+      "category": "Festivals & Culture",
+      "question": "Which Legazpi City festival is based on an ancient Bicolano epic celebrating mythic heroes Baltog, Handyong, and Bantong battling monstrous creatures?",
+      "options": ["Magayon Festival", "Ibalong Festival", "Kagharong Festival", "Coron Festival"],
+      "answer": "Ibalong Festival"
+    },
+    {
+      "id": 17,
+      "difficulty": "Medium",
+      "category": "Geography & Natural Wonders",
+      "question": "Which town in Albay is famous for the 'Quitinday Hills', frequently referred to as the 'Chocolate Hills of Albay'?",
+      "options": ["Camalig", "Guinobatan", "Oas", "Polangui"],
+      "answer": "Camalig"
+    },
+    {
+      "id": 18,
+      "difficulty": "Medium",
+      "category": "Natural Wonders & Speleology",
+      "question": "What is the name of the popular limestone cave in Camalig, Albay, that served as a natural guerrilla hospital and civilian refuge during World War II?",
+      "options": ["Calabidongan Cave", "Hoyop-Hoyopan Cave", "Minaroso Cave", "Pototan Cave"],
+      "answer": "Hoyop-Hoyopan Cave"
+    },
+    {
+      "id": 19,
+      "difficulty": "Medium",
+      "category": "Geography & Landmarks",
+      "question": "What hill in Ligao City is uniquely known as the 'hill without a top' or a concave-top hill containing a life-sized Stations of the Cross?",
+      "options": ["Lignon Hill", "Kawa-Kawa Hill", "Quitinday Hill", "Bantayan Hill"],
+      "answer": "Kawa-Kawa Hill"
+    },
+    {
+      "id": 20,
+      "difficulty": "Medium",
+      "category": "Administrative Geography",
+      "question": "How many component cities comprise the province of Albay?",
+      "options": ["2", "3", "4", "5"],
+      "answer": "3"
+    },
+    {
+      "id": 21,
+      "difficulty": "Medium",
+      "category": "Administrative Geography",
+      "question": "Which three component cities make up Albay Province?",
+      "options": [
+        "Legazpi, Naga, and Iriga",
+        "Legazpi, Ligao, and Tabaco",
+        "Legazpi, Daraga, and Tabaco",
+        "Legazpi, Sorsogon, and Ligao"
+      ],
+      "answer": "Legazpi, Ligao, and Tabaco"
+    },
+    {
+      "id": 22,
+      "difficulty": "Medium",
+      "category": "Historical Events",
+      "question": "On which exact date did Mount Mayon trigger its deadliest recorded historical eruption, annihilating Cagsawa, Budiao, and Camalig?",
+      "options": ["February 1, 1814", "June 23, 1897", "March 15, 1900", "August 27, 1883"],
+      "answer": "February 1, 1814"
+    },
+    {
+      "id": 23,
+      "difficulty": "Medium",
+      "category": "International Recognition",
+      "question": "In 2016, UNESCO declared the entire province of Albay as a:",
+      "options": [
+        "World Heritage Cultural Landscape",
+        "Biosphere Reserve",
+        "Global Geopark",
+        "Creative City of Gastronomy"
+      ],
+      "answer": "Biosphere Reserve"
+    },
+    {
+      "id": 24,
+      "difficulty": "Medium",
+      "category": "Geography & Hydrology",
+      "question": "What volcanic freshwater crater lake, nestled between Mount Malinao and Mount Masaraga, is a notable eco-tourism site in Albay?",
+      "options": ["Lake Buhi", "Lake Danao", "Lake Bato", "Lake Bulusan"],
+      "answer": "Lake Danao"
+    },
+    {
+      "id": 25,
+      "difficulty": "Medium",
+      "category": "Colonial History",
+      "question": "Which Spanish conquistador first explored and subjugated the region of Albay and surrounding Bicol settlements in 1569–1573?",
+      "options": [
+        "Miguel López de Legazpi",
+        "Juan de Salcedo",
+        "Ruy López de Villalobos",
+        "Martin de Goiti"
+      ],
+      "answer": "Juan de Salcedo"
+    },
+    {
+      "id": 26,
+      "difficulty": "Medium",
+      "category": "Folklore & Mythology",
+      "question": "In the epic Ibalong, which deceitful maiden-serpent was able to change into a beautiful woman with a voice so sweet it charmed Handyong?",
+      "options": ["Oryol", "Burigadang Pada Sinaklang Bulawan", "Magindang", "Aswang"],
+      "answer": "Oryol"
+    },
+    {
+      "id": 27,
+      "difficulty": "Medium",
+      "category": "Heritage Crafts",
+      "question": "The coastal municipality of Tiwi in Albay is particularly noted throughout the Bicol Region for which traditional artisanal industry?",
+      "options": [
+        "Cutlery and knife forging",
+        "Red clay pottery and ceramics",
+        "Woodcarving",
+        "Poblacion gold filigree jewelry"
+      ],
+      "answer": "Red clay pottery and ceramics"
+    },
+    {
+      "id": 28,
+      "difficulty": "Medium",
+      "category": "Energy & Natural Resources",
+      "question": "Which municipality in Albay hosts one of the earliest and largest operational geothermal energy power plants in the Philippines?",
+      "options": ["Tiwi", "Bacacay", "Manito", "Libon"],
+      "answer": "Tiwi"
+    },
+    {
+      "id": 29,
+      "difficulty": "Medium",
+      "category": "Festivals & Heritage",
+      "question": "The town of Tiwi celebrates which festival dedicated to its patron saint and its historic pottery tradition?",
+      "options": [
+        "Pinangat Festival",
+        "Coron Festival",
+        "Tabak Festival",
+        "Sarung Banggi Festival"
+      ],
+      "answer": "Coron Festival"
+    },
+    {
+      "id": 30,
+      "difficulty": "Medium",
+      "category": "Music & Arts",
+      "question": "Which municipality in Albay hosts the annual 'Sarung Banggi Festival' in honor of composer Potenciano V. Gregorio, who was born there?",
+      "options": ["Santo Domingo", "Malilipot", "Camalig", "Guinobatan"],
+      "answer": "Santo Domingo"
+    },
+    {
+      "id": 31,
+      "difficulty": "Medium",
+      "category": "Heritage Crafts",
+      "question": "Tabaco City is renowned for which craft and metalworking trade, celebrated every year during its Tabak Festival?",
+      "options": [
+        "Blacksmithing and cutlery making",
+        "Bronze casting",
+        "Goldsmithing",
+        "Shipbuilding"
+      ],
+      "answer": "Blacksmithing and cutlery making"
+    },
+    {
+      "id": 32,
+      "difficulty": "Medium",
+      "category": "Religion & Architecture",
+      "question": "Which church in Albay is distinguished by its unique construction of volcanic stones bearing mason marks incised by stonecutters?",
+      "options": [
+        "San Juan Bautista Church in Tabaco",
+        "Daraga Church",
+        "Polangui Church",
+        "Oas Church"
+      ],
+      "answer": "San Juan Bautista Church in Tabaco"
+    },
+    {
+      "id": 33,
+      "difficulty": "Medium",
+      "category": "Heritage Architecture",
+      "question": "In Camalig, the Spanish colonial ancestral home built in the 1830s that has served as a cultural landmark and restaurant is known as:",
+      "options": ["Balay Cena Una", "Casa Real de Albay", "Bahay na Pula", "Villa Angela"],
+      "answer": "Balay Cena Una"
+    },
+    {
+      "id": 34,
+      "difficulty": "Medium",
+      "category": "History & Military",
+      "question": "During the Philippine-American War, which Albayano general famously led revolutionary guerrilla resistance in Albay and was among the last Filipino generals to surrender in 1903?",
+      "options": [
+        "General Simeon Ola",
+        "General Vicente Lukban",
+        "General Miguel Malvar",
+        "General Macario Sakay"
+      ],
+      "answer": "General Simeon Ola"
+    },
+    {
+      "id": 35,
+      "difficulty": "Medium",
+      "category": "Geography & Marine Areas",
+      "question": "The Albay Gulf opens into which major strait that separates the Bicol Peninsula from the island of Samar?",
+      "options": ["San Bernardino Strait", "Tablas Strait", "Mindoro Strait", "Surigao Strait"],
+      "answer": "San Bernardino Strait"
+    },
+    {
+      "id": 36,
+      "difficulty": "Hard",
+      "category": "Volcanology & Geography",
+      "question": "Mayon Volcano is part of a volcanic chain that includes two other prominent nearby stratovolcanoes situated within Albay. What are their names?",
+      "options": [
+        "Mount Isarog and Mount Iriga",
+        "Mount Masaraga and Mount Malinao",
+        "Mount Bulusan and Mount Labo",
+        "Mount Pocdol and Mount Asog"
+      ],
+      "answer": "Mount Masaraga and Mount Malinao"
+    },
+    {
+      "id": 37,
+      "difficulty": "Hard",
+      "category": "Archaeology",
+      "question": "What rare and significant secondary burial artifacts dating back to the late Neolithic/Metal Age were discovered in the Bato Caves of Bacon and Hoyop-Hoyopan in Camalig?",
+      "options": [
+        "Anthropomorphic earthenware burial jars",
+        "Maitum quadrangular stone coffins",
+        "Gold funeral masks",
+        "Glazed Celadon porcelain plates"
+      ],
+      "answer": "Anthropomorphic earthenware burial jars"
+    },
+    {
+      "id": 38,
+      "difficulty": "Hard",
+      "category": "Colonial History",
+      "question": "Before being named Albay, the pre-colonial and early colonial settlement in the marshlands around present-day Legazpi was originally called:",
+      "options": ["Sawangan", "Cagsawa", "Ibalon", "Budiao"],
+      "answer": "Sawangan"
+    },
+    {
+      "id": 39,
+      "difficulty": "Hard",
+      "category": "Colonial Administration",
+      "question": "In which year did the Spanish colonial government formally establish the Partido de Ibalon into the separate province of Albay?",
+      "options": ["1574", "1636", "1846", "1898"],
+      "answer": "1846"
+    },
+    {
+      "id": 40,
+      "difficulty": "Hard",
+      "category": "Military History",
+      "question": "In the Battle of Legazpi on January 23, 1900, which Filipino commander led the defense at San Rafael Bridge against incoming American forces?",
+      "options": [
+        "Colonel Ignacio Paua",
+        "General Vito Belarmino",
+        "General Simeon Ola",
+        "Major Ludovico Arejola"
+      ],
+      "answer": "General Vito Belarmino"
+    },
+    {
+      "id": 41,
+      "difficulty": "Hard",
+      "category": "History & Biography",
+      "question": "Which Chinese-Filipino revolutionary general and blacksmith from Bicol set up ammunition factories and fought extensively in Albay?",
+      "options": [
+        "General Ignacio Paua",
+        "General Francisco Roman",
+        "General Jose Paua",
+        "General Roman Ongpin"
+      ],
+      "answer": "General Ignacio Paua"
+    },
+    {
+      "id": 42,
+      "difficulty": "Hard",
+      "category": "Linguistics & Dialectology",
+      "question": "Linguistically, Albay Bikol (part of Coastal and Inland Bikol) includes distinct micro-dialects. Which inland dialect of Albay is recognized for its unique vowel phonology containing a high central unrounded vowel [ɨ]?",
+      "options": ["Central Bikol", "Miraya (Oas, Polangui, Camalig)", "Panday Bikol", "Sorsoganon"],
+      "answer": "Miraya (Oas, Polangui, Camalig)"
+    },
+    {
+      "id": 43,
+      "difficulty": "Hard",
+      "category": "Geography & Islands",
+      "question": "Which group of islands comprising Rapu-Rapu, Batan, and Cagraray forms the protective natural barrier of Albay Gulf?",
+      "options": [
+        "Calamianes Group",
+        "Prieto Diaz Islands",
+        "Albay Gulf Barrier Islands",
+        "Polillo Islands"
+      ],
+      "answer": "Albay Gulf Barrier Islands"
+    },
+    {
+      "id": 44,
+      "difficulty": "Hard",
+      "category": "Colonial History",
+      "question": "Which Franciscan missionary was responsible for organizing and administering the construction of both the Daraga Church and the rebuilding of towns after Mayon eruptions?",
+      "options": [
+        "Fr. Francisco Aragones",
+        "Fr. Geronimo de Aguilar",
+        "Fr. Martin de Rada",
+        "Fr. Pedro de San Alfons"
+      ],
+      "answer": "Fr. Francisco Aragones"
+    },
+    {
+      "id": 45,
+      "difficulty": "Hard",
+      "category": "Geography & Ecology",
+      "question": "What is the name of the protected marine sanctuary and natural park located on Cagraray Island in Bacacay, Albay?",
+      "options": [
+        "Misibis Marine Sanctuary",
+        "Cagraray Eco-Energy Park",
+        "Pinamuntugan Reef Park",
+        "Albay Mangrove Biosphere Reserve"
+      ],
+      "answer": "Cagraray Eco-Energy Park"
+    },
+    {
+      "id": 46,
+      "difficulty": "Hard",
+      "category": "World War II History",
+      "question": "During World War II, on what date did the Japanese Imperial Forces land amphibious forces at Legazpi City to establish control of southeastern Luzon?",
+      "options": ["December 12, 1941", "January 8, 1942", "April 9, 1942", "December 25, 1941"],
+      "answer": "December 12, 1941"
+    },
+    {
+      "id": 47,
+      "difficulty": "Hard",
+      "category": "Folklore & Mythology",
+      "question": "In the pre-colonial Bicolano pantheon recorded in folklore, who was the supreme sky god associated with good, fire, and Mount Mayon?",
+      "options": ["Asuang", "Gugurang", "Haliya", "Bakunawa"],
+      "answer": "Gugurang"
+    },
+    {
+      "id": 48,
+      "difficulty": "Hard",
+      "category": "Religion & Architecture",
+      "question": "What historical ecclesiastical designation was awarded by the National Museum of the Philippines to San Juan Bautista Parish Church in Tabaco City?",
+      "options": [
+        "National Cultural Treasure",
+        "Important Cultural Property",
+        "National Historical Landmark",
+        "World Heritage Monument"
+      ],
+      "answer": "National Cultural Treasure"
+    },
+    {
+      "id": 49,
+      "difficulty": "Hard",
+      "category": "Agriculture & Botany",
+      "question": "Which specific variety of taro leaves (Colocasia esculenta) is predominantly cultivated in Camalig for authentic Pinangat due to its non-itchy texture and high liquid retention?",
+      "options": ["Sungsung variety", "Buntog variety", "Bun-long variety", "Miraya variety"],
+      "answer": "Sungsung variety"
+    },
+    {
+      "id": 50,
+      "difficulty": "Hard",
+      "category": "History & Etymology",
+      "question": "What does the indigenous word 'Cagsawa' translate to in archaic local dialect, reflecting the natural hazard of the area prior to its 1814 destruction?",
+      "options": [
+        "Snake Charmer / Abode of Pythons",
+        "Place of Flowing Mud",
+        "House of Fire",
+        "Buried Land"
+      ],
+      "answer": "Snake Charmer / Abode of Pythons"
+    }
+  ]
+}

@@ -93,6 +93,10 @@
         color: #333;
       }
       .hotline-number {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        min-width: 44px;
         color: #0032a0;
         font-weight: 600;
         text-decoration: none;
@@ -155,7 +159,30 @@
         convenience.
       </p>
 
-      <div class="hotlines"><h2>Emergency contacts</h2><p>National emergency: <a href="tel:911">911</a></p><p><a href="https://ehotlines.e.gov.ph/">Official emergency directory (requires internet)</a></p></div>
+      <!-- emergency-offline:start -->
+      <div class="hotlines">
+        <h2>Emergency contacts</h2>
+        <ul class="hotline-list">
+          <li>
+            <span class="hotline-label">National emergency</span
+            ><a class="hotline-number" href="tel:911">911</a>
+          </li>
+          <li>
+            <span class="hotline-label">APSEMO</span
+            ><a class="hotline-number" href="tel:09544199935">0954 419 9935</a>
+          </li>
+          <li>
+            <span class="hotline-label">Albay EMS</span
+            ><a class="hotline-number" href="tel:09475700332">0947 570 0332</a>
+          </li>
+        </ul>
+        <p>
+          <a href="/contact/#emergency-hotlines">All Albay hotlines</a> (requires a saved page or
+          internet)
+        </p>
+        <p>Directory updated as of 2025-11-08.</p>
+      </div>
+      <!-- emergency-offline:end -->
 
       <button class="retry-btn" onclick="window.location.reload()">Try Again</button>
     </main>

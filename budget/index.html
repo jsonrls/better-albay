@@ -59,9 +59,9 @@
     <meta name="theme-color" content="#1a5f2a" />
 
     <title>Budget & Financial Transparency | BetterAlbay.org</title>
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/logo/favicon.svg" />
+    <link rel="apple-touch-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -78,8 +78,9 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/transparency-v2.css" />
+    <link rel="stylesheet" href="../assets/css/transparency-v2.css?v=e3cca720fd" />
   </head>
+
   <body>
     <a href="#main-content" class="skip-link" data-i18n="budget-skip-to-main-content"
       >Skip to main content</a
@@ -87,7 +88,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -99,6 +108,8 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -106,7 +117,13 @@
           <ul>
             <li><a href="../" data-i18n="budget-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="budget-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="budget-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="budget-certificates"
@@ -147,7 +164,13 @@
             <li><a href="../government/" data-i18n="budget-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="budget-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="budget-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="budget-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a
@@ -177,8 +200,8 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
               FIL
             </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">
+              BCL
             </button>
           </div>
         </div>
@@ -242,44 +265,44 @@
                 Statement of Receipts & Expenditures
               </h2>
               <p data-i18n="budget-fy-2025-quarterly-financial-performance">
-                FY 2025 quarterly financial performance
+                Latest published statement of receipts and expenditures
               </p>
+              <p class="sre-period-caption" id="sre-period-caption"></p>
             </div>
-            <div class="sre-period-toggle" role="tablist" aria-label="Select fiscal quarter">
-              <button
-                type="button"
-                class="sre-period-btn active"
-                role="tab"
-                aria-selected="true"
-                data-quarter="q1"
-              >
-                <span class="sre-period-q" data-i18n="budget-q1">Q1</span>
-                <span class="sre-period-range" data-i18n="budget-jan-mar">Jan - Mar</span>
-              </button>
-              <button
-                type="button"
-                class="sre-period-btn"
-                role="tab"
-                aria-selected="false"
-                data-quarter="q2"
-              >
-                <span class="sre-period-q" data-i18n="budget-q2">Q2</span>
-                <span class="sre-period-range" data-i18n="budget-apr-jun">Apr - Jun</span>
-              </button>
+            <div class="sre-controls">
+              <div
+                class="sre-year-select"
+                role="tablist"
+                aria-label="Select fiscal year"
+                hidden
+              ></div>
+              <div
+                class="sre-period-toggle"
+                role="tablist"
+                aria-label="Select reporting period"
+              ></div>
             </div>
           </div>
+
+          <div class="sre-unavailable" id="sre-unavailable" role="status">
+            <i class="bi bi-info-circle"></i>
+            <p data-i18n="budget-data-unavailable">
+              Verified Albay financial data is not yet available.
+            </p>
+          </div>
+
           <div class="sre-metrics-row">
             <div class="sre-metric-card sre-metric-income">
               <div class="sre-metric-icon"><i class="bi bi-arrow-down-circle"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-total-income">₱158.47 M</span>
+                <span class="sre-metric-value" id="sre-total-income">—</span>
                 <span class="sre-metric-label" data-i18n="budget-total-income">Total Income</span>
               </div>
             </div>
             <div class="sre-metric-card sre-metric-expense">
               <div class="sre-metric-icon"><i class="bi bi-arrow-up-circle"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-total-expense">₱67.51 M</span>
+                <span class="sre-metric-value" id="sre-total-expense">—</span>
                 <span class="sre-metric-label" data-i18n="budget-total-expenditures"
                   >Total Expenditures</span
                 >
@@ -288,7 +311,7 @@
             <div class="sre-metric-card sre-metric-net">
               <div class="sre-metric-icon"><i class="bi bi-plus-slash-minus"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-net-income">₱90.96 M</span>
+                <span class="sre-metric-value" id="sre-net-income">—</span>
                 <span class="sre-metric-label" data-i18n="budget-net-operating-income"
                   >Net Operating Income</span
                 >
@@ -297,7 +320,7 @@
             <div class="sre-metric-card sre-metric-balance">
               <div class="sre-metric-icon"><i class="bi bi-wallet2"></i></div>
               <div class="sre-metric-data">
-                <span class="sre-metric-value" id="sre-fund-balance">₱283.29 M</span>
+                <span class="sre-metric-value" id="sre-fund-balance">—</span>
                 <span class="sre-metric-label" data-i18n="budget-fund-balance-end"
                   >Fund Balance (End)</span
                 >
@@ -329,8 +352,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-income-local">₱88.85 M</span>
-                      <span class="sre-item-pct" id="sre-income-local-pct">56.1%</span>
+                      <span class="sre-item-amount" id="sre-income-local">—</span>
+                      <span class="sre-item-pct" id="sre-income-local-pct">—</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="external">
@@ -344,8 +367,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-income-external">₱69.62 M</span>
-                      <span class="sre-item-pct" id="sre-income-external-pct">43.9%</span>
+                      <span class="sre-item-amount" id="sre-income-external">—</span>
+                      <span class="sre-item-pct" id="sre-income-external-pct">—</span>
                     </div>
                   </div>
                 </div>
@@ -374,8 +397,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-gps">₱42.76 M</span>
-                      <span class="sre-item-pct" id="sre-exp-gps-pct">63.3%</span>
+                      <span class="sre-item-amount" id="sre-exp-gps">—</span>
+                      <span class="sre-item-pct" id="sre-exp-gps-pct">—</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="social">
@@ -389,8 +412,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-social">₱13.33 M</span>
-                      <span class="sre-item-pct" id="sre-exp-social-pct">19.7%</span>
+                      <span class="sre-item-amount" id="sre-exp-social">—</span>
+                      <span class="sre-item-pct" id="sre-exp-social-pct">—</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="economic">
@@ -404,8 +427,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-economic">₱11.07 M</span>
-                      <span class="sre-item-pct" id="sre-exp-economic-pct">16.4%</span>
+                      <span class="sre-item-amount" id="sre-exp-economic">—</span>
+                      <span class="sre-item-pct" id="sre-exp-economic-pct">—</span>
                     </div>
                   </div>
                   <div class="sre-breakdown-item" data-type="debt">
@@ -419,8 +442,8 @@
                       >
                     </div>
                     <div class="sre-item-values">
-                      <span class="sre-item-amount" id="sre-exp-debt">₱0.35 M</span>
-                      <span class="sre-item-pct" id="sre-exp-debt-pct">0.5%</span>
+                      <span class="sre-item-amount" id="sre-exp-debt">—</span>
+                      <span class="sre-item-pct" id="sre-exp-debt-pct">—</span>
                     </div>
                   </div>
                 </div>
@@ -437,6 +460,14 @@
               data-i18n="budget-bureau-of-local-government-finance-blgf"
               >Bureau of Local Government Finance (BLGF)</a
             >
+            <a
+              class="sre-source-doc"
+              id="sre-source-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            ></a>
           </p>
         </div>
       </section>
@@ -450,196 +481,22 @@
             >
             <h2 data-i18n="budget-infrastructure-investments">Infrastructure Investments</h2>
             <p data-i18n="budget-major-development-projects-serving-the-community">
-              Major development projects serving the community
+              Every contract DPWH publishes for Albay, with contractor, cost and reported progress
             </p>
           </div>
-          <div class="infra-project-v5">
-            <div class="infra-project-main">
-              <div class="infra-project-tags">
-                <span class="infra-tag-year">2024</span>
-                <span class="infra-tag-category"
-                  ><i class="bi bi-water"></i>
-                  <span data-i18n="budget-flood-control">Flood Control</span></span
-                >
-              </div>
-              <h3 data-i18n="budget-fcds-package-5-magat-river-flood-control">
-                FCDS Package 5 - Provincial infrastructure project</h3>
-              <p class="infra-location">
-                <i class="bi bi-geo-alt"></i>
-                <span data-i18n="budget-magat-river-bagahabag-section-albay-nueva-vizcaya"
-                  >Provincial infrastructure project</span
-                >
-              </p>
-            </div>
-            <div class="infra-project-details">
-              <div class="infra-detail-row">
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-type-of-work"
-                    >Type of Work</span
-                  >
-                  <span
-                    class="infra-detail-value"
-                    data-i18n="budget-construction-of-flood-mitigation-structure"
-                    >Construction of Flood Mitigation Structure</span
-                  >
-                </div>
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-contractor">Contractor</span>
-                  <span class="infra-detail-value" data-i18n="budget-egb-construction-corporation"
-                    >EGB Construction Corporation</span
-                  >
-                </div>
-                <div class="infra-detail-col infra-detail-cost">
-                  <span class="infra-detail-label" data-i18n="budget-contract-cost"
-                    >Contract Cost</span
-                  >
-                  <span class="infra-detail-value">₱144,750,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="infra-project-footer">
-              <span class="infra-source"
-                ><i class="bi bi-info-circle"></i>
-                <span data-i18n="budget-source-sumbong-sa-pangulo"
-                  >Source: Sumbong sa Pangulo</span
-                ></span
-              >
-              <a
-                href="https://sumbongsapangulo.ph/flood-control-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="infra-link"
-                ><i class="bi bi-arrow-up-right"></i>
-                <span data-i18n="budget-view-on-map">View on Map</span></a
-              >
-            </div>
-          </div>
-
-          <div class="infra-project-v5">
-            <div class="infra-project-main">
-              <div class="infra-project-tags">
-                <span class="infra-tag-year">2021</span>
-                <span class="infra-tag-category"
-                  ><i class="bi bi-water"></i>
-                  <span data-i18n="budget-flood-control">Flood Control</span></span
-                >
-              </div>
-              <h3 data-i18n="budget-repairrehabilitation-of-flood-control-and">
-                Repair/Rehabilitation of Flood Control and Drainage Structure - Section 1
-              </h3>
-              <p class="infra-location">
-                <i class="bi bi-geo-alt"></i>
-                <span data-i18n="budget-magat-river-bangar-section-1-brgy-bangar-albay"
-                  >Provincial infrastructure project</span
-                >
-              </p>
-            </div>
-            <div class="infra-project-details">
-              <div class="infra-detail-row">
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-type-of-work"
-                    >Type of Work</span
-                  >
-                  <span
-                    class="infra-detail-value"
-                    data-i18n="budget-rehabilitation-major-repair-of-flood-control"
-                    >Rehabilitation / Major Repair of Flood Control Structure</span
-                  >
-                </div>
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-contractor">Contractor</span>
-                  <span class="infra-detail-value" data-i18n="budget-shanley-construction"
-                    >Shanley Construction</span
-                  >
-                </div>
-                <div class="infra-detail-col infra-detail-cost">
-                  <span class="infra-detail-label" data-i18n="budget-contract-cost"
-                    >Contract Cost</span
-                  >
-                  <span class="infra-detail-value">₱29,700,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="infra-project-footer">
-              <span class="infra-source"
-                ><i class="bi bi-info-circle"></i>
-                <span data-i18n="budget-source-sumbong-sa-pangulo"
-                  >Source: Sumbong sa Pangulo</span
-                ></span
-              >
-              <a
-                href="https://sumbongsapangulo.ph/flood-control-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="infra-link"
-                ><i class="bi bi-arrow-up-right"></i>
-                <span data-i18n="budget-view-on-map">View on Map</span></a
-              >
-            </div>
-          </div>
-
-          <div class="infra-project-v5">
-            <div class="infra-project-main">
-              <div class="infra-project-tags">
-                <span class="infra-tag-year">2021</span>
-                <span class="infra-tag-category"
-                  ><i class="bi bi-water"></i>
-                  <span data-i18n="budget-flood-control">Flood Control</span></span
-                >
-              </div>
-              <h3 data-i18n="budget-repairrehabilitation-of-flood-control-and">
-                Repair/Rehabilitation of Flood Control and Drainage Structure - Section 2
-              </h3>
-              <p class="infra-location">
-                <i class="bi bi-geo-alt"></i>
-                <span data-i18n="budget-magat-river-bangar-section-2-brgy-bangar-albay"
-                  >Provincial infrastructure project</span
-                >
-              </p>
-            </div>
-            <div class="infra-project-details">
-              <div class="infra-detail-row">
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-type-of-work"
-                    >Type of Work</span
-                  >
-                  <span
-                    class="infra-detail-value"
-                    data-i18n="budget-rehabilitation-major-repair-of-flood-control"
-                    >Rehabilitation / Major Repair of Flood Control Structure</span
-                  >
-                </div>
-                <div class="infra-detail-col">
-                  <span class="infra-detail-label" data-i18n="budget-contractor">Contractor</span>
-                  <span class="infra-detail-value" data-i18n="budget-shanley-construction"
-                    >Shanley Construction</span
-                  >
-                </div>
-                <div class="infra-detail-col infra-detail-cost">
-                  <span class="infra-detail-label" data-i18n="budget-contract-cost"
-                    >Contract Cost</span
-                  >
-                  <span class="infra-detail-value">₱29,700,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="infra-project-footer">
-              <span class="infra-source"
-                ><i class="bi bi-info-circle"></i>
-                <span data-i18n="budget-source-sumbong-sa-pangulo"
-                  >Source: Sumbong sa Pangulo</span
-                ></span
-              >
-              <a
-                href="https://sumbongsapangulo.ph/flood-control-map/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="infra-link"
-                ><i class="bi bi-arrow-up-right"></i>
-                <span data-i18n="budget-view-on-map">View on Map</span></a
-              >
-            </div>
-          </div>
+          <p class="dpwh-portal-note" data-i18n="budget-dpwh-portal-note">
+            DPWH publishes every contract awarded for Albay on its Transparency Portal. The list
+            below is taken directly from that portal.
+          </p>
+          <p>
+            <a
+              href="https://transparency.dpwh.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="budget-dpwh-transparency-portal"
+              >DPWH Transparency Portal</a
+            >
+          </p>
         </div>
       </section>
 
@@ -655,7 +512,7 @@
             <h2 data-i18n="budget-dpwh-infrastructure-projects-in-albay">
               DPWH Infrastructure Projects in Albay
             </h2>
-            <p data-i18n="budget-implementing-agency-nueva-vizcaya-district">
+            <p data-i18n="budget-implementing-agency-bicol-region-deo">
               Implementing Agency: Bicol Region District Engineering Office
             </p>
           </div>
@@ -680,7 +537,7 @@
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -722,7 +579,8 @@
             <h4 data-i18n="budget-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -753,34 +611,76 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span>
+              <span class="footer-cost-value">&#8369;0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -791,17 +691,17 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/transparency-v2.js"></script>
-    <script defer src="../assets/js/dpwh-projects.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="../assets/js/transparency-v2.js?v=019d8c4ecb"></script>
+    <script defer src="../assets/js/dpwh-projects.js?v=465d719f25"></script>
   </body>
 </html>

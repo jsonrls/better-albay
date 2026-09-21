@@ -1,0 +1,72 @@
+name: Albay News Sync
+
+# Pulls current press coverage of Albay from the Bing News RSS endpoint,
+# keeps only headlines that name the province or one of its 18 cities and
+# municipalities, collapses the same story reported by several outlets, and
+# merges the result into data/news.json. Metadata-only: no credentials needed.
+# Deploys the merged file to cPanel when FTP secrets are configured.
+
+on:
+  schedule:
+    # Every 6 hours. Local news does not change as fast as a Facebook page, and
+    # a six-hour cadence keeps the feed current without hammering the endpoint.
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {} # allows a manual run from the Actions tab for testing
+
+permissions:
+  contents: read
+
+# Shared with the Facebook sync workflow: both scripts read-modify-write
+# data/news.json, so their runs must not overlap.
+concurrency:
+  group: news-json
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+      FTP_REMOTE_PATH: ${{ vars.FTP_REMOTE_PATH }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync Albay coverage into data/news.json
+        id: sync
+        env:
+          # Optional overrides:
+          # NEWS_WINDOW_DAYS: '180'
+          # NEWS_MAX_ITEMS: '60'
+          # NEWS_QUERIES: 'Albay,Legazpi City,Mayon Volcano'
+          NEWS_WINDOW_DAYS: ${{ vars.NEWS_WINDOW_DAYS }}
+          NEWS_MAX_ITEMS: ${{ vars.NEWS_MAX_ITEMS }}
+        run: node scripts/sync-news.js
+
+      - name: Deploy news.json to cPanel (FTPS)
+        if: steps.sync.outputs.changed == 'true' && env.FTP_SERVER != ''
+        run: |
+          curl --fail --show-error --silent --ssl-reqd \
+            -T data/news.json \
+            "ftp://${FTP_SERVER}/${FTP_REMOTE_PATH}" \
+            --user "${FTP_USERNAME}:${FTP_PASSWORD}"
+          echo "Deployed data/news.json to cPanel."
+
+      - name: No deploy target configured
+        if: steps.sync.outputs.changed == 'true' && env.FTP_SERVER == ''
+        run: |
+          echo "news.json changed but no FTP_SERVER secret is set."
+          echo "Download the artifact below or configure FTP secrets to auto-deploy."
+
+      - name: Upload news.json artifact (fallback when no FTP configured)
+        if: steps.sync.outputs.changed == 'true' && env.FTP_SERVER == ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-json
+          path: data/news.json
+          retention-days: 7

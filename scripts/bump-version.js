@@ -124,6 +124,31 @@ htmlDirs.forEach(function (dir) {
 
 console.log('Updated ' + filesUpdated + ' HTML file(s)');
 
+// Stamp the service-worker cache namespace. Without this, sw.js keeps the
+// same CACHE_VERSION across releases, the browser never sees a changed
+// service worker, and returning visitors keep the previous release's CSS
+// and JavaScript out of Cache Storage.
+const SW_FILE = path.join(__dirname, '..', 'sw.js');
+try {
+  const sw = fs.readFileSync(SW_FILE, 'utf8');
+  const stamped = sw.replace(
+    /var CACHE_VERSION = '[^']*';/,
+    "var CACHE_VERSION = '" + newVersion + "';"
+  );
+  if (stamped === sw) {
+    if (/var CACHE_VERSION = '/.test(sw)) {
+      console.log('sw.js CACHE_VERSION already at ' + newVersion);
+    } else {
+      console.warn('Warning: CACHE_VERSION declaration not found in sw.js');
+    }
+  } else {
+    fs.writeFileSync(SW_FILE, stamped);
+    console.log('Stamped sw.js CACHE_VERSION → ' + newVersion);
+  }
+} catch (e) {
+  console.warn('Warning: Could not update sw.js:', e.message);
+}
+
 // Sync version.json to react-app/public/ (consumed by React Footer at runtime)
 var reactPublicVersion = path.join(__dirname, '..', 'react-app', 'public', 'version.json');
 if (fs.existsSync(path.dirname(reactPublicVersion))) {

@@ -15,8 +15,10 @@ on:
 permissions:
   contents: read
 
+# Shared with the Albay news sync workflow: both scripts read-modify-write
+# data/news.json, so their runs must not overlap.
 concurrency:
-  group: facebook-sync
+  group: news-json
   cancel-in-progress: false
 
 jobs:

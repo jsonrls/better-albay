@@ -1,14 +1,15 @@
 {
   "name": "ba-web",
-  "version": "1.1.19",
+  "version": "1.1.30",
   "description": "BetterAlbay.org - Official Portal for LGU Albay",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
+    "dev": "python3 serve.py -d . -p 8000",
     "build": "bash build.sh",
     "build:major": "bash scripts/version.sh major && bash build.sh --no-bump",
     "build:minor": "bash scripts/version.sh minor && bash build.sh --no-bump",
-    "serve": "python3 -m http.server 8000",
-    "serve:dist": "cd dist && python3 -m http.server 8080",
+    "serve": "python3 serve.py -d . -p 8000",
+    "serve:dist": "python3 serve.py -d dist -p 8080",
+    "check:links": "node scripts/check-links.js",
     "version:major": "node scripts/bump-version.js major",
     "version:minor": "node scripts/bump-version.js minor",
     "version:patch": "node scripts/bump-version.js patch",
@@ -21,7 +22,8 @@
     "format:check": "prettier --check .",
     "package": "bash scripts/package-cpanel.sh --build",
     "package:only": "bash scripts/package-cpanel.sh",
-    "test:chromium": "playwright test --project=chromium"
+    "test:chromium": "playwright test --project=chromium",
+    "test:unit": "node --test --test-concurrency=1 tests/unit/*.test.cjs"
   },
   "keywords": [
     "albay",

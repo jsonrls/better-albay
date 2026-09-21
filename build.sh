@@ -37,6 +37,14 @@ if [ -f .env ]; then
     echo "▶ [0/6] Loaded .env (SITE_URL=${SITE_URL:-unset})"
 fi
 
+# Regenerate shared service layouts and copy before stamping their assets.
+python3 scripts/sync-verified-content.py
+python3 scripts/render-government-page.py
+node scripts/sync-service-guide-copy.js
+node scripts/build-services-pages.js
+node scripts/build-service-guides.js
+python3 scripts/set-footer-logo.py --write
+
 # Validate JavaScript before changing the release version or creating output.
 while IFS= read -r -d '' file; do
     node --check "$file"
@@ -55,6 +63,33 @@ else
 fi
 
 VERSION=$(node -e "console.log(require('./version.json').version)")
+
+# The service worker's cache namespace must match the release version,
+# otherwise returning visitors keep the previous release's CSS and JS out
+# of Cache Storage. bump-version.js stamps this; re-stamp here so that a
+# --no-bump build cannot ship a stale namespace either.
+node -e '
+  var fs = require("fs");
+  var v = require("./version.json").version;
+  var src = fs.readFileSync("sw.js", "utf8");
+  var want = "var CACHE_VERSION = \x27" + v + "\x27;";
+  if (src.indexOf(want) !== -1) { console.log("  sw.js cache namespace: " + v); process.exit(0); }
+  if (!/var CACHE_VERSION = \x27[^\x27]*\x27;/.test(src)) {
+    console.error("  ERROR: no CACHE_VERSION declaration in sw.js");
+    process.exit(1);
+  }
+  fs.writeFileSync(
+    "sw.js",
+    src.replace(/var CACHE_VERSION = \x27[^\x27]*\x27;/, want)
+  );
+  console.log("  sw.js cache namespace re-stamped → " + v);
+' || exit 1
+
+# Cache-busting queries are derived from the asset bytes, not typed by hand.
+# sw.js serves static assets stale-while-revalidate, so a query that did not
+# move when its asset did keeps the old code in front of returning visitors.
+# Runs after the version bump because bump-version.js does not touch ?v=.
+node scripts/stamp-assets.js || exit 1
 
 # ── 2. Clean dist ────────────────────────────────────────────────────────────
 echo ""
@@ -79,6 +114,7 @@ if command -v rsync &>/dev/null; then
         --exclude='build.sh' \
         --exclude='babel.config.json' \
         --exclude='serve.py' \
+        --exclude='/_*.html' \
         --exclude='scripts' \
         --exclude='docs' \
         --exclude='*.backup' \
@@ -193,6 +229,8 @@ printf  "║  Source: %-31s║\n" "${ORIG_SIZE}"
 printf  "║  Dist:   %-31s║\n" "${DIST_SIZE}"
 echo "╠══════════════════════════════════════════╣"
 echo "║  Upload dist/ → cPanel public_html/     ║"
-echo "║  Preview: cd dist && python3 -m http.server 8080  ║"
+echo "║  Preview: npm run serve:dist            ║"
+echo "║  (clean URLs need serve.py - plain      ║"
+echo "║   'python3 -m http.server' 404s them)   ║"
 echo "╚══════════════════════════════════════════╝"
 echo ""

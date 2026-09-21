@@ -75,10 +75,10 @@ const translations: Record<string, Record<string, string>> = {
     'section-updates': 'Latest Updates',
     'btn-view-all': 'View All',
 
-    // Municipal Leadership
-    'section-leadership': 'Municipal Leadership',
-    'title-mayor': 'Municipal Mayor',
-    'title-vice-mayor': 'Municipal Vice Mayor',
+    // Provincial Leadership
+    'section-leadership': 'Provincial Leadership',
+    'title-mayor': 'Governor',
+    'title-vice-mayor': 'Vice Governor',
     'btn-view-officials': 'View All Officials',
 
     // Contact Section
@@ -392,7 +392,8 @@ const translations: Record<string, Record<string, string>> = {
     'weather-map-title': 'Weather and Map of Albay',
     'weather-mainly-clear': 'Mainly clear',
     'weather-location': 'Legazpi City, Albay',
-    'history-title': 'Information pending verification.',
+    'home-brief-history-of-albay': 'Brief History of Albay',
+    'history-title': 'Brief History of Albay',
     'history-1760': 'Information pending verification.',
     'history-1767': 'Information pending verification.',
     'history-1768': 'Information pending verification.',
@@ -419,7 +420,7 @@ const translations: Record<string, Record<string, string>> = {
     'quiz-title': 'Albay Quiz',
     'quiz-subtitle': 'How well do you know Albay, Philippines?',
     'quiz-description':
-      "Evaluate your familiarity with the municipality's heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Bicol Region's most prominent localities.",
+      "Evaluate your familiarity with the province's heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Bicol Region's most prominent localities.",
     'quiz-take': 'Take the Quiz',
 
     // Footer
@@ -507,10 +508,10 @@ const translations: Record<string, Record<string, string>> = {
     'section-updates': 'Pinakabagong mga Update',
     'btn-view-all': 'Tingnan Lahat',
 
-    // Municipal Leadership
-    'section-leadership': 'Pamunuan ng Munisipalidad',
-    'title-mayor': 'Punong Bayan',
-    'title-vice-mayor': 'Bise Punong Bayan',
+    // Provincial Leadership
+    'section-leadership': 'Pamunuan ng Lalawigan',
+    'title-mayor': 'Gobernador',
+    'title-vice-mayor': 'Bise Gobernador',
     'btn-view-officials': 'Tingnan Lahat ng Opisyal',
 
     // Contact Section
@@ -844,7 +845,8 @@ const translations: Record<string, Record<string, string>> = {
     'weather-map-title': 'Panahon at Mapa ng Albay',
     'weather-mainly-clear': 'Halos maaliwalas',
     'weather-location': 'Lungsod ng Legazpi, Albay',
-    'history-title': 'Information pending verification.',
+    'home-brief-history-of-albay': 'Maikling Kasaysayan ng Albay',
+    'history-title': 'Maikling Kasaysayan ng Albay',
     'history-1760': 'Information pending verification.',
     'history-1767': 'Information pending verification.',
     'history-1768': 'Information pending verification.',
@@ -871,7 +873,7 @@ const translations: Record<string, Record<string, string>> = {
     'quiz-title': 'Albay Quiz',
     'quiz-subtitle': 'Gaano mo kakilala ang Albay, Philippines?',
     'quiz-description':
-      'Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng munisipalidad sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Bicol Region.',
+      'Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng lalawigan sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Bicol Region.',
     'quiz-take': 'Subukin ang Quiz',
 
     // Footer
@@ -955,11 +957,27 @@ const translations: Record<string, Record<string, string>> = {
     'weather-location': 'Syudad nin Legazpi, Albay',
     'history-title': 'Information pending verification.',
 
-    // Municipal/Provincial Leadership
+    // Provincial Leadership
     'section-leadership': 'Mga Lider kan Probinsya',
-    'title-mayor': 'Gobernador kan Probinsya',
-    'title-vice-mayor': 'Bise Gobernador kan Probinsya',
-    'btn-view-officials': 'Hilingon an gabos na Opisyal',
+    'title-mayor': 'Gobernador',
+    'title-vice-mayor': 'Bise Gobernador',
+    'btn-view-officials': 'Hilingon an Gabos na Opisyal',
+
+    // Contact Section
+    'section-contact': 'Impormasyon sa Pakikipag-ugnayan',
+    'contact-phone': 'Telepono',
+    'contact-email': 'Email',
+    'contact-address': 'Direksyon',
+    'contact-hours': 'Mon-Fri: 8:00 AM - 5:00 PM',
+    'contact-response': 'Masimbag kami sa laog nin 24 oras',
+    'contact-municipal-hall': 'Kapitolyo kan Probinsya',
+
+    // Quiz
+    'quiz-title': 'Albay Quiz',
+    'quiz-subtitle': 'Gurano mo kamidbid an Albay, Philippines?',
+    'quiz-description':
+      'Suriaron an saimong kaaraman dapit sa pamana, kultural na pagkamidbid, asin importansyang heograpiko kan probinsya paagi sa sarong interactive na pagtimbang nin kaaraman na dinisenyo tanganing ipahiling an saro sa mga pinakabantog na lokalidad kan Rehiyon Bikol.',
+    'quiz-take': 'Ponan an Quiz',
 
     // Footer
     'footer-tagline':
@@ -979,7 +997,9 @@ const translations: Record<string, Record<string, string>> = {
   },
 };
 
-type Language = 'en' | 'fil' | 'bik';
+translations.bcl = translations.bik;
+
+type Language = 'en' | 'fil' | 'bcl' | 'bik';
 
 interface LanguageContextType {
   language: Language;
@@ -994,9 +1014,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      const savedLang = localStorage.getItem('betteralbay_lang') as Language;
-      if (savedLang && ['en', 'fil', 'bik'].includes(savedLang)) {
-        setLanguageState(savedLang);
+      let stored = localStorage.getItem('selectedLang') || localStorage.getItem('betteralbay_lang');
+      if (!stored && typeof document !== 'undefined' && document.cookie) {
+        const match = document.cookie.match(/(?:^|;\s*)(?:selectedLang|betteralbay_lang)=([^;]+)/);
+        if (match && match[1]) stored = decodeURIComponent(match[1]);
+      }
+      const savedLang = (stored === 'bik' ? 'bcl' : stored) as Language;
+      if (savedLang && ['en', 'fil', 'bcl', 'bik'].includes(savedLang)) {
+        setLanguageState(savedLang === 'bik' ? 'bcl' : savedLang);
       }
     } catch {
       // Browser privacy settings may disable storage; keep the default language.
@@ -1004,17 +1029,33 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    const normalized = lang === 'bik' ? 'bcl' : lang;
+    setLanguageState(normalized);
     try {
-      localStorage.setItem('betteralbay_lang', lang);
+      localStorage.setItem('betteralbay_lang', normalized);
+      localStorage.setItem('selectedLang', normalized);
     } catch {
       // Language selection still works for this session when storage is blocked.
+    }
+    try {
+      if (typeof document !== 'undefined') {
+        document.cookie = `selectedLang=${encodeURIComponent(normalized)};path=/;max-age=31536000;SameSite=Lax`;
+        document.cookie = `betteralbay_lang=${encodeURIComponent(normalized)};path=/;max-age=31536000;SameSite=Lax`;
+      }
+    } catch {
+      // Ignore cookie errors
     }
   };
 
   // Falls back to English for any key not yet translated into the active language
   const t = (key: string): string => {
-    return translations[language]?.[key] || translations['en']?.[key] || key;
+    const targetLang = language === 'bik' ? 'bcl' : language;
+    return (
+      translations[targetLang]?.[key] ||
+      translations['bik']?.[key] ||
+      translations['en']?.[key] ||
+      key
+    );
   };
 
   return (

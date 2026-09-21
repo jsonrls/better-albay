@@ -49,15 +49,22 @@ function shouldExclude(name) {
   return false;
 }
 
-function copyDir(src, dest) {
+// Root-level `_*.html` files are local preview harnesses, never pages. The
+// rsync path in build.sh excludes `/_*.html`; this mirrors it.
+function shouldExcludeRootFile(name) {
+  return name.charAt(0) === '_' && name.endsWith('.html');
+}
+
+function copyDir(src, dest, isRoot) {
   if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
   const entries = fs.readdirSync(src, { withFileTypes: true });
   for (const entry of entries) {
     if (shouldExclude(entry.name)) continue;
+    if (isRoot && !entry.isDirectory() && shouldExcludeRootFile(entry.name)) continue;
     const srcPath = path.join(src, entry.name);
     const destPath = path.join(dest, entry.name);
     if (entry.isDirectory()) {
-      copyDir(srcPath, destPath);
+      copyDir(srcPath, destPath, false);
     } else {
       fs.copyFileSync(srcPath, destPath);
     }
@@ -70,5 +77,5 @@ if (!src || !dest) {
   process.exit(1);
 }
 
-copyDir(path.resolve(src), path.resolve(dest));
+copyDir(path.resolve(src), path.resolve(dest), true);
 console.log(`Copied: ${src} → ${dest}`);

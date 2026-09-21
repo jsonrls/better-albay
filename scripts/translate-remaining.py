@@ -472,9 +472,7 @@ FIL_SENTENCES = {
 
     # Common service phrases
     "Contact us for assistance with this service.": "Makipag-ugnayan sa amin para sa tulong sa serbisyong ito.",
-    "Municipal Hall, Ground Floor Albay, Philippines 3708": "Munisipyo, Unang Palapag, Albay, Philippines 3708",
-    "Municipal Hall, 2nd Floor Albay, Philippines 3708": "Munisipyo, Ikalawang Palapag, Albay, Philippines 3708",
-    "Municipal Hall, Ground Floor, Albay, Philippines 3708": "Munisipyo, Unang Palapag, Albay, Philippines 3708",
+    # Municipal hall addresses removed — these were Solano, NV (zip 3708) legacy entries
     "2nd Floor, Municipal Hall, Albay, Philippines": "Ikalawang Palapag, Munisipyo, Albay, Philippines",
     "Ground Floor, Municipal Hall, Albay, Philippines": "Unang Palapag, Munisipyo, Albay, Philippines",
 
@@ -625,9 +623,7 @@ ILO_SENTENCES = {
 
     # Common service phrases
     "Contact us for assistance with this service.": "Kontakennakami para iti tulong iti daytoy a serbisio.",
-    "Municipal Hall, Ground Floor Albay, Philippines 3708": "Munisipalidad, Umuna a Kadsaaran, Albay, Philippines 3708",
-    "Municipal Hall, 2nd Floor Albay, Philippines 3708": "Munisipalidad, Maikadua a Kadsaaran, Albay, Philippines 3708",
-    "Municipal Hall, Ground Floor, Albay, Philippines 3708": "Munisipalidad, Umuna a Kadsaaran, Albay, Philippines 3708",
+    # Municipal hall addresses removed — these were Solano, NV (zip 3708) legacy entries
     "2nd Floor, Municipal Hall, Albay, Philippines": "Maikadua a Kadsaaran, Munisipalidad, Albay, Philippines",
     "Ground Floor, Municipal Hall, Albay, Philippines": "Umuna a Kadsaaran, Munisipalidad, Albay, Philippines",
 

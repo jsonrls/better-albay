@@ -62,7 +62,7 @@
     <title>Resolution Framework | BetterAlbay.org</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
 
     <!-- Fonts -->
@@ -88,6 +88,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/legislative.css?v=0f26ca0b5b" />
   </head>
 
   <body>
@@ -99,7 +100,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +122,8 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -121,7 +132,13 @@
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="reso-certificates">Certificates</a>
@@ -158,7 +175,14 @@
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="./" class="active" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="./"
+                class="active"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="ordinance-framework" data-i18n="reso-ordinance-framework"
@@ -188,8 +212,8 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
               FIL
             </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">
+              BCL
             </button>
           </div>
         </div>
@@ -247,6 +271,23 @@
             <p class="page-header-desc" data-i18n="reso-page-desc">
               Resolutions passed by the Sangguniang Panlalawigan ng Albay
             </p>
+            <div class="page-header-search">
+              <form class="search-form" role="search">
+                <div class="search-input-wrapper">
+                  <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                  <input
+                    type="search"
+                    id="service-search"
+                    class="service-search-input"
+                    placeholder="Search services..."
+                    data-i18n-placeholder="search-placeholder"
+                    aria-label="Search services"
+                    data-i18n-aria="search-aria-label"
+                    autocomplete="off"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -313,76 +354,58 @@
         </div>
       </section>
 
-      <!-- 2026 Resolutions Table -->
+      <!-- Provincial Resolutions Table -->
       <section class="section">
         <div class="container">
           <div class="text-center" style="margin-bottom: var(--spacing-lg)">
             <h2
               style="font-size: 1.5rem; margin-bottom: var(--spacing-xs)"
-              data-i18n="reso-2026-title"
+              data-i18n="reso-record-title"
             >
-              2026 Resolutions
+              Provincial Resolutions on Record
             </h2>
-            <p style="color: var(--color-text-light)" data-i18n="reso-2026-subtitle">
-              Official resolutions passed by the Sangguniang Panlalawigan ng Albay in 2026
+            <p style="color: var(--color-text-light)" data-i18n="reso-record-subtitle">
+              Resolutions of the Sangguniang Panlalawigan ng Albay recorded from a retrievable
+              public source
             </p>
           </div>
-          <div class="table-responsive">
-            <table class="data-table resolution-table" id="resolution-table-2026">
-              <caption class="sr-only">
-                List of 2026 Resolutions from Sangguniang Panlalawigan ng Albay
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col" data-i18n="reso-table-number">Resolution No.</th>
-                  <th scope="col" data-i18n="reso-table-title">Title</th>
-                  <th scope="col" data-i18n="reso-table-date">Session Date</th>
-                </tr>
-              </thead>
-              <tbody id="resolution-table-body-2026">
-                <!-- Dynamically populated by resolutions.js -->
-              </tbody>
-            </table>
-          </div>
-          <div class="text-center" style="margin-top: var(--spacing-lg)">
-            <a
-              href="https://albay.gov.ph/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary"
-              ><i class="bi bi-box-arrow-up-right"></i>
-              <span data-i18n="reso-view-all-resolutions-on-sb-website"
-                >View All Resolutions on SB Website</span
-              ></a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- 2025 Resolutions Table -->
-      <section class="section">
-        <div class="container">
-          <div class="text-center" style="margin-bottom: var(--spacing-lg)">
-            <h2
-              style="font-size: 1.5rem; margin-bottom: var(--spacing-xs)"
-              data-i18n="reso-2025-title"
-            >
-              2025 Resolutions
-            </h2>
-            <p style="color: var(--color-text-light)" data-i18n="reso-2025-subtitle">
-              Official resolutions passed by the Sangguniang Panlalawigan ng Albay in 2025
+          <div class="leg-note">
+            <p>
+              <strong>There is nothing to show here yet.</strong> No Sangguniang Panlalawigan
+              resolution of Albay could be recorded from a source that is publicly retrievable. The
+              records below are empty by design — nothing is shown rather than an invented number,
+              title or session date.
+            </p>
+            <p>
+              <strong>What was checked.</strong> The province's resolution listing at
+              <em>albay.gov.ph/spa/resolutions/</em> returns an access-denied page to automated
+              clients and, in the Internet Archive, is an empty container that never held a single
+              record; its RSS feed was never populated. <em>spalbay.gov.ph</em> does not resolve.
+              The Official Gazette, the eFOI portal and data.gov.ph all refuse automated access or
+              expose no dataset.
+            </p>
+            <p>
+              <strong>How to get a specific resolution.</strong> Ask the Sangguniang Panlalawigan
+              Secretariat or the Provincial Secretary for a certified copy, or file an eFOI request
+              at
+              <a href="https://www.foi.gov.ph/" target="_blank" rel="noopener noreferrer"
+                >foi.gov.ph</a
+              >
+              naming the Sangguniang Panlalawigan ng Albay as the agency. The portal blocks
+              automated clients but is reachable in a browser.
             </p>
           </div>
           <div class="table-responsive">
             <table class="data-table resolution-table" id="resolution-table">
               <caption class="sr-only">
-                List of 2025 Resolutions from Sangguniang Panlalawigan ng Albay
+                Provincial resolutions of Albay recorded from retrievable sources
               </caption>
               <thead>
                 <tr>
                   <th scope="col" data-i18n="reso-table-number">Resolution No.</th>
                   <th scope="col" data-i18n="reso-table-title">Title</th>
                   <th scope="col" data-i18n="reso-table-date">Session Date</th>
+                  <th scope="col" data-i18n="reso-table-source">Source</th>
                 </tr>
               </thead>
               <tbody id="resolution-table-body">
@@ -392,10 +415,19 @@
           </div>
           <div class="text-center" style="margin-top: var(--spacing-lg)">
             <a
+              href="https://www.foi.gov.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              ><i class="bi bi-file-earmark-text"></i>
+              <span data-i18n="reso-file-efoi-request">File an eFOI request</span></a
+            >
+            <a
               href="https://albay.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-primary"
+              style="margin-left: 8px"
               ><i class="bi bi-box-arrow-up-right"></i>
               <span data-i18n="reso-view-all-resolutions-on-sb-website"
                 >View All Resolutions on SB Website</span
@@ -411,7 +443,7 @@
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -453,7 +485,8 @@
             <h4 data-i18n="reso-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -490,34 +523,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -528,16 +602,17 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/resolutions.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="../assets/js/resolutions.js?v=29e47f0c7d"></script>
+    <script defer src="../assets/js/search.js?v=248841e71f"></script>
   </body>
 </html>

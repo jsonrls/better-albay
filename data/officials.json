@@ -1,5 +1,1165 @@
 {
-  "_status": "unverified",
-  "_source": "https://albay.gov.ph/",
-  "officials": []
+  "title": "Albay Province Government Officials Directory",
+  "province": "Albay",
+  "country": "Philippines",
+  "reference_date": "2026-09-19",
+  "term": "2025–2028 local term / 20th Congress",
+  "provenance": "Structured export of the research summary in this conversation; no new verification was performed for this export.",
+  "scope": "Congressional representatives, provincial governor/vice governor and regular board members, city and municipal mayors/vice mayors and regular councilors, limited other officials.",
+  "limitations": [
+    "This is not a complete list of all government officials in Albay.",
+    "Barangay officials, SK officials, most ex officio members, judges, and most appointed national- and local-government personnel are not included.",
+    "The 2025 election returns cited for municipality mayors and vice mayors were labeled partial and unofficial, despite 100% precinct reporting.",
+    "Most councilors come from a temporary 2025–2028 roster; changes through September 19, 2026 were not individually checked.",
+    "Names and spellings are transcribed from the previous response and may need validation against original government records before formal use."
+  ],
+  "congressional_representatives": [
+    {
+      "name": "Cielo Krisel Lagman",
+      "position": "Representative",
+      "verification": "Identified in the official House of Representatives directory for the 20th Congress in prior research.",
+      "district": 1
+    },
+    {
+      "name": "Carlos Andes Loria",
+      "position": "Representative",
+      "verification": "Identified in the official House of Representatives directory for the 20th Congress in prior research.",
+      "district": 2
+    },
+    {
+      "name": "Adrian E. Salceda",
+      "position": "Representative",
+      "verification": "Identified in the official House of Representatives directory for the 20th Congress in prior research.",
+      "district": 3
+    }
+  ],
+  "provincial_government": {
+    "governor": {
+      "name": "Noel E. Rosal",
+      "position": "Governor",
+      "verification": "Identified in reporting available by September 2026 in prior research."
+    },
+    "vice_governor": {
+      "name": "Farida “Diday” S. Co",
+      "position": "Vice Governor",
+      "verification": "Identified in reporting available by September 2026 in prior research."
+    },
+    "regular_board_members": [
+      {
+        "name": "Sheina Marie Onrubia-Dela Cruz",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 1
+      },
+      {
+        "name": "John Gio Ong Bongao",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 1
+      },
+      {
+        "name": "Marian Caroline Ziga-So",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 1
+      },
+      {
+        "name": "Melissa Abadeza-Armedilla",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 2
+      },
+      {
+        "name": "Glenn Casulla",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 2
+      },
+      {
+        "name": "Harold O. Imperial",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 2
+      },
+      {
+        "name": "Juan Miguel Ricardo Salceda",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 3
+      },
+      {
+        "name": "Brayan Arandia",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 3
+      },
+      {
+        "name": "Emmanuel Ribaya",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 3
+      },
+      {
+        "name": "Wilfredo Maronilla",
+        "position": "Provincial Board Member",
+        "verification": "Listed in the 2025 election results and 2025–2028 provincial board roster; individual September 2026 incumbency not independently confirmed.",
+        "district": 3
+      }
+    ],
+    "additional_board_or_ex_officio_names": [
+      {
+        "name": "Patricia Gonzales-Alsua",
+        "position": "Philippine Councilors League representative",
+        "verification": "Listed in prior research; current seat holder not independently confirmed."
+      },
+      {
+        "name": "Milagros B. Bal",
+        "position": "Provincial Board Member",
+        "verification": "Identified in September 2026 reporting; exact seat category not established in prior research."
+      }
+    ]
+  },
+  "cities": [
+    {
+      "name": "Legazpi City",
+      "mayor": {
+        "name": "Hisham B. Ismail",
+        "position": "Mayor",
+        "verification": "Identified for the 2025–2028 term in prior research; not individually reverified for September 19, 2026."
+      },
+      "vice_mayor": {
+        "name": "Luis Felipe L. Gutierrez",
+        "position": "Vice Mayor",
+        "verification": "Identified for the 2025–2028 term in prior research; not individually reverified for September 19, 2026."
+      },
+      "city_councilors": [
+        {
+          "name": "Vicente F. Baltazar III",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Lourence M. Beltran",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ismael B. Buban IV",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Alexander U. Jao",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Roberto Rafael N. Lucila II",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joseph Philip L. Lee",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Charlton S. Lajara",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Maria Paz C. Imperial",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Alan O. Rañola",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Renato A. Valladolid",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Ligao City",
+      "mayor": {
+        "name": "Fernando V. Gonzalez",
+        "position": "Mayor",
+        "verification": "Identified for the 2025–2028 term in prior research; not individually reverified for September 19, 2026."
+      },
+      "vice_mayor": {
+        "name": "Jaypee M. David",
+        "position": "Vice Mayor",
+        "verification": "Identified for the 2025–2028 term in prior research; not individually reverified for September 19, 2026."
+      },
+      "city_councilors": [
+        {
+          "name": "Viktoria Shaine M. Chua",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Patricia G. Alsua",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Arnold P. Revilla II",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Amado V. Manlangit Jr.",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Felipe O. Alday",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Teodorico A. Residilla Jr.",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rey Noel T. Salceda",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Esteban M. Gonzales",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ana P. Manlangit",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Jona L. Peñalosa",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Tabaco City",
+      "mayor": {
+        "name": "Reynaldo B. Bragais",
+        "position": "Mayor",
+        "verification": "Identified for the 2025–2028 term in prior research; not individually reverified for September 19, 2026."
+      },
+      "vice_mayor": {
+        "name": "Glenda Ong Bongao",
+        "position": "Vice Mayor",
+        "verification": "Identified for the 2025–2028 term in prior research; not individually reverified for September 19, 2026."
+      },
+      "city_councilors": [
+        {
+          "name": "Salvacion E. Balingbing",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Luis Renir B. Burce",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ram B. Dyangko",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Arnold C. Onrubia",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Preciocisima B. Tanggo",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Noel S. Bonaobra",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nestor T. San Pablo",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Dionisio P. Ragodon Jr.",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Lourdes B. Berces",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Generoso I. Bon",
+          "position": "City Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    }
+  ],
+  "municipalities": [
+    {
+      "name": "Bacacay",
+      "mayor": {
+        "name": "Daniel Jose “Nookie” Bombales",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Robert Hector “Bob” Arjona",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Herbert Bermas",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rimell Faith Torre",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nilda Bermundo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rodel Belleza",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rodolfo Cao Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nicole Denisse Bercasio",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Elenita Bañares",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Lara Romano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Camalig",
+      "mayor": {
+        "name": "Carlos Irwin “Caloy” Baldo Jr.",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Maria Ahrdail “Ding” Baldo",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Purisima Nocedo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Sherwin Ian Buena",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Felipe Noe Napa Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Abegail Go",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Millard Moyo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Shellie May Vibar",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Dennise Misolania",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Sheila Marie Dino",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ],
+      "council_roster_note": "Camalig’s July 2025 inaugural-session report names Sheila Marie “Shei” Dino; a separate temporary roster lists Susana Llosala instead. The inaugural-session report was used here; September 2026 membership and any intervening changes have not been established."
+    },
+    {
+      "name": "Daraga",
+      "mayor": {
+        "name": "Victor “Vic” Perete",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Fleur Jazel “Love” Ruiz",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Bobby Magalona",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nelson Nuñez Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Julius Duran",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ian Macasinag",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Leonides Teofilo de Lumen II",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Warren Sorsogon",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Carlos Baylon",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joey Marcellana",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Guinobatan",
+      "mayor": {
+        "name": "Ann Ongjoco",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Rogelio “Doc Butch” Rivera",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Kathleen Mae Padua",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Marelen Flores",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Dominic Amano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Julio Tingzon IV",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ricky Matza",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Wilfredo Arevalo Sr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Robert Bañaga",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rolando Palabrica",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Jovellar",
+      "mayor": {
+        "name": "Jorem Arcangel",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Cezar “Nong” Arellano",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Esther Gaile Nobleza",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Mercuria Salomon",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Melinda Quirona",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Alejandro Enciso Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joseph Arcangel",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nadier Tolosa Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Zandro Gomez",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Michael Anzano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Libon",
+      "mayor": {
+        "name": "Macgregor Edward “Mac” Sayson",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Jan Saclag",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Nestor Ayo Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nico Freddie Will Lived Maronilla",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Daniel Dycoco",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Francis James Velasco",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Abegail Velasco",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ramon Ferdinand Velasco",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Mark Ian Cortes",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Florian Briones",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Malilipot",
+      "mayor": {
+        "name": "Cenon Volante",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Jose Bolaños",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Johanes Ampig",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Paterno Brotamonte",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joey Bides",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Sandy Balingbing",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Josefina Biñas",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joel Bobis",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Gilbert Gonzales Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joephil Bien",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Malinao",
+      "mayor": {
+        "name": "Sheryl Capus-Bilo",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Abner “Abe” Cargullo",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Reymond Mahinay",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Irene Fajut",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Edwin Giovanni Alcala",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ernalyn Solisa",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Joel Ceriola",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Evelyn Cellona",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Adele Albano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Myrla Aperin",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Manito",
+      "mayor": {
+        "name": "Jerry Arizapa",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "“Jun” Solinap",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Erwin Daz",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "William Daen",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Eleuterio Daep Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Arly Guiriba",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Lorris Jan Balitaon",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nelia Abellano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Mia Asejo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Randolf Madrid",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Oas",
+      "mayor": {
+        "name": "John Kenneth Trinidad",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Domingo “Ging” Escoto Jr.",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Allen Rivera",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Christian Bryan Bustamante",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Antonio Yuchongco II",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Robert Arevalo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Roman Rendor III",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Nensus Reblando",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Arvin Gregg Ricate",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Noel Brijuega",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Pio Duran",
+      "mayor": {
+        "name": "Evangeline “Vangie” Arandia",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Henry “Itay” Callope",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Mercedes Napa",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Mary June Malgapo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Pedro de Luna",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Marvin Thomas Quiroz",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Mark Lyndon Ariate",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Karen Joy Navarro",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Bon Edward Barnido",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ernesto Alano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Polangui",
+      "mayor": {
+        "name": "Jesciel Salceda",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Cherilie “Cherry” Mella-Sampal",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Kristel Louise Pasia",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Eugene Arive",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Mark Thet Sabando",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Bernie Broncano",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Niño Adonis Rebeta",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "William Buendia",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rizaldy Recierdo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Edna Siguenza",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Rapu-Rapu",
+      "mayor": {
+        "name": "Romel “Otoy” Galicia",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "“Tom” Galicia",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Samuel Batas",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Retchell Bajaro",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Napoleon Bello",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Kennedy Bertumen",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Jose Rommel Villalba",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Jerick Jay Arienda",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Christopher Santillan",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ronald Galicia Jr.",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Santo Domingo",
+      "mayor": {
+        "name": "Nomar “Bong” Banda",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "“Mark” Aguas",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Raquel Sto. Tomas",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Dino Jose Surtida",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Marvin Baloloy",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Paul Clinton Chan",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Carlo Baloloy",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Jose Maristela",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Lyra Gregorio",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Patrick Glenn Chan",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    },
+    {
+      "name": "Tiwi",
+      "mayor": {
+        "name": "Jose Morel “Jojo” Climaco",
+        "position": "Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "vice_mayor": {
+        "name": "Jaime “Ami” Villanueva",
+        "position": "Vice Mayor",
+        "verification": "Named in May 15, 2025 election returns reported as partial and unofficial despite 100% of precincts reporting; September 19, 2026 incumbency not independently confirmed."
+      },
+      "municipal_councilors": [
+        {
+          "name": "Ma. Theresa Ciocson",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Jerahmeel Clerigo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Edgardo Capa",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Aiken Villanueva",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Cherry Ann Colina",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Katherine Salcedo",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Rey Kallos",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        },
+        {
+          "name": "Ryan Kevin Carlet",
+          "position": "Municipal Councilor",
+          "verification": "Listed in a temporary 2025–2028 local-officials roster pending completion of DILG profiling; September 19, 2026 incumbency not independently confirmed."
+        }
+      ]
+    }
+  ],
+  "other_identified_provincial_officials": [
+    {
+      "name": "Engr. Raul E. Rosal",
+      "position": "Provincial Administrator",
+      "verification": "Identified in January 2026 reporting; status as of September 19, 2026 not independently confirmed."
+    },
+    {
+      "name": "Dr. Karl Hegel M. Ante",
+      "position": "Officer-in-Charge, Provincial Health Office",
+      "verification": "Identified in September 2026 reporting."
+    }
+  ],
+  "source_pointers": {
+    "house_directory": "Official House of Representatives directory for the 20th Congress (cited in the previous answer).",
+    "local_officials_directory": "https://drive.google.com/drive/folders/1fcyeVj_aNF3mdcnDq8rvL8Zj9r77oLZw",
+    "barangay_officials_directory": "https://dilg.gov.ph/barangay-officials-directory",
+    "note": "These pointers are retained from the previous response, not independently rechecked for this export."
+  }
 }

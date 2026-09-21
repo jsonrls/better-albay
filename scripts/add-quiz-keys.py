@@ -22,21 +22,21 @@ prefixes = [
 # Quiz CTA keys (homepage only)
 quiz_cta_en = {
     'home-albay-quiz': 'Albay Quiz',
-    'home-how-well-do-you-know-albay-nueva-vizcaya': 'How well do you know Albay, Philippines?',
+    'home-how-well-do-you-know-albay': 'How well do you know Albay, Philippines?',
     'home-evaluate-your-familiarity-with-the-municipalitys': "Evaluate your familiarity with the municipality's heritage, cultural identity, and geographic significance through an interactive knowledge assessment designed to showcase one of Bicol Region's most prominent localities.",
     'home-take-the-quiz': 'Take the Quiz',
 }
 
 quiz_cta_fil = {
     'home-albay-quiz': 'Albay Quiz',
-    'home-how-well-do-you-know-albay-nueva-vizcaya': 'Gaano mo kakilala ang Albay, Philippines?',
+    'home-how-well-do-you-know-albay': 'Gaano mo kakilala ang Albay, Philippines?',
     'home-evaluate-your-familiarity-with-the-municipalitys': "Suriin ang iyong kaalaman sa pamana, pagkakakilanlan sa kultura, at kahalagahang heograpiko ng munisipalidad sa pamamagitan ng isang interactive na pagtatasa ng kaalaman na idinisenyo upang ipakita ang isa sa mga pinakatanyag na lokalidad ng Bicol Region.",
     'home-take-the-quiz': 'Subukin ang Quiz',
 }
 
 quiz_cta_ilo = {
     'home-albay-quiz': 'Albay Quiz',
-    'home-how-well-do-you-know-albay-nueva-vizcaya': 'Kasano ti pannakaammom iti Albay, Philippines?',
+    'home-how-well-do-you-know-albay': 'Kasano ti pannakaammom iti Albay, Philippines?',
     'home-evaluate-your-familiarity-with-the-municipalitys': "Evaluaren ti pannakaammom iti tawid, kultural a pagbigbigan, ken heograpiko a kapatgan ti munisipalidad babaen ti maysa nga interactive a panagsubok ti pannakaammo a naidisinio tapno ipakita ti maysa kadagiti kalatakan a lokalidad ti Bicol Region.",
     'home-take-the-quiz': 'Subokan ti Quiz',
 }
@@ -135,6 +135,6 @@ for prefix in prefixes[:3]:
     count = verify.count(f'"{key}"')
     print(f'  "{key}" appears {count} times (expect 3)')
 
-for k in ['home-take-the-quiz', 'home-how-well-do-you-know-albay-nueva-vizcaya']:
+for k in ['home-take-the-quiz', 'home-how-well-do-you-know-albay']:
     count = verify.count(f'"{k}"')
     print(f'  "{k}" appears {count} times (expect 3)')

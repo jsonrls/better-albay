@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:8000 in your browser.
+Open <http://localhost:8000> in your browser.
 
 ### React + TypeScript Version
 
@@ -56,7 +56,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open <http://localhost:3000> in your browser.
 
 ## How to Contribute
 
@@ -80,19 +80,25 @@ Open http://localhost:3000 in your browser.
 
 1. **Fork** the repository
 2. **Create** a feature branch
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
+
 3. **Make** your changes
 4. **Test** on multiple browsers (Chrome, Firefox, Safari, Edge)
 5. **Commit** with a descriptive message
+
    ```bash
    git commit -m "Add: brief description of changes"
    ```
+
 6. **Push** to your fork
+
    ```bash
    git push origin feature/your-feature-name
    ```
+
 7. **Open** a Pull Request
 
 ### Commit Message Format
@@ -112,17 +118,17 @@ Types:
 
 ## Contribution Areas
 
-| Area               | Description                          |
-| ------------------ | ------------------------------------ |
-| Bug Fixes          | Fix reported issues                  |
-| Features           | Implement new functionality          |
-| Content            | Update municipal service information |
-| Translations       | Translate to Filipino or Ilocano     |
-| Design             | Improve UI/UX and accessibility      |
-| Data               | Verify and update statistics         |
-| Documentation      | Improve guides and comments          |
-| API Integration    | Connect real-time data sources       |
-| Data Visualization | Enhance charts and graphs            |
+| Area               | Description                            |
+| ------------------ | -------------------------------------- |
+| Bug Fixes          | Fix reported issues                    |
+| Features           | Implement new functionality            |
+| Content            | Update municipal service information   |
+| Translations       | Translate to Filipino or Central Bikol |
+| Design             | Improve UI/UX and accessibility        |
+| Data               | Verify and update statistics           |
+| Documentation      | Improve guides and comments            |
+| API Integration    | Connect real-time data sources         |
+| Data Visualization | Enhance charts and graphs              |
 
 ## Code Guidelines
 
@@ -185,7 +191,7 @@ Pull requests are reviewed for:
 - **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
 - **Facebook:** [@betteralbay.org](https://www.facebook.com/pioalbay2023)
 - **LinkedIn:** [Connect with us](https://www.linkedin.com/company/betteralbay)
-- **Email:** volunteer@betteralbay.org
+- **Email:** <volunteer@betteralbay.org>
 
 ## Recognition
 

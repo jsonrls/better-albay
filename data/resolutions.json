@@ -2,6 +2,48 @@
   "_schema_version": "2.0",
   "_status": "draft",
   "_source": "Sangguniang Panlalawigan ng Albay \u2014 Provincial Board Secretariat",
-  "_note": "Awaiting official provincial resolution records from the SP secretariat or albay.gov.ph.",
+  "_retrieved": "2026-02-11",
+  "_note": "No Sangguniang Panlalawigan resolution of Albay could be recorded from a retrievable source. The records below are empty by design: nothing is shown rather than showing an invented number, title or session date.",
+  "_sources_checked": [
+    {
+      "url": "https://albay.gov.ph/",
+      "result": "HTTP 403 \u2014 Cloudflare challenge; not retrievable by automated clients"
+    },
+    {
+      "url": "https://albay.gov.ph/spa/resolutions/",
+      "result": "HTTP 403 live; the archived copy is an empty page container with no records"
+    },
+    {
+      "url": "https://albay.gov.ph/spa/resolutions/feed/",
+      "result": "Empty RSS channel \u2014 no items were ever published"
+    },
+    {
+      "url": "https://spalbay.gov.ph/",
+      "result": "DNS resolution failed"
+    },
+    {
+      "url": "https://www.officialgazette.gov.ph/",
+      "result": "HTTP 403"
+    },
+    {
+      "url": "https://www.foi.gov.ph/",
+      "result": "HTTP 403 on the site and on every API path tried"
+    },
+    {
+      "url": "https://data.gov.ph/api/3/action/package_search?q=albay",
+      "result": "Returns the site's HTML shell, not JSON \u2014 no CKAN API is exposed"
+    },
+    {
+      "url": "https://www.dilg.gov.ph/",
+      "result": "Reachable, but publishes no provincial resolution dataset"
+    }
+  ],
+  "_retrieval_attempts": "Internet Archive CDX inventory of 16,391 archived albay.gov.ph URLs was searched for resolution documents. Twenty-three snapshots of /spa/resolutions/ exist; every one is an empty page container. No archived resolution index, resolution text or resolution PDF was found.",
+  "_how_to_obtain": [
+    "Ask the Sangguniang Panlalawigan Secretariat or the Provincial Secretary for a certified copy of a specific resolution.",
+    "File an eFOI request at https://www.foi.gov.ph/ naming the Sangguniang Panlalawigan ng Albay as the agency (the site blocks automated clients, but is reachable in a browser).",
+    "Check the Sangguniang Panlalawigan's own postings at https://albay.gov.ph/ in a browser."
+  ],
+  "_completeness": "Empty. Zero resolution records are published.",
   "resolutions": []
 }

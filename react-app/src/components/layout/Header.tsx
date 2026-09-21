@@ -84,6 +84,37 @@ export default function Header() {
     }
   }, [mobileMenuOpen, closeMenu]);
 
+  const languageActions = (placementClass: string) => (
+    <div className={`header-actions ${placementClass}`}>
+      <div className="lang-selector">
+        <button
+          type="button"
+          className={`btn btn-secondary btn-sm lang-btn ${language === 'en' ? 'active' : ''}`}
+          onClick={() => setLanguage('en')}
+          aria-label="Switch to English"
+        >
+          EN
+        </button>
+        <button
+          type="button"
+          className={`btn btn-secondary btn-sm lang-btn ${language === 'fil' ? 'active' : ''}`}
+          onClick={() => setLanguage('fil')}
+          aria-label="Switch to Filipino"
+        >
+          FIL
+        </button>
+        <button
+          type="button"
+          className={`btn btn-secondary btn-sm lang-btn ${language === 'bcl' || language === 'bik' ? 'active' : ''}`}
+          onClick={() => setLanguage('bcl')}
+          aria-label="Switch to Bikol"
+        >
+          BCL
+        </button>
+      </div>
+    </div>
+  );
+
   // Escape key to close
   useEffect(() => {
     function handleEscape(e: KeyboardEvent) {
@@ -126,6 +157,8 @@ export default function Header() {
               src="/assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               className="logo-img"
+              width={113}
+              height={40}
             />
           </Link>
         </div>
@@ -218,36 +251,10 @@ export default function Header() {
               <Link href="/contact">{t('nav-contact')}</Link>
             </li>
           </ul>
+          {languageActions('mobile-language-actions')}
         </nav>
 
-        <div className="header-actions">
-          <div className="lang-selector">
-            <button
-              type="button"
-              className={`btn btn-secondary btn-sm lang-btn ${language === 'en' ? 'active' : ''}`}
-              onClick={() => setLanguage('en')}
-              aria-label="Switch to English"
-            >
-              EN
-            </button>
-            <button
-              type="button"
-              className={`btn btn-secondary btn-sm lang-btn ${language === 'fil' ? 'active' : ''}`}
-              onClick={() => setLanguage('fil')}
-              aria-label="Switch to Filipino"
-            >
-              FIL
-            </button>
-            <button
-              type="button"
-              className={`btn btn-secondary btn-sm lang-btn ${language === 'bik' ? 'active' : ''}`}
-              onClick={() => setLanguage('bik')}
-              aria-label="Switch to Bikol"
-            >
-              BIK
-            </button>
-          </div>
-        </div>
+        {languageActions('desktop-language-actions')}
 
         <button
           ref={toggleRef}

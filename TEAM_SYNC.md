@@ -25,19 +25,11 @@
 
 ## Emergency Information Verification
 
-The following hotlines must be verified monthly against official LGU records:
+The authoritative supplied directory is `data/emergency_hotlines.json`. Its `updated_as_of` field records the source date; it is not a claim that numbers were verified during the latest build.
 
-| Service                 | Number         | Source                    |
-| ----------------------- | -------------- | ------------------------- |
-| Police (PNP)            | 0927 400 8033  | LGU Albay Municipal Hall |
-| MSWDO                   | 0916 284 0885  | LGU Albay Municipal Hall |
-| Fire (BFP)              | 0936 062 0305  | LGU Albay Municipal Hall |
-| DILG                    | 0906 188 086   | LGU Albay Municipal Hall |
-| MDRRMO                  | 0926 383 3744  | LGU Albay Municipal Hall |
-| R2TMC                   | 0906 819 5569  | LGU Albay Municipal Hall |
-| Municipal Hall Landline | (078) 805-3581 | Official records          |
+Update agency records, numbers, source date, and notes in that JSON. Run `python3 scripts/sync-verified-content.py` or the production build to regenerate legacy bars, the full contact directory, offline critical contacts, and the React hotline bar. Do not edit generated numbers separately. Keep legitimate duplicate listings and source phone formatting; the generator sanitizes call links.
 
-**Last Verified:** [DATE]
+Current critical actions are national emergency **911**, **APSEMO**, and **Albay EMS**, with local numbers read from the JSON. Review changed records against the responsible office before publishing.
 
 ---
 
@@ -68,7 +60,7 @@ The following hotlines must be verified monthly against official LGU records:
 
 - **Source:** CMCI DTI Portal (cmci.dti.gov.ph)
 - **Frequency:** Annually (after CMCI release, typically Q2)
-- **File to update:** `data/competitive-index.json`
+- **File to update:** `data/cmci_2024.json`
 - **Approver:** Lead Maintainer
 
 ### DPWH Infrastructure Projects
@@ -109,6 +101,6 @@ The following hotlines must be verified monthly against official LGU records:
 
 ## Change Management Log
 
-| Date       | Change                       | Verified By     |
-| ---------- | ---------------------------- | --------------- |
+| Date       | Change                       | Verified By      |
+| ---------- | ---------------------------- | ---------------- |
 | 2026-02-03 | Initial TEAM_SYNC.md created | Jayson (jsonrls) |

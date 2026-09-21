@@ -31,7 +31,7 @@
     <!-- Hreflang for multi-language SEO -->
     <link rel="alternate" hreflang="en" href="https://betteralbay.org/" />
     <link rel="alternate" hreflang="fil" href="https://betteralbay.org/?lang=fil" />
-    <link rel="alternate" hreflang="ilo" href="https://betteralbay.org/?lang=ilo" />
+    <link rel="alternate" hreflang="bcl" href="https://betteralbay.org/?lang=bcl" />
     <link rel="alternate" hreflang="x-default" href="https://betteralbay.org/" />
 
     <!-- Open Graph / Facebook -->
@@ -75,8 +75,6 @@
     <meta name="geo.region" content="PH-NUV" />
     <meta name="geo.placename" content="Albay, Philippines" />
 
-
-
     <!-- Theme Color -->
     <meta name="theme-color" content="#0032a0" />
     <meta name="msapplication-TileColor" content="#0032a0" />
@@ -87,9 +85,9 @@
     <title>BetterAlbay.org | Community Information Portal</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico" />
-    <link rel="apple-touch-icon" href="assets/images/logo/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/images/logo/favicon.ico" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
     <!-- Fonts -->
@@ -117,7 +115,15 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "BetterAlbay", "url": "https://betteralbay.org", "description": "Community civic information for Albay, Philippines."}</script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "BetterAlbay",
+        "url": "https://betteralbay.org",
+        "description": "Community civic information for Albay, Philippines."
+      }
+    </script>
 
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/accessibility.css" />
@@ -133,7 +139,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -147,6 +161,8 @@
               src="assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -238,10 +254,10 @@
             <button
               type="button"
               class="btn btn-secondary btn-sm lang-btn"
-              data-lang="ilo"
-              aria-label="Switch to Ilocano"
+              data-lang="bcl"
+              aria-label="Switch to Central Bikol"
             >
-              ILO
+              BCL
             </button>
           </div>
         </div>
@@ -278,6 +294,23 @@
     <main id="main-content">
       <!-- Hero Section -->
       <section class="home-hero-v2">
+        <div class="home-hero-media" aria-hidden="true">
+          <video
+            class="home-hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="assets/images/banners/mt-mayon-hero.webp"
+            oncanplay="this.classList.add('is-playing')"
+            onplaying="this.classList.add('is-playing')"
+          >
+            <source src="assets/images/banners/mt-mayon-hero.mp4" type="video/mp4" />
+          </video>
+          <div class="home-hero-clouds-drift"></div>
+          <div class="home-hero-overlay"></div>
+        </div>
         <div class="container">
           <div class="home-hero-v2-inner">
             <div class="home-hero-v2-text">
@@ -338,7 +371,53 @@
       </section>
 
       <!-- Appointment Services CTA -->
-      <section class="appointment-cta-section" aria-label="Mayor's Office Appointment Services"><div class="container"><h2>Appointments</h2><p>Online appointment booking is not available through this site. Consult the official government website for current options.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="appointment-cta-section" aria-label="Governor's Office Appointment Services">
+        <div class="container">
+          <div class="appointment-cta-inner">
+            <div class="appointment-cta-animation" aria-hidden="true">
+              <dotlottie-player
+                src="assets/animation/ramonloganjr-booking.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              >
+                <img
+                  src="assets/images/illustrations/appointment-illustration.png"
+                  alt=""
+                  width="420"
+                  height="420"
+                  loading="lazy"
+                />
+              </dotlottie-player>
+            </div>
+            <div class="appointment-cta-content">
+              <h2 class="appointment-cta-heading" data-i18n="appointment-cta-heading">
+                Enhancing Appointment Services of the Office of the Provincial Governor of Albay
+              </h2>
+              <p class="appointment-cta-subtitle" data-i18n="appointment-cta-subtitle">
+                No lines. No back-and-forth. Just efficient appointments.
+              </p>
+              <div class="appointment-cta-actions">
+                <a
+                  href="mailto:pgasecretariat@gmail.com"
+                  class="appointment-cta-btn appointment-cta-btn--primary"
+                >
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                  <span data-i18n="appointment-schedule-btn">Contact Governor's Office</span>
+                </a>
+                <a
+                  href="government/#provincial-officials"
+                  class="appointment-cta-btn appointment-cta-btn--outline"
+                >
+                  <i class="bi bi-person-lines-fill" aria-hidden="true"></i>
+                  <span data-i18n="appointment-create-btn">View Provincial Directory</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Quick Access Services -->
       <section class="section">
@@ -403,7 +482,72 @@
       </section>
 
       <!-- Quick Stats -->
-      <section class="home-stats-v2"><div class="container"><h2>Albay population</h2><p class="home-stat-card-value">1,374,768</p><p>2020 Census of Population and Housing — province of Albay.</p><p><a href="https://psa.gov.ph/content/highlights-region-v-bicol-region-population-2020-census-population-and-housing-2020-cph">Source: Philippine Statistics Authority, 2020 Census</a></p></div></section>
+      <section class="home-stats-v2">
+        <div class="container">
+          <div class="home-stats-v2-header">
+            <h2 data-i18n="stats-metrics-heading">Albay at a Glance</h2>
+            <a href="statistics/" class="home-section-link">
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              <span data-i18n="home-view-statistics">View Statistics</span>
+            </a>
+          </div>
+          <div class="home-stats-v2-grid">
+            <!-- Population -->
+            <a href="statistics/" class="home-stat-card">
+              <div class="home-stat-card-icon" aria-hidden="true">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div class="home-stat-card-content">
+                <span class="home-stat-card-value">1,374,768</span>
+                <span class="home-stat-card-label" data-i18n="stats-population">Population</span>
+                <span class="home-stat-card-source" data-i18n="stats-census-2020">2020 Census</span>
+              </div>
+            </a>
+
+            <!-- Barangays -->
+            <a href="government/barangays.html" class="home-stat-card">
+              <div class="home-stat-card-icon" aria-hidden="true">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div class="home-stat-card-content">
+                <span class="home-stat-card-value">720</span>
+                <span class="home-stat-card-label" data-i18n="stats-barangays">Barangays</span>
+                <span class="home-stat-card-source" data-i18n="home-administrative-units"
+                  >Administrative Units</span
+                >
+              </div>
+            </a>
+
+            <!-- Income Classification -->
+            <a href="statistics/" class="home-stat-card">
+              <div class="home-stat-card-icon" aria-hidden="true">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <div class="home-stat-card-content">
+                <span class="home-stat-card-value">1st Class</span>
+                <span class="home-stat-card-label">Province</span>
+                <span class="home-stat-card-source" data-i18n="home-income-classification"
+                  >Income Classification</span
+                >
+              </div>
+            </a>
+
+            <!-- Land Area -->
+            <a href="statistics/" class="home-stat-card">
+              <div class="home-stat-card-icon" aria-hidden="true">
+                <i class="bi bi-rulers"></i>
+              </div>
+              <div class="home-stat-card-content">
+                <span class="home-stat-card-value">2,514.74 km²</span>
+                <span class="home-stat-card-label" data-i18n="stats-land-area">Land Area</span>
+                <span class="home-stat-card-source" data-i18n="home-total-municipal-area"
+                  >Total Provincial Area</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- Weather & Location Section -->
       <section class="section weather-map-section">
@@ -418,14 +562,302 @@
               </div>
             </div>
             <div class="map-column">
-              <div class="map-card"><div class="container"><h2>Albay location</h2><p>The embedded map is unavailable while its location details are verified.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></div>
+              <div class="map-card">
+                <div class="map-card-toolbar">
+                  <div class="map-toolbar-title">
+                    <i class="bi bi-map-fill" aria-hidden="true"></i>
+                    <span data-i18n="map-civic-title">Civic Map of Albay</span>
+                  </div>
+                  <div
+                    class="map-toolbar-filters"
+                    role="group"
+                    aria-label="Filter civic map locations"
+                  >
+                    <button
+                      type="button"
+                      class="map-filter-btn active"
+                      data-filter="all"
+                      aria-pressed="true"
+                      data-i18n="map-filter-all"
+                    >
+                      All (18 LGUs)
+                    </button>
+                    <button
+                      type="button"
+                      class="map-filter-btn"
+                      data-filter="city"
+                      aria-pressed="false"
+                      data-i18n="map-filter-cities"
+                    >
+                      Cities (3)
+                    </button>
+                    <button
+                      type="button"
+                      class="map-filter-btn"
+                      data-filter="municipality"
+                      aria-pressed="false"
+                      data-i18n="map-filter-municipalities"
+                    >
+                      Municipalities (15)
+                    </button>
+                    <button
+                      type="button"
+                      class="map-filter-btn"
+                      data-filter="civic"
+                      aria-pressed="false"
+                      data-i18n="map-filter-civic"
+                    >
+                      Capitol &amp; Civic
+                    </button>
+                  </div>
+                </div>
+                <div
+                  id="map-container"
+                  role="region"
+                  aria-label="Interactive civic map of the Province of Albay, Philippines"
+                  data-map-loaded="iframe"
+                >
+                  <iframe
+                    id="osm-embed"
+                    class="map-iframe"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=123.35%2C12.92%2C124.25%2C13.55&amp;layer=mapnik&amp;marker=13.1391%2C123.7434"
+                    title="Civic Map of Albay Province, Philippines"
+                    loading="lazy"
+                    aria-label="OpenStreetMap showing the Province of Albay, Bicol Region"
+                  ></iframe>
+                </div>
+                <div class="map-attribution">
+                  <div class="map-attr-info">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    <span data-i18n="map-coverage-text"
+                      >Province of Albay &bull; 18 LGUs (3 Cities, 15 Municipalities)</span
+                    >
+                  </div>
+                  <div class="map-attr-actions">
+                    <button
+                      type="button"
+                      class="map-reset-btn"
+                      id="map-reset-bounds"
+                      title="Fit Entire Albay Province"
+                      aria-label="Fit entire Albay province"
+                    >
+                      <i class="bi bi-arrows-fullscreen" aria-hidden="true"></i>
+                      <span data-i18n="map-fit-bounds">Fit Entire Albay</span>
+                    </button>
+                    <a href="government/" class="map-link-btn" title="View LGU directory">
+                      <span data-i18n="map-directory">Directory</span>
+                      <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Brief History of Albay Section -->
-      <section class="section history-section"><div class="container"><h2>History of Albay</h2><p>A source-checked history of Albay is not yet available on this site.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="section history-section">
+        <div class="container">
+          <div class="home-stats-v2-header">
+            <h2>
+              <i class="bi bi-book" aria-hidden="true"></i>
+              <span data-i18n="home-brief-history-of-albay">Brief History of Albay</span>
+            </h2>
+          </div>
+          <div class="history-content">
+            <div class="history-timeline">
+              <div class="timeline-item" data-year="200 BC – 1500s">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">200 BC – 1500s</span>
+                  <h4 class="timeline-title" data-i18n="history-200bc-title">
+                    Early Inhabitants &amp; Pre-Colonial Era
+                  </h4>
+                  <p data-i18n="history-200bc-desc">
+                    Long before Spanish arrival, Albay harbored structured, self-sustaining
+                    indigenous societies. Archaeological excavations in Camalig’s Hoyop-hoyopan Cave
+                    show continuous human habitation dating back to the Early Iron Age (200 BC to
+                    900 AD). The region was natively known as Ibat, and later Libog, and was ruled
+                    by localized chieftains, most notably the ancient chief Gat Ibal.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1569">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">July 1569</span>
+                  <h4 class="timeline-title" data-i18n="history-1569-title">
+                    First Spanish Contact
+                  </h4>
+                  <p data-i18n="history-1569-desc">
+                    Spanish contact with Albay began when Captain Luis Enríquez de Guzmán, leading a
+                    reconnaissance detachment from a larger Spanish expedition, crossed from the
+                    islands of Burias and Ticao to explore the coastal settlements of the Bicol
+                    peninsula.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1573">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">1573</span>
+                  <h4 class="timeline-title" data-i18n="history-1573-title">
+                    Inland Exploration and Settlement
+                  </h4>
+                  <p data-i18n="history-1573-desc">
+                    The Spanish conquistador Juan de Salcedo penetrated deeper into the Bicol
+                    peninsula from the north, marching as far south as Libon. There, he established
+                    the settlement of Santiago de Libon, firmly planting Spanish presence in the
+                    region.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1578">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">1578 – 1579</span>
+                  <h4 class="timeline-title" data-i18n="history-1578-title">
+                    Evangelization and Town Foundations
+                  </h4>
+                  <p data-i18n="history-1578-desc">
+                    Franciscan missionaries assumed primary responsibility for the evangelization of
+                    the Bicol region. By 1579, missionaries Father Pablo de Jesús and Father
+                    Bartolomé Ruiz formally established Camalig as a town and independent parish,
+                    making it the oldest formal municipal organization in Albay.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1636">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">1636</span>
+                  <h4 class="timeline-title" data-i18n="history-1636-title">
+                    Creation of Ibalon Province
+                  </h4>
+                  <p data-i18n="history-1636-desc">
+                    Initially, the entire Bicol peninsula was managed as a single administrative
+                    unit. In 1636, the Spanish Crown formally divided the region into two,
+                    establishing the southeastern portion as the independent province of Ibalon (the
+                    colonial precursor to Albay), with Sorsogon serving as its administrative
+                    capital.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1814">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">February 1, 1814</span>
+                  <h4 class="timeline-title" data-i18n="history-1814-title">
+                    The Great Eruption of Mayon
+                  </h4>
+                  <p data-i18n="history-1814-desc">
+                    Mayon Volcano experienced its most violent and destructive eruption in recorded
+                    history. The catastrophic event completely buried the town of Cagsawa and
+                    destroyed several other surrounding municipalities, killing thousands. Survivors
+                    were forced to relocate to higher ground, establishing the present-day town of
+                    Daraga.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1846">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">1846</span>
+                  <h4 class="timeline-title" data-i18n="history-1846-title">
+                    Administrative Reorganization
+                  </h4>
+                  <p data-i18n="history-1846-desc">
+                    Governor-General Narciso Clavería issued an executive decree that significantly
+                    reshaped the province’s borders. The islands of Masbate, Ticao, and Burias were
+                    detached from Albay to form an independent military district. Albay was then
+                    divided into four contiguous districts: Iraya, Cordillera (Tabaco), Sorsogon,
+                    and Catanduanes.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1898">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">September 22, 1898</span>
+                  <h4 class="timeline-title" data-i18n="history-1898-title">
+                    The Philippine Revolution
+                  </h4>
+                  <p data-i18n="history-1898-desc">
+                    As Spanish colonial power collapsed, Albay became an active theater of the
+                    Philippine Revolution. A provisional revolutionary government of Albay was
+                    formally established, with Anacleto Solano taking office as the provisional
+                    president, while Major General Vito Belarmino commanded the Filipino army in the
+                    province.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1901">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">April 26, 1901</span>
+                  <h4 class="timeline-title" data-i18n="history-1901-title">
+                    American Occupation and Resistance
+                  </h4>
+                  <p data-i18n="history-1901-desc">
+                    Following the capture of the province by American forces, a civil government was
+                    established in Albay. However, local resistance fiercely continued under the
+                    leadership of Simeon Ola. Ola and his men famously defied American authority
+                    through guerilla warfare well after the civil government was installed,
+                    eventually becoming the last Filipino general to surrender.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="1941">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-year">December 12, 1941</span>
+                  <h4 class="timeline-title" data-i18n="history-1941-title">
+                    World War II Japanese Occupation
+                  </h4>
+                  <p data-i18n="history-1941-desc">
+                    During the Second World War, the Kimura Detachment of the Japanese Imperial
+                    Forces landed in and occupied Legazpi, swiftly taking control of the Bicol
+                    Peninsula despite the defense mounted by local Philippine Constabulary units.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="history-summary">
+              <div class="history-card">
+                <div class="history-card-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="history-card-content">
+                  <h4 data-i18n="history-cagsawa-title">The Cagsawa Legacy</h4>
+                  <p data-i18n="history-cagsawa-desc">
+                    The catastrophic February 1, 1814 eruption of Mayon completely buried Cagsawa,
+                    leading survivors to relocate and establish the modern town of Daraga.
+                  </p>
+                </div>
+              </div>
+              <div class="history-card">
+                <div class="history-card-icon"><i class="bi bi-award-fill"></i></div>
+                <div class="history-card-content">
+                  <h4 data-i18n="history-ola-title">Last General to Surrender</h4>
+                  <p data-i18n="history-ola-desc">
+                    Albay was the stronghold of General Simeon Ola of Guinobatan, who led fierce
+                    resistance and became the last Filipino revolutionary general to surrender.
+                  </p>
+                </div>
+              </div>
+              <div class="history-card">
+                <div class="history-card-icon"><i class="bi bi-compass"></i></div>
+                <div class="history-card-content">
+                  <h4 data-i18n="history-roots-title">Ancient Roots</h4>
+                  <p data-i18n="history-roots-desc">
+                    Archaeological excavations at Camalig’s Hoyop-hoyopan Cave revealed continuous
+                    human habitation dating back to the Early Iron Age (200 BC to 900 AD).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Latest Updates -->
       <section class="section home-fb-section">
@@ -436,34 +868,61 @@
               ><i class="bi bi-arrow-right"></i> <span data-i18n="home-view-all">View All</span></a
             >
           </div>
+
+          <!--
+            The three most recent verified stories from data/news.json,
+            rendered by news.js. The container stays in the markup so the
+            section keeps its shape before the fetch resolves, but it stays
+            empty: news.js owns the empty state, and a hardcoded one would
+            appear during the fetch on a slow connection.
+          -->
+          <div
+            class="home-news-grid home-news-grid--featured"
+            id="home-news-grid"
+            role="feed"
+            aria-label="Recent Albay news coverage"
+          >
+            <noscript>
+              <p class="home-news-noscript">
+                JavaScript is needed to load the news list. You can read verified updates on the
+                <a href="https://albay.gov.ph/">Official Albay government website</a>.
+              </p>
+            </noscript>
+          </div>
+
           <!--
             Live feed from the official LGU Albay Facebook Page (auto-updating,
-            no API token required). REPLACE the page URL in BOTH places below
-            (the iframe `href=` value and the CTA/fallback links) with the exact
-            official page URL, e.g. https://www.facebook.com/YourPageName
+            no API token required). The page URL lives in the #fb-feed mount
+            below (`data-fb-page`) and in the CTA/fallback links — keep all of
+            them in sync if the official page ever changes.
           -->
           <div class="home-fb">
             <div class="home-fb-intro">
               <span class="home-fb-eyebrow">
-                <i class="bi bi-facebook" aria-hidden="true"></i> Official Facebook Page
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+                <span data-i18n="fb-eyebrow">Official Facebook Page</span>
               </span>
-              <h3 class="home-fb-title">Real-time updates, straight from our page</h3>
-              <p class="home-fb-text">
+              <h3 class="home-fb-title" data-i18n="fb-title">
+                Real-time updates, straight from our page
+              </h3>
+              <p class="home-fb-text" data-i18n="fb-text">
                 Follow the Official LGU Albay Facebook Page for the latest announcements,
                 advisories, events, and community updates as they happen.
               </p>
               <ul class="home-fb-points">
                 <li>
-                  <i class="bi bi-megaphone" aria-hidden="true"></i> Official announcements &amp;
-                  advisories
+                  <i class="bi bi-megaphone" aria-hidden="true"></i>
+                  <span data-i18n="fb-point-announcements"
+                    >Official announcements &amp; advisories</span
+                  >
                 </li>
                 <li>
-                  <i class="bi bi-calendar-event" aria-hidden="true"></i> Events &amp; community
-                  programs
+                  <i class="bi bi-calendar-event" aria-hidden="true"></i>
+                  <span data-i18n="fb-point-events">Events &amp; community programs</span>
                 </li>
                 <li>
-                  <i class="bi bi-broadcast" aria-hidden="true"></i> Posted in real time, as it
-                  happens
+                  <i class="bi bi-broadcast" aria-hidden="true"></i>
+                  <span data-i18n="fb-point-realtime">Posted in real time, as it happens</span>
                 </li>
               </ul>
               <a
@@ -472,54 +931,247 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i class="bi bi-facebook" aria-hidden="true"></i> Visit our Facebook Page
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+                <span data-i18n="fb-cta">Visit our Facebook Page</span>
               </a>
             </div>
 
             <div class="home-fb-feed">
-              <div class="fb-plugin-wrap">
-                <iframe
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialLGUAlbay%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
-                  width="500"
-                  height="700"
-                  class="fb-page-plugin"
-                  scrolling="no"
-                  frameborder="0"
-                  allowfullscreen="true"
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  title="LGU Albay Official Facebook Page — Live Updates"
-                ></iframe>
+              <div
+                class="fb-plugin-wrap"
+                id="fb-feed"
+                data-fb-page="https://www.facebook.com/pioalbay2023"
+              >
+                <div class="fb-card-header">
+                  <div class="fb-card-avatar-wrap">
+                    <img
+                      src="assets/images/logo/albay-pio.jpg"
+                      class="fb-card-avatar"
+                      alt="Albay PIO Logo"
+                      width="48"
+                      height="48"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="fb-card-meta">
+                    <a
+                      href="https://www.facebook.com/pioalbay2023"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="fb-card-title"
+                      data-i18n="fb-page-title"
+                      >Albay Provincial Information Office</a
+                    >
+                    <span class="fb-card-followers" data-i18n="fb-followers-count"
+                      >204,293 followers</span
+                    >
+                  </div>
+                </div>
+                <!--
+                  Progressive enhancement (assets/js/fb-feed.js): this slide
+                  shows the newest verified updates from data/news.json, then
+                  reveals the live Facebook timeline only if the embed proves
+                  it loaded. Without JavaScript, the link below is the fallback.
+                -->
+                <noscript>
+                  <p class="fb-feed-fallback">
+                    <a
+                      data-i18n="fb-open-page"
+                      href="https://www.facebook.com/pioalbay2023/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Open the Official LGU Albay Facebook Page</a
+                    >
+                  </p>
+                </noscript>
               </div>
-              <p class="home-fb-fallback">
-                Can't see the feed?
+              <p class="fb-feed-fallback">
+                <span data-i18n="fb-cant-see">Can't see the feed?</span>
                 <a
+                  data-i18n="fb-open-on-facebook"
                   href="https://www.facebook.com/pioalbay2023/"
                   target="_blank"
                   rel="noopener noreferrer"
                   >Open it on Facebook</a
                 >
               </p>
+              <!--
+                Revealed by CSS whenever fb-feed.js is serving the self-hosted
+                fallback, and hidden the moment the live timeline proves it
+                loaded, so the note never contradicts what is on screen.
+              -->
+              <p class="home-fb-note" data-i18n="fb-live-note">
+                The live Facebook timeline isn't loading, so we're showing the most recent verified
+                Albay news coverage instead. Every story links to its original publisher.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Municipal Leadership -->
-      <section class="section home-leadership-section"><div class="container"><h2>Albay officials</h2><p>An up-to-date Albay officials directory is not available on this site yet.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <!-- Provincial Leadership -->
+      <section class="section home-leadership-section">
+        <div class="container">
+          <div class="home-section-header">
+            <h2 data-i18n="section-leadership">Provincial Leadership</h2>
+            <a href="government/" class="home-section-link">
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              <span data-i18n="btn-view-officials">View All Officials</span>
+            </a>
+          </div>
+          <div class="home-leadership-grid">
+            <div class="home-leader-card">
+              <span class="home-leader-badge" data-i18n="title-governor">Governor</span>
+              <h3 data-i18n="home-hon-noel-e-rosal">Hon. Noel E. Rosal</h3>
+              <div class="home-leader-contacts">
+                <a href="mailto:pgasecretariat@gmail.com"
+                  ><i class="bi bi-envelope" aria-hidden="true"></i>
+                  <span data-i18n="home-gov-email">pgasecretariat@gmail.com</span></a
+                >
+                <a href="tel:0527426377"
+                  ><i class="bi bi-telephone" aria-hidden="true"></i> <span>(052) 742-6377</span></a
+                >
+              </div>
+            </div>
+            <div class="home-leader-card">
+              <span class="home-leader-badge" data-i18n="title-vice-governor">Vice Governor</span>
+              <h3 data-i18n="home-hon-farida-diday-s-co">Hon. Farida “Diday” S. Co</h3>
+              <div class="home-leader-contacts">
+                <a href="mailto:vicepgasecretariat@gmail.com"
+                  ><i class="bi bi-envelope" aria-hidden="true"></i>
+                  <span data-i18n="home-vicegov-email">vicepgasecretariat@gmail.com</span></a
+                >
+                <a href="tel:09268284392"
+                  ><i class="bi bi-telephone" aria-hidden="true"></i>
+                  <span>(0926) 828-4392</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Contact Section -->
-      <section class="section"><div class="container"><h2>Contact information</h2><p>Current office contacts and hours are not verified on this site.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="section">
+        <div class="container">
+          <div class="home-section-header">
+            <h2 data-i18n="section-contact">Contact Information</h2>
+            <a href="contact/" class="home-section-link"
+              ><i class="bi bi-arrow-right" aria-hidden="true"></i>
+              <span data-i18n="home-view-all">View All</span></a
+            >
+          </div>
+          <div class="home-contact-v2-grid">
+            <a href="tel:0527426377" class="home-contact-v2-card">
+              <div class="home-contact-v2-icon" aria-hidden="true">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div class="home-contact-v2-content">
+                <h3 data-i18n="contact-phone">Phone</h3>
+                <p class="home-contact-v2-value">(052) 742-6377</p>
+                <span class="home-contact-v2-note" data-i18n="contact-hours"
+                  >Mon-Fri: 8:00 AM - 5:00 PM</span
+                >
+              </div>
+            </a>
+            <a href="mailto:pgasecretariat@gmail.com" class="home-contact-v2-card">
+              <div class="home-contact-v2-icon" aria-hidden="true">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="home-contact-v2-content">
+                <h3 data-i18n="contact-email">Email</h3>
+                <p class="home-contact-v2-value">pgasecretariat@gmail.com</p>
+                <span class="home-contact-v2-note" data-i18n="contact-response"
+                  >We'll respond within 24 hours</span
+                >
+              </div>
+            </a>
+            <div class="home-contact-v2-card">
+              <div class="home-contact-v2-icon" aria-hidden="true">
+                <i class="bi bi-geo-alt-fill"></i>
+              </div>
+              <div class="home-contact-v2-content">
+                <h3 data-i18n="contact-address">Address</h3>
+                <p class="home-contact-v2-value" data-i18n="contact-municipal-hall">
+                  Provincial Capitol
+                </p>
+                <span class="home-contact-v2-note">Legazpi City, Albay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Albay Quiz CTA -->
-      <section class="quiz-cta-section" aria-label="Albay Quiz"><div class="container"><h2>Albay Quiz</h2><p>The quiz is unavailable while its questions are verified.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="quiz-cta-section" aria-label="Albay Quiz">
+        <div class="container">
+          <div class="quiz-cta-inner">
+            <div class="quiz-cta-animation" aria-hidden="true">
+              <dotlottie-player
+                src="assets/animation/ramonloganjr-exam.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+              ></dotlottie-player>
+            </div>
+            <div class="quiz-cta-content">
+              <h2 class="quiz-cta-heading" data-i18n="home-albay-quiz">Albay Quiz</h2>
+              <p class="quiz-cta-subtitle" data-i18n="home-how-well-do-you-know-albay">
+                How well do you know Albay, Philippines?
+              </p>
+              <p
+                class="quiz-cta-description"
+                data-i18n="home-evaluate-your-familiarity-with-the-municipalitys"
+              >
+                Evaluate your familiarity with the province's heritage, cultural identity, and
+                geographic significance through an interactive knowledge assessment designed to
+                showcase one of Bicol Region's most prominent localities.
+              </p>
+              <button
+                type="button"
+                class="quiz-cta-btn"
+                id="albay-quiz-start"
+                aria-haspopup="dialog"
+              >
+                <i class="bi bi-play-circle-fill" aria-hidden="true"></i>
+                <span data-i18n="home-take-the-quiz">Take the Quiz</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <dialog id="albay-quiz" class="albay-quiz" aria-labelledby="albay-quiz-title" lang="en">
+      <div class="albay-quiz-shell">
+        <header class="albay-quiz-header">
+          <div class="albay-quiz-header-title">
+            <span class="albay-quiz-header-badge" aria-hidden="true">
+              <img
+                src="assets/images/logo/better-albay-logo.svg"
+                alt=""
+                class="albay-quiz-header-logo"
+                width="28"
+                height="10"
+              />
+            </span>
+            <h2 id="albay-quiz-title" data-i18n="quiz-heading">Albay Quiz</h2>
+          </div>
+          <button type="button" class="albay-quiz-close" aria-label="Close quiz">
+            <span data-i18n="quiz-action-close">Close</span> <span aria-hidden="true">×</span>
+          </button>
+        </header>
+        <div id="albay-quiz-content"></div>
+      </div>
+    </dialog>
 
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="assets/images/logo/better-albay-logo-white.svg"
+              src="assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -561,7 +1213,8 @@
             <h4 data-i18n="home-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -598,34 +1251,76 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span data-i18n="footer-cost-label">Cost to the People of Albay =</span>
+              <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -633,10 +1328,10 @@
           <div class="footer-copyright">
             <span class="footer-copyright-text">&copy; 2026 BetterAlbay.org</span>
             <span class="footer-copyright-license">MIT | CC BY 4.0</span>
-            <span class="footer-copyright-disclaimer"
+            <span class="footer-copyright-disclaimer" data-i18n="footer-disclaimer-text"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
@@ -658,7 +1353,7 @@
         <div class="vol-popup-header">
           <div class="vol-popup-header-bg" aria-hidden="true"></div>
           <img
-            src="assets/images/logo/better-albay-logo-white.svg"
+            src="assets/images/logo/better-albay-logo.svg"
             alt="BetterAlbay.org"
             class="vol-popup-logo"
             width="210"
@@ -666,43 +1361,48 @@
             loading="eager"
             draggable="false"
           />
-          <h2 id="vol-popup-title" class="vol-popup-title">Be Part of Something Greater</h2>
-          <p class="vol-popup-header-sub">Albay, Philippines deserves a world-class digital government. Help us build it.</p>
+          <h2 id="vol-popup-title" class="vol-popup-title" data-i18n="vol-popup-heading">
+            Be Part of Something Greater
+          </h2>
+          <p class="vol-popup-header-sub" data-i18n="vol-popup-sub">
+            Albay, Philippines deserves a world-class digital government. Help us build it.
+          </p>
         </div>
         <div class="vol-popup-body">
-          <p class="vol-popup-lead">We are looking for passionate <strong>Albayanos</strong> who want to serve their community through their craft.</p>
+          <p class="vol-popup-lead" data-i18n="vol-popup-lead">
+            We are looking for passionate <strong>Albayanos</strong> who want to serve their
+            community through their craft.
+          </p>
           <div class="vol-popup-roles" role="list">
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-code-slash" aria-hidden="true"></i>
-              <span>Software Dev</span>
+              <span data-i18n="vol-popup-role-dev">Software Dev</span>
             </div>
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-layers" aria-hidden="true"></i>
-              <span>UI/UX Design</span>
+              <span data-i18n="vol-popup-role-uiux">UI/UX Design</span>
             </div>
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-palette" aria-hidden="true"></i>
-              <span>Graphic Design</span>
+              <span data-i18n="vol-popup-role-graphic">Graphic Design</span>
             </div>
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-pencil-square" aria-hidden="true"></i>
-              <span>Content Creation</span>
+              <span data-i18n="vol-popup-role-content">Content Creation</span>
             </div>
             <div class="vol-popup-role" role="listitem">
               <i class="bi bi-megaphone" aria-hidden="true"></i>
-              <span>Digital Marketing</span>
+              <span data-i18n="vol-popup-role-marketing">Digital Marketing</span>
             </div>
           </div>
           <div class="vol-popup-actions">
-            <a
-              href="mailto:volunteer@betteralbay.org"
-              class="vol-popup-cta"
-              rel="noopener"
-            >
+            <a href="mailto:volunteer@betteralbay.org" class="vol-popup-cta" rel="noopener">
               <i class="bi bi-envelope-heart-fill" aria-hidden="true"></i>
-              I Want to Volunteer
+              <span data-i18n="vol-popup-cta">I Want to Volunteer</span>
             </a>
-            <button class="vol-popup-skip" type="button">Maybe Later</button>
+            <button class="vol-popup-skip" type="button" data-i18n="vol-popup-dismiss">
+              Maybe Later
+            </button>
           </div>
         </div>
       </div>
@@ -712,16 +1412,17 @@
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"
     ></script>
-    <script defer src="assets/js/translations.js"></script>
+    <script defer src="assets/js/translations.js?v=d522345aad"></script>
     <script defer src="assets/js/info-bar.js"></script>
     <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/version.js"></script>
-    <script defer src="assets/js/search.js"></script>
-    <script defer src="assets/js/news.js"></script>
-    <script defer src="assets/js/fb-feed.js?v=1.2.0"></script>
-    <script defer src="assets/js/volunteer-popup.js?v=1.2.2"></script>
+    <script defer src="assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="assets/js/search.js?v=248841e71f"></script>
+    <script defer src="assets/js/news.js?v=aae320a8d8"></script>
+    <script defer src="assets/js/fb-feed.js?v=f69bac88f4"></script>
+    <script defer src="assets/js/volunteer-popup.js?v=ccce5aba8f"></script>
+    <script defer src="assets/js/albay-quiz.js?v=36184b5e61"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script defer src="assets/js/weather-map.js?v=1.6.4"></script>
+    <script defer src="assets/js/weather-map.js?v=0f12c69808"></script>
 
     <!-- Failsafe: Ensure weather section renders even if scripts hang -->
     <!-- Note: map failsafe removed — OSM iframe is now inlined in the HTML and always visible. -->
@@ -737,7 +1438,7 @@
             } else {
               console.warn('Weather failsafe: Scripts not loaded, showing static fallback');
               weatherContainer.innerHTML =
-                '<div class="weather-widget" role="region" aria-label="Current weather in Albay"><div class="weather-current"><div class="weather-current-icon"><i class="bi bi-cloud-sun-fill"></i></div><div class="weather-current-info"><div class="weather-current-temp">29°C</div><div class="weather-current-condition">Mainly clear</div><div class="weather-current-location"><i class="bi bi-geo-alt"></i> Albay, Philippines</div></div></div><div class="weather-stats"><div class="weather-stat"><i class="bi bi-droplet"></i><span>65%</span></div><div class="weather-stat"><i class="bi bi-wind"></i><span>12 km/h</span></div></div><div class="weather-hourly"><div class="weather-hour"><span class="weather-hour-time">1 PM</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-hour-temp">26°</span></div><div class="weather-hour"><span class="weather-hour-time">2 PM</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-hour-temp">27°</span></div><div class="weather-hour"><span class="weather-hour-time">3 PM</span><i class="bi bi-sun-fill"></i><span class="weather-hour-temp">28°</span></div><div class="weather-hour"><span class="weather-hour-time">4 PM</span><i class="bi bi-sun-fill"></i><span class="weather-hour-temp">29°</span></div></div></div>';
+                '<div class="weather-widget" role="region" aria-label="Current weather in Albay"><div class="weather-current"><div class="weather-current-icon"><i class="bi bi-cloud-sun-fill"></i></div><div class="weather-current-info"><div class="weather-current-temp">29°C</div><div class="weather-current-condition">Mainly clear</div><div class="weather-current-location"><i class="bi bi-geo-alt"></i> Albay, Philippines</div></div></div><div class="weather-stats" role="list" aria-label="Weather details"><div class="weather-stat" role="listitem" aria-label="Humidity 65 percent"><i class="bi bi-droplet"></i><span>65%</span></div><div class="weather-stat" role="listitem" aria-label="Wind speed 12 kilometers per hour"><i class="bi bi-wind"></i><span>12 km/h</span></div></div><div class="weather-forecast-section"><div class="weather-forecast-header"><span class="weather-forecast-title">5-Day Forecast</span></div><div class="weather-forecast-strip weather-hourly"><div class="weather-forecast-day weather-hour"><span class="weather-forecast-date weather-hour-time">Sun</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-forecast-temp weather-hour-temp">31°</span><span class="weather-forecast-min">25°</span></div><div class="weather-forecast-day weather-hour"><span class="weather-forecast-date weather-hour-time">Mon</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-forecast-temp weather-hour-temp">32°</span><span class="weather-forecast-min">24°</span></div><div class="weather-forecast-day weather-hour"><span class="weather-forecast-date weather-hour-time">Tue</span><i class="bi bi-cloud-rain-fill"></i><span class="weather-forecast-temp weather-hour-temp">30°</span><span class="weather-forecast-min">25°</span></div><div class="weather-forecast-day weather-hour"><span class="weather-forecast-date weather-hour-time">Wed</span><i class="bi bi-sun-fill"></i><span class="weather-forecast-temp weather-hour-temp">31°</span><span class="weather-forecast-min">24°</span></div><div class="weather-forecast-day weather-hour"><span class="weather-forecast-date weather-hour-time">Thu</span><i class="bi bi-cloud-sun-fill"></i><span class="weather-forecast-temp weather-hour-temp">30°</span><span class="weather-forecast-min">25°</span></div></div></div></div>';
               weatherContainer.setAttribute('data-weather-loaded', 'failsafe');
             }
           }

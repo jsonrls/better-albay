@@ -1,5 +1,4922 @@
 {
-  "_status": "unverified",
-  "_note": "Verified Albay competitive index data is not yet available.",
-  "data": []
+  "_schema_version": "1.0",
+  "_status": "verified",
+  "_source": "Cities and Municipalities Competitiveness Index (CMCI), Department of Trade and Industry (DTI)",
+  "_source_url": "https://cmci.dti.gov.ph/rankings-data.php",
+  "_source_url_per_lgu": "https://cmci.dti.gov.ph/lgu-profile.php?lgu=<name>&year=2024",
+  "_retrieved": "2026-09-17",
+  "year": 2024,
+  "province": "Albay",
+  "region": "REGION V (Bicol Region)",
+  "total_lgus": 18,
+  "rank_scope": "Every `rank` below is CMCI's rank WITHIN the LGU's classification (`category`), not a national rank. CMCI publishes separate rankings for provinces and for each city/municipality class, so a rank of 3 means '3rd among LGUs of the same class'. Use `province_rank` (1-18, by overall score among Albay LGUs) for province-level comparisons.",
+  "pillars": {
+    "ed": "Economic Dynamism",
+    "ge": "Government Efficiency",
+    "in": "Infrastructure",
+    "re": "Resiliency",
+    "iv": "Innovation"
+  },
+  "indicators": {
+    "les": {
+      "label": "Local Economy Size",
+      "pillar": "ed"
+    },
+    "leg": {
+      "label": "Local Economy Growth",
+      "pillar": "ed"
+    },
+    "sle": {
+      "label": "Active Establishments in the Locality",
+      "pillar": "ed"
+    },
+    "scb": {
+      "label": "Safety Compliant Business",
+      "pillar": "ed"
+    },
+    "job": {
+      "label": "Employment Generation",
+      "pillar": "ed"
+    },
+    "col": {
+      "label": "Cost of Living",
+      "pillar": "ed"
+    },
+    "cdb": {
+      "label": "Cost of Doing Business",
+      "pillar": "ed"
+    },
+    "fd": {
+      "label": "Financial Deepening",
+      "pillar": "ed"
+    },
+    "pro": {
+      "label": "Productivity",
+      "pillar": "ed"
+    },
+    "pbpo": {
+      "label": "Presence of Business and Professional Organizations",
+      "pillar": "ed"
+    },
+    "cnd": {
+      "label": "Compliance to National Directives",
+      "pillar": "ge"
+    },
+    "pipu": {
+      "label": "Presence of Investment Promotion Unit",
+      "pillar": "ge"
+    },
+    "bre": {
+      "label": "Compliance to ARTA Citizens Charter",
+      "pillar": "ge"
+    },
+    "rat": {
+      "label": "Capacity to Generate Local Resource",
+      "pillar": "ge"
+    },
+    "chs": {
+      "label": "Capacity of Health Services",
+      "pillar": "ge"
+    },
+    "css": {
+      "label": "Capacity of School Services",
+      "pillar": "ge"
+    },
+    "lgua": {
+      "label": "Recognition of Performance",
+      "pillar": "ge"
+    },
+    "bpls": {
+      "label": "Getting Business Permits",
+      "pillar": "ge"
+    },
+    "pao": {
+      "label": "Peace and Order",
+      "pillar": "ge"
+    },
+    "sp": {
+      "label": "Social Protection",
+      "pillar": "ge"
+    },
+    "road": {
+      "label": "Road Network",
+      "pillar": "in"
+    },
+    "dtp": {
+      "label": "Distance to Ports",
+      "pillar": "in"
+    },
+    "abu": {
+      "label": "Availability of Basic Utilities",
+      "pillar": "in"
+    },
+    "trans": {
+      "label": "Transportation Vehicles",
+      "pillar": "in"
+    },
+    "edu": {
+      "label": "Education",
+      "pillar": "in"
+    },
+    "hea": {
+      "label": "Health",
+      "pillar": "in"
+    },
+    "inv": {
+      "label": "LGU Investment",
+      "pillar": "in"
+    },
+    "acc": {
+      "label": "Accommodation Capacity",
+      "pillar": "in"
+    },
+    "ict": {
+      "label": "Information Technology Capacity",
+      "pillar": "in"
+    },
+    "atm": {
+      "label": "Financial Technology Capacity",
+      "pillar": "in"
+    },
+    "lup": {
+      "label": "Land Use Plan",
+      "pillar": "re"
+    },
+    "drrp": {
+      "label": "Disaster Risk Reduction Plan",
+      "pillar": "re"
+    },
+    "add": {
+      "label": "Annual Disaster Drill",
+      "pillar": "re"
+    },
+    "ews": {
+      "label": "Early Warning System",
+      "pillar": "re"
+    },
+    "drrmp": {
+      "label": "Budget for DRRMP",
+      "pillar": "re"
+    },
+    "lra": {
+      "label": "Local Risk Assessments",
+      "pillar": "re"
+    },
+    "ei": {
+      "label": "Emergency Infrastructure",
+      "pillar": "re"
+    },
+    "util": {
+      "label": "Utilities",
+      "pillar": "re"
+    },
+    "ep": {
+      "label": "Employed Population",
+      "pillar": "re"
+    },
+    "ss": {
+      "label": "Sanitary System",
+      "pillar": "re"
+    },
+    "itp": {
+      "label": "ICT Plan",
+      "pillar": "iv"
+    },
+    "ivf": {
+      "label": "Innovation Financing: R&D Expenditures Allotment",
+      "pillar": "iv"
+    },
+    "ebpls": {
+      "label": "ICT Use: E-BPLS Software",
+      "pillar": "iv"
+    },
+    "opf": {
+      "label": "Online Payment Facilities",
+      "pillar": "iv"
+    },
+    "stg": {
+      "label": "STEM graduates",
+      "pillar": "iv"
+    },
+    "ipop": {
+      "label": "Intellectual Property Registration",
+      "pillar": "iv"
+    },
+    "intc": {
+      "label": "Internet Capability",
+      "pillar": "iv"
+    },
+    "abis": {
+      "label": "Availability of Basic Internet Service",
+      "pillar": "iv"
+    },
+    "stup": {
+      "label": "Start Up and Innovation Facilities",
+      "pillar": "iv"
+    },
+    "newt": {
+      "label": "New Technology",
+      "pillar": "iv"
+    }
+  },
+  "_validation": {
+    "lgu_count": 18,
+    "indicators_per_lgu": 50,
+    "indicators_per_pillar": 10,
+    "names_match_barangays_json": true,
+    "cross_source_pillar_rank_and_score_match": true,
+    "pillar_scores_sum_to_overall": true,
+    "scores_within_0_100": true
+  },
+  "_notes": [
+    "Indicator scores are CMCI's normalised values, comparable only within the same indicator — never across indicators or pillars.",
+    "The overall score is the sum of the five pillar scores; this is asserted per LGU during generation.",
+    "Ranks are within the LGU's CMCI classification (see rank_scope). province_rank is computed locally and is not a CMCI figure.",
+    "population_cmci is CMCI's own figure and may differ slightly from the PSA 2020 census value in population_2020.",
+    "CMCI disambiguates same-named LGUs as 'Santo Domingo (AY)' and 'Malinao (AY)'; the province tag is stripped to match PSGC.",
+    "Each pillar table on CMCI's profile pages ends with a duplicated stray row, discarded during parsing.",
+    "Four indicators (cnd, pipu, lup, itp) sit in a different pillar than their order in CMCI's data portal implies; the pillar assignment here follows the profile pages' own table headings."
+  ],
+  "lgus": [
+    {
+      "name": "Legazpi",
+      "category": "Component City",
+      "mayor": "HISHAM B. ISMAIL",
+      "population_cmci": 210616,
+      "website": "www.legazpi.gov.ph",
+      "email": null,
+      "address": "2nd Floor, City Hall Bldg., Rizal Street, Legazpi City",
+      "contact": "Tel: 09274143768 09122983504",
+      "facebook": null,
+      "cmci_editions": "2013-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 3,
+        "score": 50.4584
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 5,
+          "score": 8.1209,
+          "indicators": {
+            "les": {
+              "rank": 25,
+              "score": 0.1375
+            },
+            "leg": {
+              "rank": 54,
+              "score": 0.0098
+            },
+            "sle": {
+              "rank": 6,
+              "score": 1.2331
+            },
+            "scb": {
+              "rank": 27,
+              "score": 0.4927
+            },
+            "job": {
+              "rank": 3,
+              "score": 0.2406
+            },
+            "col": {
+              "rank": 26,
+              "score": 0.9296
+            },
+            "cdb": {
+              "rank": 15,
+              "score": 1.7885
+            },
+            "fd": {
+              "rank": 7,
+              "score": 1.1362
+            },
+            "pro": {
+              "rank": 15,
+              "score": 0.1529
+            },
+            "pbpo": {
+              "rank": 1,
+              "score": 2
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 7,
+          "score": 12.1542,
+          "indicators": {
+            "cnd": {
+              "rank": 1,
+              "score": 2
+            },
+            "pipu": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 24,
+              "score": 0.2247
+            },
+            "chs": {
+              "rank": 14,
+              "score": 0.6818
+            },
+            "css": {
+              "rank": 9,
+              "score": 0.5917
+            },
+            "lgua": {
+              "rank": 15,
+              "score": 0.5578
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 13,
+              "score": 0.3307
+            },
+            "sp": {
+              "rank": 16,
+              "score": 1.7674
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 4,
+          "score": 8.0413,
+          "indicators": {
+            "road": {
+              "rank": 22,
+              "score": 0.0075
+            },
+            "dtp": {
+              "rank": 18,
+              "score": 1.9183
+            },
+            "abu": {
+              "rank": 88,
+              "score": 0.9936
+            },
+            "trans": {
+              "rank": 30,
+              "score": 0.1476
+            },
+            "edu": {
+              "rank": 11,
+              "score": 0.6333
+            },
+            "hea": {
+              "rank": 1,
+              "score": 1.1994
+            },
+            "inv": {
+              "rank": 27,
+              "score": 0.319
+            },
+            "acc": {
+              "rank": 2,
+              "score": 1.1444
+            },
+            "ict": {
+              "rank": 34,
+              "score": 0.2629
+            },
+            "atm": {
+              "rank": 2,
+              "score": 1.4153
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 13,
+          "score": 12.46,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9828
+            },
+            "drrp": {
+              "rank": 3,
+              "score": 1.9091
+            },
+            "add": {
+              "rank": 52,
+              "score": 1.0136
+            },
+            "ews": {
+              "rank": 22,
+              "score": 1.0041
+            },
+            "drrmp": {
+              "rank": 5,
+              "score": 0.7416
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 21,
+              "score": 0.5241
+            },
+            "util": {
+              "rank": 49,
+              "score": 1.4978
+            },
+            "ep": {
+              "rank": 15,
+              "score": 0.2657
+            },
+            "ss": {
+              "rank": 30,
+              "score": 1.5212
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 6,
+          "score": 9.682,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 28,
+              "score": 0.0925
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 1,
+              "score": 2
+            },
+            "stg": {
+              "rank": 4,
+              "score": 0.9778
+            },
+            "ipop": {
+              "rank": 20,
+              "score": 0.3832
+            },
+            "intc": {
+              "rank": 22,
+              "score": 1.0016
+            },
+            "abis": {
+              "rank": 11,
+              "score": 0.9868
+            },
+            "stup": {
+              "rank": 32,
+              "score": 0.2272
+            },
+            "newt": {
+              "rank": 25,
+              "score": 0.0128
+            }
+          }
+        }
+      },
+      "official_name": "City of Legazpi",
+      "type": "city",
+      "psgc_code": "050506000",
+      "population_2020": 209533,
+      "pillar_sum_check": 50.4584,
+      "province_rank": 1
+    },
+    {
+      "name": "Ligao",
+      "category": "Component City",
+      "mayor": "FERNANDO V. GONZALEZ",
+      "population_cmci": 119779,
+      "website": "www.ligaocity.gov.ph",
+      "email": null,
+      "address": "City Hall, Sta.Cruz, Ligao City",
+      "contact": "Tel: (052) 485-1255",
+      "facebook": null,
+      "cmci_editions": "2013-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 36,
+        "score": 40.6275
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 86,
+          "score": 3.4777,
+          "indicators": {
+            "les": {
+              "rank": 72,
+              "score": 0.0229
+            },
+            "leg": {
+              "rank": 17,
+              "score": 0.0199
+            },
+            "sle": {
+              "rank": 98,
+              "score": 0.1135
+            },
+            "scb": {
+              "rank": 51,
+              "score": 0.3019
+            },
+            "job": {
+              "rank": 54,
+              "score": 0.0271
+            },
+            "col": {
+              "rank": 26,
+              "score": 0.9296
+            },
+            "cdb": {
+              "rank": 13,
+              "score": 1.8135
+            },
+            "fd": {
+              "rank": 94,
+              "score": 0.1742
+            },
+            "pro": {
+              "rank": 61,
+              "score": 0.0298
+            },
+            "pbpo": {
+              "rank": 63,
+              "score": 0.0453
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 18,
+          "score": 11.3415,
+          "indicators": {
+            "cnd": {
+              "rank": 1,
+              "score": 2
+            },
+            "pipu": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 41,
+              "score": 0.1735
+            },
+            "chs": {
+              "rank": 64,
+              "score": 0.1796
+            },
+            "css": {
+              "rank": 11,
+              "score": 0.4821
+            },
+            "lgua": {
+              "rank": 49,
+              "score": 0.2781
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 20,
+              "score": 0.2283
+            },
+            "sp": {
+              "rank": 2,
+              "score": 1.9998
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 33,
+          "score": 4.9575,
+          "indicators": {
+            "road": {
+              "rank": 41,
+              "score": 0.0035
+            },
+            "dtp": {
+              "rank": 46,
+              "score": 1.7462
+            },
+            "abu": {
+              "rank": 9,
+              "score": 1.5018
+            },
+            "trans": {
+              "rank": 50,
+              "score": 0.104
+            },
+            "edu": {
+              "rank": 68,
+              "score": 0.2442
+            },
+            "hea": {
+              "rank": 52,
+              "score": 0.244
+            },
+            "inv": {
+              "rank": 13,
+              "score": 0.5181
+            },
+            "acc": {
+              "rank": 33,
+              "score": 0.1239
+            },
+            "ict": {
+              "rank": 21,
+              "score": 0.3803
+            },
+            "atm": {
+              "rank": 61,
+              "score": 0.0915
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 16,
+          "score": 12.3245,
+          "indicators": {
+            "lup": {
+              "rank": 1,
+              "score": 2
+            },
+            "drrp": {
+              "rank": 1,
+              "score": 2
+            },
+            "add": {
+              "rank": 8,
+              "score": 1.3518
+            },
+            "ews": {
+              "rank": 44,
+              "score": 1.0003
+            },
+            "drrmp": {
+              "rank": 14,
+              "score": 0.1344
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 6,
+              "score": 0.691
+            },
+            "util": {
+              "rank": 24,
+              "score": 1.5063
+            },
+            "ep": {
+              "rank": 31,
+              "score": 0.0872
+            },
+            "ss": {
+              "rank": 9,
+              "score": 1.5535
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 25,
+          "score": 8.5263,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 56,
+              "score": 0.0204
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 1,
+              "score": 2
+            },
+            "stg": {
+              "rank": 59,
+              "score": 0.0506
+            },
+            "ipop": {
+              "rank": 95,
+              "score": 0.0125
+            },
+            "intc": {
+              "rank": 22,
+              "score": 1.0016
+            },
+            "abis": {
+              "rank": 2,
+              "score": 1.1191
+            },
+            "stup": {
+              "rank": 25,
+              "score": 0.3202
+            },
+            "newt": {
+              "rank": 31,
+              "score": 0.0018
+            }
+          }
+        }
+      },
+      "official_name": "City of Ligao",
+      "type": "city",
+      "psgc_code": "050508000",
+      "population_2020": 118096,
+      "pillar_sum_check": 40.6275,
+      "province_rank": 2
+    },
+    {
+      "name": "Tabaco",
+      "category": "Component City",
+      "mayor": "CIELO KRISEL LAGMAN-LUISTRO",
+      "population_cmci": 158864,
+      "website": "http://www.tabacocity.com.ph/",
+      "email": null,
+      "address": "Tabaco City Hall, Llorente St., Quinale-Cabasan, Tabaco City",
+      "contact": "Tel: 052-487-5196",
+      "facebook": null,
+      "cmci_editions": "2013-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 53,
+        "score": 38.4958
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 61,
+          "score": 4.1265,
+          "indicators": {
+            "les": {
+              "rank": 80,
+              "score": 0.015
+            },
+            "leg": {
+              "rank": 60,
+              "score": 0.009
+            },
+            "sle": {
+              "rank": 38,
+              "score": 0.4866
+            },
+            "scb": {
+              "rank": 24,
+              "score": 0.5303
+            },
+            "job": {
+              "rank": 61,
+              "score": 0.0219
+            },
+            "col": {
+              "rank": 26,
+              "score": 0.9296
+            },
+            "cdb": {
+              "rank": 17,
+              "score": 1.7802
+            },
+            "fd": {
+              "rank": 76,
+              "score": 0.278
+            },
+            "pro": {
+              "rank": 62,
+              "score": 0.0297
+            },
+            "pbpo": {
+              "rank": 62,
+              "score": 0.0462
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 52,
+          "score": 10.4899,
+          "indicators": {
+            "cnd": {
+              "rank": 1,
+              "score": 2
+            },
+            "pipu": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 61,
+              "score": 0.1136
+            },
+            "chs": {
+              "rank": 53,
+              "score": 0.2241
+            },
+            "css": {
+              "rank": 46,
+              "score": 0.354
+            },
+            "lgua": {
+              "rank": 42,
+              "score": 0.3138
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 27,
+              "score": 0.1181
+            },
+            "sp": {
+              "rank": 88,
+              "score": 1.3662
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 44,
+          "score": 4.6731,
+          "indicators": {
+            "road": {
+              "rank": 37,
+              "score": 0.0041
+            },
+            "dtp": {
+              "rank": 35,
+              "score": 1.8491
+            },
+            "abu": {
+              "rank": 24,
+              "score": 1.4815
+            },
+            "trans": {
+              "rank": 68,
+              "score": 0.0656
+            },
+            "edu": {
+              "rank": 40,
+              "score": 0.3784
+            },
+            "hea": {
+              "rank": 49,
+              "score": 0.2518
+            },
+            "inv": {
+              "rank": 40,
+              "score": 0.2178
+            },
+            "acc": {
+              "rank": 28,
+              "score": 0.1723
+            },
+            "ict": {
+              "rank": 47,
+              "score": 0.1643
+            },
+            "atm": {
+              "rank": 64,
+              "score": 0.0882
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 38,
+          "score": 11.6257,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9828
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9545
+            },
+            "add": {
+              "rank": 17,
+              "score": 1.1727
+            },
+            "ews": {
+              "rank": 44,
+              "score": 1.0003
+            },
+            "drrmp": {
+              "rank": 41,
+              "score": 0.0635
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 66,
+              "score": 0.4002
+            },
+            "util": {
+              "rank": 69,
+              "score": 1.4929
+            },
+            "ep": {
+              "rank": 49,
+              "score": 0.0379
+            },
+            "ss": {
+              "rank": 31,
+              "score": 1.5209
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 59,
+          "score": 7.5806,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 17,
+              "score": 0.1797
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 1,
+              "score": 2
+            },
+            "stg": {
+              "rank": 43,
+              "score": 0.1036
+            },
+            "ipop": {
+              "rank": 73,
+              "score": 0.0494
+            },
+            "intc": {
+              "rank": 30,
+              "score": 1.0008
+            },
+            "abis": {
+              "rank": 88,
+              "score": 0.0912
+            },
+            "stup": {
+              "rank": 48,
+              "score": 0.1467
+            },
+            "newt": {
+              "rank": 27,
+              "score": 0.0091
+            }
+          }
+        }
+      },
+      "official_name": "City of Tabaco",
+      "type": "city",
+      "psgc_code": "050517000",
+      "population_2020": 140961,
+      "pillar_sum_check": 38.4958,
+      "province_rank": 3
+    },
+    {
+      "name": "Daraga",
+      "category": "First Class Municipality",
+      "mayor": "VICTOR U. PERETE",
+      "population_cmci": 138000,
+      "website": "http://lgudaraga.com/",
+      "email": null,
+      "address": "T. Perez St. , San Roque, Daraga, Albay",
+      "contact": "Tel: 742-01-64",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 114,
+        "score": 33.5861
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 68,
+          "score": 4.202,
+          "indicators": {
+            "les": {
+              "rank": 114,
+              "score": 0.024
+            },
+            "leg": {
+              "rank": 64,
+              "score": 0.0008
+            },
+            "sle": {
+              "rank": 58,
+              "score": 0.388
+            },
+            "scb": {
+              "rank": 21,
+              "score": 0.52
+            },
+            "job": {
+              "rank": 82,
+              "score": 0.1801
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 204,
+              "score": 1.5314
+            },
+            "fd": {
+              "rank": 42,
+              "score": 0.4059
+            },
+            "pro": {
+              "rank": 88,
+              "score": 0.1156
+            },
+            "pbpo": {
+              "rank": 151,
+              "score": 0.0059
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 28,
+          "score": 9.6555,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.96
+            },
+            "pipu": {
+              "rank": 5,
+              "score": 1.9048
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 59,
+              "score": 0.2108
+            },
+            "chs": {
+              "rank": 29,
+              "score": 0.5545
+            },
+            "css": {
+              "rank": 4,
+              "score": 0.4265
+            },
+            "lgua": {
+              "rank": 192,
+              "score": 0.1086
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 45,
+              "score": 0.1031
+            },
+            "sp": {
+              "rank": 380,
+              "score": 0.3872
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 309,
+          "score": 2.3468,
+          "indicators": {
+            "road": {
+              "rank": 36,
+              "score": 0.0022
+            },
+            "dtp": {
+              "rank": 451,
+              "score": 1.3268
+            },
+            "abu": {
+              "rank": 131,
+              "score": 0.3366
+            },
+            "trans": {
+              "rank": 86,
+              "score": 0.0606
+            },
+            "edu": {
+              "rank": 44,
+              "score": 0.1748
+            },
+            "hea": {
+              "rank": 46,
+              "score": 0.3117
+            },
+            "inv": {
+              "rank": 99,
+              "score": 0.0031
+            },
+            "acc": {
+              "rank": 141,
+              "score": 0.0165
+            },
+            "ict": {
+              "rank": 37,
+              "score": 0.0145
+            },
+            "atm": {
+              "rank": 56,
+              "score": 0.1
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 223,
+          "score": 11.3578,
+          "indicators": {
+            "lup": {
+              "rank": 1,
+              "score": 2
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9783
+            },
+            "add": {
+              "rank": 108,
+              "score": 1.0006
+            },
+            "ews": {
+              "rank": 127,
+              "score": 1.0008
+            },
+            "drrmp": {
+              "rank": 52,
+              "score": 0.0013
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 290,
+              "score": 0.3695
+            },
+            "util": {
+              "rank": 129,
+              "score": 1.5051
+            },
+            "ep": {
+              "rank": 309,
+              "score": 0.0021
+            },
+            "ss": {
+              "rank": 21,
+              "score": 1.5001
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 183,
+          "score": 6.024,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 37,
+              "score": 0.0006
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 15,
+              "score": 0.2716
+            },
+            "ipop": {
+              "rank": 48,
+              "score": 0.0783
+            },
+            "intc": {
+              "rank": 53,
+              "score": 1.0039
+            },
+            "abis": {
+              "rank": 43,
+              "score": 0.655
+            },
+            "stup": {
+              "rank": 130,
+              "score": 0.0145
+            },
+            "newt": {
+              "rank": 32,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Daraga",
+      "type": "municipality",
+      "psgc_code": "050503000",
+      "population_2020": 133893,
+      "pillar_sum_check": 33.5861,
+      "province_rank": 4
+    },
+    {
+      "name": "Camalig",
+      "category": "First Class Municipality",
+      "mayor": "CARLOS IRWIN G. BALDO, JR.",
+      "population_cmci": 73087,
+      "website": "http://www.camalig.gov.ph/",
+      "email": null,
+      "address": "Municipal Hall, Bgy. 2 Camalig, Albay",
+      "contact": "Tel: NDA",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 118,
+        "score": 33.3892
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 245,
+          "score": 3.3426,
+          "indicators": {
+            "les": {
+              "rank": 125,
+              "score": 0.0201
+            },
+            "leg": {
+              "rank": 5,
+              "score": 0.165
+            },
+            "sle": {
+              "rank": 318,
+              "score": 0.1184
+            },
+            "scb": {
+              "rank": 358,
+              "score": 0.0733
+            },
+            "job": {
+              "rank": 175,
+              "score": 0.0975
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 91,
+              "score": 1.5692
+            },
+            "fd": {
+              "rank": 199,
+              "score": 0.1842
+            },
+            "pro": {
+              "rank": 178,
+              "score": 0.0623
+            },
+            "pbpo": {
+              "rank": 137,
+              "score": 0.0223
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 282,
+          "score": 8.3693,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.96
+            },
+            "pipu": {
+              "rank": 2,
+              "score": 1.9763
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 192,
+              "score": 0.1147
+            },
+            "chs": {
+              "rank": 328,
+              "score": 0.0565
+            },
+            "css": {
+              "rank": 83,
+              "score": 0.1014
+            },
+            "lgua": {
+              "rank": 156,
+              "score": 0.1335
+            },
+            "bpls": {
+              "rank": 2,
+              "score": 1.5
+            },
+            "pao": {
+              "rank": 36,
+              "score": 0.1959
+            },
+            "sp": {
+              "rank": 395,
+              "score": 0.331
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 180,
+          "score": 2.543,
+          "indicators": {
+            "road": {
+              "rank": 46,
+              "score": 0.0012
+            },
+            "dtp": {
+              "rank": 61,
+              "score": 1.9561
+            },
+            "abu": {
+              "rank": 286,
+              "score": 0.2536
+            },
+            "trans": {
+              "rank": 34,
+              "score": 0.1238
+            },
+            "edu": {
+              "rank": 117,
+              "score": 0.0963
+            },
+            "hea": {
+              "rank": 415,
+              "score": 0.0328
+            },
+            "inv": {
+              "rank": 65,
+              "score": 0.0065
+            },
+            "acc": {
+              "rank": 111,
+              "score": 0.0262
+            },
+            "ict": {
+              "rank": 55,
+              "score": 0.0048
+            },
+            "atm": {
+              "rank": 77,
+              "score": 0.0417
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 175,
+          "score": 11.415,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9857
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9783
+            },
+            "add": {
+              "rank": 107,
+              "score": 1.0011
+            },
+            "ews": {
+              "rank": 126,
+              "score": 1.0012
+            },
+            "drrmp": {
+              "rank": 46,
+              "score": 0.0019
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 384,
+              "score": 0.3504
+            },
+            "util": {
+              "rank": 155,
+              "score": 1.5025
+            },
+            "ep": {
+              "rank": 110,
+              "score": 0.0937
+            },
+            "ss": {
+              "rank": 20,
+              "score": 1.5002
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 36,
+          "score": 7.7193,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 42,
+              "score": 0.0001
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 1,
+              "score": 2
+            },
+            "stg": {
+              "rank": 243,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 160,
+              "score": 0.0123
+            },
+            "intc": {
+              "rank": 70,
+              "score": 1.0014
+            },
+            "abis": {
+              "rank": 38,
+              "score": 0.6674
+            },
+            "stup": {
+              "rank": 68,
+              "score": 0.0373
+            },
+            "newt": {
+              "rank": 26,
+              "score": 0.0007
+            }
+          }
+        }
+      },
+      "official_name": "Camalig",
+      "type": "municipality",
+      "psgc_code": "050502000",
+      "population_2020": 72042,
+      "pillar_sum_check": 33.3892,
+      "province_rank": 5
+    },
+    {
+      "name": "Polangui",
+      "category": "First Class Municipality",
+      "mayor": "RAYMOND ADRIAN E. SALCEDA",
+      "population_cmci": 89344,
+      "website": "LGU Polangui",
+      "email": null,
+      "address": "Municipal Building, Centro Occidental, Polangui, Albay",
+      "contact": "Tel: 09170000000",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 173,
+        "score": 32.2102
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 158,
+          "score": 3.6676,
+          "indicators": {
+            "les": {
+              "rank": 166,
+              "score": 0.011
+            },
+            "leg": {
+              "rank": 64,
+              "score": 0.0008
+            },
+            "sle": {
+              "rank": 249,
+              "score": 0.1587
+            },
+            "scb": {
+              "rank": 260,
+              "score": 0.1154
+            },
+            "job": {
+              "rank": 135,
+              "score": 0.1284
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 338,
+              "score": 1.4813
+            },
+            "fd": {
+              "rank": 42,
+              "score": 0.4059
+            },
+            "pro": {
+              "rank": 117,
+              "score": 0.0933
+            },
+            "pbpo": {
+              "rank": 28,
+              "score": 0.2425
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 128,
+          "score": 8.9306,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.96
+            },
+            "pipu": {
+              "rank": 2,
+              "score": 1.9763
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 399,
+              "score": 0.0139
+            },
+            "chs": {
+              "rank": 277,
+              "score": 0.0944
+            },
+            "css": {
+              "rank": 119,
+              "score": 0.0761
+            },
+            "lgua": {
+              "rank": 212,
+              "score": 0.0963
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 46,
+              "score": 0.0928
+            },
+            "sp": {
+              "rank": 30,
+              "score": 0.6208
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 118,
+          "score": 2.6975,
+          "indicators": {
+            "road": {
+              "rank": 53,
+              "score": 0.0005
+            },
+            "dtp": {
+              "rank": 206,
+              "score": 1.8721
+            },
+            "abu": {
+              "rank": 101,
+              "score": 0.3449
+            },
+            "trans": {
+              "rank": 187,
+              "score": 0.027
+            },
+            "edu": {
+              "rank": 101,
+              "score": 0.1092
+            },
+            "hea": {
+              "rank": 185,
+              "score": 0.1467
+            },
+            "inv": {
+              "rank": 77,
+              "score": 0.0053
+            },
+            "acc": {
+              "rank": 53,
+              "score": 0.0722
+            },
+            "ict": {
+              "rank": 43,
+              "score": 0.0113
+            },
+            "atm": {
+              "rank": 54,
+              "score": 0.1083
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 183,
+          "score": 11.404,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9857
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9783
+            },
+            "add": {
+              "rank": 94,
+              "score": 1.0085
+            },
+            "ews": {
+              "rank": 125,
+              "score": 1.0016
+            },
+            "drrmp": {
+              "rank": 43,
+              "score": 0.0022
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 182,
+              "score": 0.4009
+            },
+            "util": {
+              "rank": 119,
+              "score": 1.5063
+            },
+            "ep": {
+              "rank": 230,
+              "score": 0.0205
+            },
+            "ss": {
+              "rank": 22,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 229,
+          "score": 5.5105,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 32,
+              "score": 0.0011
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 54,
+              "score": 0.1002
+            },
+            "ipop": {
+              "rank": 176,
+              "score": 0.009
+            },
+            "intc": {
+              "rank": 75,
+              "score": 1.0007
+            },
+            "abis": {
+              "rank": 116,
+              "score": 0.383
+            },
+            "stup": {
+              "rank": 125,
+              "score": 0.0157
+            },
+            "newt": {
+              "rank": 26,
+              "score": 0.0007
+            }
+          }
+        }
+      },
+      "official_name": "Polangui",
+      "type": "municipality",
+      "psgc_code": "050514000",
+      "population_2020": 89176,
+      "pillar_sum_check": 32.2102,
+      "province_rank": 6
+    },
+    {
+      "name": "Santo Domingo",
+      "category": "Fourth Class Municipality",
+      "mayor": "NOMAR V. BANDA",
+      "population_cmci": 37586,
+      "website": "https://www.facebook.com/bongkarasbong",
+      "email": null,
+      "address": "San Vicente, Sto. Domingo, Albay",
+      "contact": "Tel: 09192740921",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 313,
+        "score": 29.7321
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 213,
+          "score": 4.5566,
+          "indicators": {
+            "les": {
+              "rank": 10,
+              "score": 0.1065
+            },
+            "leg": {
+              "rank": 14,
+              "score": 0.1038
+            },
+            "sle": {
+              "rank": 230,
+              "score": 0.2979
+            },
+            "scb": {
+              "rank": 267,
+              "score": 0.2714
+            },
+            "job": {
+              "rank": 224,
+              "score": 0.1524
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 419,
+              "score": 1.5338
+            },
+            "fd": {
+              "rank": 318,
+              "score": 0.0893
+            },
+            "pro": {
+              "rank": 188,
+              "score": 0.095
+            },
+            "pbpo": {
+              "rank": 8,
+              "score": 0.0474
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 406,
+          "score": 7.1094,
+          "indicators": {
+            "cnd": {
+              "rank": 6,
+              "score": 1.8684
+            },
+            "pipu": {
+              "rank": 6,
+              "score": 1.8851
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 112,
+              "score": 0.1024
+            },
+            "chs": {
+              "rank": 192,
+              "score": 0.0898
+            },
+            "css": {
+              "rank": 198,
+              "score": 0.0203
+            },
+            "lgua": {
+              "rank": 207,
+              "score": 0.086
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 45,
+              "score": 0.0574
+            },
+            "sp": {
+              "rank": 285,
+              "score": 0
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 143,
+          "score": 3.0778,
+          "indicators": {
+            "road": {
+              "rank": 40,
+              "score": 0
+            },
+            "dtp": {
+              "rank": 87,
+              "score": 1.9473
+            },
+            "abu": {
+              "rank": 241,
+              "score": 0.329
+            },
+            "trans": {
+              "rank": 22,
+              "score": 0.0809
+            },
+            "edu": {
+              "rank": 453,
+              "score": 0.0267
+            },
+            "hea": {
+              "rank": 422,
+              "score": 0.0322
+            },
+            "inv": {
+              "rank": 93,
+              "score": 0.0035
+            },
+            "acc": {
+              "rank": 15,
+              "score": 0.2486
+            },
+            "ict": {
+              "rank": 26,
+              "score": 0.2667
+            },
+            "atm": {
+              "rank": 55,
+              "score": 0.1429
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 345,
+          "score": 11.1776,
+          "indicators": {
+            "lup": {
+              "rank": 12,
+              "score": 1.859
+            },
+            "drrp": {
+              "rank": 3,
+              "score": 1.9545
+            },
+            "add": {
+              "rank": 85,
+              "score": 1.0032
+            },
+            "ews": {
+              "rank": 85,
+              "score": 1.0079
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 324,
+              "score": 0.367
+            },
+            "util": {
+              "rank": 220,
+              "score": 1.484
+            },
+            "ep": {
+              "rank": 273,
+              "score": 0.002
+            },
+            "ss": {
+              "rank": 5,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 346,
+          "score": 3.8107,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 121,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 153,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 125,
+              "score": 0.0095
+            },
+            "intc": {
+              "rank": 32,
+              "score": 1.0064
+            },
+            "abis": {
+              "rank": 198,
+              "score": 0.1281
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Santo Domingo",
+      "type": "municipality",
+      "psgc_code": "050516000",
+      "population_2020": 37765,
+      "pillar_sum_check": 29.7321,
+      "province_rank": 7
+    },
+    {
+      "name": "Libon",
+      "category": "First Class Municipality",
+      "mayor": "WILFREDO V. MARONILLA",
+      "population_cmci": 75073,
+      "website": "www.libon.gov.ph",
+      "email": null,
+      "address": "Libon, Albay",
+      "contact": "Tel: 4866-101",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 318,
+        "score": 29.5017
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 369,
+          "score": 2.945,
+          "indicators": {
+            "les": {
+              "rank": 249,
+              "score": 0.0015
+            },
+            "leg": {
+              "rank": 65,
+              "score": 0.0007
+            },
+            "sle": {
+              "rank": 386,
+              "score": 0.0763
+            },
+            "scb": {
+              "rank": 383,
+              "score": 0.0585
+            },
+            "job": {
+              "rank": 389,
+              "score": 0.0324
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 31,
+              "score": 1.5933
+            },
+            "fd": {
+              "rank": 398,
+              "score": 0.0579
+            },
+            "pro": {
+              "rank": 351,
+              "score": 0.0168
+            },
+            "pbpo": {
+              "rank": 90,
+              "score": 0.0773
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 432,
+          "score": 7.1169,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.96
+            },
+            "pipu": {
+              "rank": 8,
+              "score": 1.8334
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 200,
+              "score": 0.1101
+            },
+            "chs": {
+              "rank": 269,
+              "score": 0.0983
+            },
+            "css": {
+              "rank": 266,
+              "score": 0.029
+            },
+            "lgua": {
+              "rank": 273,
+              "score": 0.0484
+            },
+            "bpls": {
+              "rank": 2,
+              "score": 1.5
+            },
+            "pao": {
+              "rank": 48,
+              "score": 0.0722
+            },
+            "sp": {
+              "rank": 308,
+              "score": 0.4655
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 292,
+          "score": 2.3697,
+          "indicators": {
+            "road": {
+              "rank": 51,
+              "score": 0.0007
+            },
+            "dtp": {
+              "rank": 157,
+              "score": 1.8996
+            },
+            "abu": {
+              "rank": 264,
+              "score": 0.2683
+            },
+            "trans": {
+              "rank": 328,
+              "score": 0.0048
+            },
+            "edu": {
+              "rank": 171,
+              "score": 0.0721
+            },
+            "hea": {
+              "rank": 351,
+              "score": 0.0649
+            },
+            "inv": {
+              "rank": 97,
+              "score": 0.0033
+            },
+            "acc": {
+              "rank": 139,
+              "score": 0.0171
+            },
+            "ict": {
+              "rank": 38,
+              "score": 0.0139
+            },
+            "atm": {
+              "rank": 82,
+              "score": 0.025
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 389,
+          "score": 11.1699,
+          "indicators": {
+            "lup": {
+              "rank": 6,
+              "score": 1.9286
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9783
+            },
+            "add": {
+              "rank": 105,
+              "score": 1.0023
+            },
+            "ews": {
+              "rank": 86,
+              "score": 1.019
+            },
+            "drrmp": {
+              "rank": 48,
+              "score": 0.0017
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 67,
+              "score": 0.4807
+            },
+            "util": {
+              "rank": 206,
+              "score": 1.2573
+            },
+            "ep": {
+              "rank": 310,
+              "score": 0.0019
+            },
+            "ss": {
+              "rank": 21,
+              "score": 1.5001
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 190,
+          "score": 5.9002,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 43,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 1,
+              "score": 2
+            },
+            "stg": {
+              "rank": 116,
+              "score": 0.0351
+            },
+            "ipop": {
+              "rank": 216,
+              "score": 0.0007
+            },
+            "intc": {
+              "rank": 54,
+              "score": 1.0037
+            },
+            "abis": {
+              "rank": 210,
+              "score": 0.1903
+            },
+            "stup": {
+              "rank": 172,
+              "score": 0.0037
+            },
+            "newt": {
+              "rank": 32,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Libon",
+      "type": "municipality",
+      "psgc_code": "050507000",
+      "population_2020": 75073,
+      "pillar_sum_check": 29.5017,
+      "province_rank": 8
+    },
+    {
+      "name": "Bacacay",
+      "category": "Second Class Municipality",
+      "mayor": "EDSEL B. BELLEZA",
+      "population_cmci": 74159,
+      "website": "https://www.facebook.com/people/Bacacay-Albay/100017880965099/",
+      "email": null,
+      "address": "Barangay 4, Bacacay, Albay",
+      "contact": "Tel: (052)-558-3243",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 353,
+        "score": 29.0213
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 223,
+          "score": 3.4556,
+          "indicators": {
+            "les": {
+              "rank": 264,
+              "score": 0
+            },
+            "leg": {
+              "rank": 68,
+              "score": 0.0004
+            },
+            "sle": {
+              "rank": 431,
+              "score": 0.0447
+            },
+            "scb": {
+              "rank": 292,
+              "score": 0.097
+            },
+            "job": {
+              "rank": 124,
+              "score": 0.1357
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 191,
+              "score": 1.5352
+            },
+            "fd": {
+              "rank": 212,
+              "score": 0.1734
+            },
+            "pro": {
+              "rank": 258,
+              "score": 0.0359
+            },
+            "pbpo": {
+              "rank": 19,
+              "score": 0.403
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 361,
+          "score": 7.8841,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.96
+            },
+            "pipu": {
+              "rank": 3,
+              "score": 1.9524
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 236,
+              "score": 0.0948
+            },
+            "chs": {
+              "rank": 319,
+              "score": 0.0652
+            },
+            "css": {
+              "rank": 264,
+              "score": 0.0292
+            },
+            "lgua": {
+              "rank": 283,
+              "score": 0.0361
+            },
+            "bpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "pao": {
+              "rank": 46,
+              "score": 0.0928
+            },
+            "sp": {
+              "rank": 16,
+              "score": 0.6536
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 56,
+          "score": 2.9642,
+          "indicators": {
+            "road": {
+              "rank": 58,
+              "score": 0
+            },
+            "dtp": {
+              "rank": 35,
+              "score": 1.9714
+            },
+            "abu": {
+              "rank": 5,
+              "score": 0.6618
+            },
+            "trans": {
+              "rank": 258,
+              "score": 0.0138
+            },
+            "edu": {
+              "rank": 212,
+              "score": 0.0566
+            },
+            "hea": {
+              "rank": 166,
+              "score": 0.1605
+            },
+            "inv": {
+              "rank": 92,
+              "score": 0.0038
+            },
+            "acc": {
+              "rank": 72,
+              "score": 0.0487
+            },
+            "ict": {
+              "rank": 53,
+              "score": 0.0059
+            },
+            "atm": {
+              "rank": 77,
+              "score": 0.0417
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 419,
+          "score": 10.9447,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9857
+            },
+            "drrp": {
+              "rank": 3,
+              "score": 1.9565
+            },
+            "add": {
+              "rank": 21,
+              "score": 1.1138
+            },
+            "ews": {
+              "rank": 128,
+              "score": 1.0004
+            },
+            "drrmp": {
+              "rank": 46,
+              "score": 0.0019
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 383,
+              "score": 0.3508
+            },
+            "util": {
+              "rank": 146,
+              "score": 1.5034
+            },
+            "ep": {
+              "rank": 202,
+              "score": 0.0321
+            },
+            "ss": {
+              "rank": 26,
+              "score": 1.0001
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 378,
+          "score": 3.7727,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 35,
+              "score": 0.0008
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 243,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 210,
+              "score": 0.0029
+            },
+            "intc": {
+              "rank": 69,
+              "score": 1.0016
+            },
+            "abis": {
+              "rank": 258,
+              "score": 0.093
+            },
+            "stup": {
+              "rank": 159,
+              "score": 0.0077
+            },
+            "newt": {
+              "rank": 32,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Bacacay",
+      "type": "municipality",
+      "psgc_code": "050501000",
+      "population_2020": 72485,
+      "pillar_sum_check": 29.0213,
+      "province_rank": 9
+    },
+    {
+      "name": "Tiwi",
+      "category": "First Class Municipality",
+      "mayor": "JOSE MORREL C. CLIMACO",
+      "population_cmci": 56871,
+      "website": "www.tiwi.gov.ph",
+      "email": null,
+      "address": "Tigbi, Tiwi, Albay",
+      "contact": "Tel: 052-4885051",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 368,
+        "score": 28.7718
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 322,
+          "score": 3.0935,
+          "indicators": {
+            "les": {
+              "rank": 171,
+              "score": 0.0103
+            },
+            "leg": {
+              "rank": 68,
+              "score": 0.0004
+            },
+            "sle": {
+              "rank": 319,
+              "score": 0.1181
+            },
+            "scb": {
+              "rank": 138,
+              "score": 0.2071
+            },
+            "job": {
+              "rank": 266,
+              "score": 0.0662
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 144,
+              "score": 1.5504
+            },
+            "fd": {
+              "rank": 410,
+              "score": 0.0511
+            },
+            "pro": {
+              "rank": 210,
+              "score": 0.0491
+            },
+            "pbpo": {
+              "rank": 147,
+              "score": 0.0105
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 456,
+          "score": 6.677,
+          "indicators": {
+            "cnd": {
+              "rank": 5,
+              "score": 1.84
+            },
+            "pipu": {
+              "rank": 3,
+              "score": 1.9524
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 86,
+              "score": 0.1755
+            },
+            "chs": {
+              "rank": 331,
+              "score": 0.054
+            },
+            "css": {
+              "rank": 261,
+              "score": 0.0302
+            },
+            "lgua": {
+              "rank": 291,
+              "score": 0.0211
+            },
+            "bpls": {
+              "rank": 3,
+              "score": 1
+            },
+            "pao": {
+              "rank": 46,
+              "score": 0.0928
+            },
+            "sp": {
+              "rank": 191,
+              "score": 0.511
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 186,
+          "score": 2.5324,
+          "indicators": {
+            "road": {
+              "rank": 53,
+              "score": 0.0005
+            },
+            "dtp": {
+              "rank": 106,
+              "score": 1.9279
+            },
+            "abu": {
+              "rank": 39,
+              "score": 0.356
+            },
+            "trans": {
+              "rank": 309,
+              "score": 0.0071
+            },
+            "edu": {
+              "rank": 295,
+              "score": 0.0374
+            },
+            "hea": {
+              "rank": 154,
+              "score": 0.1701
+            },
+            "inv": {
+              "rank": 84,
+              "score": 0.0046
+            },
+            "acc": {
+              "rank": 240,
+              "score": 0
+            },
+            "ict": {
+              "rank": 57,
+              "score": 0.0038
+            },
+            "atm": {
+              "rank": 82,
+              "score": 0.025
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 266,
+          "score": 11.3288,
+          "indicators": {
+            "lup": {
+              "rank": 3,
+              "score": 1.9714
+            },
+            "drrp": {
+              "rank": 3,
+              "score": 1.9565
+            },
+            "add": {
+              "rank": 106,
+              "score": 1.0017
+            },
+            "ews": {
+              "rank": 128,
+              "score": 1.0004
+            },
+            "drrmp": {
+              "rank": 45,
+              "score": 0.002
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 343,
+              "score": 0.3601
+            },
+            "util": {
+              "rank": 180,
+              "score": 1.4999
+            },
+            "ep": {
+              "rank": 190,
+              "score": 0.0367
+            },
+            "ss": {
+              "rank": 21,
+              "score": 1.5001
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 253,
+          "score": 5.1401,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 43,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 1,
+              "score": 2
+            },
+            "stg": {
+              "rank": 78,
+              "score": 0.0689
+            },
+            "ipop": {
+              "rank": 155,
+              "score": 0.0133
+            },
+            "intc": {
+              "rank": 73,
+              "score": 1.001
+            },
+            "abis": {
+              "rank": 290,
+              "score": 0.0568
+            },
+            "stup": {
+              "rank": 180,
+              "score": 0
+            },
+            "newt": {
+              "rank": 32,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Tiwi",
+      "type": "municipality",
+      "psgc_code": "050518000",
+      "population_2020": 56444,
+      "pillar_sum_check": 28.7718,
+      "province_rank": 10
+    },
+    {
+      "name": "Pio Duran",
+      "category": "Third Class Municipality",
+      "mayor": "ALAN R. ARANDIA",
+      "population_cmci": 48713,
+      "website": "https://www.facebook.com/lgu.pioduran",
+      "email": null,
+      "address": "Caratagan, Pio Duran, Albay",
+      "contact": "Tel: 9052637960",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 426,
+        "score": 27.8401
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 346,
+          "score": 4.2269,
+          "indicators": {
+            "les": {
+              "rank": 135,
+              "score": 0.0037
+            },
+            "leg": {
+              "rank": 102,
+              "score": 0.0018
+            },
+            "sle": {
+              "rank": 338,
+              "score": 0.2138
+            },
+            "scb": {
+              "rank": 366,
+              "score": 0.1993
+            },
+            "job": {
+              "rank": 324,
+              "score": 0.1023
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 27,
+              "score": 1.6597
+            },
+            "fd": {
+              "rank": 273,
+              "score": 0.1075
+            },
+            "pro": {
+              "rank": 248,
+              "score": 0.0761
+            },
+            "pbpo": {
+              "rank": 84,
+              "score": 0.0036
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 469,
+          "score": 6.5848,
+          "indicators": {
+            "cnd": {
+              "rank": 3,
+              "score": 1.9474
+            },
+            "pipu": {
+              "rank": 3,
+              "score": 1.9541
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 385,
+              "score": 0.0146
+            },
+            "chs": {
+              "rank": 413,
+              "score": 0.0026
+            },
+            "css": {
+              "rank": 104,
+              "score": 0.0359
+            },
+            "lgua": {
+              "rank": 195,
+              "score": 0.0958
+            },
+            "bpls": {
+              "rank": 2,
+              "score": 1.5
+            },
+            "pao": {
+              "rank": 51,
+              "score": 0.0344
+            },
+            "sp": {
+              "rank": 285,
+              "score": 0
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 604,
+          "score": 1.9222,
+          "indicators": {
+            "road": {
+              "rank": 39,
+              "score": 0.0001
+            },
+            "dtp": {
+              "rank": 578,
+              "score": 1.2458
+            },
+            "abu": {
+              "rank": 446,
+              "score": 0.1466
+            },
+            "trans": {
+              "rank": 97,
+              "score": 0.0215
+            },
+            "edu": {
+              "rank": 283,
+              "score": 0.0699
+            },
+            "hea": {
+              "rank": 199,
+              "score": 0.1062
+            },
+            "inv": {
+              "rank": 101,
+              "score": 0.0027
+            },
+            "acc": {
+              "rank": 107,
+              "score": 0.0445
+            },
+            "ict": {
+              "rank": 28,
+              "score": 0.1778
+            },
+            "atm": {
+              "rank": 62,
+              "score": 0.1071
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 185,
+          "score": 11.3693,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9872
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9773
+            },
+            "add": {
+              "rank": 87,
+              "score": 1.0024
+            },
+            "ews": {
+              "rank": 87,
+              "score": 1.004
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 222,
+              "score": 0.3841
+            },
+            "util": {
+              "rank": 137,
+              "score": 1.505
+            },
+            "ep": {
+              "rank": 232,
+              "score": 0.0093
+            },
+            "ss": {
+              "rank": 5,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 363,
+          "score": 3.7369,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 46,
+              "score": 0.0116
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 153,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 125,
+              "score": 0.0095
+            },
+            "intc": {
+              "rank": 34,
+              "score": 1.0042
+            },
+            "abis": {
+              "rank": 289,
+              "score": 0.0449
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Pio Duran",
+      "type": "municipality",
+      "psgc_code": "050513000",
+      "population_2020": 49070,
+      "pillar_sum_check": 27.8401,
+      "province_rank": 11
+    },
+    {
+      "name": "Malinao",
+      "category": "Third Class Municipality",
+      "mayor": "SHERYL C. BILO",
+      "population_cmci": 49570,
+      "website": "https://www.facebook.com/MalinaoAlbayPH/",
+      "email": null,
+      "address": "Malinao, Albay",
+      "contact": "Tel: (052)820 0591",
+      "facebook": null,
+      "cmci_editions": "2015-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 468,
+        "score": 27.1687
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 280,
+          "score": 4.3656,
+          "indicators": {
+            "les": {
+              "rank": 9,
+              "score": 0.1102
+            },
+            "leg": {
+              "rank": 13,
+              "score": 0.1044
+            },
+            "sle": {
+              "rank": 392,
+              "score": 0.1844
+            },
+            "scb": {
+              "rank": 421,
+              "score": 0.1685
+            },
+            "job": {
+              "rank": 250,
+              "score": 0.1404
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 155,
+              "score": 1.6281
+            },
+            "fd": {
+              "rank": 385,
+              "score": 0.0619
+            },
+            "pro": {
+              "rank": 158,
+              "score": 0.1085
+            },
+            "pbpo": {
+              "rank": 119,
+              "score": 0.0001
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 412,
+          "score": 7.0716,
+          "indicators": {
+            "cnd": {
+              "rank": 4,
+              "score": 1.9211
+            },
+            "pipu": {
+              "rank": 4,
+              "score": 1.9311
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 344,
+              "score": 0.0214
+            },
+            "chs": {
+              "rank": 373,
+              "score": 0.0252
+            },
+            "css": {
+              "rank": 227,
+              "score": 0.0167
+            },
+            "lgua": {
+              "rank": 230,
+              "score": 0.0607
+            },
+            "bpls": {
+              "rank": 3,
+              "score": 1
+            },
+            "pao": {
+              "rank": 48,
+              "score": 0.0459
+            },
+            "sp": {
+              "rank": 160,
+              "score": 0.0495
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 308,
+          "score": 2.6862,
+          "indicators": {
+            "road": {
+              "rank": 38,
+              "score": 0.0002
+            },
+            "dtp": {
+              "rank": 108,
+              "score": 1.9382
+            },
+            "abu": {
+              "rank": 221,
+              "score": 0.3402
+            },
+            "trans": {
+              "rank": 180,
+              "score": 0.0086
+            },
+            "edu": {
+              "rank": 510,
+              "score": 0.0159
+            },
+            "hea": {
+              "rank": 420,
+              "score": 0.0326
+            },
+            "inv": {
+              "rank": 91,
+              "score": 0.0037
+            },
+            "acc": {
+              "rank": 280,
+              "score": 0
+            },
+            "ict": {
+              "rank": 25,
+              "score": 0.3111
+            },
+            "atm": {
+              "rank": 80,
+              "score": 0.0357
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 231,
+          "score": 11.3272,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9872
+            },
+            "drrp": {
+              "rank": 3,
+              "score": 1.9545
+            },
+            "add": {
+              "rank": 88,
+              "score": 1.002
+            },
+            "ews": {
+              "rank": 85,
+              "score": 1.0079
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 287,
+              "score": 0.372
+            },
+            "util": {
+              "rank": 164,
+              "score": 1.5023
+            },
+            "ep": {
+              "rank": 277,
+              "score": 0.0013
+            },
+            "ss": {
+              "rank": 5,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 563,
+          "score": 1.7181,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 121,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 153,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 87,
+              "score": 0.044
+            },
+            "intc": {
+              "rank": 31,
+              "score": 1.0074
+            },
+            "abis": {
+              "rank": 391,
+              "score": 0
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Malinao",
+      "type": "municipality",
+      "psgc_code": "050510000",
+      "population_2020": 47395,
+      "pillar_sum_check": 27.1687,
+      "province_rank": 12
+    },
+    {
+      "name": "Manito",
+      "category": "Fourth Class Municipality",
+      "mayor": "JERRY D. ARIZAPA",
+      "population_cmci": 27213,
+      "website": "facebook page: lgumanitoofficial@gmail.com",
+      "email": null,
+      "address": "Purok 2 Rizal St., It-ba (Poblacion) Manito, Albay",
+      "contact": "Tel: NDA",
+      "facebook": null,
+      "cmci_editions": "2016-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 532,
+        "score": 25.6813
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 443,
+          "score": 4.0475,
+          "indicators": {
+            "les": {
+              "rank": 169,
+              "score": 0.0003
+            },
+            "leg": {
+              "rank": 109,
+              "score": 0.0011
+            },
+            "sle": {
+              "rank": 564,
+              "score": 0.0567
+            },
+            "scb": {
+              "rank": 569,
+              "score": 0.051
+            },
+            "job": {
+              "rank": 381,
+              "score": 0.0823
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 220,
+              "score": 1.6159
+            },
+            "fd": {
+              "rank": 40,
+              "score": 0.3077
+            },
+            "pro": {
+              "rank": 280,
+              "score": 0.0656
+            },
+            "pbpo": {
+              "rank": 50,
+              "score": 0.0078
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 529,
+          "score": 5.9478,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.9737
+            },
+            "pipu": {
+              "rank": 2,
+              "score": 1.9771
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 46,
+              "score": 0.1367
+            },
+            "chs": {
+              "rank": 275,
+              "score": 0.059
+            },
+            "css": {
+              "rank": 191,
+              "score": 0.021
+            },
+            "lgua": {
+              "rank": 53,
+              "score": 0.227
+            },
+            "bpls": {
+              "rank": 4,
+              "score": 0.5
+            },
+            "pao": {
+              "rank": 47,
+              "score": 0.0497
+            },
+            "sp": {
+              "rank": 270,
+              "score": 0.0036
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 524,
+          "score": 2.2768,
+          "indicators": {
+            "road": {
+              "rank": 37,
+              "score": 0.0003
+            },
+            "dtp": {
+              "rank": 110,
+              "score": 1.9369
+            },
+            "abu": {
+              "rank": 503,
+              "score": 0.03
+            },
+            "trans": {
+              "rank": 120,
+              "score": 0.0163
+            },
+            "edu": {
+              "rank": 261,
+              "score": 0.0759
+            },
+            "hea": {
+              "rank": 261,
+              "score": 0.081
+            },
+            "inv": {
+              "rank": 126,
+              "score": 0
+            },
+            "acc": {
+              "rank": 264,
+              "score": 0.0031
+            },
+            "ict": {
+              "rank": 29,
+              "score": 0.1333
+            },
+            "atm": {
+              "rank": 88,
+              "score": 0
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 374,
+          "score": 11.0489,
+          "indicators": {
+            "lup": {
+              "rank": 2,
+              "score": 1.9872
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9773
+            },
+            "add": {
+              "rank": 89,
+              "score": 1.0016
+            },
+            "ews": {
+              "rank": 72,
+              "score": 1.0337
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 461,
+              "score": 0.0464
+            },
+            "util": {
+              "rank": 189,
+              "score": 1.4997
+            },
+            "ep": {
+              "rank": 267,
+              "score": 0.003
+            },
+            "ss": {
+              "rank": 5,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 516,
+          "score": 2.3603,
+          "indicators": {
+            "itp": {
+              "rank": 2,
+              "score": 1.3334
+            },
+            "ivf": {
+              "rank": 121,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 124,
+              "score": 0.014
+            },
+            "ipop": {
+              "rank": 127,
+              "score": 0.0048
+            },
+            "intc": {
+              "rank": 35,
+              "score": 1.0032
+            },
+            "abis": {
+              "rank": 371,
+              "score": 0.0049
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Manito",
+      "type": "municipality",
+      "psgc_code": "050511000",
+      "population_2020": 26162,
+      "pillar_sum_check": 25.6813,
+      "province_rank": 13
+    },
+    {
+      "name": "Guinobatan",
+      "category": "First Class Municipality",
+      "mayor": "ANN YAP ONGJOCO",
+      "population_cmci": 84420,
+      "website": "www.guinobatan.gov.ph",
+      "email": null,
+      "address": "Mabini St., Poblacion, Guinobatan Albay",
+      "contact": "Tel: 820-8363",
+      "facebook": null,
+      "cmci_editions": "2014-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 466,
+        "score": 25.2273
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 339,
+          "score": 3.0489,
+          "indicators": {
+            "les": {
+              "rank": 206,
+              "score": 0.006
+            },
+            "leg": {
+              "rank": 65,
+              "score": 0.0007
+            },
+            "sle": {
+              "rank": 262,
+              "score": 0.1491
+            },
+            "scb": {
+              "rank": 311,
+              "score": 0.0908
+            },
+            "job": {
+              "rank": 271,
+              "score": 0.0653
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 346,
+              "score": 1.4752
+            },
+            "fd": {
+              "rank": 244,
+              "score": 0.1488
+            },
+            "pro": {
+              "rank": 259,
+              "score": 0.0358
+            },
+            "pbpo": {
+              "rank": 116,
+              "score": 0.0469
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 445,
+          "score": 6.8933,
+          "indicators": {
+            "cnd": {
+              "rank": 4,
+              "score": 1.88
+            },
+            "pipu": {
+              "rank": 14,
+              "score": 1.6905
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 183,
+              "score": 0.1197
+            },
+            "chs": {
+              "rank": 345,
+              "score": 0.038
+            },
+            "css": {
+              "rank": 64,
+              "score": 0.123
+            },
+            "lgua": {
+              "rank": 297,
+              "score": 0
+            },
+            "bpls": {
+              "rank": 2,
+              "score": 1.5
+            },
+            "pao": {
+              "rank": 47,
+              "score": 0.0825
+            },
+            "sp": {
+              "rank": 313,
+              "score": 0.4596
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 351,
+          "score": 2.2687,
+          "indicators": {
+            "road": {
+              "rank": 52,
+              "score": 0.0006
+            },
+            "dtp": {
+              "rank": 126,
+              "score": 1.9179
+            },
+            "abu": {
+              "rank": 370,
+              "score": 0.1293
+            },
+            "trans": {
+              "rank": 181,
+              "score": 0.0289
+            },
+            "edu": {
+              "rank": 207,
+              "score": 0.0575
+            },
+            "hea": {
+              "rank": 417,
+              "score": 0.0307
+            },
+            "inv": {
+              "rank": 19,
+              "score": 0.0194
+            },
+            "acc": {
+              "rank": 104,
+              "score": 0.0285
+            },
+            "ict": {
+              "rank": 53,
+              "score": 0.0059
+            },
+            "atm": {
+              "rank": 74,
+              "score": 0.05
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 476,
+          "score": 10.0003,
+          "indicators": {
+            "lup": {
+              "rank": 23,
+              "score": 1.6714
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9783
+            },
+            "add": {
+              "rank": 104,
+              "score": 1.0028
+            },
+            "ews": {
+              "rank": 126,
+              "score": 1.0012
+            },
+            "drrmp": {
+              "rank": 46,
+              "score": 0.0019
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 410,
+              "score": 0.3423
+            },
+            "util": {
+              "rank": 220,
+              "score": 0.9998
+            },
+            "ep": {
+              "rank": 306,
+              "score": 0.0026
+            },
+            "ss": {
+              "rank": 27,
+              "score": 1
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 439,
+          "score": 3.0161,
+          "indicators": {
+            "itp": {
+              "rank": 4,
+              "score": 0
+            },
+            "ivf": {
+              "rank": 41,
+              "score": 0.0002
+            },
+            "ebpls": {
+              "rank": 1,
+              "score": 2
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 243,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 156,
+              "score": 0.0132
+            },
+            "intc": {
+              "rank": 61,
+              "score": 1.0027
+            },
+            "abis": {
+              "rank": 371,
+              "score": 0
+            },
+            "stup": {
+              "rank": 180,
+              "score": 0
+            },
+            "newt": {
+              "rank": 32,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Guinobatan",
+      "type": "municipality",
+      "psgc_code": "050504000",
+      "population_2020": 85786,
+      "pillar_sum_check": 25.2273,
+      "province_rank": 14
+    },
+    {
+      "name": "Jovellar",
+      "category": "Fourth Class Municipality",
+      "mayor": "JOREM L. ARCANGEL",
+      "population_cmci": 17795,
+      "website": "https://www.facebook.com/municipio.dejovellar.1",
+      "email": null,
+      "address": "Jovellar, Albay",
+      "contact": "Tel: NDA",
+      "facebook": null,
+      "cmci_editions": "2016-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 551,
+        "score": 24.9989
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 597,
+          "score": 3.5068,
+          "indicators": {
+            "les": {
+              "rank": 171,
+              "score": 0.0001
+            },
+            "leg": {
+              "rank": 105,
+              "score": 0.0015
+            },
+            "sle": {
+              "rank": 562,
+              "score": 0.0577
+            },
+            "scb": {
+              "rank": 578,
+              "score": 0.0304
+            },
+            "job": {
+              "rank": 556,
+              "score": 0.0157
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 432,
+              "score": 1.5079
+            },
+            "fd": {
+              "rank": 427,
+              "score": 0.0174
+            },
+            "pro": {
+              "rank": 513,
+              "score": 0.0073
+            },
+            "pbpo": {
+              "rank": 41,
+              "score": 0.0097
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 594,
+          "score": 5.1051,
+          "indicators": {
+            "cnd": {
+              "rank": 5,
+              "score": 1.8947
+            },
+            "pipu": {
+              "rank": 40,
+              "score": 0
+            },
+            "bre": {
+              "rank": 1,
+              "score": 2
+            },
+            "rat": {
+              "rank": 474,
+              "score": 0.0021
+            },
+            "chs": {
+              "rank": 381,
+              "score": 0.0214
+            },
+            "css": {
+              "rank": 227,
+              "score": 0.0167
+            },
+            "lgua": {
+              "rank": 253,
+              "score": 0.0351
+            },
+            "bpls": {
+              "rank": 3,
+              "score": 1
+            },
+            "pao": {
+              "rank": 43,
+              "score": 0.065
+            },
+            "sp": {
+              "rank": 13,
+              "score": 0.0701
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 559,
+          "score": 2.1486,
+          "indicators": {
+            "road": {
+              "rank": 38,
+              "score": 0.0002
+            },
+            "dtp": {
+              "rank": 181,
+              "score": 1.9082
+            },
+            "abu": {
+              "rank": 470,
+              "score": 0.0776
+            },
+            "trans": {
+              "rank": 208,
+              "score": 0.0057
+            },
+            "edu": {
+              "rank": 505,
+              "score": 0.017
+            },
+            "hea": {
+              "rank": 498,
+              "score": 0.0125
+            },
+            "inv": {
+              "rank": 100,
+              "score": 0.0028
+            },
+            "acc": {
+              "rank": 280,
+              "score": 0
+            },
+            "ict": {
+              "rank": 30,
+              "score": 0.0889
+            },
+            "atm": {
+              "rank": 80,
+              "score": 0.0357
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 321,
+          "score": 11.2362,
+          "indicators": {
+            "lup": {
+              "rank": 9,
+              "score": 1.8974
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9773
+            },
+            "add": {
+              "rank": 92,
+              "score": 1.0004
+            },
+            "ews": {
+              "rank": 87,
+              "score": 1.004
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 393,
+              "score": 0.3572
+            },
+            "util": {
+              "rank": 206,
+              "score": 1.4977
+            },
+            "ep": {
+              "rank": 272,
+              "score": 0.0022
+            },
+            "ss": {
+              "rank": 5,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 458,
+          "score": 3.0022,
+          "indicators": {
+            "itp": {
+              "rank": 1,
+              "score": 2.0001
+            },
+            "ivf": {
+              "rank": 121,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 153,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 129,
+              "score": 0
+            },
+            "intc": {
+              "rank": 36,
+              "score": 1.0021
+            },
+            "abis": {
+              "rank": 391,
+              "score": 0
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Jovellar",
+      "type": "municipality",
+      "psgc_code": "050505000",
+      "population_2020": 17795,
+      "pillar_sum_check": 24.9989,
+      "province_rank": 15
+    },
+    {
+      "name": "Rapu-Rapu",
+      "category": "Third Class Municipality",
+      "mayor": "ROMEL A. GALICIA",
+      "population_cmci": 36281,
+      "website": "https://www.facebook.com/lgu.rapurapu",
+      "email": null,
+      "address": "Poblacion, Rapu-Rapu, Albay",
+      "contact": "Tel: NDA",
+      "facebook": null,
+      "cmci_editions": "2019-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 559,
+        "score": 24.8671
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 545,
+          "score": 3.8106,
+          "indicators": {
+            "les": {
+              "rank": 158,
+              "score": 0.0014
+            },
+            "leg": {
+              "rank": 83,
+              "score": 0.0038
+            },
+            "sle": {
+              "rank": 535,
+              "score": 0.0904
+            },
+            "scb": {
+              "rank": 535,
+              "score": 0.093
+            },
+            "job": {
+              "rank": 416,
+              "score": 0.0721
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 224,
+              "score": 1.6153
+            },
+            "fd": {
+              "rank": 405,
+              "score": 0.0456
+            },
+            "pro": {
+              "rank": 434,
+              "score": 0.0289
+            },
+            "pbpo": {
+              "rank": 110,
+              "score": 0.001
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 517,
+          "score": 6.0922,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.9737
+            },
+            "pipu": {
+              "rank": 13,
+              "score": 1.7242
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 193,
+              "score": 0.0748
+            },
+            "chs": {
+              "rank": 136,
+              "score": 0.1234
+            },
+            "css": {
+              "rank": 223,
+              "score": 0.0171
+            },
+            "lgua": {
+              "rank": 209,
+              "score": 0.0857
+            },
+            "bpls": {
+              "rank": 3,
+              "score": 1
+            },
+            "pao": {
+              "rank": 48,
+              "score": 0.0459
+            },
+            "sp": {
+              "rank": 174,
+              "score": 0.0474
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 378,
+          "score": 2.58,
+          "indicators": {
+            "road": {
+              "rank": 38,
+              "score": 0.0002
+            },
+            "dtp": {
+              "rank": 308,
+              "score": 1.8615
+            },
+            "abu": {
+              "rank": 167,
+              "score": 0.3703
+            },
+            "trans": {
+              "rank": 33,
+              "score": 0.0679
+            },
+            "edu": {
+              "rank": 252,
+              "score": 0.0787
+            },
+            "hea": {
+              "rank": 318,
+              "score": 0.0628
+            },
+            "inv": {
+              "rank": 75,
+              "score": 0.0053
+            },
+            "acc": {
+              "rank": 280,
+              "score": 0
+            },
+            "ict": {
+              "rank": 29,
+              "score": 0.1333
+            },
+            "atm": {
+              "rank": 88,
+              "score": 0
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 491,
+          "score": 10.7144,
+          "indicators": {
+            "lup": {
+              "rank": 23,
+              "score": 1.7179
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9773
+            },
+            "add": {
+              "rank": 89,
+              "score": 1.0016
+            },
+            "ews": {
+              "rank": 84,
+              "score": 1.0099
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 59,
+              "score": 0.4608
+            },
+            "util": {
+              "rank": 185,
+              "score": 1.5001
+            },
+            "ep": {
+              "rank": 118,
+              "score": 0.0468
+            },
+            "ss": {
+              "rank": 6,
+              "score": 1
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 587,
+          "score": 1.6699,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 121,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 153,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 129,
+              "score": 0
+            },
+            "intc": {
+              "rank": 35,
+              "score": 1.0032
+            },
+            "abis": {
+              "rank": 391,
+              "score": 0
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Rapu-Rapu",
+      "type": "municipality",
+      "psgc_code": "050515000",
+      "population_2020": 36151,
+      "pillar_sum_check": 24.8671,
+      "province_rank": 16
+    },
+    {
+      "name": "Oas",
+      "category": "First Class Municipality",
+      "mayor": "DOMINGO R. ESCOTO JR.",
+      "population_cmci": 64890,
+      "website": "https://www.facebook.com/LocalGovernmentofOas/",
+      "email": null,
+      "address": "Ilaor Sur, Oas, Albay",
+      "contact": "Tel: 0917 114 6093",
+      "facebook": null,
+      "cmci_editions": "2015-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 476,
+        "score": 24.543
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 426,
+          "score": 2.7613,
+          "indicators": {
+            "les": {
+              "rank": 257,
+              "score": 0.0007
+            },
+            "leg": {
+              "rank": 64,
+              "score": 0.0008
+            },
+            "sle": {
+              "rank": 432,
+              "score": 0.0435
+            },
+            "scb": {
+              "rank": 439,
+              "score": 0.032
+            },
+            "job": {
+              "rank": 422,
+              "score": 0.0183
+            },
+            "col": {
+              "rank": 39,
+              "score": 1.0303
+            },
+            "cdb": {
+              "rank": 159,
+              "score": 1.5449
+            },
+            "fd": {
+              "rank": 376,
+              "score": 0.0699
+            },
+            "pro": {
+              "rank": 385,
+              "score": 0.0092
+            },
+            "pbpo": {
+              "rank": 146,
+              "score": 0.0117
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 470,
+          "score": 6.2144,
+          "indicators": {
+            "cnd": {
+              "rank": 2,
+              "score": 1.96
+            },
+            "pipu": {
+              "rank": 2,
+              "score": 1.9763
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 419,
+              "score": 0.0082
+            },
+            "chs": {
+              "rank": 362,
+              "score": 0.0209
+            },
+            "css": {
+              "rank": 285,
+              "score": 0.0244
+            },
+            "lgua": {
+              "rank": 144,
+              "score": 0.1421
+            },
+            "bpls": {
+              "rank": 3,
+              "score": 1
+            },
+            "pao": {
+              "rank": 47,
+              "score": 0.0825
+            },
+            "sp": {
+              "rank": 436,
+              "score": 0
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 281,
+          "score": 2.3826,
+          "indicators": {
+            "road": {
+              "rank": 22,
+              "score": 0.0051
+            },
+            "dtp": {
+              "rank": 189,
+              "score": 1.8831
+            },
+            "abu": {
+              "rank": 124,
+              "score": 0.3378
+            },
+            "trans": {
+              "rank": 249,
+              "score": 0.0154
+            },
+            "edu": {
+              "rank": 220,
+              "score": 0.0544
+            },
+            "hea": {
+              "rank": 450,
+              "score": 0.0108
+            },
+            "inv": {
+              "rank": 44,
+              "score": 0.0096
+            },
+            "acc": {
+              "rank": 101,
+              "score": 0.0307
+            },
+            "ict": {
+              "rank": 44,
+              "score": 0.0107
+            },
+            "atm": {
+              "rank": 82,
+              "score": 0.025
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 120,
+          "score": 11.5129,
+          "indicators": {
+            "lup": {
+              "rank": 4,
+              "score": 1.9571
+            },
+            "drrp": {
+              "rank": 3,
+              "score": 1.9565
+            },
+            "add": {
+              "rank": 99,
+              "score": 1.0057
+            },
+            "ews": {
+              "rank": 123,
+              "score": 1.0024
+            },
+            "drrmp": {
+              "rank": 41,
+              "score": 0.0024
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 61,
+              "score": 0.486
+            },
+            "util": {
+              "rank": 193,
+              "score": 1.4982
+            },
+            "ep": {
+              "rank": 100,
+              "score": 0.1046
+            },
+            "ss": {
+              "rank": 22,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 485,
+          "score": 1.6718,
+          "indicators": {
+            "itp": {
+              "rank": 3,
+              "score": 0.6667
+            },
+            "ivf": {
+              "rank": 43,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 243,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 213,
+              "score": 0.0022
+            },
+            "intc": {
+              "rank": 60,
+              "score": 1.0029
+            },
+            "abis": {
+              "rank": 371,
+              "score": 0
+            },
+            "stup": {
+              "rank": 180,
+              "score": 0
+            },
+            "newt": {
+              "rank": 32,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Oas",
+      "type": "municipality",
+      "psgc_code": "050512000",
+      "population_2020": 66084,
+      "pillar_sum_check": 24.543,
+      "province_rank": 17
+    },
+    {
+      "name": "Malilipot",
+      "category": "Fourth Class Municipality",
+      "mayor": "CENON B. VOLANTE",
+      "population_cmci": 41066,
+      "website": "https://www.facebook.com/Malilipot.ml/",
+      "email": null,
+      "address": "Belen Street, Brgy. II Poblacion, Malilipot, Albay",
+      "contact": "Tel: (052) 742 5885",
+      "facebook": null,
+      "cmci_editions": "2016-2024",
+      "region": "REGION V (Bicol Region)",
+      "overall": {
+        "rank": 585,
+        "score": 24.1632
+      },
+      "pillars": {
+        "ed": {
+          "label": "Economic Dynamism",
+          "rank": 535,
+          "score": 3.8355,
+          "indicators": {
+            "les": {
+              "rank": 164,
+              "score": 0.0008
+            },
+            "leg": {
+              "rank": 109,
+              "score": 0.0011
+            },
+            "sle": {
+              "rank": 460,
+              "score": 0.145
+            },
+            "scb": {
+              "rank": 498,
+              "score": 0.1223
+            },
+            "job": {
+              "rank": 336,
+              "score": 0.0964
+            },
+            "col": {
+              "rank": 37,
+              "score": 1.8591
+            },
+            "cdb": {
+              "rank": 418,
+              "score": 1.534
+            },
+            "fd": {
+              "rank": 426,
+              "score": 0.0195
+            },
+            "pro": {
+              "rank": 313,
+              "score": 0.0568
+            },
+            "pbpo": {
+              "rank": 115,
+              "score": 0.0005
+            }
+          }
+        },
+        "ge": {
+          "label": "Government Efficiency",
+          "rank": 632,
+          "score": 3.8786,
+          "indicators": {
+            "cnd": {
+              "rank": 3,
+              "score": 1.9474
+            },
+            "pipu": {
+              "rank": 40,
+              "score": 0
+            },
+            "bre": {
+              "rank": 2,
+              "score": 1
+            },
+            "rat": {
+              "rank": 258,
+              "score": 0.0494
+            },
+            "chs": {
+              "rank": 386,
+              "score": 0.0188
+            },
+            "css": {
+              "rank": 16,
+              "score": 0.1241
+            },
+            "lgua": {
+              "rank": 145,
+              "score": 0.1379
+            },
+            "bpls": {
+              "rank": 4,
+              "score": 0.5
+            },
+            "pao": {
+              "rank": 46,
+              "score": 0.0535
+            },
+            "sp": {
+              "rank": 173,
+              "score": 0.0475
+            }
+          }
+        },
+        "in": {
+          "label": "Infrastructure",
+          "rank": 194,
+          "score": 2.9459,
+          "indicators": {
+            "road": {
+              "rank": 37,
+              "score": 0.0003
+            },
+            "dtp": {
+              "rank": 85,
+              "score": 1.9488
+            },
+            "abu": {
+              "rank": 139,
+              "score": 0.3853
+            },
+            "trans": {
+              "rank": 254,
+              "score": 0.0011
+            },
+            "edu": {
+              "rank": 91,
+              "score": 0.1548
+            },
+            "hea": {
+              "rank": 241,
+              "score": 0.0871
+            },
+            "inv": {
+              "rank": 89,
+              "score": 0.0039
+            },
+            "acc": {
+              "rank": 80,
+              "score": 0.0622
+            },
+            "ict": {
+              "rank": 26,
+              "score": 0.2667
+            },
+            "atm": {
+              "rank": 80,
+              "score": 0.0357
+            }
+          }
+        },
+        "re": {
+          "label": "Resiliency",
+          "rank": 347,
+          "score": 11.1629,
+          "indicators": {
+            "lup": {
+              "rank": 19,
+              "score": 1.7692
+            },
+            "drrp": {
+              "rank": 2,
+              "score": 1.9773
+            },
+            "add": {
+              "rank": 90,
+              "score": 1.0012
+            },
+            "ews": {
+              "rank": 85,
+              "score": 1.0079
+            },
+            "drrmp": {
+              "rank": 4,
+              "score": 0
+            },
+            "lra": {
+              "rank": 1,
+              "score": 2
+            },
+            "ei": {
+              "rank": 398,
+              "score": 0.3566
+            },
+            "util": {
+              "rank": 175,
+              "score": 1.5012
+            },
+            "ep": {
+              "rank": 114,
+              "score": 0.0495
+            },
+            "ss": {
+              "rank": 5,
+              "score": 1.5
+            }
+          }
+        },
+        "iv": {
+          "label": "Innovation",
+          "rank": 520,
+          "score": 2.3403,
+          "indicators": {
+            "itp": {
+              "rank": 2,
+              "score": 1.3334
+            },
+            "ivf": {
+              "rank": 121,
+              "score": 0
+            },
+            "ebpls": {
+              "rank": 2,
+              "score": 0
+            },
+            "opf": {
+              "rank": 2,
+              "score": 0
+            },
+            "stg": {
+              "rank": 153,
+              "score": 0
+            },
+            "ipop": {
+              "rank": 127,
+              "score": 0.0048
+            },
+            "intc": {
+              "rank": 36,
+              "score": 1.0021
+            },
+            "abis": {
+              "rank": 391,
+              "score": 0
+            },
+            "stup": {
+              "rank": 139,
+              "score": 0
+            },
+            "newt": {
+              "rank": 24,
+              "score": 0
+            }
+          }
+        }
+      },
+      "official_name": "Malilipot",
+      "type": "municipality",
+      "psgc_code": "050509000",
+      "population_2020": 40857,
+      "pillar_sum_check": 24.1632,
+      "province_rank": 18
+    }
+  ]
 }

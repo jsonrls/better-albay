@@ -1,0 +1,648 @@
+{
+  "_comment": "Copy for the statistics dashboard and directory renderers. 'en' must match the renderer's inline fallback text exactly; a test compares them. Values from data/*.json are never translated - they are passed as {{params}} instead.",
+  "sre-archived-filing": {
+    "en": "{{period}} filing (archived PDF)",
+    "fil": "Paghahain ng {{period}} (naka-arkibong PDF)",
+    "bcl": "Pagpasumite kan {{period}} (naka-archive na PDF)"
+  },
+  "stats-source": {
+    "en": "Source",
+    "fil": "Pinagmulan",
+    "bcl": "Ginikanan"
+  },
+  "stats-metrics-heading": {
+    "en": "Albay at a glance",
+    "fil": "Ang Albay sa isang sulyap",
+    "bcl": "An Albay sa sarong paghiling"
+  },
+  "stats-metrics-blurb": {
+    "en": "Official 2024 Census of Population counts for the Province of Albay, as published by the Philippine Statistics Authority.",
+    "fil": "Opisyal na bilang ng 2024 Census of Population para sa Lalawigan ng Albay, ayon sa inilathala ng Philippine Statistics Authority.",
+    "bcl": "Opisyal na bilang kan 2024 Census of Population para sa Probinsya nin Albay, sono sa pigpapahayag kan Philippine Statistics Authority."
+  },
+  "stats-cities-and-municipalities": {
+    "en": "Cities and Municipalities",
+    "fil": "Mga Lungsod at Munisipalidad",
+    "bcl": "Mga Syudad asin Munisipyo"
+  },
+  "stats-barangays": {
+    "en": "Barangays",
+    "fil": "Mga Barangay",
+    "bcl": "Mga Barangay"
+  },
+  "stats-average-household-size": {
+    "en": "Average Household Size",
+    "fil": "Karaniwang Laki ng Sambahayan",
+    "bcl": "Kadawyan na Kadakula kan Pamilya"
+  },
+  "stats-census-2024": {
+    "en": "2024 Census",
+    "fil": "Senso 2024",
+    "bcl": "Senso 2024"
+  },
+  "stats-census-2024-private-households": {
+    "en": "2024 Census (private households)",
+    "fil": "Senso 2024 (pribadong sambahayan)",
+    "bcl": "Senso 2024 (pribadong pamilya)"
+  },
+  "stats-persons-per-km2-2024": {
+    "en": "persons per km² (2024)",
+    "fil": "katao kada km² (2024)",
+    "bcl": "tawo sa lambang km² (2024)"
+  },
+  "stats-census-change-2020-2024": {
+    "en": "2020 to 2024 census change",
+    "fil": "pagbabago ng senso 2020 hanggang 2024",
+    "bcl": "Pagbabago sa senso 2020 sagkod 2024"
+  },
+  "stats-cities-count": {
+    "en": "{{count}} cities",
+    "fil": "{{count}} lungsod",
+    "bcl": "{{count}} syudad"
+  },
+  "stats-lgus-and-municipalities": {
+    "en": "{{lgus}} LGUs, {{municipalities}} municipalities",
+    "fil": "{{lgus}} LGU, {{municipalities}} munisipalidad",
+    "bcl": "{{lgus}} LGU, {{municipalities}} munisipyo"
+  },
+  "stats-across-all-18-lgus": {
+    "en": "across all 18 LGUs",
+    "fil": "sa lahat ng 18 LGU",
+    "bcl": "sa gabos na 18 LGU"
+  },
+  "stats-persons-per-private-household-2024": {
+    "en": "persons per private household, 2024",
+    "fil": "katao kada pribadong sambahayan, 2024",
+    "bcl": "tawo sa lambang pribadong pamilya, 2024"
+  },
+  "stats-trends-tag": {
+    "en": "Population Trends",
+    "fil": "Mga Takbo ng Populasyon",
+    "bcl": "Mga Trend kan Populasyon"
+  },
+  "stats-trends-heading": {
+    "en": "How Albay’s population changed",
+    "fil": "Paano nagbago ang populasyon ng Albay",
+    "bcl": "Kun paano nagbago an populasyon kan Albay"
+  },
+  "stats-trends-blurb": {
+    "en": "Three official censuses and the change in population between 2020 and 2024, for the province and for every city and municipality.",
+    "fil": "Tatlong opisyal na senso at ang pagbabago ng populasyon mula 2020 hanggang 2024, para sa lalawigan at sa bawat lungsod at munisipalidad.",
+    "bcl": "Tolong opisyal na senso asin an pagbabago sa populasyon sa pagitan kan 2020 asin 2024, para sa probinsya asin sa lambang syudad asin munisipyo."
+  },
+  "stats-census-2015": {
+    "en": "2015 Census",
+    "fil": "Senso 2015",
+    "bcl": "Senso 2015"
+  },
+  "stats-census-2020": {
+    "en": "2020 Census",
+    "fil": "Senso 2020",
+    "bcl": "Senso 2020"
+  },
+  "stats-change-2020-2024": {
+    "en": "Change 2020–2024",
+    "fil": "Pagbabago 2020–2024",
+    "bcl": "Pagbabago 2020–2024"
+  },
+  "stats-albay-population": {
+    "en": "Albay population",
+    "fil": "Populasyon ng Albay",
+    "bcl": "Populasyon kan Albay"
+  },
+  "stats-distribution-tag": {
+    "en": "Distribution",
+    "fil": "Distribusyon",
+    "bcl": "Pamamahagi"
+  },
+  "stats-distribution-heading": {
+    "en": "Population by city and municipality",
+    "fil": "Populasyon ayon sa lungsod at munisipalidad",
+    "bcl": "Populasyon sono sa syudad asin munisipyo"
+  },
+  "stats-distribution-blurb": {
+    "en": "All 18 local government units of Albay, ranked by their 2024 Census population. The capital, Legazpi, is the most populous and the most densely settled.",
+    "fil": "Lahat ng 18 lokal na yunit ng pamahalaan ng Albay, niraranggo ayon sa populasyon nila sa Senso 2024. Ang kabisera, Legazpi, ang pinakamatao at pinakamakapal ang paninirahan.",
+    "bcl": "An gabos na 18 lokal na yunit nin gobyerno kan Albay, pigraranggo sono sa populasyon ninda sa Senso 2024. An kapitolyo, Legazpi, an may pinakadakol na populasyon asin pinakahalangkaw na densidad."
+  },
+  "stats-most-densely-settled-lgu": {
+    "en": "Most densely settled LGU",
+    "fil": "Pinakamakapal ang paninirahan na LGU",
+    "bcl": "Pinakahalangkaw an densidad na LGU"
+  },
+  "stats-largest-land-area": {
+    "en": "Largest land area",
+    "fil": "Pinakamalaking lawak ng lupa",
+    "bcl": "Pinakadakulang kalawa nin daga"
+  },
+  "stats-barangays-province-wide": {
+    "en": "Barangays province-wide",
+    "fil": "Mga barangay sa buong lalawigan",
+    "bcl": "Mga barangay sa bilog na probinsya"
+  },
+  "stats-persons-per-km2": {
+    "en": "persons/km²",
+    "fil": "katao/km²",
+    "bcl": "tawo/km²"
+  },
+  "stats-lgus": {
+    "en": "LGUs",
+    "fil": "LGU",
+    "bcl": "mga LGU"
+  },
+  "stats-distribution-chart-aria": {
+    "en": "Share of Albay population by LGU",
+    "fil": "Bahagi ng populasyon ng Albay kada LGU",
+    "bcl": "Kabtang kan populasyon kan Albay sono sa LGU"
+  },
+  "stats-economy-heading": {
+    "en": "Competitiveness and local economy",
+    "fil": "Competitibidad at lokal na ekonomiya",
+    "bcl": "Kompetitibidad asin lokal na ekonomiya"
+  },
+  "stats-economy-blurb": {
+    "en": "Albay’s results in the DTI Cities and Municipalities Competitiveness Index, combined across all 18 LGUs, alongside census economic context.",
+    "fil": "Mga resulta ng Albay sa DTI Cities and Municipalities Competitiveness Index, pinagsama-sama sa lahat ng 18 LGU, kasama ang kontekstong pang-ekonomiya mula sa senso.",
+    "bcl": "An mga resulta kan Albay sa DTI Cities and Municipalities Competitiveness Index, pinagsaro sa gabos na 18 LGU, kaiba an ekonomikong konteksto gikan sa senso."
+  },
+  "stats-average-score-per-lgu": {
+    "en": "{{pillar}} — average score per LGU, {{year}}",
+    "fil": "{{pillar}} — karaniwang iskor kada LGU, {{year}}",
+    "bcl": "{{pillar}} — promedyong puntos sa lambang LGU, {{year}}"
+  },
+  "stats-leader": {
+    "en": "Leader: {{name}} ({{score}})",
+    "fil": "Nangunguna: {{name}} ({{score}})",
+    "bcl": "Nangengenot: {{name}} ({{score}})"
+  },
+  "stats-indicators-per-lgu": {
+    "en": "Competitiveness indicators measured per LGU",
+    "fil": "Mga tagapagpahiwatig ng kompetitibidad na sinusukat kada LGU",
+    "bcl": "Mga indikador nin kompetitibidad na sinusukol sa lambang LGU"
+  },
+  "stats-share-of-combined-score": {
+    "en": "Share of Albay’s combined competitiveness score, by pillar",
+    "fil": "Bahagi ng pinagsamang iskor ng kompetitibidad ng Albay, ayon sa haligi",
+    "bcl": "Kabtang kan pinagsarong puntos nin kompetitibidad kan Albay, sono sa adigi"
+  },
+  "stats-provincial-population-2024": {
+    "en": "Provincial population, 2024 Census",
+    "fil": "Populasyon ng lalawigan, Senso 2024",
+    "bcl": "Populasyon kan probinsya, Senso 2024"
+  },
+  "stats-since-2015": {
+    "en": "since 2015",
+    "fil": "mula 2015",
+    "bcl": "poon 2015"
+  },
+  "stats-private-households-2024": {
+    "en": "Private households, 2024",
+    "fil": "Pribadong sambahayan, 2024",
+    "bcl": "Pribadong pamilya, 2024"
+  },
+  "stats-persons-each": {
+    "en": "persons each",
+    "fil": "katao bawat isa",
+    "bcl": "tawo an lambang saro"
+  },
+  "stats-fastest-growing-lgu": {
+    "en": "Fastest-growing LGU, 2020–2024",
+    "fil": "Pinakamabilis na lumalaking LGU, 2020–2024",
+    "bcl": "Pinakamarikas na nagdakula na LGU, 2020–2024"
+  },
+  "stats-fin-tag": {
+    "en": "Public Finance",
+    "fil": "Pampublikong Pananalapi",
+    "bcl": "Pampublikong Pinansya"
+  },
+  "stats-fin-heading": {
+    "en": "Provincial income and receipts",
+    "fil": "Kita at resibo ng lalawigan",
+    "bcl": "Kita asin resibo kan probinsya"
+  },
+  "stats-fin-blurb": {
+    "en": "Where the Provincial Government of Albay’s income comes from, from the statements of receipts and expenditures it files with the Bureau of Local Government Finance.",
+    "fil": "Saan nagmumula ang kita ng Pamahalaang Panlalawigan ng Albay, batay sa mga statement of receipts and expenditures na isinusumite nito sa Bureau of Local Government Finance.",
+    "bcl": "Kun sain nagtitipon an kita kan Gobierno Probinsyal kan Albay, gikan sa mga statement of receipts and expenditures na ipinapasumite kaini sa Bureau of Local Government Finance."
+  },
+  "stats-fin-blurb-empty": {
+    "en": "Receipts and expenditures of the Provincial Government of Albay, as reported to the Bureau of Local Government Finance.",
+    "fil": "Mga resibo at gastos ng Pamahalaang Panlalawigan ng Albay, ayon sa iniulat sa Bureau of Local Government Finance.",
+    "bcl": "Mga resibo asin gastos kan Gobierno Probinsyal kan Albay, sono sa pigreport sa Bureau of Local Government Finance."
+  },
+  "stats-fin-no-complete-year": {
+    "en": "No complete fiscal year of verified receipts data is available, so no income figure is shown here rather than an estimate of unknown provenance.",
+    "fil": "Walang kumpletong taon ng pananalapi na may beripikadong datos ng resibo, kaya walang bilang ng kita na ipinapakita dito sa halip na tantiya na hindi tiyak ang pinagmulan.",
+    "bcl": "Dai nin kompleto na taon piskal nin naberipikar na datos nin resibo, kaya dai nin bilang nin kita na ipinapahiling digdi imbes na sarong tantya na dai aram an ginikanan."
+  },
+  "stats-fin-total-receipts": {
+    "en": "Total receipts, {{period}}",
+    "fil": "Kabuuang resibo, {{period}}",
+    "bcl": "Kabuuan na resibo, {{period}}"
+  },
+  "stats-fin-raised-locally": {
+    "en": "Raised locally — taxes, fees and economic enterprises",
+    "fil": "Lokal na nakalap — buwis, bayad at negosyong pang-ekonomiya",
+    "bcl": "Nakolekta sa lokal — buwis, bayad asin ekonomikong negosyo"
+  },
+  "stats-fin-national-transfers": {
+    "en": "National transfers — internal revenue allotment and national wealth shares",
+    "fil": "Mga transfer mula sa nasyonal — internal revenue allotment at bahagi sa national wealth",
+    "bcl": "Mga transfer gikan sa nasyonal — internal revenue allotment asin kabtang sa nasyonal na kayamanan"
+  },
+  "stats-fin-net-income": {
+    "en": "Net income — receipts less expenditures",
+    "fil": "Netong kita — resibo ibinawas ang mga gastos",
+    "bcl": "Netong kita — resibo na binawasan nin gastos"
+  },
+  "stats-fin-percent-of-total": {
+    "en": "% of total receipts",
+    "fil": "% ng kabuuang resibo",
+    "bcl": "% kan kabuuan na resibo"
+  },
+  "stats-fin-fund-balance": {
+    "en": "{{amount}} fund balance at year end",
+    "fil": "{{amount}} na balanse ng pondo sa katapusan ng taon",
+    "bcl": "{{amount}} balanse kan pondo sa katapusan nin taon"
+  },
+  "stats-fin-receipts-by-source": {
+    "en": "Receipts by source, per complete fiscal year (PHP millions)",
+    "fil": "Resibo ayon sa pinagmulan, kada kumpletong taon ng pananalapi (milyong PHP)",
+    "bcl": "Mga resibo sono sa ginikanan, sa lambang kompleto na taon piskal (milyon na PHP)"
+  },
+  "stats-fin-chart-note-a": {
+    "en": "Only complete fiscal years are compared here. The most recent period on file is",
+    "fil": "Tanging ang mga kumpletong taon ng pananalapi ang inihahambing dito. Ang pinakahuling panahon sa talá ay",
+    "bcl": "Kompleto sanang taon piskal an pigkokompara digdi. An pinakahuring peryodo na yaon sa rekord"
+  },
+  "stats-fin-chart-note-b": {
+    "en": ", which covers half a year and is therefore left out of the chart; every period, including that one, is set out on the",
+    "fil": ", na sumasaklaw lamang ng kalahating taon kaya hindi kasama sa tsart; ang bawat panahon, kasama na iyon, ay nakasaad sa",
+    "bcl": ", na nagsasakop nin kabanga nin taon kaya dai kabali sa tsart; an lambang peryodo, kabali an saro, nakasaad sa"
+  },
+  "stats-fin-budget-page-link": {
+    "en": "budget and transparency page",
+    "fil": "pahina ng badyet at transparency",
+    "bcl": "pahina nin badyet asin transparency"
+  },
+  "stats-fin-amounts-note": {
+    "en": "Amounts are the provincial government’s own receipts, in PHP millions rounded to two decimal places. They do not include the income of Albay’s cities and municipalities.",
+    "fil": "Ang mga halaga ay sariling resibo ng pamahalaang panlalawigan, sa milyong PHP na ni-round sa dalawang decimal na lugar. Hindi kasama dito ang kita ng mga lungsod at munisipalidad ng Albay.",
+    "bcl": "An mga kantidad mga sadiring resibo kan gobyerno probinsyal, sa milyon na PHP na rinaround sa duwang decimal. Dai kabali digdi an kita kan mga syudad asin munisipyo kan Albay."
+  },
+  "stats-fin-legend-local": {
+    "en": "Raised locally",
+    "fil": "Lokal na nakalap",
+    "bcl": "Nakolekta sa lokal"
+  },
+  "stats-fin-legend-national": {
+    "en": "National transfers",
+    "fil": "Mga transfer mula sa nasyonal",
+    "bcl": "Mga transfer gikan sa nasyonal"
+  },
+  "stats-fin-chart-aria": {
+    "en": "Albay provincial receipts by source and fiscal year",
+    "fil": "Mga resibo ng lalawigan ng Albay ayon sa pinagmulan at taon ng pananalapi",
+    "bcl": "Mga resibo kan probinsya nin Albay sono sa ginikanan asin taon piskal"
+  },
+  "stats-poverty-tag": {
+    "en": "Living Conditions",
+    "fil": "Kalagayan ng Pamumuhay",
+    "bcl": "Kamugtakan nin Pamumuhay"
+  },
+  "stats-poverty-heading": {
+    "en": "Poverty statistics",
+    "fil": "Estadistika ng kahirapan",
+    "bcl": "Estadistika nin kahirapan"
+  },
+  "stats-poverty-blurb": {
+    "en": "Poverty incidence for Albay’s cities and municipalities is published by the Philippine Statistics Authority as a separate release, not as part of the census tables used elsewhere on this page.",
+    "fil": "Ang insidente ng kahirapan para sa mga lungsod at munisipalidad ng Albay ay inilalathala ng Philippine Statistics Authority bilang hiwalay na release, hindi bahagi ng mga talahanayan ng senso na ginamit sa ibang bahagi ng pahinang ito.",
+    "bcl": "An insidente nin kahirapan para sa mga syudad asin munisipyo kan Albay pigpapahayag kan Philippine Statistics Authority bilang suway na release, bakong kabali sa mga tabla nin senso na ginamit sa ibang parte kan pahinang ini."
+  },
+  "stats-poverty-not-ingested": {
+    "en": "This project only publishes figures it can verify against a primary source. The official city and municipal poverty estimates are not yet ingested, so no poverty figure is shown here rather than an estimate of unknown provenance.",
+    "fil": "Ang proyektong ito ay naglalathala lamang ng mga bilang na makukumpirma laban sa isang primaryang pinagmulan. Hindi pa naisasama ang opisyal na tantiya ng kahirapan sa lungsod at munisipalidad, kaya walang bilang ng kahirapan na ipinapakita dito sa halip na tantiya na hindi tiyak ang pinagmulan.",
+    "bcl": "Ining proyekto nagpapahayag sana nin mga bilang na kayang beripikar kontra sa sarong panginot na ginikanan. An opisyal na tantya nin kahirapan kan mga syudad asin munisipyo dai pa nakukua, kaya dai nin bilang nin kahirapan na ipinapahiling digdi imbes na sarong tantya na dai aram an ginikanan."
+  },
+  "stats-psa-poverty-link": {
+    "en": "PSA poverty statistics",
+    "fil": "Estadistika ng kahirapan ng PSA",
+    "bcl": "Estadistika nin kahirapan kan PSA"
+  },
+  "stats-competitive-tag": {
+    "en": "Competitiveness",
+    "fil": "Kompetitibidad",
+    "bcl": "Kompetitibidad"
+  },
+  "stats-competitive-heading": {
+    "en": "Cities and Municipalities Competitiveness Index",
+    "fil": "Index ng Kompetitibidad ng mga Lungsod at Munisipalidad",
+    "bcl": "Cities and Municipalities Competitiveness Index"
+  },
+  "stats-competitive-blurb": {
+    "en": "Albay’s 18 LGUs scored against five pillars and 50 indicators in the {{year}} CMCI, published by the Department of Trade and Industry.",
+    "fil": "Ang 18 LGU ng Albay ay may iskor laban sa limang haligi at 50 tagapagpahiwatig sa CMCI {{year}}, na inilathala ng Department of Trade and Industry.",
+    "bcl": "An 18 LGU kan Albay pinuntos kontra sa limang adigi asin 50 indikador sa CMCI {{year}}, na pigpapahayag kan Department of Trade and Industry."
+  },
+  "stats-province-overview": {
+    "en": "Province overview",
+    "fil": "Pangkalahatang tanaw ng lalawigan",
+    "bcl": "Kabuuan kan probinsya"
+  },
+  "stats-ranks-within-class-note": {
+    "en": "Ranks shown are within each LGU’s own LGU class (city or municipality class), not national rank, because CMCI ranks LGUs separately by class.",
+    "fil": "Ang mga ranggong ipinapakita ay nasa loob ng sariling klase ng LGU (klase ng lungsod o munisipalidad), hindi ranggo sa buong bansa, dahil hiwalay na niraranggo ng CMCI ang mga LGU ayon sa klase.",
+    "bcl": "An mga ranggong ipinapahiling yaon sa laog kan sadiring klase nin LGU (klase nin syudad o munisipyo), bakong nasyonal na ranggo, huli ta an CMCI nagraranggo kan mga LGU nin suway sono sa klase."
+  },
+  "stats-pillar-profile-vs-average": {
+    "en": "pillar profile vs. the Albay average",
+    "fil": "profile ng haligi kumpara sa karaniwan ng Albay",
+    "bcl": "profile kan adigi kontra sa promedyo kan Albay"
+  },
+  "stats-pillar-profile-aria": {
+    "en": "Pillar profile",
+    "fil": "Profile ng haligi",
+    "bcl": "Profile kan adigi"
+  },
+  "stats-overall-score-rank": {
+    "en": "Overall score {{score}} — rank {{rank}} among {{category}} LGUs. Provincial rank {{provinceRank}} of {{total}}. Mayor: {{mayor}}.",
+    "fil": "Kabuuang iskor {{score}} — ranggo {{rank}} sa mga {{category}} LGU. Ranggo sa lalawigan {{provinceRank}} sa {{total}}. Alkalde: {{mayor}}.",
+    "bcl": "Kabuuan na puntos {{score}} — ranggo {{rank}} sa {{category}} na LGU. Ranggo sa probinsya {{provinceRank}} sa {{total}}. Mayor: {{mayor}}."
+  },
+  "stats-not-stated": {
+    "en": "not stated",
+    "fil": "hindi nakasaad",
+    "bcl": "dai nakasaad"
+  },
+  "stats-albay-average": {
+    "en": "Albay average",
+    "fil": "Karaniwan ng Albay",
+    "bcl": "Promedyo kan Albay"
+  },
+  "stats-rank-in-class": {
+    "en": "{{category}} — rank {{rank}} in class",
+    "fil": "{{category}} — ranggo {{rank}} sa klase",
+    "bcl": "{{category}} — ranggo {{rank}} sa klase"
+  },
+  "stats-overall-competitiveness-all-lgus": {
+    "en": "Overall competitiveness score, all 18 Albay LGUs",
+    "fil": "Kabuuang iskor ng kompetitibidad, lahat ng 18 LGU ng Albay",
+    "bcl": "Kabuuan na puntos nin kompetitibidad, gabos na 18 LGU kan Albay"
+  },
+  "stats-overview-chart-aria": {
+    "en": "Overall CMCI score by LGU",
+    "fil": "Kabuuang iskor sa CMCI kada LGU",
+    "bcl": "Kabuuan na puntos sa CMCI sa lambang LGU"
+  },
+  "stats-score-class-rank-labour": {
+    "en": "Score, class rank and labour force indicators by LGU",
+    "fil": "Iskor, ranggo sa klase at mga tagapagpahiwatig ng lakas paggawa kada LGU",
+    "bcl": "Puntos, ranggo sa klase asin indikador kan labour force sa lambang LGU"
+  },
+  "stats-overall-cmci-score": {
+    "en": "Overall CMCI score",
+    "fil": "Kabuuang iskor sa CMCI",
+    "bcl": "Kabuuan na puntos sa CMCI"
+  },
+  "stats-cmci-score-axis": {
+    "en": "CMCI score",
+    "fil": "Iskor sa CMCI",
+    "bcl": "Puntos sa CMCI"
+  },
+  "stats-albay-best-and-lgu": {
+    "en": "Albay best: {{best}} · this LGU: {{lgu}}",
+    "fil": "Pinakamataas sa Albay: {{best}} · LGU na ito: {{lgu}}",
+    "bcl": "Pinakahalangkaw sa Albay: {{best}} · ining LGU: {{lgu}}"
+  },
+  "stats-rank-label": {
+    "en": "Rank {{rank}}",
+    "fil": "Ranggo {{rank}}",
+    "bcl": "Ranggo {{rank}}"
+  },
+  "stats-rank-in-category": {
+    "en": "Rank {{rank}} in {{category}}",
+    "fil": "Ranggo {{rank}} sa {{category}}",
+    "bcl": "Ranggo {{rank}} sa {{category}}"
+  },
+  "stats-barchart-tag": {
+    "en": "Barangays",
+    "fil": "Mga Barangay",
+    "bcl": "Mga Barangay"
+  },
+  "stats-barchart-heading": {
+    "en": "The 20 most populous barangays",
+    "fil": "Ang 20 pinakamataong barangay",
+    "bcl": "An 20 barangay na pinakadakol an populasyon"
+  },
+  "stats-barchart-blurb": {
+    "en": "Of Albay’s {{count}} barangays, these had the largest 2024 Census populations.",
+    "fil": "Sa {{count}} barangay ng Albay, ang mga ito ang may pinakamalaking populasyon sa Senso 2024.",
+    "bcl": "Sa {{count}} barangay kan Albay, ini an may pinakadakol na populasyon sa Senso 2024."
+  },
+  "stats-view-all-barangays": {
+    "en": "View all {{count}} barangays",
+    "fil": "Tingnan ang lahat ng {{count}} barangay",
+    "bcl": "Hilingon an gabos na {{count}} barangay"
+  },
+  "stats-2024-population": {
+    "en": "2024 population",
+    "fil": "Populasyon 2024",
+    "bcl": "Populasyon 2024"
+  },
+  "stats-barangay-tooltip": {
+    "en": "{{lgu}} — {{population}} persons, {{households}} households",
+    "fil": "{{lgu}} — {{population}} katao, {{households}} sambahayan",
+    "bcl": "{{lgu}} — {{population}} tawo, {{households}} pamilya"
+  },
+  "stats-barchar-chart-aria": {
+    "en": "Top 20 barangays by 2024 population",
+    "fil": "Nangungunang 20 barangay ayon sa populasyon 2024",
+    "bcl": "Nangengenot na 20 barangay sono sa populasyon 2024"
+  },
+  "stats-population-chart-aria": {
+    "en": "Albay population by census year",
+    "fil": "Populasyon ng Albay kada taon ng senso",
+    "bcl": "Populasyon kan Albay sono sa taon nin senso"
+  },
+  "stats-load-failed": {
+    "en": "This dashboard could not load its verified dataset ({{file}}). No figures are shown rather than unverified ones.",
+    "fil": "Hindi ma-load ng dashboard na ito ang beripikadong dataset nito ({{file}}). Walang bilang na ipinapakita sa halip na mga hindi beripikado.",
+    "bcl": "Ining dashboard dai nakakarga kan naberipikar na dataset kaini ({{file}}). Dai nin bilang na ipinapahiling imbes na mga bakong beripikado."
+  },
+  "stats-fin-load-failed": {
+    "en": "The verified receipts dataset could not be loaded ({{file}}). No income figure is shown here rather than an unverified one.",
+    "fil": "Hindi ma-load ang beripikadong dataset ng resibo ({{file}}). Walang bilang ng kita na ipinapakita dito sa halip na hindi beripikado.",
+    "bcl": "Dai nakarga an naberipikar na dataset nin resibo ({{file}}). Dai nin bilang nin kita na ipinapahiling digdi imbes na sarong bakong beripikado."
+  },
+  "fb-eyebrow": {
+    "en": "Official Facebook Page",
+    "fil": "Opisyal na Facebook Page",
+    "bcl": "Opisyal na Facebook Page"
+  },
+  "fb-followers-count": {
+    "en": "204,293 followers",
+    "fil": "204,293 tagasunod",
+    "bcl": "204,293 parasunod"
+  },
+  "fb-page-title": {
+    "en": "Albay Provincial Information Office",
+    "fil": "Albay Provincial Information Office",
+    "bcl": "Albay Provincial Information Office"
+  },
+  "fb-title": {
+    "en": "Real-time updates, straight from our page",
+    "fil": "Mga update sa real time, direkta mula sa aming page",
+    "bcl": "Real-time na update, direkta gikan sa samuyang pahina"
+  },
+  "fb-text": {
+    "en": "Follow the Official LGU Albay Facebook Page for the latest announcements, advisories, events, and community updates as they happen.",
+    "fil": "Sundan ang Opisyal na Facebook Page ng LGU Albay para sa pinakabagong mga anunsyo, abiso, kaganapan, at update sa komunidad habang nangyayari ang mga ito.",
+    "bcl": "Sundon an Opisyal na Facebook Page kan LGU Albay para sa pinakahuring mga anunsyo, paingat, pangyayari, asin update sa komunidad mantang nangyayari."
+  },
+  "fb-point-announcements": {
+    "en": "Official announcements & advisories",
+    "fil": "Opisyal na mga anunsyo at abiso",
+    "bcl": "Opisyal na anunsyo & paingat"
+  },
+  "fb-point-events": {
+    "en": "Events & community programs",
+    "fil": "Mga kaganapan at programa sa komunidad",
+    "bcl": "Mga pangyayari & programa sa komunidad"
+  },
+  "fb-point-realtime": {
+    "en": "Posted in real time, as it happens",
+    "fil": "Nai-post sa real time, habang nangyayari",
+    "bcl": "Ipinapaskil sa real time, mantang nangyayari"
+  },
+  "fb-cta": {
+    "en": "Visit our Facebook Page",
+    "fil": "Bisitahin ang aming Facebook Page",
+    "bcl": "Bisitaon an samuyang Facebook Page"
+  },
+  "fb-page-heading": {
+    "en": "From our Facebook Page",
+    "fil": "Mula sa aming Facebook Page",
+    "bcl": "Gikan sa samuyang Facebook Page"
+  },
+  "fb-page-blurb": {
+    "en": "Announcements, advisories and events from the Official LGU Albay Facebook Page.",
+    "fil": "Mga anunsyo, abiso at kaganapan mula sa Opisyal na Facebook Page ng LGU Albay.",
+    "bcl": "Mga anunsyo, paingat asin pangyayari gikan sa Opisyal na Facebook Page kan LGU Albay."
+  },
+  "fb-open-page": {
+    "en": "Open the Official LGU Albay Facebook Page",
+    "fil": "Buksan ang Opisyal na Facebook Page ng LGU Albay",
+    "bcl": "Bukasan an Opisyal na Facebook Page kan LGU Albay"
+  },
+  "fb-cant-see": {
+    "en": "Can't see the feed?",
+    "fil": "Hindi makita ang feed?",
+    "bcl": "Dai mahiling an feed?"
+  },
+  "fb-visit-page": {
+    "en": "Visit the Official LGU Albay Facebook Page",
+    "fil": "Bisitahin ang Opisyal na Facebook Page ng LGU Albay",
+    "bcl": "Bisitaon an Opisyal na Facebook Page kan LGU Albay"
+  },
+  "fb-open-on-facebook": {
+    "en": "Open it on Facebook",
+    "fil": "Buksan ito sa Facebook",
+    "bcl": "Bukasan ini sa Facebook"
+  },
+  "fb-live-note": {
+    "en": "The live Facebook timeline isn't loading, so we're showing the most recent verified Albay news coverage instead. Every story links to its original publisher.",
+    "fil": "Hindi naglo-load ang live na Facebook timeline, kaya ipinapakita namin ang pinakabagong beripikadong coverage ng balita sa Albay. Ang bawat balita ay may link sa orihinal na publisher.",
+    "bcl": "Dai nagkakarga an live na Facebook timeline, kaya an pinakahuring naberipikar na bareta manungod sa Albay an ipinapahiling mi imbes. An lambang istorya may link sa orihinal na nagpahayag."
+  },
+  "fb-empty": {
+    "en": "Verified Albay news is not yet available.",
+    "fil": "Wala pa ang beripikadong balita sa Albay.",
+    "bcl": "Dai pa makukua an naberipikar na bareta sa Albay."
+  },
+  "fb-empty-cta": {
+    "en": "See the latest on Facebook",
+    "fil": "Tingnan ang pinakabago sa Facebook",
+    "bcl": "Hilingon an pinakahuri sa Facebook"
+  },
+  "fb-read-full": {
+    "en": "Read full story",
+    "fil": "Basahin ang buong balita",
+    "bcl": "Basahon an bilog na istorya"
+  },
+  "fb-read-more": {
+    "en": "Read more",
+    "fil": "Magbasa pa",
+    "bcl": "Basahon pa"
+  },
+  "fb-byline-fallback": {
+    "en": "Albay news",
+    "fil": "Balitang Albay",
+    "bcl": "Bareta sa Albay"
+  },
+  "date-short": {
+    "en": "{{month}} {{day}}, {{year}}",
+    "fil": "{{month}} {{day}}, {{year}}",
+    "bcl": "{{month}} {{day}}, {{year}}"
+  },
+  "month-jan": {
+    "en": "Jan",
+    "fil": "Ene",
+    "bcl": "Ene"
+  },
+  "month-feb": {
+    "en": "Feb",
+    "fil": "Peb",
+    "bcl": "Peb"
+  },
+  "month-mar": {
+    "en": "Mar",
+    "fil": "Mar",
+    "bcl": "Mar"
+  },
+  "month-apr": {
+    "en": "Apr",
+    "fil": "Abr",
+    "bcl": "Abr"
+  },
+  "month-may": {
+    "en": "May",
+    "fil": "May",
+    "bcl": "May"
+  },
+  "month-jun": {
+    "en": "Jun",
+    "fil": "Hun",
+    "bcl": "Hun"
+  },
+  "month-jul": {
+    "en": "Jul",
+    "fil": "Hul",
+    "bcl": "Hul"
+  },
+  "month-aug": {
+    "en": "Aug",
+    "fil": "Ago",
+    "bcl": "Ago"
+  },
+  "month-sep": {
+    "en": "Sep",
+    "fil": "Set",
+    "bcl": "Set"
+  },
+  "month-oct": {
+    "en": "Oct",
+    "fil": "Okt",
+    "bcl": "Okt"
+  },
+  "month-nov": {
+    "en": "Nov",
+    "fil": "Nob",
+    "bcl": "Nob"
+  },
+  "month-dec": {
+    "en": "Dec",
+    "fil": "Dis",
+    "bcl": "Dis"
+  }
+}

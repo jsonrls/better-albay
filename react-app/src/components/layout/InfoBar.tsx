@@ -99,7 +99,7 @@ export default function InfoBar() {
             <span className="time-value">{timeStr}</span>
             <span className="time-label">PHT</span>
           </div>
-          <a href="https://www.exchangerate-api.com" style={{ color: 'inherit' }}>
+          <a href="https://www.exchangerate-api.com" className="exchange-rate-source">
             Rates by ExchangeRate-API
           </a>
         </div>

@@ -61,7 +61,7 @@
     />
     <title>Municipal General Services Office | BetterAlbay.org</title>
 
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -81,352 +81,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-
-    <style>
-      .gso-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-        margin-bottom: var(--spacing-lg);
-        padding: var(--spacing-md);
-        background: var(--color-white);
-        border-radius: 12px;
-        box-shadow: var(--shadow-sm);
-      }
-
-      .gso-nav-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 10px 16px;
-        background: var(--color-bg-alt);
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-        text-decoration: none;
-      }
-
-      .gso-nav-btn:hover,
-      .gso-nav-btn.active {
-        background: var(--color-primary);
-        color: white;
-        border-color: var(--color-primary);
-        text-decoration: none;
-      }
-
-      .service-section {
-        scroll-margin-top: 120px;
-        margin-bottom: var(--spacing-xl);
-      }
-
-      .section-header-card {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-md);
-        background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-        padding: var(--spacing-md) var(--spacing-lg);
-        border-radius: 12px;
-        margin-bottom: var(--spacing-md);
-        color: white;
-      }
-
-      .section-header-card.vehicles {
-        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-      }
-      .section-header-card.equipment {
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-      }
-      .section-header-card.personnel {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      }
-      .section-header-card.procurement {
-        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-      }
-
-      .section-header-icon {
-        width: 56px;
-        height: 56px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        flex-shrink: 0;
-      }
-
-      .section-header-content h2 {
-        color: white;
-        font-size: 1.375rem;
-        margin: 0 0 4px 0;
-      }
-
-      .section-header-content p {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 0.875rem;
-        margin: 0;
-      }
-
-      .service-detail-card {
-        background: var(--color-white);
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        overflow: hidden;
-      }
-
-      .service-detail-body {
-        padding: var(--spacing-lg);
-      }
-
-      .vehicle-table,
-      .equipment-table,
-      .personnel-table,
-      .process-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: var(--spacing-md);
-        font-size: 0.875rem;
-      }
-
-      .vehicle-table th,
-      .vehicle-table td,
-      .equipment-table th,
-      .equipment-table td,
-      .personnel-table th,
-      .personnel-table td,
-      .process-table th,
-      .process-table td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #e5e7eb;
-        vertical-align: top;
-      }
-
-      .vehicle-table th,
-      .equipment-table th,
-      .personnel-table th,
-      .process-table th {
-        background: var(--color-bg-alt);
-        font-weight: 600;
-        color: var(--color-text);
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-
-      .vehicle-table tr:hover,
-      .equipment-table tr:hover,
-      .personnel-table tr:hover,
-      .process-table tr:hover {
-        background: var(--color-bg-alt);
-      }
-
-      .rate-badge {
-        display: inline-block;
-        padding: 4px 10px;
-        background: #dcfce7;
-        color: #166534;
-        border-radius: 4px;
-        font-size: 0.8125rem;
-        font-weight: 600;
-      }
-
-      .time-badge {
-        display: inline-block;
-        padding: 4px 10px;
-        background: #dbeafe;
-        color: #1e40af;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 600;
-      }
-
-      .step-number {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 24px;
-        height: 24px;
-        background: var(--color-primary);
-        color: white;
-        border-radius: 50%;
-        font-size: 0.75rem;
-        font-weight: 600;
-        margin-right: 8px;
-      }
-
-      .person-badge {
-        display: block;
-        font-size: 0.8125rem;
-        color: var(--color-text);
-        font-weight: 600;
-      }
-
-      .person-title {
-        display: block;
-        font-size: 0.75rem;
-        color: var(--color-text-light);
-      }
-
-      .gso-layout {
-        display: grid;
-        grid-template-columns: 1fr 300px;
-        gap: var(--spacing-xl);
-        align-items: start;
-      }
-
-      @media (max-width: 991px) {
-        .gso-layout {
-          grid-template-columns: 1fr;
-        }
-
-        .vehicle-table,
-        .equipment-table,
-        .personnel-table,
-        .process-table {
-          display: block;
-          overflow-x: auto;
-        }
-      }
-
-      .contact-sidebar {
-        background: var(--color-white);
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: var(--spacing-lg);
-        position: sticky;
-        top: 100px;
-      }
-
-      .contact-sidebar h3 {
-        font-size: 1.125rem;
-        margin: 0 0 var(--spacing-md) 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .contact-sidebar h3 i {
-        color: var(--color-primary);
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 12px 0;
-        border-bottom: 1px solid #f3f4f6;
-      }
-
-      .contact-item:last-child {
-        border-bottom: none;
-      }
-
-      .contact-item i {
-        color: var(--color-primary);
-        font-size: 1.125rem;
-        margin-top: 2px;
-      }
-
-      .contact-item-content {
-        flex: 1;
-      }
-
-      .contact-item-content strong {
-        display: block;
-        font-size: 0.875rem;
-        color: var(--color-text);
-        margin-bottom: 2px;
-      }
-
-      .contact-item-content span,
-      .contact-item-content a {
-        font-size: 0.8125rem;
-        color: var(--color-text-light);
-      }
-
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-lg);
-      }
-
-      @media (max-width: 768px) {
-        .quick-stats {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      .quick-stat-card {
-        background: var(--color-white);
-        border: 1px solid #e5e7eb;
-        border-radius: 10px;
-        padding: var(--spacing-md);
-        text-align: center;
-      }
-
-      .quick-stat-card i {
-        font-size: 2rem;
-        color: var(--color-primary);
-        margin-bottom: 8px;
-      }
-
-      .quick-stat-card h4 {
-        font-size: 0.75rem;
-        color: var(--color-text-light);
-        text-transform: uppercase;
-        margin: 0 0 4px 0;
-      }
-
-      .quick-stat-card p {
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-
-      .related-services {
-        margin-top: var(--spacing-lg);
-        padding-top: var(--spacing-md);
-        border-top: 1px solid #e5e7eb;
-      }
-
-      .related-services h4 {
-        font-size: 0.9375rem;
-        margin-bottom: var(--spacing-sm);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .related-services h4 i {
-        color: var(--color-primary);
-      }
-
-      .related-services ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 0.8125rem;
-      }
-
-      .related-services li {
-        margin-bottom: 8px;
-      }
-
-      .related-services a {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        color: var(--color-primary);
-      }
-    </style>
+    <link rel="stylesheet" href="../assets/css/services.css?v=7c7b9c40cb" />
   </head>
 
   <body>
@@ -438,7 +93,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -452,13 +115,22 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Province of Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
           /></a>
         </div>
         <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                class="active"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="gs-certificates">Certificates</a>
@@ -493,7 +165,13 @@
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../legislative/ordinance-framework" data-i18n="gs-ordinance-framework"
@@ -519,8 +197,8 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
               FIL
             </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">
+              BCL
             </button>
           </div>
         </div>
@@ -554,14 +232,21 @@
       </div>
     </div>
 
-    <main id="main-content"><section class="section"><div class="container"><h1>Municipal General Services Office</h1><p role="status">Albay-specific requirements, fees, and processing times have not been verified. Confirm these with the responsible government office before applying.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p><ul><li>Vehicle Rental Services</li><li>Heavy Equipment Services</li><li>Procurement Services</li></ul></div></section></main>
+    <main id="main-content" class="services-page">
+  <div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../" data-i18n="nav-home">Home</a><span>/</span><a href="../services/" data-i18n="nav-services">Services</a><span>/</span><a href="../services/" data-i18n="nav-services">Services</a><span>/</span><span aria-current="page"><span data-i18n="sg-title-general-services">General Services Office</span></span></nav></div>
+  <section class="page-header"><div class="container"><div class="page-header-content"><span class="page-header-badge"><i class="bi bi-file-earmark-text" aria-hidden="true"></i><span data-i18n="sg-guide">Service guide</span></span><h1><span data-i18n="sg-title-general-services">General Services Office</span></h1><p class="page-header-desc"><span data-i18n="sg-desc-general-services">Government facilities and general administrative support.</span></p></div></div></section>
+  <section class="section"><div class="container"><p class="service-notice"><i class="bi bi-info-circle" aria-hidden="true"></i><span data-i18n="svc-verification-notice">Requirements, fees and processing times for Albay services have not been verified. Confirm them with the responsible office before applying.</span></p><dl class="guide-summary"><div><i class="bi bi-building" aria-hidden="true"></i><dt><span data-i18n="sg-office">Responsible office</span></dt><dd><span data-i18n="sg-confirm">Confirm with the office</span></dd></div><div><i class="bi bi-list-check" aria-hidden="true"></i><dt><span data-i18n="sg-requirements">Requirements</span></dt><dd><span data-i18n="sg-unknown">Not yet verified</span></dd></div><div><i class="bi bi-cash-coin" aria-hidden="true"></i><dt><span data-i18n="sg-fees">Fees</span></dt><dd><span data-i18n="sg-unknown">Not yet verified</span></dd></div><div><i class="bi bi-clock" aria-hidden="true"></i><dt><span data-i18n="sg-processing">Processing time</span></dt><dd><span data-i18n="sg-unknown">Not yet verified</span></dd></div></dl></div></section>
+  <section class="section guide-preparation"><div class="container"><h2><span data-i18n="sg-before">Before you apply</span></h2><p class="section-intro"><span data-i18n="sg-general">General preparation guidance, not an official application procedure.</span></p><ol class="guide-steps"><li><span class="step-number" aria-hidden="true">1</span><h3><span data-i18n="sg-step1">Find the right office</span></h3><p><span data-i18n="sg-step1-desc">Ask which office handles your request in your city or municipality.</span></p></li><li><span class="step-number" aria-hidden="true">2</span><h3><span data-i18n="sg-step2">Confirm what to bring</span></h3><p><span data-i18n="sg-step2-desc">Request the current checklist, eligibility rules, fees and accepted payment methods.</span></p></li><li><span class="step-number" aria-hidden="true">3</span><h3><span data-i18n="sg-step3">Plan your visit</span></h3><p><span data-i18n="sg-step3-desc">Check the office location, opening hours, appointment rules and expected processing time.</span></p></li></ol></div></section>
+  <section class="section"><div class="container guide-columns"><div><section class="guide-panel"><h2><span data-i18n="sg-checklist">Requirements to confirm</span></h2><ul class="guide-checklist"><li><span data-i18n="sg-check1">Who may apply and whether a representative is allowed</span></li><li><span data-i18n="sg-check2">Accepted identification and supporting documents</span></li><li><span data-i18n="sg-check3">Required originals, photocopies and application forms</span></li></ul></section><section><h2><span data-i18n="sg-faq">Frequently asked questions</span></h2><details class="guide-faq"><summary><span data-i18n="sg-q1">Can I apply online?</span></summary><p><span data-i18n="sg-a1">An online application channel has not been verified here. Ask the responsible office for its official application options.</span></p></details><details class="guide-faq"><summary><span data-i18n="sg-q2">How much does it cost and how long will it take?</span></summary><p><span data-i18n="sg-a2">Local fees and processing times are not yet verified. Confirm current amounts and timelines before making arrangements.</span></p></details></section></div>
+  <aside><section class="guide-panel"><h2><span data-i18n="sg-resources">Office &amp; resources</span></h2><p><span data-i18n="sg-step1-desc">Ask which office handles your request in your city or municipality.</span></p><a class="guide-resource" href="https://albay.gov.ph/"><span data-i18n="sg-official">Official Albay website</span> ↗</a></section><section class="guide-panel"><h2><span data-i18n="sg-related">Related services</span></h2><a class="guide-resource" href="../service-details/human-resource-management"><span data-i18n="sg-title-human-resource">Human Resource Management Office</span></a><a class="guide-resource" href="../services/" data-i18n="nav-services">Services</a><a class="guide-resource" href="../services/"><span data-i18n="sg-all">Browse all services</span></a></section><section class="guide-panel"><h2><span data-i18n="sg-help">Need help finding an office?</span></h2><a class="guide-resource" href="../contact/"><span data-i18n="sg-contact">Contact &amp; information</span></a></section></aside></div></section>
+</main>
 
     <footer class="site-footer no-margin-top">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -603,7 +288,8 @@
             <h4 data-i18n="gs-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -640,34 +326,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -678,15 +405,15 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
   </body>
 </html>

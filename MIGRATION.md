@@ -80,7 +80,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open <http://localhost:3000> in your browser.
 
 ## Directory Structure Comparison
 
@@ -231,7 +231,7 @@ export default function ExampleCard({ title, description }: ExampleCardProps) {
 
 - Open an issue on GitHub with the `react` label
 - Join our Discord community for real-time discussion
-- Email: volunteer@betteralbay.org
+- Email: <volunteer@betteralbay.org>
 
 ---
 

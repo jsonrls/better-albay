@@ -30,7 +30,7 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <title>Municipal Accounting Office | BetterAlbay.org</title>
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,247 +50,9 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <style>
-      .mao-section {
-        padding: 40px 0;
-      }
-      .mao-section.alt-bg {
-        background: var(--color-bg-alt);
-      }
-      .section-header {
-        margin-bottom: 20px;
-      }
-      .section-header h2 {
-        font-size: 1.125rem;
-        color: var(--color-text);
-        margin-bottom: 4px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .section-header h2 i {
-        color: var(--color-primary);
-        font-size: 1rem;
-      }
-      .section-header p {
-        color: var(--color-text-light);
-        font-size: 0.8125rem;
-        margin: 0;
-      }
-      .quick-stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-      .stat-card {
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 12px;
-        text-align: center;
-      }
-      .stat-card i {
-        font-size: 1rem;
-        color: var(--color-primary);
-        margin-bottom: 4px;
-      }
-      .stat-card h4 {
-        font-size: 0.625rem;
-        color: var(--color-text-light);
-        margin-bottom: 2px;
-        font-weight: 500;
-        text-transform: uppercase;
-      }
-      .stat-card p {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin: 0;
-      }
-      .process-table {
-        width: 100%;
-        border-collapse: collapse;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        font-size: 0.75rem;
-      }
-      .process-table th {
-        background: var(--color-primary);
-        color: white;
-        padding: 10px 12px;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.6875rem;
-        text-transform: uppercase;
-      }
-      .process-table td {
-        padding: 10px 12px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-        vertical-align: top;
-      }
-      .process-table tr:last-child td {
-        border-bottom: none;
-      }
-      .process-table tr:hover {
-        background: rgba(0, 50, 160, 0.02);
-      }
-      .step-badge {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 20px;
-        height: 20px;
-        background: var(--color-primary);
-        color: white;
-        font-size: 0.625rem;
-        font-weight: 700;
-        border-radius: 4px;
-        margin-right: 6px;
-      }
-      .personnel-tag {
-        display: inline-block;
-        background: rgba(0, 50, 160, 0.08);
-        color: var(--color-primary);
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-size: 0.625rem;
-        font-weight: 500;
-        margin: 1px 0;
-      }
-      .time-tag {
-        color: var(--color-text-light);
-        font-size: 0.6875rem;
-      }
-      .service-tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 20px;
-        justify-content: center;
-      }
-      .service-tab {
-        padding: 8px 16px;
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 6px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-text);
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-      .service-tab:hover {
-        border-color: var(--color-primary);
-      }
-      .service-tab.active {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: white;
-      }
-      .service-content {
-        display: none;
-      }
-      .service-content.active {
-        display: block;
-      }
-      .req-box {
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 14px;
-      }
-      .req-box h4 {
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .req-box h4 i {
-        color: var(--color-primary);
-      }
-      .req-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .req-list li {
-        font-size: 0.75rem;
-        color: var(--color-text);
-        padding: 4px 0;
-        display: flex;
-        align-items: flex-start;
-        gap: 6px;
-      }
-      .req-list li i {
-        color: var(--color-primary);
-        font-size: 0.625rem;
-        margin-top: 3px;
-        flex-shrink: 0;
-      }
-      .staff-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-      }
-      .staff-card {
-        background: white;
-        border: 1px solid rgba(0, 0, 0, 0.06);
-        border-radius: 8px;
-        padding: 12px;
-      }
-      .staff-card h4 {
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--color-text);
-        margin-bottom: 2px;
-      }
-      .staff-card p {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-      }
-      .doc-list {
-        font-size: 0.6875rem;
-        color: var(--color-text-light);
-        margin: 0;
-        padding-left: 12px;
-      }
-      .doc-list li {
-        margin-bottom: 2px;
-      }
-      @media (max-width: 992px) {
-        .staff-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 768px) {
-        .quick-stats {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .process-table {
-          font-size: 0.6875rem;
-        }
-      }
-      @media (max-width: 575px) {
-        .quick-stats,
-        .staff-grid {
-          grid-template-columns: 1fr;
-        }
-        .service-tabs {
-          flex-direction: column;
-        }
-        .service-tab {
-          text-align: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="../assets/css/services.css?v=7c7b9c40cb" />
   </head>
+
   <body>
     <a href="#main-content" class="skip-link" data-i18n="acct-skip-to-main-content"
       >Skip to main content</a
@@ -298,7 +60,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -310,13 +80,22 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
           /></a>
         </div>
         <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../" data-i18n="acct-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" class="active" data-i18n="acct-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                class="active"
+                data-i18n="acct-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="acct-certificates">Certificates</a>
@@ -353,7 +132,13 @@
             <li><a href="../government/" data-i18n="acct-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="acct-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="acct-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="acct-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../legislative/ordinance-framework" data-i18n="acct-ordinance-framework"
@@ -381,8 +166,8 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
               FIL
             </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">
+              BCL
             </button>
           </div>
         </div>
@@ -408,14 +193,21 @@
       </div>
     </div>
 
-    <main id="main-content"><section class="section"><div class="container"><h1>Municipal Accounting Office</h1><p role="status">Albay-specific requirements, fees, and processing times have not been verified. Confirm these with the responsible government office before applying.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p><ul><li>Accounting Office Services</li><li>Pre-Audit of Disbursement Vouchers</li><li>Preparation of Monthly Reports</li><li>Preparation of Payroll</li><li>Preparation and Issuance of Checks</li><li>Preparation of JEV and Financial Statements</li></ul></div></section></main>
+    <main id="main-content" class="services-page">
+  <div class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../" data-i18n="nav-home">Home</a><span>/</span><a href="../services/" data-i18n="nav-services">Services</a><span>/</span><a href="../services/tax-payments" data-i18n="tax-page-badge">Tax Payments</a><span>/</span><span aria-current="page"><span data-i18n="sg-title-municipal-accounting">Municipal Accounting Office</span></span></nav></div>
+  <section class="page-header"><div class="container"><div class="page-header-content"><span class="page-header-badge"><i class="bi bi-calculator" aria-hidden="true"></i><span data-i18n="sg-guide">Service guide</span></span><h1><span data-i18n="sg-title-municipal-accounting">Municipal Accounting Office</span></h1><p class="page-header-desc"><span data-i18n="sg-desc-municipal-accounting">Local accounting and financial record inquiries.</span></p></div></div></section>
+  <section class="section"><div class="container"><p class="service-notice"><i class="bi bi-info-circle" aria-hidden="true"></i><span data-i18n="svc-verification-notice">Requirements, fees and processing times for Albay services have not been verified. Confirm them with the responsible office before applying.</span></p><dl class="guide-summary"><div><i class="bi bi-building" aria-hidden="true"></i><dt><span data-i18n="sg-office">Responsible office</span></dt><dd><span data-i18n="sg-confirm">Confirm with the office</span></dd></div><div><i class="bi bi-list-check" aria-hidden="true"></i><dt><span data-i18n="sg-requirements">Requirements</span></dt><dd><span data-i18n="sg-unknown">Not yet verified</span></dd></div><div><i class="bi bi-cash-coin" aria-hidden="true"></i><dt><span data-i18n="sg-fees">Fees</span></dt><dd><span data-i18n="sg-unknown">Not yet verified</span></dd></div><div><i class="bi bi-clock" aria-hidden="true"></i><dt><span data-i18n="sg-processing">Processing time</span></dt><dd><span data-i18n="sg-unknown">Not yet verified</span></dd></div></dl></div></section>
+  <section class="section guide-preparation"><div class="container"><h2><span data-i18n="sg-before">Before you apply</span></h2><p class="section-intro"><span data-i18n="sg-general">General preparation guidance, not an official application procedure.</span></p><ol class="guide-steps"><li><span class="step-number" aria-hidden="true">1</span><h3><span data-i18n="sg-step1">Find the right office</span></h3><p><span data-i18n="sg-step1-desc">Ask which office handles your request in your city or municipality.</span></p></li><li><span class="step-number" aria-hidden="true">2</span><h3><span data-i18n="sg-step2">Confirm what to bring</span></h3><p><span data-i18n="sg-step2-desc">Request the current checklist, eligibility rules, fees and accepted payment methods.</span></p></li><li><span class="step-number" aria-hidden="true">3</span><h3><span data-i18n="sg-step3">Plan your visit</span></h3><p><span data-i18n="sg-step3-desc">Check the office location, opening hours, appointment rules and expected processing time.</span></p></li></ol></div></section>
+  <section class="section"><div class="container guide-columns"><div><section class="guide-panel"><h2><span data-i18n="sg-checklist">Requirements to confirm</span></h2><ul class="guide-checklist"><li><span data-i18n="sg-check1">Who may apply and whether a representative is allowed</span></li><li><span data-i18n="sg-check2">Accepted identification and supporting documents</span></li><li><span data-i18n="sg-check3">Required originals, photocopies and application forms</span></li></ul></section><section><h2><span data-i18n="sg-faq">Frequently asked questions</span></h2><details class="guide-faq"><summary><span data-i18n="sg-q1">Can I apply online?</span></summary><p><span data-i18n="sg-a1">An online application channel has not been verified here. Ask the responsible office for its official application options.</span></p></details><details class="guide-faq"><summary><span data-i18n="sg-q2">How much does it cost and how long will it take?</span></summary><p><span data-i18n="sg-a2">Local fees and processing times are not yet verified. Confirm current amounts and timelines before making arrangements.</span></p></details></section></div>
+  <aside><section class="guide-panel"><h2><span data-i18n="sg-resources">Office &amp; resources</span></h2><p><span data-i18n="sg-step1-desc">Ask which office handles your request in your city or municipality.</span></p><a class="guide-resource" href="https://albay.gov.ph/"><span data-i18n="sg-official">Official Albay website</span> ↗</a></section><section class="guide-panel"><h2><span data-i18n="sg-related">Related services</span></h2><a class="guide-resource" href="../service-details/municipal-treasurer"><span data-i18n="sg-title-municipal-treasurer">Municipal Treasurer&#39;s Office</span></a><a class="guide-resource" href="../service-details/municipal-budget"><span data-i18n="sg-title-municipal-budget">Municipal Budget Office</span></a><a class="guide-resource" href="../service-details/property-declaration"><span data-i18n="sg-title-property-declaration">Property Declaration</span></a><a class="guide-resource" href="../services/tax-payments" data-i18n="tax-page-title">Taxation &amp; Payments</a><a class="guide-resource" href="../services/"><span data-i18n="sg-all">Browse all services</span></a></section><section class="guide-panel"><h2><span data-i18n="sg-help">Need help finding an office?</span></h2><a class="guide-resource" href="../contact/"><span data-i18n="sg-contact">Contact &amp; information</span></a></section></aside></div></section>
+</main>
 
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -457,7 +249,8 @@
             <h4 data-i18n="acct-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -494,34 +287,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -532,27 +366,14 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
-    <script>
-      // Tab functionality
-      document.querySelectorAll('.service-tab').forEach((tab) => {
-        tab.addEventListener('click', () => {
-          document.querySelectorAll('.service-tab').forEach((t) => t.classList.remove('active'));
-          document
-            .querySelectorAll('.service-content')
-            .forEach((c) => c.classList.remove('active'));
-          tab.classList.add('active');
-          document.getElementById(tab.dataset.tab).classList.add('active');
-        });
-      });
-    </script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
   </body>
 </html>

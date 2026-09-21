@@ -1,20 +1,46 @@
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import copy from '../../../../../data/service-guide-copy.json';
+import serviceData from '../../../../../data/services.json';
+import '../../../../../assets/css/services.css';
+
+const icons: Record<string, string> = {
+  vaccination: 'bi-shield-plus',
+  'health-certificate': 'bi-clipboard2-pulse',
+  'medical-assistance': 'bi-hospital',
+  'prenatal-checkup': 'bi-heart-pulse',
+};
 
 export default function HealthPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const [query, setQuery] = useState('');
+  const lang = language === 'bik' ? 'bcl' : language;
+  const strings: Record<string, string> = copy[lang];
+  const label = (key: string) => strings[key] || t(key);
+  const services = serviceData.services.filter((service) => service.categoryId === 'health');
+  const visible = services.filter((service) =>
+    [
+      label(`sg-title-${service.id}`),
+      label(`sg-desc-${service.id}`),
+      service.title,
+      ...service.keywords,
+    ]
+      .join(' ')
+      .toLocaleLowerCase()
+      .includes(query.trim().toLocaleLowerCase())
+  );
 
   return (
-    <>
+    <div className="services-page">
       <div className="container">
         <nav className="breadcrumbs" aria-label="Breadcrumb">
-          <Link href="/">{t('nav-home')}</Link>
+          <a href="/">{t('nav-home')}</a>
           <span>/</span>
-          <Link href="/services">{t('nav-services')}</Link>
+          <a href="/services/">{t('nav-services')}</a>
           <span>/</span>
-          <span aria-current="page">{t('health-page-title')}</span>
+          <span aria-current="page">{label('health-page-title')}</span>
         </nav>
       </div>
       <section className="page-header">
@@ -22,42 +48,97 @@ export default function HealthPage() {
           <div className="page-header-content">
             <span className="page-header-badge">
               <i className="bi bi-heart-pulse-fill" aria-hidden="true" />
-              <span>{t('health-page-badge')}</span>
+              {label('health-page-badge')}
             </span>
-            <h1>{t('health-page-title')}</h1>
+            <h1>{label('health-page-title')}</h1>
+            <p className="page-header-desc">{label('health-page-desc')}</p>
+            <div className="page-header-search">
+              <form
+                className="search-form"
+                role="search"
+                onSubmit={(event) => event.preventDefault()}
+              >
+                <div className="search-input-wrapper">
+                  <i className="bi bi-search search-icon" aria-hidden="true" />
+                  <input
+                    type="search"
+                    id="service-search"
+                    className="service-search-input"
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    placeholder={label('sg-health-search')}
+                    aria-label={label('sg-health-search')}
+                    autoComplete="off"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
       <section className="section">
         <div className="container">
-          <p>
-            Albay-specific requirements, fees, and processing times have not been verified. Confirm
-            these with the responsible government office before applying.
+          <p className="service-notice">
+            <i className="bi bi-info-circle" aria-hidden="true" />
+            <span>{label('svc-verification-notice')}</span>
           </p>
-          <p>A verified local health facility directory is not yet available on this site.</p>
-          <p>
-            <a href="https://albay.gov.ph/">Official Albay government website</a>
-          </p>
-          <h2>Related services</h2>
-          <ul>
-            <li>
-              <Link href="/services">Browse all services</Link>
-            </li>
-            <li>
-              <Link href="/services/social-services">Social services</Link>
-            </li>
-            <li>
-              <Link href="/services/public-safety">Public safety and emergency contacts</Link>
-            </li>
-          </ul>
-          <p>
-            National emergency: <a href="tel:911">911</a>
-          </p>
-          <p>
-            <a href="https://ehotlines.e.gov.ph/">Official emergency directory</a>
-          </p>
+          <div className="grid grid-3" aria-live="polite">
+            {visible.map((service) => (
+              <div className="service-item-card" key={service.id}>
+                <h2 className="service-item-title">
+                  <i className={`bi ${icons[service.id]}`} aria-hidden="true" />
+                  <span>{label(`sg-title-${service.id}`)}</span>
+                </h2>
+                <p className="service-item-desc">{label(`sg-desc-${service.id}`)}</p>
+                <span className="service-card-action">{label('sg-confirm')}</span>
+              </div>
+            ))}
+            {visible.length === 0 && (
+              <div className="service-grid-status">
+                <p>{label('sg-no-results')}</p>
+                <button type="button" className="btn btn-secondary" onClick={() => setQuery('')}>
+                  {label('sg-clear-search')}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </section>
-    </>
+      <section className="section bg-alt">
+        <div className="container guide-columns">
+          <section className="guide-panel">
+            <h2>{label('sg-resources')}</h2>
+            <p>{label('sg-directory')}</p>
+            <a className="guide-resource" href="https://albay.gov.ph/">
+              {label('sg-official')} ↗
+            </a>
+            <a className="guide-resource" href="tel:911">
+              {label('sg-emergency')}: 911
+            </a>
+            <a className="guide-resource" href="/contact/#hotlines-hospitals" lang="en">
+              Hospital hotlines
+            </a>
+            <a className="guide-resource" href="/contact/#hotlines-rural-health-unit" lang="en">
+              Rural health unit hotlines
+            </a>
+            <a className="guide-resource" href="/contact/#emergency-hotlines" lang="en">
+              All Albay hotlines
+            </a>
+          </section>
+          <section className="guide-panel">
+            <h2>{label('sg-related')}</h2>
+            <a className="guide-resource" href="/services/">
+              {label('sg-all')}
+            </a>
+            <a className="guide-resource" href="/services/social-services">
+              {t('dropdown-social-services')}
+            </a>
+            <a className="guide-resource" href="/services/public-safety">
+              {t('dropdown-public-safety')}
+            </a>
+          </section>
+        </div>
+      </section>
+    </div>
   );
 }

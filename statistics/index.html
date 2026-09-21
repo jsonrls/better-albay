@@ -59,9 +59,9 @@
     <meta name="theme-color" content="#1a5f2a" />
 
     <title>Municipal Statistics & Data | BetterAlbay.org</title>
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
-    <link rel="apple-touch-icon" href="../assets/images/logo/favicon.svg" />
+    <link rel="apple-touch-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -80,8 +80,9 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/statistics.css" />
+    <link rel="stylesheet" href="../assets/css/statistics.css?v=fc8144d97c" />
   </head>
+
   <body>
     <a href="#main-content" class="skip-link" data-i18n="stats-skip-to-main-content"
       >Skip to main content</a
@@ -91,7 +92,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -105,6 +114,8 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -112,7 +123,13 @@
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="stats-certificates">Certificates</a>
@@ -149,7 +166,13 @@
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="./" class="active" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../legislative/ordinance-framework" data-i18n="stats-ordinance-framework"
@@ -177,8 +200,8 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
               FIL
             </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">
+              BCL
             </button>
           </div>
         </div>
@@ -223,31 +246,109 @@
       </div>
 
       <!-- Hero Section -->
-      <section class="stats-hero"><div class="container"><h1>Albay Statistics</h1><p>Verified census information and data availability.</p></div></section>
+      <section class="stats-hero">
+        <div class="container">
+          <span class="stats-hero-badge"
+            ><i class="bi bi-patch-check-fill"></i> Verified open data</span
+          >
+          <h1 data-i18n="stats-page-title">Albay Statistics</h1>
+          <p>
+            Census population, land area, households and competitiveness results for the Province of
+            Albay &mdash; drawn directly from the Philippine Statistics Authority and the Department
+            of Trade and Industry.
+          </p>
+        </div>
+      </section>
 
       <!-- Key Metrics -->
-      <section class="stats-metrics"><div class="container"><h2>Albay population</h2><p class="home-stat-card-value">1,374,768</p><p>2020 Census of Population and Housing — province of Albay.</p><p><a href="https://psa.gov.ph/content/highlights-region-v-bicol-region-population-2020-census-population-and-housing-2020-cph">Source: Philippine Statistics Authority, 2020 Census</a></p></div></section>
+      <section class="stats-metrics">
+        <div class="container">
+          <h2>Albay population</h2>
+          <p class="home-stat-card-value">1,374,768</p>
+          <p>2020 Census of Population and Housing — province of Albay.</p>
+          <p>
+            <a
+              href="https://psa.gov.ph/content/highlights-region-v-bicol-region-population-2020-census-population-and-housing-2020-cph"
+              >Source: Philippine Statistics Authority, 2020 Census</a
+            >
+          </p>
+        </div>
+      </section>
 
-      <!-- Municipal Finance -->
-      <section class="stats-section stats-finance animate-on-scroll"><div class="container"><h2>Municipal Income</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <!-- Provincial Finance -->
+      <section class="stats-section stats-finance animate-on-scroll">
+        <div class="container">
+          <h2>Provincial Income and Receipts</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p><a href="https://blgf.gov.ph/">Source: Bureau of Local Government Finance</a></p>
+        </div>
+      </section>
 
       <!-- Population Trends -->
-      <section class="stats-section stats-trends animate-on-scroll"><div class="container"><h2>Population Trends</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="stats-section stats-trends animate-on-scroll">
+        <div class="container">
+          <h2>Population Trends</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p><a href="https://openstat.psa.gov.ph">Source: Philippine Statistics Authority</a></p>
+        </div>
+      </section>
 
       <!-- Population Distribution -->
-      <section class="stats-section stats-distribution animate-on-scroll"><div class="container"><h2>Population by LGU</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="stats-section stats-distribution animate-on-scroll">
+        <div class="container">
+          <h2>Population by LGU</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p><a href="https://openstat.psa.gov.ph">Source: Philippine Statistics Authority</a></p>
+        </div>
+      </section>
 
       <!-- Economic Indicators -->
-      <section class="stats-section stats-economy animate-on-scroll"><div class="container"><h2>Economic Indicators</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="stats-section stats-economy animate-on-scroll">
+        <div class="container">
+          <h2>Economic Indicators</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p>
+            <a href="https://cmci.dti.gov.ph/"
+              >Source: DTI Cities and Municipalities Competitiveness Index</a
+            >
+          </p>
+        </div>
+      </section>
 
       <!-- Poverty Statistics -->
-      <section class="stats-section stats-poverty animate-on-scroll"><div class="container"><h2>Poverty Statistics</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="stats-section stats-poverty animate-on-scroll">
+        <div class="container">
+          <h2>Poverty Statistics</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p>
+            <a href="https://psa.gov.ph/statistics/poverty"
+              >Source: Philippine Statistics Authority</a
+            >
+          </p>
+        </div>
+      </section>
 
       <!-- Competitive Index Section -->
-      <section class="stats-section stats-competitive animate-on-scroll" id="competitive-index"><div class="container"><h2>Albay Competitive Index</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="stats-section stats-competitive animate-on-scroll" id="competitive-index">
+        <div class="container">
+          <h2>Albay Competitive Index</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p>
+            <a href="https://cmci.dti.gov.ph/"
+              >Source: DTI Cities and Municipalities Competitiveness Index</a
+            >
+          </p>
+        </div>
+      </section>
 
       <!-- Bar Chart Section -->
-      <section class="stats-section stats-barchart animate-on-scroll"><div class="container"><h2>Population Bar Chart</h2><p>Verified Albay data for this section is not yet available.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p></div></section>
+      <section class="stats-section stats-barchart animate-on-scroll">
+        <div class="container">
+          <h2>Population Bar Chart</h2>
+          <p>Verified Albay data for this section is not yet available.</p>
+          <p><a href="https://openstat.psa.gov.ph">Source: Philippine Statistics Authority</a></p>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
@@ -255,7 +356,7 @@
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -297,7 +398,8 @@
             <h4 data-i18n="stats-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -330,34 +432,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -368,17 +511,18 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/statistics-new.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="../assets/js/statistics-new.js?v=b2b519584e"></script>
+    <script defer src="../assets/js/statistics-data.js?v=bb81bb4d1b"></script>
   </body>
 </html>

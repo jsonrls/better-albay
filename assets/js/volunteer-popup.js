@@ -11,6 +11,8 @@
   var _scrollbarWidth = 0;
   var _scrollY = 0;
   var _onKeyDown = null;
+  var _quizStarted = false;
+  var _scrollLocked = false;
 
   // ─── Scroll lock ──────────────────────────────────────────────────────────
 
@@ -26,6 +28,7 @@
    * the reading position survives.
    */
   function lockScroll() {
+    _scrollLocked = true;
     _scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
     _scrollbarWidth = measureScrollbarWidth();
 
@@ -40,6 +43,8 @@
   }
 
   function unlockScroll() {
+    if (!_scrollLocked) return;
+    _scrollLocked = false;
     var body = document.body;
     body.style.position = '';
     body.style.top = '';
@@ -144,6 +149,15 @@
     var overlay = document.getElementById('vol-popup-overlay');
     if (!overlay) return;
 
+    // A quiz takes priority for this page visit without marking volunteering dismissed.
+    document.addEventListener('albay-quiz:opening', function () {
+      _quizStarted = true;
+      if (_onKeyDown) document.removeEventListener('keydown', _onKeyDown);
+      _onKeyDown = null;
+      unlockScroll();
+      if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+    });
+
     var alreadySeen = false;
     try {
       alreadySeen = !!localStorage.getItem(STORAGE_KEY);
@@ -198,6 +212,7 @@
     });
 
     setTimeout(function () {
+      if (_quizStarted || _dismissed) return;
       // Capture focused element now, before scroll lock shifts layout.
       _previousFocus = document.activeElement;
 
@@ -213,9 +228,11 @@
       //     card's entry animation starts from its committed from-state and the
       //     (already-promoted) backdrop-filter layer simply turns opaque.
       requestAnimationFrame(function () {
+        if (_quizStarted || _dismissed) return;
         lockScroll();
 
         requestAnimationFrame(function () {
+          if (_quizStarted || _dismissed) return;
           overlay.classList.add('vol-popup-overlay--visible');
           overlay.removeAttribute('aria-hidden');
 

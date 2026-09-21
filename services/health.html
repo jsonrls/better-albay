@@ -28,7 +28,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://betteralbay.org/services/health" />
-    <meta property="og:title" content="Health Services | BetterAlbay.org" />
+    <meta property="og:title" content="Health & Wellness | BetterAlbay.org" />
     <meta
       property="og:description"
       content="Community civic information for Albay, Philippines. Verify current government information with the responsible office."
@@ -50,7 +50,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://betteralbay.org/services/health" />
-    <meta name="twitter:title" content="Health Services | BetterAlbay.org" />
+    <meta name="twitter:title" content="Health & Wellness | BetterAlbay.org" />
     <meta
       name="twitter:description"
       content="Community civic information for Albay, Philippines. Verify current government information with the responsible office."
@@ -59,8 +59,8 @@
       name="twitter:image"
       content="https://betteralbay.org/assets/images/banners/opengraph.png"
     />
-    <title>Health Services | BetterAlbay.org</title>
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <title>Health & Wellness | BetterAlbay.org</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/services.css?v=7c7b9c40cb" />
   </head>
 
   <body>
@@ -91,7 +92,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -105,13 +114,22 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Province of Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
           /></a>
         </div>
         <nav class="main-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="./" class="active" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="./"
+                class="active"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li><a href="certificates" data-i18n="health-certificates">Certificates</a></li>
                 <li><a href="business" data-i18n="health-business">Business</a></li>
@@ -132,7 +150,13 @@
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="../legislative/" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="../legislative/"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a
@@ -156,9 +180,27 @@
         </nav>
         <div class="header-actions">
           <div class="lang-selector">
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="en">EN</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="fil">FIL</button>
-            <button class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">ILO</button>
+            <button
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="en"
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="fil"
+              aria-label="Switch to Filipino"
+            >
+              FIL
+            </button>
+            <button
+              class="btn btn-secondary btn-sm lang-btn"
+              data-lang="bcl"
+              aria-label="Switch to Central Bikol"
+            >
+              BCL
+            </button>
           </div>
         </div>
       </div>
@@ -191,13 +233,63 @@
       </div>
     </div>
 
-    <main id="main-content"><section class="section"><div class="container"><h1>Health Services</h1><p>Albay-specific requirements, fees, and processing times have not been verified. Confirm these with the responsible government office before applying.</p><p><a href="https://albay.gov.ph/">Visit the official Albay government website</a></p><ul></ul></div></section></main>
+    <main id="main-content" class="services-page">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../" data-i18n="nav-home">Home</a>
+        <span>/</span>
+        <a href="./" data-i18n="nav-services">Services</a>
+        <span>/</span>
+        <span aria-current="page" data-i18n="health-page-title">Health &amp; Wellness</span>
+      </nav>
+    </div>
+
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <span class="page-header-badge"><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
+            <span data-i18n="health-page-badge">Health</span></span>
+          <h1 data-i18n="health-page-title">Health &amp; Wellness</h1>
+          <p class="page-header-desc" data-i18n="health-page-desc">
+            Health services, health certificates and medical assistance.
+          </p>
+          <div class="page-header-search"><form class="search-form" role="search"><div class="search-input-wrapper"><i class="bi bi-search search-icon" aria-hidden="true"></i><input type="search" id="service-search" class="service-search-input" placeholder="Search services..." data-i18n-placeholder="search-placeholder" aria-label="Search services" data-i18n-aria="search-aria-label" autocomplete="off" /></div></form></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="service-notice">
+          <i class="bi bi-info-circle" aria-hidden="true"></i>
+          <span data-i18n="svc-verification-notice">Requirements, fees and processing times for Albay services have
+            not been verified. Confirm them with the responsible office before applying.</span>
+        </p>
+        <div class="grid grid-3" id="services-category" data-category="health"
+          data-src="../data/services.json">
+          <p class="service-grid-status" data-i18n="svc-loading">Loading services...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-alt" lang="en"><div class="container"><h2>Emergency contacts</h2>
+      <p>Find local offices and call numbers in the Albay hotline directory.</p>
+      <a class="guide-resource" href="/contact/#hotlines-hospitals">Hospitals</a>
+<a class="guide-resource" href="/contact/#hotlines-rural-health-unit">Rural health units</a>
+    </div></section>
+    <section class="section section-compact bg-alt" id="services-offices" hidden>
+      <div class="container">
+        <h2 class="section-title-sm" data-i18n="offices-title">Responsible Offices</h2>
+        <div class="office-cards-grid" id="offices-grid"></div>
+      </div>
+    </section>
+  </main>
     <footer class="site-footer">
       <div class="container">
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -239,7 +331,8 @@
             <h4 data-i18n="health-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -278,34 +371,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -316,14 +450,16 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="../assets/js/search.js?v=248841e71f"></script>
+    <script defer src="../assets/js/services-category.js?v=8d6cc0f586"></script>
   </body>
 </html>

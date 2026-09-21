@@ -16,9 +16,11 @@
         --danger: #b91c1c;
         --ok: #15803d;
       }
+
       * {
         box-sizing: border-box;
       }
+
       body {
         margin: 0;
         font-family:
@@ -26,6 +28,7 @@
         color: var(--text);
         background: var(--bg);
       }
+
       header.app {
         background: #fff;
         border-bottom: 1px solid var(--border);
@@ -38,11 +41,13 @@
         top: 0;
         z-index: 5;
       }
+
       header.app h1 {
         font-size: 1.05rem;
         margin: 0;
         flex: 1 1 220px;
       }
+
       header.app .tag {
         font-size: 0.7rem;
         background: #fef3c7;
@@ -51,6 +56,7 @@
         border-radius: 50px;
         font-weight: 600;
       }
+
       button {
         font: inherit;
         cursor: pointer;
@@ -60,21 +66,26 @@
         padding: 8px 12px;
         border-radius: 8px;
       }
+
       button:hover {
         border-color: var(--primary);
       }
+
       button.primary {
         background: var(--primary);
         border-color: var(--primary);
         color: #fff;
       }
+
       button.primary:hover {
         background: var(--primary-dark);
       }
+
       button.danger {
         color: var(--danger);
         border-color: #fecaca;
       }
+
       main {
         display: grid;
         grid-template-columns: minmax(280px, 360px) 1fr;
@@ -82,17 +93,20 @@
         padding: 18px 20px;
         align-items: start;
       }
+
       @media (max-width: 840px) {
         main {
           grid-template-columns: 1fr;
         }
       }
+
       .panel {
         background: #fff;
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 16px;
       }
+
       .panel h2 {
         font-size: 0.85rem;
         text-transform: uppercase;
@@ -100,50 +114,60 @@
         color: var(--muted);
         margin: 0 0 12px;
       }
+
       .entry {
         border: 1px solid var(--border);
         border-radius: 10px;
         padding: 10px 12px;
         margin-bottom: 10px;
       }
+
       .entry.active {
         border-color: var(--primary);
         box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.15);
       }
+
       .entry .row {
         display: flex;
         justify-content: space-between;
         gap: 8px;
         align-items: baseline;
       }
+
       .entry strong {
         font-size: 0.92rem;
         line-height: 1.3;
       }
+
       .entry .meta {
         font-size: 0.72rem;
         color: var(--muted);
         margin-top: 4px;
       }
+
       .entry .actions {
         margin-top: 8px;
         display: flex;
         gap: 6px;
       }
+
       .entry .actions button {
         padding: 4px 9px;
         font-size: 0.78rem;
       }
+
       label {
         display: block;
         font-size: 0.8rem;
         font-weight: 600;
         margin: 12px 0 4px;
       }
+
       label .opt {
         color: var(--muted);
         font-weight: 400;
       }
+
       input,
       select,
       textarea {
@@ -154,60 +178,73 @@
         border-radius: 8px;
         background: #fff;
       }
+
       textarea {
         min-height: 84px;
         resize: vertical;
       }
+
       .hint {
         font-size: 0.72rem;
         color: var(--muted);
         margin-top: 4px;
       }
+
       .counter.over {
         color: var(--danger);
         font-weight: 600;
       }
+
       .err {
         color: var(--danger);
         font-size: 0.75rem;
         margin-top: 4px;
         display: none;
       }
+
       .field.invalid input,
       .field.invalid textarea,
       .field.invalid select {
         border-color: var(--danger);
       }
+
       .field.invalid .err {
         display: block;
       }
+
       .form-actions {
         margin-top: 16px;
         display: flex;
         gap: 8px;
       }
+
       .grid-2 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
       }
+
       .status {
         font-size: 0.78rem;
         color: var(--muted);
         margin-left: auto;
       }
+
       .status.ok {
         color: var(--ok);
       }
+
       .status.bad {
         color: var(--danger);
       }
+
       /* Faithful preview using the live site's badge palette */
       .preview-wrap {
         margin-top: 14px;
         border-top: 1px dashed var(--border);
         padding-top: 14px;
       }
+
       .nc {
         border: 1px solid var(--border);
         border-radius: 12px;
@@ -215,60 +252,72 @@
         max-width: 360px;
         background: #fff;
       }
+
       .nc-head {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 12px 14px 0;
       }
+
       .nc-badge {
         font-size: 0.75rem;
         font-weight: 600;
         padding: 4px 10px;
         border-radius: 50px;
       }
+
       .b-info {
         background: #e0f2fe;
         color: #0369a1;
       }
+
       .b-success {
         background: #dcfce7;
         color: #15803d;
       }
+
       .b-warning {
         background: #fef3c7;
         color: #b45309;
       }
+
       .nc-date {
         font-size: 0.75rem;
         color: var(--muted);
       }
+
       .nc-body {
         padding: 8px 14px 14px;
       }
+
       .nc-title {
         font-size: 1rem;
         font-weight: 600;
         margin: 0 0 6px;
       }
+
       .nc-desc {
         font-size: 0.8125rem;
         color: var(--muted);
         margin: 0;
         line-height: 1.55;
       }
+
       .nc-foot {
         padding: 0 14px 12px;
         font-size: 0.8125rem;
         font-weight: 500;
         color: var(--primary);
       }
+
       .visually-hidden {
         position: absolute;
         left: -9999px;
       }
     </style>
   </head>
+
   <body>
     <header class="app">
       <h1>News Curation <span class="tag">internal tool · not deployed</span></h1>
@@ -628,6 +677,11 @@
           url: url || null,
         };
         if (source) item.source = source;
+        // This form has no image field: scripts/sync-news.js is what discovers
+        // the publisher's lead photo. Carry the stored one through the edit, or
+        // saving would silently strip the preview from the entry.
+        var previous = editingIndex > -1 ? entries[editingIndex] : null;
+        if (previous && previous.image) item.image = previous.image;
         return item;
       }
 
@@ -652,6 +706,8 @@
             summary: e.summary || '',
             url: e.url || null,
             source: e.source || undefined,
+            // Written by scripts/sync-news.js; the editor only has to not lose it.
+            image: e.image || undefined,
           });
         }
         return out;

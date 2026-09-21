@@ -1,7 +1,106 @@
 {
   "_schema_version": "2.0",
-  "_status": "draft",
-  "_source": "Sangguniang Panlalawigan ng Albay \u2014 Provincial Board Secretariat",
-  "_note": "Awaiting official provincial ordinance records from the SP secretariat or albay.gov.ph.",
-  "ordinances": []
+  "_status": "verified",
+  "_source": "Sangguniang Panlalawigan ng Albay \u2014 enacted ordinance texts, archived by the Internet Archive",
+  "_retrieved": "2026-02-11",
+  "_description": "Provincial ordinances of Albay whose enacted text is preserved in a publicly retrievable source. Each record below was transcribed from, or is cited verbatim in, a document published by the Provincial Government of Albay and preserved by the Internet Archive.",
+  "_sources": [
+    {
+      "label": "Provincial Ordinance No. 2003-17 (General Administrative Code) \u2014 full enacted text, 1.3 MB",
+      "url": "https://web.archive.org/web/20080229141532/http://www.albay.gov.ph/administrative%20code.htm"
+    },
+    {
+      "label": "Provincial Ordinance No. 2003-12 (Provincial Environment Code) \u2014 full enacted text, 522 KB",
+      "url": "https://web.archive.org/web/20070626222944/http://albay.gov.ph/environment%20code.htm"
+    },
+    {
+      "label": "Albay Provincial Ordinances \u2014 index of the codified provincial codes",
+      "url": "https://web.archive.org/web/20080201055108/http://www.albay.gov.ph/Albay%20Ordinances.htm"
+    }
+  ],
+  "_records_on_publication": 6,
+  "_completeness": "Partial. This is not a complete index of Albay provincial ordinances. The Sangguniang Panlalawigan does not publish a machine-readable register of its ordinances and albay.gov.ph is not retrievable by automated clients. The six records below are the ones whose ordinance number and official title could be established from a retrievable primary source.",
+  "_codified_codes_not_yet_on_record": [
+    "Tax Code",
+    "Traffic Safety Code",
+    "Fishery Code",
+    "G.A.D. Code",
+    "Tourism Code"
+  ],
+  "_completeness_note": "The index of codified provincial codes also lists a Tax Code, Traffic Safety Code, Fishery Code, G.A.D. Code and Tourism Code. Their enacted texts were never archived and no ordinance number or session date is therefore published for them.",
+  "_caveats": [
+    "A session date is stated only where the source document names the session and its date. Where a source cites an ordinance without dating it, sessionDate is null and the table shows \u201cNot published\u201d rather than an inferred date.",
+    "Ordinance No. 005-99 also appears in the sources as \u201cProvincial Ordinance No. 05-99\u201d. It is recorded once, under the fuller form.",
+    "The Environment Code source prints its enacting clause as \u201cAN ORDINANCE ENACTINGTHE PROVINCIAL ENVIRONMENT CODE\u201d. The missing space is a typographic error in the original and has been normalised; no wording was changed.",
+    "Titles reproduce the wording and punctuation of the source, except that all-capital enacting clauses have been converted to sentence case for readability.",
+    "These are historical records of enactment, not a statement of what is currently in force. Verify any ordinance against the Sangguniang Panlalawigan or the Provincial Secretary before relying on it."
+  ],
+  "ordinances": [
+    {
+      "ordinanceNo": "2003-17",
+      "title": "An Ordinance Codifying the General Administrative Ordinances of the Province of Albay and Incorporating Pertinent Provisions of R.A. 7160",
+      "sessionDate": "2003-12-19",
+      "session": "5th Special Session",
+      "kind": "code",
+      "alsoKnownAs": "General Administrative Code of the Province of Albay",
+      "sourceLabel": "Full enacted text (Internet Archive)",
+      "sourceUrl": "https://web.archive.org/web/20080229141532/http://www.albay.gov.ph/administrative%20code.htm",
+      "_status": "verified"
+    },
+    {
+      "ordinanceNo": "2003-12",
+      "title": "An Ordinance Enacting the Provincial Environment Code of the Province of Albay",
+      "sessionDate": "2003-07-22",
+      "session": "103rd Regular Session",
+      "kind": "code",
+      "alsoKnownAs": "Provincial Environment Code",
+      "sourceLabel": "Full enacted text (Internet Archive)",
+      "sourceUrl": "https://web.archive.org/web/20070626222944/http://albay.gov.ph/environment%20code.htm",
+      "_status": "verified"
+    },
+    {
+      "ordinanceNo": "2003-02",
+      "title": "An Ordinance Amending the Title and Certain Provisions/Sections of Provincial Ordinance No. 2002-10, Also Known as \u201cThe Monetization Grant for All Qualified Employees of the Province of Albay\u201d, to Make Its Implementation More Effective and Orderly",
+      "sessionDate": null,
+      "session": null,
+      "kind": "ordinance",
+      "alsoKnownAs": null,
+      "sourceLabel": "Cited in the General Administrative Code",
+      "sourceUrl": "https://web.archive.org/web/20080229141532/http://www.albay.gov.ph/administrative%20code.htm",
+      "_status": "verified"
+    },
+    {
+      "ordinanceNo": "2002-10",
+      "title": "An Ordinance Granting the Full Conversion into Money Value or Monetization of Fifty Percent (50%) or More of the Accumulated Leave Credits of All Qualified Employees of the Provincial Government of Albay, Thereby Providing Mechanism for Its Implementation and for Other Purposes, Subject to Civil Service Rules and Regulations",
+      "sessionDate": null,
+      "session": null,
+      "kind": "ordinance",
+      "alsoKnownAs": "The Monetization Grant for All Qualified Employees of the Province of Albay",
+      "sourceLabel": "Cited in the General Administrative Code",
+      "sourceUrl": "https://web.archive.org/web/20080229141532/http://www.albay.gov.ph/administrative%20code.htm",
+      "_status": "verified"
+    },
+    {
+      "ordinanceNo": "005-99",
+      "title": "An Ordinance Enacting the 1999 Provincial Tax Code of the Province of Albay, Prescribing the Guidelines and Providing Penalties for Violation Thereof",
+      "sessionDate": null,
+      "session": null,
+      "kind": "code",
+      "alsoKnownAs": "1999 Provincial Tax Code (also cited as Ordinance No. 05-99)",
+      "sourceLabel": "Cited in the Provincial Environment Code",
+      "sourceUrl": "https://web.archive.org/web/20070626222944/http://albay.gov.ph/environment%20code.htm",
+      "_status": "verified"
+    },
+    {
+      "ordinanceNo": "2001-05",
+      "title": "An Ordinance Amending Section 31 of Provincial Ordinance No. 05-99",
+      "sessionDate": null,
+      "session": null,
+      "kind": "ordinance",
+      "alsoKnownAs": null,
+      "sourceLabel": "Cited in the Provincial Environment Code",
+      "sourceUrl": "https://web.archive.org/web/20070626222944/http://albay.gov.ph/environment%20code.htm",
+      "_status": "verified"
+    }
+  ]
 }

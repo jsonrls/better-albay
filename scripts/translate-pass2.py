@@ -1004,7 +1004,6 @@ PASS2_FIL_4 = {
     "SEEDO – Slaughterhouse": "SEEDO – Katayan",
     "Bintawan Road, Brgy. Quezon": "Bintawan Road, Brgy. Quezon",
     "Magat River, Bagahabag Section, Albay, Philippines": "Ilog Magat, Seksyon ng Bagahabag, Albay, Philippines",
-    "Albay, Philippines 3708": "Albay, Philippines 3708",
 }
 
 # ============================================================

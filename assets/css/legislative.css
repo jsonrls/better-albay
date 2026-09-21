@@ -25,6 +25,18 @@
   z-index: 1;
 }
 
+/* The service search sits in the hero, and its autocomplete panel is an
+   absolutely positioned child that hangs below the field. `overflow: hidden`
+   exists only to clip the decorative ::before, so lift it on the hero that
+   actually holds a search box or the panel is cut off at the hero's edge. */
+.leg-hero--search {
+  overflow: visible;
+}
+
+.leg-hero .page-header-search {
+  margin-top: 28px;
+}
+
 .leg-hero-badge {
   display: inline-flex;
   align-items: center;
@@ -626,5 +638,64 @@
 
   .leg-flow-card p {
     font-size: 0.75rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Sourcing disclosure note
+   Used on the ordinance and resolution pages to state plainly where the
+   records come from and what is missing, before the reader reaches the
+   table. Informational, not an error state.
+   ------------------------------------------------------------------ */
+.leg-note {
+  background: rgba(0, 119, 190, 0.06);
+  border-left: 3px solid var(--color-info);
+  border-radius: 0 10px 10px 0;
+  padding: 18px 22px;
+  margin-bottom: 28px;
+  font-size: 0.875rem;
+  line-height: var(--line-height-body);
+  color: var(--color-text-light);
+}
+
+.leg-note p {
+  margin: 0 0 12px;
+}
+
+.leg-note p:last-child {
+  margin-bottom: 0;
+}
+
+.leg-note strong {
+  color: var(--color-text);
+}
+
+.leg-note a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* The legislative tables gained a Source column; keep the citation on one
+   line on wide screens so the column does not collapse under long titles.
+   The date column is already kept on one line by style.css. */
+.data-table td[data-label='Source'] {
+  white-space: nowrap;
+  font-size: 0.8125rem;
+}
+
+.data-table td[data-label='Source'] a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .leg-note {
+    padding: 16px 18px;
+    font-size: 0.8438rem;
+  }
+
+  .data-table td[data-label='Source'] {
+    white-space: normal;
+    font-size: inherit;
   }
 }

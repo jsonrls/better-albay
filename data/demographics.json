@@ -1,7 +1,7 @@
 {
   "_schema_version": "2.0",
   "_status": "verified",
-  "_source": "Philippine Statistics Authority (PSA) 2020 Census of Population and Housing",
+  "_source": "Philippine Statistics Authority (PSA) — 2020 Census of Population and Housing, with land area from the PSA OpenSTAT per-LGU table",
   "municipality": "Albay",
   "province": "Albay",
   "region": "Region V - Bicol Region",
@@ -10,7 +10,7 @@
     "year": 2020,
     "source": "PSA 2020 Census"
   },
-  "land_area_km2": 2574.91,
+  "land_area_km2": 2514.74,
   "barangay_count": 720,
   "income_class": "1st",
   "administrative_divisions": {
@@ -20,7 +20,7 @@
     "capital": "Legazpi City"
   },
   "barangays": [],
-  "_note": "PSA 2020 Census figures used. albay.gov.ph/about cites the earlier 2015 census (1,312,309 population; 277,127 households).",
+  "_note": "PSA 2020 Census figures used. Land area is the PSA OpenSTAT total and equals the sum of the 18 per-LGU values in data/population_2024.json. albay.gov.ph/about cites the earlier 2015 census (1,312,309 population; 277,127 households).",
   "barangays_ref": "data/barangays.json",
   "competitiveness_ref": "data/cmci_2024.json"
 }

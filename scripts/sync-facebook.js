@@ -226,7 +226,20 @@ function transformPost(post) {
       : 'See the full post on the official Facebook page.',
     url: post.permalink_url || null,
     source: 'View on Facebook',
+    // The post's own picture, when it has one. Empty means "no preview".
+    image: postImageUrl(post.full_picture),
   };
+}
+
+/**
+ * The post's attached image, restricted to an absolute https URL (Facebook
+ * serves these from its CDN). A relative path, plain http or a data: URL is
+ * dropped rather than repaired: the site is HTTPS-only, so an http preview
+ * would be blocked as mixed content and the card would show a broken image.
+ */
+function postImageUrl(value) {
+  const url = typeof value === 'string' ? value.trim() : '';
+  return /^https:\/\/\S+$/i.test(url) ? url : '';
 }
 
 // ---------------------------------------------------------------------------
@@ -322,8 +335,46 @@ function readExisting() {
   }
 }
 
-function serialize(news) {
-  return JSON.stringify({ news }, null, 2) + '\n';
+function todayIso() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function defaultEnvelope() {
+  return {
+    _status: 'verified',
+    _retrieved: todayIso(),
+    _source: 'Curated Albay updates (Facebook page and press coverage)',
+  };
+}
+
+/**
+ * Read back the `_`-prefixed envelope (`_status`, `_retrieved`, `_source`,
+ * `_notes`) that whichever sync produced this file wrote, refreshing the
+ * retrieval date. Sibling syncs own different id prefixes in the same array, so
+ * a run here must update the items without erasing the other script's
+ * provenance — and must never downgrade `_status`, which gates rendering.
+ */
+function readEnvelope() {
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(CONFIG.newsPath, 'utf8'));
+  } catch (e) {
+    return defaultEnvelope();
+  }
+  if (!data || typeof data !== 'object' || Array.isArray(data)) return defaultEnvelope();
+
+  const kept = {};
+  for (const [key, value] of Object.entries(data)) {
+    if (key.charAt(0) !== '_') continue;
+    kept[key] = key === '_retrieved' ? todayIso() : value;
+  }
+  if (!kept._status) kept._status = 'verified';
+  if (!kept._retrieved) kept._retrieved = todayIso();
+  return kept;
+}
+
+function serialize(news, envelope = {}) {
+  return JSON.stringify({ ...envelope, news }, null, 2) + '\n';
 }
 
 function writeAtomic(filePath, content) {
@@ -373,7 +424,7 @@ async function main() {
 
   const existing = readExisting();
   const merged = mergeFeeds(existing, valid, CONFIG.maxFbItems);
-  const next = serialize(merged);
+  const next = serialize(merged, readEnvelope());
 
   let current = '';
   try {
@@ -404,8 +455,10 @@ module.exports = {
   truncate,
   toDate,
   transformPost,
+  postImageUrl,
   isValidItem,
   mergeFeeds,
+  readEnvelope,
   serialize,
 };
 

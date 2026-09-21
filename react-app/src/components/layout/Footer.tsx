@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="footer-main-new">
           <div className="footer-brand">
             <img
-              src="/assets/images/logo/better-albay-logo-white.svg"
+              src="/assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               className="footer-logo"
             />
@@ -136,7 +136,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="footer-column">
+          <div className="footer-column footer-column-actions">
             <div
               className="footer-cost"
               role="status"
@@ -145,7 +145,7 @@ export default function Footer() {
               {t('footer-cost')} <span className="footer-cost-value">₱0</span>
             </div>
             <a href="mailto:volunteer@betteralbay.org" className="footer-contribute">
-              <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
+              <i className="bi bi-envelope"></i> {t('footer-volunteer')}
             </a>
             <a
               href="https://github.com/jsonrls/better-albay"
@@ -166,8 +166,8 @@ export default function Footer() {
                   src="/assets/images/logo/abakada-footer.svg"
                   alt="Abakada.org"
                   className="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
                 />
               </a>
@@ -181,8 +181,8 @@ export default function Footer() {
                   src="/assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   className="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
                 />
               </a>
@@ -196,8 +196,8 @@ export default function Footer() {
                   src="/assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   className="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
                 />
               </a>

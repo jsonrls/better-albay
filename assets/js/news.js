@@ -5,12 +5,15 @@
  * Data is maintained through the curation tool at /admin/news-editor.html,
  * which writes a validated data/news.json. Each item supports:
  *   id, title, date (YYYY-MM-DD), category, badge (info|success|warning),
- *   summary, url (optional outbound link), source (optional link label).
+ *   summary, url (optional outbound link), and source (optional link label).
  */
 (function () {
   'use strict';
 
   var SUPPORTED_BADGES = { info: 1, success: 1, warning: 1 };
+
+  // Last payload, so a language switch can rebuild the lists without re-fetching.
+  var lastArticles = null;
 
   var NEWS_DATA_URL = (function () {
     var path = window.location.pathname;
@@ -33,24 +36,73 @@
       .replace(/'/g, '&#39;');
   }
 
+  // --- i18n ------------------------------------------------------------------
+  //
+  // The date is assembled here from a month name and a day, so the engine cannot
+  // translate it: it writes `element.textContent` for whole elements and reads
+  // nothing back out. The month therefore comes from the shared table keys, and a
+  // language switch re-renders rather than retranslating a finished string.
+  //
+  // `Intl` is not an option: it carries no Central Bikol data, and an
+  // unresolvable locale tag resolves silently to the *browser's* default locale
+  // - so a German visitor would read German months on a Central Bikol page.
+
+  var MONTH_KEYS = [
+    'month-jan',
+    'month-feb',
+    'month-mar',
+    'month-apr',
+    'month-may',
+    'month-jun',
+    'month-jul',
+    'month-aug',
+    'month-sep',
+    'month-oct',
+    'month-nov',
+    'month-dec',
+  ];
+  var MONTH_EN = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+
+  function currentLang() {
+    if (!window.TranslationEngine || !window.TranslationEngine.getCurrentLanguage) return 'en';
+    try {
+      return window.TranslationEngine.getCurrentLanguage() || 'en';
+    } catch (e) {
+      return 'en';
+    }
+  }
+
+  /** Text, already translated where the table has a value for the key. */
+  function tText(key, fallback, params) {
+    if (!window.TranslationEngine || !window.TranslationEngine.getTranslation) return fallback;
+    try {
+      return window.TranslationEngine.getTranslation(key, currentLang(), params) || fallback;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
   function formatDate(dateStr) {
     var d = new Date(dateStr + 'T00:00:00');
     if (isNaN(d.getTime())) return esc(dateStr);
-    var months = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec',
-    ];
-    return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+    return tText('date-short', '{{month}} {{day}}, {{year}}', {
+      month: tText(MONTH_KEYS[d.getMonth()], MONTH_EN[d.getMonth()]),
+      day: String(d.getDate()),
+      year: String(d.getFullYear()),
+    });
   }
 
   function safeBadge(badge) {
@@ -174,8 +226,7 @@
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status !== 200) {
-          renderHomeNews([]);
-          renderNewsPage([]);
+          render([]);
           return;
         }
         if (xhr.status === 200) {
@@ -192,17 +243,31 @@
                     );
                   })
                 : [];
-            renderHomeNews(articles);
-            renderNewsPage(articles);
+            render(articles);
           } catch (e) {
-            renderHomeNews([]);
-            renderNewsPage([]);
+            render([]);
           }
         }
       }
     };
     xhr.send();
   }
+
+  /**
+   * Render both lists and remember the payload. The dates are built from month
+   * names looked up at render time, so a language switch has to re-render rather
+   * than retranslate finished strings.
+   */
+  function render(articles) {
+    lastArticles = articles;
+    renderHomeNews(articles);
+    renderNewsPage(articles);
+  }
+
+  document.addEventListener('languageChanged', function () {
+    if (lastArticles === null) return;
+    render(lastArticles);
+  });
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadNews);

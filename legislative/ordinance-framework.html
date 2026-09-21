@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8777S9SP9X"></script>
+    <script async src="https://www.go ogletagmanager.com/gtag/js?id=G-8777S9SP9X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -62,7 +62,7 @@
     <title>Ordinance Framework | BetterAlbay.org</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.ico" />
     <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico" />
 
     <!-- Fonts -->
@@ -88,6 +88,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/legislative.css?v=0f26ca0b5b" />
   </head>
 
   <body>
@@ -99,7 +100,15 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items"><a href="tel:911" class="hotline-item"><i class="bi bi-telephone-fill" aria-hidden="true"></i><span>National emergency: 911</span></a><a href="https://ehotlines.e.gov.ph/" class="hotline-item"><span>Official emergency directory</span></a></div>
+          <div class="hotline-items">
+            <a href="tel:911" class="hotline-item"
+              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
+            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
+            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
+            ><a href="/contact/#emergency-hotlines" class="hotline-item"
+              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +122,8 @@
               src="../assets/images/logo/better-albay-logo.svg"
               alt="Better Albay Logo"
               class="logo-img"
+              width="113"
+              height="40"
             />
           </a>
         </div>
@@ -121,7 +132,13 @@
           <ul>
             <li><a href="../" data-i18n="nav-home">Home</a></li>
             <li class="has-dropdown">
-              <a href="../services/" data-i18n="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+              <a
+                href="../services/"
+                data-i18n="nav-services"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Services</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="../services/certificates" data-i18n="ord-certificates">Certificates</a>
@@ -158,7 +175,14 @@
             <li><a href="../government/" data-i18n="nav-government">Government</a></li>
             <li><a href="../statistics/" data-i18n="nav-statistics">Statistics</a></li>
             <li class="has-dropdown">
-              <a href="./" class="active" data-i18n="nav-legislative" aria-haspopup="true" aria-expanded="false">Legislative</a>
+              <a
+                href="./"
+                class="active"
+                data-i18n="nav-legislative"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Legislative</a
+              >
               <ul class="dropdown-menu">
                 <li>
                   <a href="ordinance-framework" class="active" data-i18n="ord-ordinance-framework"
@@ -185,8 +209,8 @@
             <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="fil">
               FIL
             </button>
-            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="ilo">
-              ILO
+            <button type="button" class="btn btn-secondary btn-sm lang-btn" data-lang="bcl">
+              BCL
             </button>
           </div>
         </div>
@@ -244,6 +268,23 @@
             <p class="page-header-desc" data-i18n="ord-page-desc">
               Municipal ordinances enacted by the Sangguniang Panlalawigan ng Albay
             </p>
+            <div class="page-header-search">
+              <form class="search-form" role="search">
+                <div class="search-input-wrapper">
+                  <i class="bi bi-search search-icon" aria-hidden="true"></i>
+                  <input
+                    type="search"
+                    id="service-search"
+                    class="service-search-input"
+                    placeholder="Search services..."
+                    data-i18n-placeholder="search-placeholder"
+                    aria-label="Search services"
+                    data-i18n-aria="search-aria-label"
+                    autocomplete="off"
+                  />
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -308,30 +349,54 @@
         </div>
       </section>
 
-      <!-- 2025 Ordinances Table -->
+      <!-- Provincial Ordinances Table -->
       <section class="section">
         <div class="container">
           <div class="text-center" style="margin-bottom: var(--spacing-lg)">
             <h2
               style="font-size: 1.5rem; margin-bottom: var(--spacing-xs)"
-              data-i18n="ord-2025-title"
+              data-i18n="ord-record-title"
             >
-              2025 Ordinances
+              Provincial Ordinances on Record
             </h2>
-            <p style="color: var(--color-text-light)" data-i18n="ord-2025-subtitle">
-              Official ordinances enacted by the Sangguniang Panlalawigan ng Albay in 2025
+            <p style="color: var(--color-text-light)" data-i18n="ord-record-subtitle">
+              Ordinances of the Sangguniang Panlalawigan ng Albay whose number and official title
+              are preserved in a retrievable public source
+            </p>
+          </div>
+          <div class="leg-note">
+            <p>
+              <strong>What this list is.</strong> The Sangguniang Panlalawigan does not publish a
+              machine-readable register of its ordinances, and albay.gov.ph cannot be retrieved by
+              automated clients. Every row below is instead taken from an enacted ordinance text
+              published by the Provincial Government of Albay and preserved by the Internet Archive,
+              and each row links to the document it came from.
+            </p>
+            <p>
+              <strong>What it is not.</strong> It is not a complete or current index. Only 6
+              ordinances could be established from a retrievable source, and the codified Tax Code,
+              Traffic Safety Code, Fishery Code, G.A.D. Code and Tourism Code are listed on the
+              province's own index but their texts were never archived, so their numbers are not
+              shown here. Where a source cites an ordinance without naming the session, the session
+              date reads <em>Not published</em> rather than an inferred date.
+            </p>
+            <p>
+              These are records of enactment, not a statement of what is currently in force. Confirm
+              any ordinance with the Sangguniang Panlalawigan Secretariat or the Provincial
+              Secretary before relying on it.
             </p>
           </div>
           <div class="table-responsive">
             <table class="data-table ordinance-table" id="ordinance-table">
               <caption class="sr-only">
-                List of 2025 Ordinances from Sangguniang Panlalawigan ng Albay
+                Provincial ordinances of Albay recorded from archived enacted texts
               </caption>
               <thead>
                 <tr>
                   <th scope="col" data-i18n="ord-table-number">Ordinance No.</th>
                   <th scope="col" data-i18n="ord-table-title">Title</th>
                   <th scope="col" data-i18n="ord-table-date">Session Date</th>
+                  <th scope="col" data-i18n="ord-table-source">Source</th>
                 </tr>
               </thead>
               <tbody id="ordinance-table-body">
@@ -341,10 +406,19 @@
           </div>
           <div class="text-center" style="margin-top: var(--spacing-lg)">
             <a
+              href="https://web.archive.org/web/20080201055108/http://www.albay.gov.ph/Albay%20Ordinances.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              ><i class="bi bi-archive"></i>
+              <span data-i18n="ord-view-archived-index">View the archived ordinances index</span></a
+            >
+            <a
               href="https://albay.gov.ph/"
               target="_blank"
               rel="noopener noreferrer"
               class="btn btn-primary"
+              style="margin-left: 8px"
               ><i class="bi bi-box-arrow-up-right"></i>
               <span data-i18n="ord-view-all-ordinances-on-sb-website"
                 >View All Ordinances on SB Website</span
@@ -360,7 +434,7 @@
         <div class="footer-main-new">
           <div class="footer-brand">
             <img
-              src="../assets/images/logo/better-albay-logo-white.svg"
+              src="../assets/images/logo/better-albay-logo-text-white.svg"
               alt="Better Albay logo"
               class="footer-logo"
             />
@@ -402,7 +476,8 @@
             <h4 data-i18n="ord-quick-links">Quick Links</h4>
             <ul class="footer-links-new">
               <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a></li>
+                <a href="https://albay.gov.ph/">Official Albay government website</a>
+              </li>
               <li>
                 <a
                   href="https://albay.gov.ph/wp-content/uploads/2025/10/As-of-October-21-2025-2.pdf"
@@ -439,34 +514,75 @@
                   >Freedom of Information</a
                 >
               </li>
-              <li>
-                <a href="https://albay.gov.ph/">Official Albay government website</a>
+            </ul>
+          </div>
+          <div class="footer-column footer-column-actions">
+            <div
+              class="footer-cost"
+              role="status"
+              aria-label="Cost to the People of Albay: Zero Pesos"
+            >
+              <span>Cost to the People of Albay =</span> <span class="footer-cost-value">₱0</span>
+            </div>
+            <a href="mailto:volunteer@betteralbay.org" class="footer-contribute">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
+              <span data-i18n="footer-volunteer">Volunteer with us</span>
+            </a>
+            <a
+              href="https://github.com/jsonrls/better-albay"
+              class="footer-contribute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github" aria-hidden="true"></i>
+              <span data-i18n="footer-contribute">Contribute code with us</span>
+            </a>
+            <div class="footer-partners">
+              <a
+                href="https://abakada.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Abakada.org"
+              >
+                <img
+                  src="../assets/images/logo/abakada-footer.svg"
+                  alt="Abakada.org"
+                  class="footer-partner-logo"
+                  width="48"
+                  height="38"
+                  loading="lazy"
+                />
+              </a>
               <a
                 href="https://hivcareph.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HIV Care Philippines"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/hiv-care-logo-footer.svg"
                   alt="HIV Care Philippines"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="BetterGov.ph"
-                ><img
+              >
+                <img
                   src="../assets/images/logo/bettergov-footer.svg"
                   alt="BetterGov.ph"
                   class="footer-partner-logo"
-                  width="120"
-                  height="28"
+                  width="48"
+                  height="38"
                   loading="lazy"
-              /></a>
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -477,16 +593,17 @@
             <span class="footer-copyright-disclaimer"
               >Verify current information with the responsible government office.</span
             >
-            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.19</span>
+            <span class="footer-version"><i class="bi bi-boxes"></i> Ver. 1.1.30</span>
           </div>
         </div>
       </div>
     </footer>
 
-    <script defer src="../assets/js/translations.js"></script>
+    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
-    <script defer src="../assets/js/version.js"></script>
-    <script defer src="../assets/js/ordinances.js"></script>
+    <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
+    <script defer src="../assets/js/ordinances.js?v=62e984b5d5"></script>
+    <script defer src="../assets/js/search.js?v=248841e71f"></script>
   </body>
 </html>

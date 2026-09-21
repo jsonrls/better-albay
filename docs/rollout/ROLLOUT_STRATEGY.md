@@ -58,13 +58,13 @@ Developers are responsible for ETL (Extract, Transform, Load) operations mapping
 ### 2.2 Integration Workflows
 
 1. **Open Data Aggregation:**
-    - Scripts should query `data.gov.ph` APIs where available. If APIs are unavailable, CSV exports must be parsed and validated against the `BetterLGU` TypeScript interfaces before commitment to the repository.
+   - Scripts should query `data.gov.ph` APIs where available. If APIs are unavailable, CSV exports must be parsed and validated against the `BetterLGU` TypeScript interfaces before commitment to the repository.
 2. **Request-Based Ingestion:**
-    - For data not publicly available, developers must utilize the **FOI Portal** (foi.gov.ph) to request datasets. Pending FOI requests should be tracked in the project issue tracker.
+   - For data not publicly available, developers must utilize the **FOI Portal** (foi.gov.ph) to request datasets. Pending FOI requests should be tracked in the project issue tracker.
 3. **Search Indexing (Meilisearch):**
-    - For enterprise-grade retrieval, the aggregated JSON files should be indexed into a self-hosted Meilisearch instance (optional for basic deployments, mandatory for provincial/city level).
-    - **Index UID:** `lgu_services`, `lgu_officials`.
-    - **Searchable Attributes:** `service_name`, `keywords`, `official_name`, `ordinance_title`.
+   - For enterprise-grade retrieval, the aggregated JSON files should be indexed into a self-hosted Meilisearch instance (optional for basic deployments, mandatory for provincial/city level).
+   - **Index UID:** `lgu_services`, `lgu_officials`.
+   - **Searchable Attributes:** `service_name`, `keywords`, `official_name`, `ordinance_title`.
 
 ---
 
@@ -74,7 +74,7 @@ This section defines the architectural modularity required to allow LGUs to sele
 
 ### 3.1 Stack Comparison Matrix
 
-| Feature         | **BetterAlbay A (Lightweight)** | **BetterAlbay B (React/TS)**              |
+| Feature         | **BetterAlbay A (Lightweight)**  | **BetterAlbay B (React/TS)**               |
 | :-------------- | :------------------------------- | :----------------------------------------- |
 | **Core Tech**   | Vanilla JS, Bootstrap 5, Leaflet | React, TypeScript, Tailwind                |
 | **Data Store**  | Static JSON Fetching             | Typed JSON Imports / Context API           |
