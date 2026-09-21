@@ -1,0 +1,72 @@
+{
+  "_schema_version": "1.0",
+  "_status": "verified",
+  "_source": "Philippine Statistics Authority (PSA) via Statistics Explorer API",
+  "_source_url": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__1F__FY/0011F3DF010.px",
+  "province": "Albay",
+  "psgc_code": "0500500000",
+  "latest_year": 2023,
+  "records": [
+    {
+      "year": 2018,
+      "per_capita_threshold_php": 24902.24,
+      "family_incidence_pct": 15,
+      "family_incidence_cv": 9.9,
+      "family_incidence_se": 1.5,
+      "family_incidence_ci95_lower": 12.1,
+      "family_incidence_ci95_upper": 17.9,
+      "population_incidence_pct": 21.2,
+      "poverty_gap_pct": 2.8
+    },
+    {
+      "year": 2021,
+      "per_capita_threshold_php": 27346.3,
+      "family_incidence_pct": 15.4,
+      "family_incidence_cv": 10.1,
+      "family_incidence_se": 1.6,
+      "family_incidence_ci95_lower": 12.4,
+      "family_incidence_ci95_upper": 18.5,
+      "population_incidence_pct": 20.4,
+      "poverty_gap_pct": 3.35
+    },
+    {
+      "year": 2023,
+      "per_capita_threshold_php": 35164.05,
+      "family_incidence_pct": 18.1,
+      "family_incidence_cv": 7.2,
+      "family_incidence_se": 1.3,
+      "family_incidence_ci95_lower": 15.5,
+      "family_incidence_ci95_upper": 20.6,
+      "population_incidence_pct": 24.7,
+      "poverty_gap_pct": 3.35
+    }
+  ],
+  "summary": {
+    "threshold_2023_php": 35164.05,
+    "family_incidence_2023_pct": 18.1,
+    "family_incidence_change_2021_2023": 2.7,
+    "population_incidence_2023_pct": 24.7,
+    "poverty_gap_2023_pct": 3.35
+  },
+  "provenance": [
+    {
+      "dataset_id": "d4aac603f5dc8c5cdb21",
+      "title": "Table 1. Annual Per Capita Poverty Threshold and Poverty Incidence Among Families with Measures of Precision, by Region and Province: 2018, 2021, and 2023",
+      "release": "2026-08-03T13-40-35-d9c83a2f8f56",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__1F__FY/0011F3DF010.px"
+    },
+    {
+      "dataset_id": "b4a71a27b4e4189c79a8",
+      "title": "Table 2. Annual Per Capita Poverty Threshold and Poverty Incidence Among Population with Measures of Precision, by Region and Province: 2018, 2021, and 2023",
+      "release": "2026-08-03T13-44-03-02580de20be9",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__1F__FY/0031F3DF020.px"
+    },
+    {
+      "dataset_id": "6584f8211247efc26f85",
+      "title": "Table 11. Poverty Gap with Measures of Precision, by Region and Province:  2018, 2021, and 2023",
+      "release": "2026-08-03T14-29-07-610c81dad313",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__1F__FY/0201F3DF011.px"
+    }
+  ],
+  "updated_at": "2026-09-21T04:55:13.981Z"
+}

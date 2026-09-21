@@ -6,6 +6,7 @@ Mimics Apache's mod_rewrite behavior for testing cPanel deployment locally
 
 import os
 import sys
+import json
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from urllib.parse import urlparse, unquote
 
@@ -14,6 +15,50 @@ class CleanURLHandler(SimpleHTTPRequestHandler):
     Custom HTTP handler that supports clean URLs (without .html extension)
     Mimics the .htaccess rewrite rules used in cPanel deployment
     """
+
+    def do_OPTIONS(self):
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.end_headers()
+
+    def do_POST(self):
+        parsed_path = urlparse(self.path)
+        path = unquote(parsed_path.path)
+
+        if path == '/api/typesafe-query':
+            try:
+                content_length = int(self.headers.get('Content-Length', 0))
+                body = self.rfile.read(content_length)
+                payload = json.loads(body.decode('utf-8'))
+                query_text = payload.get('query', '')
+
+                scripts_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scripts')
+                if scripts_dir not in sys.path:
+                    sys.path.insert(0, scripts_dir)
+                from typesafe_service import resolve_query
+                result = resolve_query(query_text)
+
+                resp_bytes = json.dumps(result, ensure_ascii=False).encode('utf-8')
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(resp_bytes)))
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(resp_bytes)
+                return
+            except Exception as e:
+                err_resp = json.dumps({'success': False, 'error': str(e)}).encode('utf-8')
+                self.send_response(500)
+                self.send_header('Content-Type', 'application/json; charset=utf-8')
+                self.send_header('Content-Length', str(len(err_resp)))
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(err_resp)
+                return
+
+        return super().do_POST()
 
     def do_GET(self):
         # Parse the URL path

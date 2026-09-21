@@ -151,16 +151,33 @@
       element('span', 'albay-quiz-count albay-quiz-count--correct', '✓ Correct ' + correct)
     );
     content.appendChild(progress);
-    var body = element('div', 'albay-quiz-body');
+
+    var steps = element('div', 'albay-quiz-steps');
+    var maxVisible = 10;
+    var startStep = Math.max(0, Math.min(index - Math.floor(maxVisible / 2), questions.length - maxVisible));
+    var endStep = Math.min(questions.length, startStep + maxVisible);
+    for (var i = startStep; i < endStep; i++) {
+      var stepClass = 'albay-quiz-step';
+      if (answers[i] !== undefined) stepClass += ' is-done';
+      else if (i === index) stepClass += ' is-current';
+      else stepClass += ' is-upcoming';
+      steps.appendChild(element('span', stepClass));
+    }
+    content.appendChild(steps);
+
+    var body = element('div', 'albay-quiz-body' + (complete ? ' albay-quiz-body--complete' : ''));
     content.appendChild(body);
     if (complete) {
       body.appendChild(heading(t('quiz-complete', 'Quiz complete')));
       body.appendChild(element('p', 'albay-quiz-score', correct + ' / ' + questions.length));
+      var pct = correct / questions.length;
+      var gradeLabel = pct >= 0.9 ? 'Excellent!' : pct >= 0.7 ? 'Great job!' : pct >= 0.5 ? 'Good effort!' : 'Keep learning!';
+      body.appendChild(element('p', 'albay-quiz-grade', gradeLabel));
       body.appendChild(
         element(
           'p',
           'albay-quiz-meta',
-          Math.round((correct / questions.length) * 100) +
+          Math.round(pct * 100) +
             '% correct · ' +
             (questions.length - correct) +
             ' incorrect'
@@ -194,7 +211,7 @@
     var title = heading(question.question);
     title.id = 'albay-quiz-question';
     body.appendChild(title);
-    var options = element('div', 'albay-quiz-options');
+    var options = element('div', 'albay-quiz-options albay-quiz-options--grid');
     options.setAttribute('role', 'group');
     options.setAttribute('aria-labelledby', title.id);
     question.options.forEach(function (option, choice) {
@@ -240,6 +257,7 @@
         feedback.className = 'albay-quiz-feedback';
         return;
       }
+      options.classList.add('is-revealed');
       Array.prototype.forEach.call(options.children, function (node, choice) {
         var value = question.options[choice];
         node.setAttribute('aria-disabled', 'true');

@@ -1,0 +1,227 @@
+{
+  "_schema_version": "1.0",
+  "_status": "verified",
+  "_source": "Philippine Statistics Authority (PSA) — Provincial Product Accounts (PPA)",
+  "_source_url": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2A__PPA/0012A5FPPA0.px",
+  "province": "Albay",
+  "psgc_code": "0500500000",
+  "latest_year": 2025,
+  "summary": {
+    "gpdp_current_2025_billion_php": 200.95,
+    "gpdp_constant_2025_billion_php": 164.23,
+    "real_growth_2025_pct": 1.1,
+    "top_sector": "Construction"
+  },
+  "macro_sectors_2025": [
+    {
+      "macro_sector": "Services",
+      "billion_php": 100.79,
+      "share_pct": 61.4
+    },
+    {
+      "macro_sector": "Industry",
+      "billion_php": 51.56,
+      "share_pct": 31.4
+    },
+    {
+      "macro_sector": "Agriculture, Forestry, and Fishing",
+      "billion_php": 11.88,
+      "share_pct": 7.2
+    }
+  ],
+  "annual_series": [
+    {
+      "year": 2018,
+      "current_prices_thousand_php": 133460943.3682784,
+      "current_prices_billion_php": 133.46,
+      "constant_2018_prices_thousand_php": 133460943.3682784,
+      "constant_2018_prices_billion_php": 133.46,
+      "real_growth_rate_pct": null
+    },
+    {
+      "year": 2019,
+      "current_prices_thousand_php": 147086799.638662,
+      "current_prices_billion_php": 147.09,
+      "constant_2018_prices_thousand_php": 146165419.0414286,
+      "constant_2018_prices_billion_php": 146.17,
+      "real_growth_rate_pct": 9.52
+    },
+    {
+      "year": 2020,
+      "current_prices_thousand_php": 132482832.7200046,
+      "current_prices_billion_php": 132.48,
+      "constant_2018_prices_thousand_php": 130248674.9599465,
+      "constant_2018_prices_billion_php": 130.25,
+      "real_growth_rate_pct": -10.89
+    },
+    {
+      "year": 2021,
+      "current_prices_thousand_php": 143691451.3698417,
+      "current_prices_billion_php": 143.69,
+      "constant_2018_prices_thousand_php": 135943108.4586535,
+      "constant_2018_prices_billion_php": 135.94,
+      "real_growth_rate_pct": 4.37
+    },
+    {
+      "year": 2022,
+      "current_prices_thousand_php": 162891247.6029219,
+      "current_prices_billion_php": 162.89,
+      "constant_2018_prices_thousand_php": 145120612.1773277,
+      "constant_2018_prices_billion_php": 145.12,
+      "real_growth_rate_pct": 6.75
+    },
+    {
+      "year": 2023,
+      "current_prices_thousand_php": 180968462.1278431,
+      "current_prices_billion_php": 180.97,
+      "constant_2018_prices_thousand_php": 153661119.3010244,
+      "constant_2018_prices_billion_php": 153.66,
+      "real_growth_rate_pct": 5.89
+    },
+    {
+      "year": 2024,
+      "current_prices_thousand_php": 197899521.9807946,
+      "current_prices_billion_php": 197.9,
+      "constant_2018_prices_thousand_php": 162443422.8384079,
+      "constant_2018_prices_billion_php": 162.44,
+      "real_growth_rate_pct": 5.72
+    },
+    {
+      "year": 2025,
+      "current_prices_thousand_php": 200953653.5531385,
+      "current_prices_billion_php": 200.95,
+      "constant_2018_prices_thousand_php": 164228440.0505693,
+      "constant_2018_prices_billion_php": 164.23,
+      "real_growth_rate_pct": 1.1
+    }
+  ],
+  "sectors_2025": [
+    {
+      "sector_code": "4",
+      "sector_name": "Construction",
+      "constant_2018_prices_thousand_php": 20945282.18258101,
+      "constant_2018_prices_billion_php": 20.95,
+      "share_pct": 12.75
+    },
+    {
+      "sector_code": "5",
+      "sector_name": "Wholesale and Retail Trade; Repair of Motor Vehicles and Motorcycles",
+      "constant_2018_prices_thousand_php": 20922963.78006634,
+      "constant_2018_prices_billion_php": 20.92,
+      "share_pct": 12.74
+    },
+    {
+      "sector_code": "9",
+      "sector_name": "Financial and Insurance Activities",
+      "constant_2018_prices_thousand_php": 17570095.38444271,
+      "constant_2018_prices_billion_php": 17.57,
+      "share_pct": 10.7
+    },
+    {
+      "sector_code": "2",
+      "sector_name": "Manufacturing",
+      "constant_2018_prices_thousand_php": 15320358.90004022,
+      "constant_2018_prices_billion_php": 15.32,
+      "share_pct": 9.33
+    },
+    {
+      "sector_code": "3",
+      "sector_name": "Electricity, Steam, Water and Waste Management",
+      "constant_2018_prices_thousand_php": 12406121.82834145,
+      "constant_2018_prices_billion_php": 12.41,
+      "share_pct": 7.55
+    },
+    {
+      "sector_code": "0",
+      "sector_name": "Agriculture, Forestry, and Fishing",
+      "constant_2018_prices_thousand_php": 11876088.77300868,
+      "constant_2018_prices_billion_php": 11.88,
+      "share_pct": 7.23
+    },
+    {
+      "sector_code": "12",
+      "sector_name": "Public Administration and Defense; Compulsory Social Activities",
+      "constant_2018_prices_thousand_php": 11457100.19774807,
+      "constant_2018_prices_billion_php": 11.46,
+      "share_pct": 6.98
+    },
+    {
+      "sector_code": "13",
+      "sector_name": "Education",
+      "constant_2018_prices_thousand_php": 10856661.51293239,
+      "constant_2018_prices_billion_php": 10.86,
+      "share_pct": 6.61
+    },
+    {
+      "sector_code": "6",
+      "sector_name": "Transportation and Storage",
+      "constant_2018_prices_thousand_php": 8674231.835579202,
+      "constant_2018_prices_billion_php": 8.67,
+      "share_pct": 5.28
+    },
+    {
+      "sector_code": "10",
+      "sector_name": "Real Estate and Ownership of Dwellings",
+      "constant_2018_prices_thousand_php": 7548599.715578269,
+      "constant_2018_prices_billion_php": 7.55,
+      "share_pct": 4.6
+    },
+    {
+      "sector_code": "8",
+      "sector_name": "Information and Communication",
+      "constant_2018_prices_thousand_php": 6182092.264329318,
+      "constant_2018_prices_billion_php": 6.18,
+      "share_pct": 3.76
+    },
+    {
+      "sector_code": "14",
+      "sector_name": "Human Health and Social Work Activities",
+      "constant_2018_prices_thousand_php": 5415086.158602749,
+      "constant_2018_prices_billion_php": 5.42,
+      "share_pct": 3.3
+    },
+    {
+      "sector_code": "11",
+      "sector_name": "Professional and Business Services",
+      "constant_2018_prices_thousand_php": 4885296.97365363,
+      "constant_2018_prices_billion_php": 4.89,
+      "share_pct": 2.97
+    },
+    {
+      "sector_code": "7",
+      "sector_name": "Accommodation and Food Service Activities",
+      "constant_2018_prices_thousand_php": 4654005.657375083,
+      "constant_2018_prices_billion_php": 4.65,
+      "share_pct": 2.83
+    },
+    {
+      "sector_code": "1",
+      "sector_name": "Mining and Quarrying",
+      "constant_2018_prices_thousand_php": 2892619.479476243,
+      "constant_2018_prices_billion_php": 2.89,
+      "share_pct": 1.76
+    },
+    {
+      "sector_code": "15",
+      "sector_name": "Other Services",
+      "constant_2018_prices_thousand_php": 2621835.406813951,
+      "constant_2018_prices_billion_php": 2.62,
+      "share_pct": 1.6
+    }
+  ],
+  "provenance": [
+    {
+      "dataset_id": "85c06b8cbf6e6cdee6f6",
+      "title": "Gross Domestic Product by Province and HUC",
+      "release": "2026-08-28T09-25-02-98e43c0bd75f",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2A__PPA/0012A5FPPA0.px"
+    },
+    {
+      "dataset_id": "2097de6633f1a5da204e",
+      "title": "Gross Domestic Product by Industry, Province and HUC",
+      "release": "2026-08-28T09-25-45-807b5b0c1e1d",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2A__PPA/0022A5FPPA1.px"
+    }
+  ],
+  "updated_at": "2026-09-21T04:55:14.690Z"
+}

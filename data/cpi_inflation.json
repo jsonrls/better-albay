@@ -1,0 +1,90 @@
+{
+  "_schema_version": "1.0",
+  "_status": "verified",
+  "_source": "Philippine Statistics Authority (PSA) — Price Statistics",
+  "_source_url": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2M__PI__CPI__2018NEW/0012M4ACP22.px",
+  "province": "Albay",
+  "base_year": "2018=100",
+  "latest_cpi": {
+    "year": 2026,
+    "month": "Aug",
+    "value": 143.1
+  },
+  "annual_series": [
+    {
+      "year": 2018,
+      "cpi": 100
+    },
+    {
+      "year": 2019,
+      "cpi": 103.27
+    },
+    {
+      "year": 2020,
+      "cpi": 109.81
+    },
+    {
+      "year": 2021,
+      "cpi": 115.67
+    },
+    {
+      "year": 2022,
+      "cpi": 121.3
+    },
+    {
+      "year": 2023,
+      "cpi": 128.78
+    },
+    {
+      "year": 2024,
+      "cpi": 133.06
+    },
+    {
+      "year": 2025,
+      "cpi": 135.36
+    }
+  ],
+  "monthly_2026_series": [
+    {
+      "month": "Jan",
+      "cpi": 138.4
+    },
+    {
+      "month": "Feb",
+      "cpi": 138.4
+    },
+    {
+      "month": "Mar",
+      "cpi": 140.4
+    },
+    {
+      "month": "Apr",
+      "cpi": 143.3
+    },
+    {
+      "month": "May",
+      "cpi": 142.8
+    },
+    {
+      "month": "Jun",
+      "cpi": 142.6
+    },
+    {
+      "month": "Jul",
+      "cpi": 142.8
+    },
+    {
+      "month": "Aug",
+      "cpi": 143.1
+    }
+  ],
+  "provenance": [
+    {
+      "dataset_id": "4e9a668dd28bc2207b05",
+      "title": "Consumer Price Index for All Income Households by Commodity Group (2018=100): January 2018 - August 2026",
+      "release": "2026-09-04T09-26-28-86c1b17c9ce1",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2M__PI__CPI__2018NEW/0012M4ACP22.px"
+    }
+  ],
+  "updated_at": "2026-09-21T04:55:15.142Z"
+}

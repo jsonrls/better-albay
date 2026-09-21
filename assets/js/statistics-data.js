@@ -979,103 +979,108 @@
    * 4. Economic indicators (CMCI pillars, province aggregate)
    * ------------------------------------------------------------------ */
 
-  function renderEconomy(pop, cmci) {
+  function renderEconomy(pop, cmci, econ, cpi, agri) {
     var section = document.querySelector('.stats-economy');
     if (!section) return;
-    var summary = pillarSummary(cmci);
-
-    var lguCount = Math.max(1, (cmci.lgus || []).length);
-    var cards = PILLAR_ORDER.map(function (key) {
-      var best = summary.best[key];
-      var pillarLabel = summary.label(key);
-      var leaderName = best ? best.lgu : '--';
-      var leaderScore = dec(best ? best.score : null, 2);
-      return (
-        '<div class="economy-card">' +
-        '<div class="economy-icon"><i class="bi ' +
-        PILLAR_META[key].icon +
-        '"></i></div>' +
-        '<div><div class="economy-value">' +
-        dec(summary.totals[key] / lguCount, 2) +
-        '</div><div class="economy-label">' +
-        tr(
-          'stats-average-score-per-lgu',
-          pillarLabel + ' \u2014 average score per LGU, ' + cmci.year,
-          { pillar: pillarLabel, year: String(cmci.year) }
-        ) +
-        '</div>' +
-        '<span class="economy-trend"><i class="bi bi-trophy"></i>' +
-        tr('stats-leader', 'Leader: ' + leaderName + ' (' + leaderScore + ')', {
-          name: leaderName,
-          score: leaderScore,
-        }) +
-        '</span></div></div>'
-      );
-    }).join('');
-
-    var sectorRows = PILLAR_ORDER.slice()
-      .sort(function (a, b) {
-        return summary.totals[b] - summary.totals[a];
-      })
-      .map(function (key) {
-        var share = summary.grand ? (summary.totals[key] / summary.grand) * 100 : 0;
-        return (
-          '<div class="sc-row"><div class="sc-meta">' +
-          '<span class="sc-dot" style="background-color:' +
-          PALETTE[PILLAR_ORDER.indexOf(key)] +
-          '"></span>' +
-          '<span class="sc-name">' +
-          esc(summary.label(key)) +
-          '</span></div>' +
-          '<span class="sc-pct">' +
-          share.toFixed(1) +
-          '%</span>' +
-          '<span class="sc-track"><span class="sc-fill" style="background-color:' +
-          PALETTE[PILLAR_ORDER.indexOf(key)] +
-          '" data-width="' +
-          share.toFixed(1) +
-          '%"></span></span></div>'
-        );
-      })
-      .join('');
 
     var t = pop.province_totals;
     var fastest = pop.lgus.slice().sort(function (a, b) {
       return (b.change_2020_2024 || -99) - (a.change_2020_2024 || -99);
     })[0];
 
-    var html =
-      sectionHeader(
-        'Economic Indicators',
-        'Competitiveness and local economy',
-        'Albay\u2019s results in the DTI Cities and Municipalities Competitiveness Index, combined across all 18 LGUs, alongside census economic context.',
-        {
-          tag: 'stats-economic',
-          heading: 'stats-economy-heading',
-          blurb: 'stats-economy-blurb',
-        }
-      ) +
-      '<div class="economy-grid">' +
-      cards +
-      '<div class="economy-card"><div class="economy-icon"><i class="bi bi-bar-chart-line-fill"></i></div><div>' +
-      '<div class="economy-value">' +
-      num(cmci.indicators ? Object.keys(cmci.indicators).length : null) +
-      '</div><div class="economy-label"' +
-      i18nAttr('stats-indicators-per-lgu') +
-      '>Competitiveness indicators measured per LGU</div>' +
-      '<span class="economy-trend"><i class="bi bi-calendar3"></i>CMCI ' +
-      esc(cmci.year) +
-      '</span></div></div>' +
-      '</div>' +
-      '<div class="sectors-chart"><h4><i class="bi bi-pie-chart-fill"></i>' +
-      tr(
-        'stats-share-of-combined-score',
-        'Share of Albay\u2019s combined competitiveness score, by pillar'
-      ) +
-      '</h4>' +
-      '<div class="sc-bars">' +
-      sectorRows +
-      '</div></div>' +
+    var econCardsHtml = '';
+    var sectorsHtml = '';
+
+    if (econ && econ.summary && econ.annual_series) {
+      var latestEcon = econ.annual_series[econ.annual_series.length - 1];
+      var gpdpCurrent = latestEcon.current_prices_billion_php;
+      var gpdpConstant = latestEcon.constant_2018_prices_billion_php;
+      var realGrowth = latestEcon.real_growth_rate_pct;
+      var latestCpiVal = cpi && cpi.latest_cpi ? cpi.latest_cpi.value : null;
+      var latestCpiDate = cpi && cpi.latest_cpi ? (cpi.latest_cpi.month + ' ' + cpi.latest_cpi.year) : null;
+      var agriVol = agri && agri.summary ? agri.summary.volume_2025_mt : null;
+      var agriArea = agri && agri.summary ? agri.summary.area_2025_ha : null;
+      var agriYield = agri && agri.summary ? agri.summary.yield_2025_mt_per_ha : null;
+
+      econCardsHtml =
+        '<div class="economy-grid">' +
+        '<div class="economy-card"><div class="economy-icon"><i class="bi bi-cash-stack"></i></div><div>' +
+        '<div class="economy-value">\u20B1' + dec(gpdpCurrent, 2) + 'B</div>' +
+        '<div class="economy-label">Gross Provincial Domestic Product (Current Prices, 2025)</div>' +
+        '<span class="economy-trend"><i class="bi bi-graph-up-arrow"></i>From \u20B1133.46B (2018) to \u20B1200.95B (2025)</span>' +
+        '</div></div>' +
+        '<div class="economy-card"><div class="economy-icon"><i class="bi bi-graph-up"></i></div><div>' +
+        '<div class="economy-value">\u20B1' + dec(gpdpConstant, 2) + 'B</div>' +
+        '<div class="economy-label">Real GPDP (Constant 2018 Prices, 2025)</div>' +
+        '<span class="economy-trend"><i class="bi bi-arrow-up-right"></i>' + pct(realGrowth, 1) + ' real growth in 2025</span>' +
+        '</div></div>' +
+        '<div class="economy-card"><div class="economy-icon"><i class="bi bi-tags-fill"></i></div><div>' +
+        '<div class="economy-value">' + (latestCpiVal != null ? dec(latestCpiVal, 1) : '--') + '</div>' +
+        '<div class="economy-label">Consumer Price Index (2018=100' + (latestCpiDate ? ', ' + esc(latestCpiDate) : '') + ')</div>' +
+        '<span class="economy-trend"><i class="bi bi-receipt"></i>Albay headline price index / cost of living</span>' +
+        '</div></div>' +
+        '<div class="economy-card"><div class="economy-icon"><i class="bi bi-flower1"></i></div><div>' +
+        '<div class="economy-value">' + (agriVol ? num(Math.round(agriVol)) + ' MT' : '--') + '</div>' +
+        '<div class="economy-label">Annual Palay (Rice) Harvested, 2025</div>' +
+        '<span class="economy-trend"><i class="bi bi-geo-alt"></i>' + (agriArea ? num(Math.round(agriArea)) + ' ha (' + agriYield + ' MT/ha)' : 'Albay agricultural harvest') + '</span>' +
+        '</div></div>' +
+        '</div>';
+
+      if (econ.macro_sectors_2025 && econ.macro_sectors_2025.length) {
+        var macroRows = econ.macro_sectors_2025.map(function (m, idx) {
+          return (
+            '<div class="sc-row"><div class="sc-meta">' +
+            '<span class="sc-dot" style="background-color:' + PALETTE[idx % PALETTE.length] + '"></span>' +
+            '<span class="sc-name">' + esc(m.macro_sector) + ' (\u20B1' + dec(m.billion_php, 2) + 'B)</span>' +
+            '</div>' +
+            '<span class="sc-pct">' + dec(m.share_pct, 1) + '%</span>' +
+            '<span class="sc-track"><span class="sc-fill" style="background-color:' +
+            PALETTE[idx % PALETTE.length] +
+            '" data-width="' + dec(m.share_pct, 1) + '%"></span></span></div>'
+          );
+        }).join('');
+
+        sectorsHtml =
+          '<div class="sectors-chart"><h4><i class="bi bi-pie-chart-fill"></i>' +
+          'Albay economic output by major sector (Constant 2018 Prices, 2025)' +
+          '</h4><div class="sc-bars">' +
+          macroRows +
+          '</div></div>';
+      }
+    } else {
+      var summary = pillarSummary(cmci);
+      var lguCount = Math.max(1, (cmci.lgus || []).length);
+      var cards = PILLAR_ORDER.map(function (key) {
+        var best = summary.best[key];
+        var pillarLabel = summary.label(key);
+        var leaderName = best ? best.lgu : '--';
+        var leaderScore = dec(best ? best.score : null, 2);
+        return (
+          '<div class="economy-card">' +
+          '<div class="economy-icon"><i class="bi ' +
+          PILLAR_META[key].icon +
+          '"></i></div>' +
+          '<div><div class="economy-value">' +
+          dec(summary.totals[key] / lguCount, 2) +
+          '</div><div class="economy-label">' +
+          tr(
+            'stats-average-score-per-lgu',
+            pillarLabel + ' \u2014 average score per LGU, ' + cmci.year,
+            { pillar: pillarLabel, year: String(cmci.year) }
+          ) +
+          '</div>' +
+          '<span class="economy-trend"><i class="bi bi-trophy"></i>' +
+          tr('stats-leader', 'Leader: ' + leaderName + ' (' + leaderScore + ')', {
+            name: leaderName,
+            score: leaderScore,
+          }) +
+          '</span></div></div>'
+        );
+      }).join('');
+      econCardsHtml = '<div class="economy-grid">' + cards + '</div>';
+    }
+
+    var demographicCardsHtml =
       '<div class="economy-grid" style="margin-top:32px">' +
       '<div class="economy-card"><div class="economy-icon"><i class="bi bi-people-fill"></i></div><div>' +
       '<div class="economy-value">' +
@@ -1108,11 +1113,26 @@
       '<span class="economy-trend"><i class="bi bi-graph-up"></i>' +
       pct(fastest ? fastest.change_2020_2024 : null, 1) +
       '</span></div></div>' +
-      '</div>' +
-      sourceLine(
-        'DTI Cities and Municipalities Competitiveness Index',
-        cmci._source_url || 'https://cmci.dti.gov.ph/'
-      );
+      '</div>';
+
+    var sourceUrl = econ && econ._source_url ? econ._source_url : (cmci._source_url || 'https://openstat.psa.gov.ph');
+    var sourceTitle = econ ? 'Philippine Statistics Authority \u2014 Provincial Product Accounts & OpenSTAT' : 'DTI Cities and Municipalities Competitiveness Index';
+
+    var html =
+      sectionHeader(
+        'Economic Indicators',
+        'Provincial economic accounts & indicators',
+        'Official Gross Provincial Domestic Product (GPDP) and economic structure for Albay Province from the Philippine Statistics Authority (PSA) Provincial Product Accounts, alongside price and production indicators.',
+        {
+          tag: 'stats-economic',
+          heading: 'stats-economy-heading',
+          blurb: 'stats-economy-blurb',
+        }
+      ) +
+      econCardsHtml +
+      sectorsHtml +
+      demographicCardsHtml +
+      sourceLine(sourceTitle, sourceUrl);
 
     var container = setContent(section, html);
     if (!container) return;
@@ -1331,40 +1351,137 @@
   }
 
   /* ------------------------------------------------------------------ *
-   * 5. Poverty statistics \u2014 honest availability notice
+   * 5. Poverty statistics — PSA OpenSTAT full-year poverty tables
    * ------------------------------------------------------------------ */
 
-  function renderPoverty() {
+  function renderPoverty(poverty) {
     var section = document.querySelector('.stats-poverty');
     if (!section) return;
+
+    if (!poverty || !poverty.records || !poverty.records.length) {
+      var fallbackHtml =
+        sectionHeader(
+          'Living Conditions',
+          'Poverty statistics',
+          'Poverty incidence for Albay\u2019s cities and municipalities is published by the Philippine Statistics Authority as a separate release, not as part of the census tables used elsewhere on this page.',
+          {
+            tag: 'stats-poverty-tag',
+            heading: 'stats-poverty-heading',
+            blurb: 'stats-poverty-blurb',
+          }
+        ) +
+        '<p role="status">' +
+        tr(
+          'stats-poverty-not-ingested',
+          'This project only publishes figures it can verify against a primary source. The official city and municipal poverty estimates are not yet ingested, so no poverty figure is shown here rather than an estimate of unknown provenance.'
+        ) +
+        '</p>' +
+        '<p>' +
+        '<a class="btn btn-primary" href="https://psa.gov.ph/statistics/poverty" target="_blank" rel="noopener noreferrer"><span' +
+        i18nAttr('stats-psa-poverty-link') +
+        '>PSA poverty statistics</span></a> ' +
+        '<a class="btn btn-secondary" href="https://openstat.psa.gov.ph" target="_blank" rel="noopener noreferrer">PSA OpenSTAT</a>' +
+        '</p>' +
+        sourceLine(
+          'Philippine Statistics Authority \u2014 Poverty statistics',
+          'https://psa.gov.ph/statistics/poverty'
+        );
+      setContent(section, fallbackHtml);
+      return;
+    }
+
+    var r2018 = poverty.records.find(function (r) { return r.year === 2018; }) || poverty.records[0];
+    var r2021 = poverty.records.find(function (r) { return r.year === 2021; }) || poverty.records[1];
+    var r2023 = poverty.records.find(function (r) { return r.year === 2023; }) || poverty.records[2];
+
+    var change1821 = +(r2021.family_incidence_pct - r2018.family_incidence_pct).toFixed(1);
+    var change2123 = +(r2023.family_incidence_pct - r2021.family_incidence_pct).toFixed(1);
+
+    var cardsHtml =
+      '<div class="poverty-comparison">' +
+      '<div class="poverty-card">' +
+      '<span class="poverty-year">2018</span>' +
+      '<div class="poverty-rate"><span class="rate-value">' + dec(r2018.family_incidence_pct, 1) + '</span><span class="rate-symbol">%</span></div>' +
+      '<div class="poverty-bar"><div class="poverty-fill" style="width:' + dec(r2018.family_incidence_pct, 1) + '%"></div></div>' +
+      '<div class="poverty-ci">Threshold: ₱' + num(Math.round(r2018.per_capita_threshold_php)) + ' / cap</div>' +
+      '<div class="poverty-ci">Population: ' + dec(r2018.population_incidence_pct, 1) + '%</div>' +
+      '</div>' +
+      '<div class="poverty-arrow" aria-hidden="true">' +
+      '<i class="bi bi-arrow-right d-none d-md-block"></i>' +
+      '<i class="bi bi-arrow-down d-md-none"></i>' +
+      '<span class="poverty-change">' + (change1821 > 0 ? '+' : '') + change1821 + '%</span>' +
+      '</div>' +
+      '<div class="poverty-card">' +
+      '<span class="poverty-year">2021</span>' +
+      '<div class="poverty-rate"><span class="rate-value">' + dec(r2021.family_incidence_pct, 1) + '</span><span class="rate-symbol">%</span></div>' +
+      '<div class="poverty-bar"><div class="poverty-fill" style="width:' + dec(r2021.family_incidence_pct, 1) + '%"></div></div>' +
+      '<div class="poverty-ci">Threshold: ₱' + num(Math.round(r2021.per_capita_threshold_php)) + ' / cap</div>' +
+      '<div class="poverty-ci">Population: ' + dec(r2021.population_incidence_pct, 1) + '%</div>' +
+      '</div>' +
+      '<div class="poverty-arrow" aria-hidden="true">' +
+      '<i class="bi bi-arrow-right d-none d-md-block"></i>' +
+      '<i class="bi bi-arrow-down d-md-none"></i>' +
+      '<span class="poverty-change" style="color:var(--color-warning, #d97706)">' + (change2123 > 0 ? '+' : '') + change2123 + '%</span>' +
+      '</div>' +
+      '<div class="poverty-card poverty-card-2021 poverty-card-latest">' +
+      '<div class="poverty-badge"><i class="bi bi-patch-check-fill"></i> Latest (2023)</div>' +
+      '<span class="poverty-year">2023</span>' +
+      '<div class="poverty-rate"><span class="rate-value">' + dec(r2023.family_incidence_pct, 1) + '</span><span class="rate-symbol">%</span></div>' +
+      '<div class="poverty-bar"><div class="poverty-fill" style="width:' + dec(r2023.family_incidence_pct, 1) + '%"></div></div>' +
+      '<div class="poverty-ci">Threshold: ₱' + num(Math.round(r2023.per_capita_threshold_php)) + ' / cap</div>' +
+      '<div class="poverty-ci">95% CI: ' + dec(r2023.family_incidence_ci95_lower, 1) + '% \u2013 ' + dec(r2023.family_incidence_ci95_upper, 1) + '%</div>' +
+      '</div>' +
+      '</div>';
+
+    var metricsGridHtml =
+      '<div class="economy-grid" style="margin-top:32px">' +
+      '<div class="economy-card"><div class="economy-icon"><i class="bi bi-wallet2"></i></div><div>' +
+      '<div class="economy-value">₱' + num(Math.round(r2023.per_capita_threshold_php)) + '</div>' +
+      '<div class="economy-label">Annual Per Capita Poverty Threshold, 2023</div>' +
+      '<span class="economy-trend"><i class="bi bi-calendar3"></i>₱' + num(Math.round(r2023.per_capita_threshold_php / 12)) + ' per month per individual</span>' +
+      '</div></div>' +
+      '<div class="economy-card"><div class="economy-icon"><i class="bi bi-people-fill"></i></div><div>' +
+      '<div class="economy-value">' + dec(r2023.population_incidence_pct, 1) + '%</div>' +
+      '<div class="economy-label">Poverty Incidence among Population, 2023</div>' +
+      '<span class="economy-trend"><i class="bi bi-info-circle"></i>Share of Albay residents below poverty line</span>' +
+      '</div></div>' +
+      '<div class="economy-card"><div class="economy-icon"><i class="bi bi-graph-down-arrow"></i></div><div>' +
+      '<div class="economy-value">' + dec(r2023.poverty_gap_pct, 2) + '%</div>' +
+      '<div class="economy-label">Poverty Gap Ratio, 2023</div>' +
+      '<span class="economy-trend"><i class="bi bi-shield-check"></i>Income shortfall relative to poverty line</span>' +
+      '</div></div>' +
+      '<div class="economy-card"><div class="economy-icon"><i class="bi bi-check2-circle"></i></div><div>' +
+      '<div class="economy-value">' + dec(r2023.family_incidence_cv, 1) + '%</div>' +
+      '<div class="economy-label">Coefficient of Variation (Sample Precision)</div>' +
+      '<span class="economy-trend"><i class="bi bi-patch-check"></i>High precision sample estimate (CV < 10%)</span>' +
+      '</div></div>' +
+      '</div>';
+
+    var sourceHtml =
+      sourceLine(
+        'Philippine Statistics Authority (PSA) \u2014 OpenSTAT Poverty Statistics',
+        poverty._source_url || 'https://openstat.psa.gov.ph'
+      );
+
     var html =
       sectionHeader(
         'Living Conditions',
         'Poverty statistics',
-        'Poverty incidence for Albay\u2019s cities and municipalities is published by the Philippine Statistics Authority as a separate release, not as part of the census tables used elsewhere on this page.',
+        'Official per capita poverty threshold and family poverty incidence for the Province of Albay, drawn directly from the Philippine Statistics Authority (PSA) full-year poverty releases.',
         {
           tag: 'stats-poverty-tag',
           heading: 'stats-poverty-heading',
           blurb: 'stats-poverty-blurb',
         }
       ) +
-      '<p role="status">' +
-      tr(
-        'stats-poverty-not-ingested',
-        'This project only publishes figures it can verify against a primary source. The official city and municipal poverty estimates are not yet ingested, so no poverty figure is shown here rather than an estimate of unknown provenance.'
-      ) +
-      '</p>' +
-      '<p>' +
-      '<a class="btn btn-primary" href="https://psa.gov.ph/statistics/poverty" target="_blank" rel="noopener noreferrer"><span' +
-      i18nAttr('stats-psa-poverty-link') +
-      '>PSA poverty statistics</span></a> ' +
-      '<a class="btn btn-secondary" href="https://openstat.psa.gov.ph" target="_blank" rel="noopener noreferrer">PSA OpenSTAT</a>' +
-      '</p>' +
-      sourceLine(
-        'Philippine Statistics Authority \u2014 Poverty statistics',
-        'https://psa.gov.ph/statistics/poverty'
-      );
-    setContent(section, html);
+      cardsHtml +
+      metricsGridHtml +
+      sourceHtml;
+
+    var container = setContent(section, html);
+    if (!container) return;
+    observeReveal(container.querySelectorAll('.poverty-card, .economy-card'));
+    animateBars(container);
   }
 
   /* ------------------------------------------------------------------ *
@@ -2025,10 +2142,19 @@
       })
       .then(function (cmci) {
         results.cmci = cmci;
-        if (results.pop) {
-          renderEconomy(results.pop, cmci);
-          renderCompetitive(results.pop, cmci);
-        }
+        return Promise.all([
+          fetchJson('economic_accounts.json').catch(function () { return null; }),
+          fetchJson('cpi_inflation.json').catch(function () { return null; }),
+          fetchJson('agriculture_palay.json').catch(function () { return null; }),
+        ]).then(function (extra) {
+          results.econ = extra[0];
+          results.cpi = extra[1];
+          results.agri = extra[2];
+          if (results.pop) {
+            renderEconomy(results.pop, cmci, results.econ, results.cpi, results.agri);
+            renderCompetitive(results.pop, cmci);
+          }
+        });
       })
       .catch(function (err) {
         /* keep the server-rendered fallback text, make the reason visible */
@@ -2049,7 +2175,15 @@
         }
       })
       .then(function () {
-        renderPoverty();
+        return fetchJson('poverty_statistics.json')
+          .then(function (poverty) {
+            renderPoverty(poverty);
+          })
+          .catch(function () {
+            renderPoverty(null);
+          });
+      })
+      .then(function () {
         /* let the i18n engine translate anything that arrived after load */
         if (window.TranslationEngine && TranslationEngine.applyTranslations) {
           try {

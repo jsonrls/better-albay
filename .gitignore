@@ -14,4 +14,9 @@ blob-report/
 
 # Build-time config (see .env.example) and release archives
 .env
+.env*.local
+*.env
+react-app/.env*
 release/
+__pycache__/
+*.pyc

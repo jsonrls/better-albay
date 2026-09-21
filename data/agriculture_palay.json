@@ -1,0 +1,111 @@
+{
+  "_schema_version": "1.0",
+  "_status": "verified",
+  "_source": "Philippine Statistics Authority (PSA) — Crops Statistics",
+  "_source_url": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2E__CS/0012E4EVCP0.px",
+  "province": "Albay",
+  "crop": "Palay (Rice)",
+  "latest_year": 2025,
+  "summary": {
+    "volume_2025_mt": 210954.81,
+    "area_2025_ha": 52482.05,
+    "yield_2025_mt_per_ha": 4.02
+  },
+  "annual_series": [
+    {
+      "year": 2018,
+      "volume_total_mt": 206019.46,
+      "volume_irrigated_mt": 177658.66,
+      "volume_rainfed_mt": 28360.8,
+      "area_total_ha": 53589,
+      "area_irrigated_ha": 42582,
+      "area_rainfed_ha": 11007,
+      "yield_mt_per_ha": 3.84
+    },
+    {
+      "year": 2019,
+      "volume_total_mt": 188012.79,
+      "volume_irrigated_mt": 168768.51,
+      "volume_rainfed_mt": 19244.28,
+      "area_total_ha": 53386.65,
+      "area_irrigated_ha": 43506.65,
+      "area_rainfed_ha": 9880,
+      "yield_mt_per_ha": 3.52
+    },
+    {
+      "year": 2020,
+      "volume_total_mt": 216006.95,
+      "volume_irrigated_mt": 186439.7,
+      "volume_rainfed_mt": 29567.25,
+      "area_total_ha": 53893,
+      "area_irrigated_ha": 43920,
+      "area_rainfed_ha": 9973,
+      "yield_mt_per_ha": 4.01
+    },
+    {
+      "year": 2021,
+      "volume_total_mt": 224533,
+      "volume_irrigated_mt": 190727,
+      "volume_rainfed_mt": 33806,
+      "area_total_ha": 53633,
+      "area_irrigated_ha": 43344,
+      "area_rainfed_ha": 10289,
+      "yield_mt_per_ha": 4.19
+    },
+    {
+      "year": 2022,
+      "volume_total_mt": 226230.8,
+      "volume_irrigated_mt": 193457,
+      "volume_rainfed_mt": 32773.8,
+      "area_total_ha": 54018,
+      "area_irrigated_ha": 43889,
+      "area_rainfed_ha": 10129,
+      "yield_mt_per_ha": 4.19
+    },
+    {
+      "year": 2023,
+      "volume_total_mt": 232649.25,
+      "volume_irrigated_mt": 196126.35,
+      "volume_rainfed_mt": 36522.89999999999,
+      "area_total_ha": 53979,
+      "area_irrigated_ha": 43740,
+      "area_rainfed_ha": 10239,
+      "yield_mt_per_ha": 4.31
+    },
+    {
+      "year": 2024,
+      "volume_total_mt": 204046.2,
+      "volume_irrigated_mt": 174048.8,
+      "volume_rainfed_mt": 29997.4,
+      "area_total_ha": 53471,
+      "area_irrigated_ha": 43928,
+      "area_rainfed_ha": 9543,
+      "yield_mt_per_ha": 3.82
+    },
+    {
+      "year": 2025,
+      "volume_total_mt": 210954.81,
+      "volume_irrigated_mt": 177262.61,
+      "volume_rainfed_mt": 33692.2,
+      "area_total_ha": 52482.05,
+      "area_irrigated_ha": 42637.05,
+      "area_rainfed_ha": 9845,
+      "yield_mt_per_ha": 4.02
+    }
+  ],
+  "provenance": [
+    {
+      "dataset_id": "9b78cb1fa95ae59f78d4",
+      "title": "Palay and Corn: Volume of Production in Metric Tons by Ecosystem/Croptype, Quarter, Semester, Region and Province, 1987-2026",
+      "release": "2026-07-29T10-20-54-739dfdd5ea11",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2E__CS/0012E4EVCP0.px"
+    },
+    {
+      "dataset_id": "c22ae91fc7712bbf0d5f",
+      "title": "Palay and Corn: Area Harvested in Hectares by Ecosystem/Croptype, Quarter, Semester, Region and Province, 1987-2026",
+      "release": "2026-07-29T10-21-54-64414276a248",
+      "source": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2E__CS/0022E4EAHC0.px"
+    }
+  ],
+  "updated_at": "2026-09-21T04:55:15.674Z"
+}

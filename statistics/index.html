@@ -80,7 +80,7 @@
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="../assets/css/accessibility.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
-    <link rel="stylesheet" href="../assets/css/statistics.css?v=fc8144d97c" />
+    <link rel="stylesheet" href="../assets/css/statistics.css?v=d9b5bba12d" />
   </head>
 
   <body>
@@ -92,15 +92,7 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items">
-            <a href="tel:911" class="hotline-item"
-              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
-            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
-            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
-            ><a href="/contact/#emergency-hotlines" class="hotline-item"
-              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
-            >
-          </div>
+          <div class="hotline-items"><a href="tel:911" class="hotline-item"><span data-i18n="hotline-bar-national">National emergency: 911</span></a><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a><a href="/contact/#emergency-hotlines" class="hotline-item"><span data-i18n="hotline-bar-all">All Albay hotlines</span></a></div>
         </div>
       </div>
     </div>
@@ -260,6 +252,72 @@
         </div>
       </section>
 
+      <!-- Ask Albay Open Data (AI Query Widget) -->
+      <section class="stats-ai-query-section" id="ask-open-data">
+        <div class="container">
+          <div class="stats-ai-card">
+            <div class="stats-ai-badge">
+              <i class="bi bi-stars" aria-hidden="true"></i> <span data-i18n="stats-ai-badge-title">Ask Albay Open Data</span>
+              <span class="stats-ai-model-pill">TypeSafe AI &bull; Jev</span>
+            </div>
+            <h2 class="stats-ai-title" data-i18n="stats-ai-heading">Ask a question in Bikol, Filipino, or English</h2>
+            <p class="stats-ai-desc" data-i18n="stats-ai-subtitle">
+              Instant answers routed by TypeSafe's System One AI model to verified government records from PSA and DTI.
+            </p>
+
+            <form class="stats-ai-form" id="stats-ai-form" role="search" aria-label="Query Albay statistical records">
+              <div class="stats-ai-input-wrap">
+                <i class="bi bi-search stats-ai-search-icon" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  id="stats-ai-input"
+                  class="stats-ai-input"
+                  placeholder="e.g., Pira an poverty threshold sa Albay? / Magkano ang GPDP?"
+                  aria-label="Ask a question about Albay statistics"
+                  autocomplete="off"
+                  required
+                />
+                <button type="button" id="stats-ai-clear-btn" class="stats-ai-clear-btn" aria-label="Clear query" hidden>
+                  <i class="bi bi-x-circle-fill"></i>
+                </button>
+              </div>
+              <button type="submit" class="btn btn-primary stats-ai-submit-btn" id="stats-ai-submit-btn">
+                <span class="btn-text" data-i18n="stats-ai-submit">Ask Data</span>
+                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+              </button>
+            </form>
+
+            <div class="stats-ai-suggestions">
+              <span class="stats-ai-suggestions-label" data-i18n="stats-ai-try-asking">Try asking:</span>
+              <button type="button" class="stats-ai-chip" data-query="Pira an poverty threshold sa Albay para sa sarong pamilya?">
+                <i class="bi bi-wallet2" aria-hidden="true"></i> Pira an poverty threshold?
+              </button>
+              <button type="button" class="stats-ai-chip" data-query="Magkano ang Gross Provincial Domestic Product (GPDP) ng Albay?">
+                <i class="bi bi-graph-up-arrow" aria-hidden="true"></i> Kabuuang GPDP ng Albay
+              </button>
+              <button type="button" class="stats-ai-chip" data-query="What is the latest inflation rate or CPI in Albay?">
+                <i class="bi bi-receipt" aria-hidden="true"></i> Inflation rate / CPI
+              </button>
+              <button type="button" class="stats-ai-chip" data-query="How much palay or rice was harvested in Albay?">
+                <i class="bi bi-flower1" aria-hidden="true"></i> Palay / rice harvest
+              </button>
+              <button type="button" class="stats-ai-chip" data-query="Pira an bilog na populasyon kan probinsya nin Albay?">
+                <i class="bi bi-people-fill" aria-hidden="true"></i> Albay population
+              </button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="stats-ai-loading" class="stats-ai-loading" role="status" aria-live="polite" hidden>
+              <div class="stats-ai-spinner" aria-hidden="true"></div>
+              <p data-i18n="stats-ai-loading-text">Analyzing query with TypeSafe System One (Jev)...</p>
+            </div>
+
+            <!-- Result Card -->
+            <div id="stats-ai-result" class="stats-ai-result" role="region" aria-live="polite" hidden></div>
+          </div>
+        </div>
+      </section>
+
       <!-- Key Metrics -->
       <section class="stats-metrics">
         <div class="container">
@@ -306,10 +364,13 @@
       <section class="stats-section stats-economy animate-on-scroll">
         <div class="container">
           <h2>Economic Indicators</h2>
-          <p>Verified Albay data for this section is not yet available.</p>
           <p>
-            <a href="https://cmci.dti.gov.ph/"
-              >Source: DTI Cities and Municipalities Competitiveness Index</a
+            Official Gross Provincial Domestic Product (GPDP) and economic structure for Albay
+            Province from the Philippine Statistics Authority (PSA) Provincial Product Accounts.
+          </p>
+          <p>
+            <a href="https://openstat.psa.gov.ph/"
+              >Source: Philippine Statistics Authority, Provincial Product Accounts</a
             >
           </p>
         </div>
@@ -319,10 +380,14 @@
       <section class="stats-section stats-poverty animate-on-scroll">
         <div class="container">
           <h2>Poverty Statistics</h2>
-          <p>Verified Albay data for this section is not yet available.</p>
+          <p>
+            Official per capita poverty threshold and family poverty incidence for the Province of
+            Albay, drawn directly from the Philippine Statistics Authority (PSA) full-year poverty
+            releases.
+          </p>
           <p>
             <a href="https://psa.gov.ph/statistics/poverty"
-              >Source: Philippine Statistics Authority</a
+              >Source: Philippine Statistics Authority, Poverty Statistics</a
             >
           </p>
         </div>
@@ -518,11 +583,12 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
+    <script defer src="../assets/js/translations.js?v=d01b354eb6"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
     <script defer src="../assets/js/statistics-new.js?v=b2b519584e"></script>
-    <script defer src="../assets/js/statistics-data.js?v=bb81bb4d1b"></script>
+    <script defer src="../assets/js/statistics-ai.js?v=382f346a14"></script>
+    <script defer src="../assets/js/statistics-data.js?v=d079b6723a"></script>
   </body>
 </html>

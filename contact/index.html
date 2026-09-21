@@ -97,15 +97,7 @@
     <div class="hotline-bar">
       <div class="container">
         <div class="hotline-inner">
-          <div class="hotline-items">
-            <a href="tel:911" class="hotline-item"
-              ><span data-i18n="hotline-bar-national">National emergency: 911</span></a
-            ><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a
-            ><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a
-            ><a href="/contact/#emergency-hotlines" class="hotline-item"
-              ><span data-i18n="hotline-bar-all">All Albay hotlines</span></a
-            >
-          </div>
+          <div class="hotline-items"><a href="tel:911" class="hotline-item"><span data-i18n="hotline-bar-national">National emergency: 911</span></a><a href="tel:09544199935" class="hotline-item"><span>APSEMO: 0954 419 9935</span></a><a href="tel:09475700332" class="hotline-item"><span>Albay EMS: 0947 570 0332</span></a><a href="/contact/#emergency-hotlines" class="hotline-item"><span data-i18n="hotline-bar-all">All Albay hotlines</span></a></div>
         </div>
       </div>
     </div>
@@ -456,1471 +448,460 @@
       </section>
 
       <!-- emergency-directory:start -->
-      <section class="section emergency-directory" id="emergency-hotlines" lang="en">
-        <div class="container">
-          <h2 data-i18n="hotline-dir-heading">Albay emergency hotlines</h2>
-          <p data-i18n="hotline-dir-sub">
-            Call the appropriate office directly using the numbers below.
-          </p>
-          <div class="emergency-critical" aria-label="Critical emergency contacts">
-            <a href="tel:911"><strong>National emergency</strong><span>911</span></a>
-            <a href="tel:09544199935"><strong>APSEMO</strong><span>0954 419 9935</span></a>
-            <a href="tel:09475700332"><strong>Albay EMS</strong><span>0947 570 0332</span></a>
-          </div>
-          <p class="emergency-updated">
-            Directory updated as of <time datetime="2025-11-08">2025-11-08</time>.
-          </p>
-          <div class="emergency-filters" hidden>
-            <div>
-              <label for="hotline-search" data-i18n="hotline-search-label">Search hotlines</label
-              ><input
-                id="hotline-search"
-                type="search"
-                placeholder="Office, municipality, or number"
-                data-i18n-placeholder="hotline-search-placeholder"
-                autocomplete="off"
-              />
-            </div>
-            <div>
-              <label for="hotline-category" data-i18n="hotline-category-label">Category</label
-              ><select id="hotline-category">
-                <option value="" data-i18n="hotline-category-all">All categories</option>
-                <option value="pdrrmc">Provincial emergency contacts (PDRRMC)</option>
-                <option value="lgu-quick-response-team">LGU quick response teams</option>
-                <option value="rural-health-unit">Rural health units</option>
-                <option value="mdrrmo">Municipal disaster response (MDRRMO)</option>
-                <option value="cdrrmo">City disaster response (CDRRMO)</option>
-                <option value="mayors-offices">City and municipal mayor’s offices</option>
-                <option value="hospitals">Hospitals</option>
-                <option value="bfp">Fire stations (BFP)</option>
-                <option value="pnp">Police stations (PNP)</option>
-                <option value="coast-guard">Coast Guard</option>
-                <option value="social-welfare">Social welfare offices (C/MSWDO)</option>
-              </select>
-            </div>
-            <button type="button" id="hotline-clear" data-i18n="hotline-btn-clear" hidden>
-              Clear filters
-            </button>
-          </div>
-          <p id="hotline-result-count" role="status" aria-live="polite">
-            Showing 115 of 115 contacts
-          </p>
-          <p id="hotline-jump-guidance" data-i18n="hotline-jump-note" hidden>
-            Jumping to a category clears filters.
-          </p>
-          <nav class="emergency-jumps" aria-label="Hotline categories">
-            <a href="#hotlines-pdrrmc">Provincial emergency contacts (PDRRMC)</a>
-            <a href="#hotlines-lgu-quick-response-team">LGU quick response teams</a>
-            <a href="#hotlines-rural-health-unit">Rural health units</a>
-            <a href="#hotlines-mdrrmo">Municipal disaster response (MDRRMO)</a>
-            <a href="#hotlines-cdrrmo">City disaster response (CDRRMO)</a>
-            <a href="#hotlines-mayors-offices">City and municipal mayor’s offices</a>
-            <a href="#hotlines-hospitals">Hospitals</a>
-            <a href="#hotlines-bfp">Fire stations (BFP)</a>
-            <a href="#hotlines-pnp">Police stations (PNP)</a>
-            <a href="#hotlines-coast-guard">Coast Guard</a>
-            <a href="#hotlines-social-welfare">Social welfare offices (C/MSWDO)</a>
-          </nav>
-          <div id="hotline-empty" hidden>
-            <h3 data-i18n="hotline-no-match-title">No hotlines match your search.</h3>
-            <p data-i18n="hotline-no-match-desc">
-              Try another office, municipality, or number, or clear your filters.
-            </p>
-          </div>
-          <section
-            class="emergency-category"
-            data-category="pdrrmc"
-            aria-labelledby="hotlines-pdrrmc"
-          >
-            <h3 id="hotlines-pdrrmc" tabindex="-1">Provincial emergency contacts (PDRRMC)</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>APSEMO</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09544199935"
-                  aria-label="Call APSEMO at 0954 419 9935"
-                  >0954 419 9935</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Albay EMS</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09475700332"
-                  aria-label="Call Albay EMS at 0947 570 0332"
-                  >0947 570 0332</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>PAGASA</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09771458474"
-                  aria-label="Call PAGASA at 0977 145 8474"
-                  >0977 145 8474</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Provincial Health Office</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0524378150"
-                  aria-label="Call Provincial Health Office at (052) 437 8150"
-                  >(052) 437 8150</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Philippine Red Cross Albay- Legazpi City Chapter</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0527422199"
-                  aria-label="Call Philippine Red Cross Albay- Legazpi City Chapter at (052) 742-2199"
-                  >(052) 742-2199</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="lgu-quick-response-team"
-            aria-labelledby="hotlines-lgu-quick-response-team"
-          >
-            <h3 id="hotlines-lgu-quick-response-team" tabindex="-1">LGU quick response teams</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Tiwi</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09178503047"
-                  aria-label="Call Tiwi Centro at 0917-850-3047"
-                  ><span>Centro</span><span>0917-850-3047</span></a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09178492508"
-                  aria-label="Call Tiwi Upland at 0917-849-2508"
-                  ><span>Upland</span><span>0917-849-2508</span></a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Guinobatan — Ambulance</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09603390381"
-                  aria-label="Call Guinobatan — Ambulance at 0960 339 0381"
-                  >0960 339 0381</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09509375110"
-                  aria-label="Call Guinobatan — Ambulance at 0950 937 5110"
-                  >0950 937 5110</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Polangui</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09852122565"
-                  aria-label="Call Polangui at 0985 212 2565"
-                  >0985 212 2565</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09277555625"
-                  aria-label="Call Polangui at 0927 755 5625"
-                  >0927 755 5625</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09156215063"
-                  aria-label="Call Camalig at 0915 621 5063"
-                  >0915 621 5063</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09296139296"
-                  aria-label="Call Camalig at 0929 613 9296"
-                  >0929 613 9296</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Libon</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09178641084"
-                  aria-label="Call Libon at 0917 864 1084"
-                  >0917 864 1084</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Oas</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09473857183"
-                  aria-label="Call Oas at 0947 385 7183"
-                  >0947 385 7183</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09166890123"
-                  aria-label="Call Oas at 0916 689 0123"
-                  >0916 689 0123</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malinao</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09271869927"
-                  aria-label="Call Malinao at 0927 186 9927"
-                  >0927 186 9927</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Ligao City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09954004711"
-                  aria-label="Call Ligao City at 0995 400 4711"
-                  >0995 400 4711</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Sto Domingo</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09101536047"
-                  aria-label="Call Sto Domingo at 0910 153 6047"
-                  >0910 153 6047</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09307804057"
-                  aria-label="Call Bacacay at 0930 780 4057"
-                  >0930 780 4057</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Manito</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09852153692"
-                  aria-label="Call Manito at 0985 215 3692"
-                  >0985 215 3692</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="rural-health-unit"
-            aria-labelledby="hotlines-rural-health-unit"
-          >
-            <h3 id="hotlines-rural-health-unit" tabindex="-1">Rural health units</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09085715110"
-                  aria-label="Call Bacacay at 0908 571 5110"
-                  >0908 571 5110</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Polangui</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09152625978"
-                  aria-label="Call Polangui at 0915 262 5978"
-                  >0915 262 5978</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09097442937"
-                  aria-label="Call Camalig at 09097442937"
-                  >09097442937</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09701169393"
-                  aria-label="Call Camalig at 09701169393"
-                  >09701169393</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Libon</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09274650937"
-                  aria-label="Call Libon at 0927 465 0937"
-                  >0927 465 0937</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Daraga</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0528260405"
-                  aria-label="Call Daraga at 052 826 0405"
-                  >052 826 0405</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Rapu-Rapu</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09763400112"
-                  aria-label="Call Rapu-Rapu at 0976 340 0112"
-                  >0976 340 0112</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malilipot</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09180365264"
-                  aria-label="Call Malilipot at 0918 036 5264"
-                  >0918 036 5264</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="mdrrmo"
-            aria-labelledby="hotlines-mdrrmo"
-          >
-            <h3 id="hotlines-mdrrmo" tabindex="-1">Municipal disaster response (MDRRMO)</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09954887681"
-                  aria-label="Call Bacacay at 0995 488 7681"
-                  >0995 488 7681</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09281678494"
-                  aria-label="Call Bacacay at 0928 1678 494"
-                  >0928 1678 494</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09279744966"
-                  aria-label="Call Camalig at 0927 974 4966"
-                  >0927 974 4966</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09630074854"
-                  aria-label="Call Camalig at 0963 007 4854"
-                  >0963 007 4854</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09202340738"
-                  aria-label="Call Camalig at 0920 234 0738"
-                  >0920 234 0738</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Daraga</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09214141927"
-                  aria-label="Call Daraga at 0921 414 1927"
-                  >0921 414 1927</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09274901545"
-                  aria-label="Call Daraga at 0927 490 1545"
-                  >0927 490 1545</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Jovellar</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09778014045"
-                  aria-label="Call Jovellar at 0977 801 4045"
-                  >0977 801 4045</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Libon</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09778401884"
-                  aria-label="Call Libon at 0977 840 1884"
-                  >0977 840 1884</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malilipot</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09278384310"
-                  aria-label="Call Malilipot at 0927 838 4310"
-                  >0927 838 4310</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malinao</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09682929228"
-                  aria-label="Call Malinao at 0968 292 9228"
-                  >0968 292 9228</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Manito</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09704913361"
-                  aria-label="Call Manito at 0970 491 3361"
-                  >0970 491 3361</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Oas</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09289800909"
-                  aria-label="Call Oas at 0928 980 0909"
-                  >0928 980 0909</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Pioduran</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09663956804"
-                  aria-label="Call Pioduran at 0966 395 6804"
-                  >0966 395 6804</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Polangui</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09619512959"
-                  aria-label="Call Polangui at 0961 951 2959"
-                  >0961 951 2959</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Rapu-rapu</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09073630504"
-                  aria-label="Call Rapu-rapu at 0907 363 0504"
-                  >0907 363 0504</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Sto. Domingo</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09979968822"
-                  aria-label="Call Sto. Domingo at 0997 996 8822"
-                  >0997 996 8822</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Guinobatan</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09509375110"
-                  aria-label="Call Guinobatan at 0950 937 5110"
-                  >0950 937 5110</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tiwi</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09178613176"
-                  aria-label="Call Tiwi at 0917-861-3176"
-                  >0917-861-3176</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="cdrrmo"
-            aria-labelledby="hotlines-cdrrmo"
-          >
-            <h3 id="hotlines-cdrrmo" tabindex="-1">City disaster response (CDRRMO)</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Legazpi City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09777723909"
-                  aria-label="Call Legazpi City at 0977 772 3909"
-                  >0977 772 3909</a
-                >
-                <a class="emergency-phone" href="tel:911" aria-label="Call Legazpi City at 911"
-                  >911</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Ligao City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09566352627"
-                  aria-label="Call Ligao City at 0956 635 2627"
-                  >0956 635 2627</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09622899037"
-                  aria-label="Call Ligao City at 0962 289 9037"
-                  >0962 289 9037</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tabaco City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09952905288"
-                  aria-label="Call Tabaco City at 0995 290 5288"
-                  >0995 290 5288</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09397829833"
-                  aria-label="Call Tabaco City at 0939 782 9833"
-                  >0939 782 9833</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09092245858"
-                  aria-label="Call Tabaco City at 0909 224 5858"
-                  >0909 224 5858</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09994758582"
-                  aria-label="Call Tabaco City at 0999 475 8582"
-                  >0999 475 8582</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="mayors-offices"
-            aria-labelledby="hotlines-mayors-offices"
-          >
-            <h3 id="hotlines-mayors-offices" tabindex="-1">City and municipal mayor’s offices</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Guinobatan</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09369996974"
-                  aria-label="Call Guinobatan at 0936 999 6974"
-                  >0936 999 6974</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09165994377"
-                  aria-label="Call Guinobatan at 0916 599 4377"
-                  >0916 599 4377</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Oas</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09196051792"
-                  aria-label="Call Oas at 0919 605 1792"
-                  >0919 605 1792</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Daraga</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09623140957"
-                  aria-label="Call Daraga at 0962 314 0957"
-                  >0962 314 0957</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09166891413"
-                  aria-label="Call Daraga at 0916 689 1413"
-                  >0916 689 1413</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tabaco City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09989990135"
-                  aria-label="Call Tabaco City at 0998 999 0135"
-                  >0998 999 0135</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09778246736"
-                  aria-label="Call Tabaco City at 0977 824 6736"
-                  >0977 824 6736</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Sto. Domingo</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09274431413"
-                  aria-label="Call Sto. Domingo at 0927 443 1413"
-                  >0927 443 1413</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malilipot</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09153521064"
-                  aria-label="Call Malilipot at 0915 352 1064"
-                  >0915 352 1064</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09478364313"
-                  aria-label="Call Bacacay at 0947 836 4313"
-                  >0947 836 4313</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09276275161"
-                  aria-label="Call Bacacay at 0927 627 5161"
-                  >0927 627 5161</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09267428548"
-                  aria-label="Call Camalig at 0926 742 8548"
-                  >0926 742 8548</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="hospitals"
-            aria-labelledby="hotlines-hospitals"
-          >
-            <h3 id="hotlines-hospitals" tabindex="-1">Hospitals</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>ACE Medical Center - Legazpi</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09171357907"
-                  aria-label="Call ACE Medical Center - Legazpi at 0917 135 7907"
-                  >0917 135 7907</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09209606844"
-                  aria-label="Call ACE Medical Center - Legazpi at 0920 960 6844"
-                  >0920 960 6844</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Albay Doctors&#x27; Hospital, Inc.</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0524808747"
-                  aria-label="Call Albay Doctors&#x27; Hospital, Inc. at (052) 480 8747"
-                  >(052) 480 8747</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09985469453"
-                  aria-label="Call Albay Doctors&#x27; Hospital, Inc. at 0998 546 9453"
-                  >0998 546 9453</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09453414732"
-                  aria-label="Call Albay Doctors&#x27; Hospital, Inc. at 09453414732"
-                  >09453414732</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Bicol Regional Hospital and Medical Center</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0527325555"
-                  aria-label="Call Bicol Regional Hospital and Medical Center at (052) 732 5555"
-                  >(052) 732 5555</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Daraga Doctors&#x27; Hospital</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09177002950"
-                  aria-label="Call Daraga Doctors&#x27; Hospital at 0917 700 2950"
-                  >0917 700 2950</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Estevez Memorial Hospital, Inc.</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0524804021"
-                  aria-label="Call Estevez Memorial Hospital, Inc. at (052) 480 4021"
-                  >(052) 480 4021</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Josefina Belmonte Duran Albay Provincial Hospital</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0527360503"
-                  aria-label="Call Josefina Belmonte Duran Albay Provincial Hospital at (052) 736 0503"
-                  >(052) 736 0503</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tanchuling General Hospital</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0524806302"
-                  aria-label="Call Tanchuling General Hospital at (052) 480 6302"
-                  >(052) 480 6302</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09773774791"
-                  aria-label="Call Tanchuling General Hospital at 0977 377 4791"
-                  >0977 377 4791</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>UST - Legazpi Hospital</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09176263621"
-                  aria-label="Call UST - Legazpi Hospital at 0917 626 3621"
-                  >0917 626 3621</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Ziga Hospital</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:0524875903"
-                  aria-label="Call Ziga Hospital at (052) 487 5903"
-                  >(052) 487 5903</a
-                >
-              </article>
-            </div>
-          </section>
-          <section class="emergency-category" data-category="bfp" aria-labelledby="hotlines-bfp">
-            <h3 id="hotlines-bfp" tabindex="-1">Fire stations (BFP)</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>BFP Regional Office</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09171139507"
-                  aria-label="Call BFP Regional Office at 0917 113 9507"
-                  >0917 113 9507</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>OPFM Albay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09209441582"
-                  aria-label="Call OPFM Albay at 0920 944 1582"
-                  >0920 944 1582</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09977724383"
-                  aria-label="Call OPFM Albay at 0997 772 4383"
-                  >0997 772 4383</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09319502490"
-                  aria-label="Call Bacacay at 0931 950 2490"
-                  >0931 950 2490</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09454785544"
-                  aria-label="Call Bacacay at 0945 478 5544"
-                  >0945 478 5544</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09171184146"
-                  aria-label="Call Camalig at 0917 118 4146"
-                  >0917 118 4146</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09992265345"
-                  aria-label="Call Camalig at 0999 226 5345"
-                  >0999 226 5345</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Daraga</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09065648793"
-                  aria-label="Call Daraga at 0906 564 8793"
-                  >0906 564 8793</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Guinobatan</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09452952906"
-                  aria-label="Call Guinobatan at 0945 295 2906"
-                  >0945 295 2906</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09630415325"
-                  aria-label="Call Guinobatan at 0963 041 5325"
-                  >0963 041 5325</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Jovellar</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985777022"
-                  aria-label="Call Jovellar at 0998 577 7022"
-                  >0998 577 7022</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09209442507"
-                  aria-label="Call Jovellar at 0920 944 2507"
-                  >0920 944 2507</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Polangui</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09541820095"
-                  aria-label="Call Polangui at 0954 182 0095"
-                  >0954 182 0095</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09511128688"
-                  aria-label="Call Polangui at 0951 112 8688"
-                  >0951 112 8688</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Rapu-Rapu</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09171130185"
-                  aria-label="Call Rapu-Rapu at 0917 113 0185"
-                  >0917 113 0185</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Sto. Domingo</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09278468668"
-                  aria-label="Call Sto. Domingo at 0927 846 8668"
-                  >0927 846 8668</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09217452459"
-                  aria-label="Call Sto. Domingo at 0921 745 2459"
-                  >0921 745 2459</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Legazpi City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09171859984"
-                  aria-label="Call Legazpi City at 0917 185 9984"
-                  >0917 185 9984</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09199925484"
-                  aria-label="Call Legazpi City at 0919 992 5484"
-                  >0919 992 5484</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tabaco City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09488506630"
-                  aria-label="Call Tabaco City at 0948 850 6630"
-                  >0948 850 6630</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09158375720"
-                  aria-label="Call Tabaco City at 0915 837 5720"
-                  >0915 837 5720</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tiwi</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09209843746"
-                  aria-label="Call Tiwi at 0920 984 3746"
-                  >0920 984 3746</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09151851417"
-                  aria-label="Call Tiwi at 0915 185 1417"
-                  >0915 185 1417</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Oas</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09177017938"
-                  aria-label="Call Oas at 0917 701 7938"
-                  >0917 701 7938</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09171156518"
-                  aria-label="Call Oas at 0917 115 6518"
-                  >0917 115 6518</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Manito</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09183177099"
-                  aria-label="Call Manito at 0918 317 7099"
-                  >0918 317 7099</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malinao</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09773822980"
-                  aria-label="Call Malinao at 0977 382 2980"
-                  >0977 382 2980</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09506372491"
-                  aria-label="Call Malinao at 0950 637 2491"
-                  >0950 637 2491</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Libon</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09338146379"
-                  aria-label="Call Libon at 0933 814 6379"
-                  >0933 814 6379</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malilipot</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09668195333"
-                  aria-label="Call Malilipot at 0966 819 5333"
-                  >0966 819 5333</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Ligao City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09637026628"
-                  aria-label="Call Ligao City at 0963 702 6628"
-                  >0963 702 6628</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09285071914"
-                  aria-label="Call Ligao City at 0928 507 1914"
-                  >0928 507 1914</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Pio Duran</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09369216586"
-                  aria-label="Call Pio Duran at 0936 921 6586"
-                  >0936 921 6586</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09319293408"
-                  aria-label="Call Pio Duran at 0931 929 3408"
-                  >0931 929 3408</a
-                >
-              </article>
-            </div>
-          </section>
-          <section class="emergency-category" data-category="pnp" aria-labelledby="hotlines-pnp">
-            <h3 id="hotlines-pnp" tabindex="-1">Police stations (PNP)</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Albay PPO TOC</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985925"
-                  aria-label="Call Albay PPO TOC at 0998 598 5925"
-                  >0998 598 5925</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985935"
-                  aria-label="Call Bacacay at 0998 598 5935"
-                  >0998 598 5935</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985940"
-                  aria-label="Call Camalig at 0998 598 5940"
-                  >0998 598 5940</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Legazpi</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985926"
-                  aria-label="Call Legazpi at 0998 598 5926"
-                  >0998 598 5926</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Daraga</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985937"
-                  aria-label="Call Daraga at 0998 598 5937"
-                  >0998 598 5937</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Guinobatan</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985941"
-                  aria-label="Call Guinobatan at 0998 598 5941"
-                  >0998 598 5941</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Jovellar</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985942"
-                  aria-label="Call Jovellar at 0998 598 5942"
-                  >0998 598 5942</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Libon</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985945"
-                  aria-label="Call Libon at 0998 598 5945"
-                  >0998 598 5945</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Sto. Domingo</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985936"
-                  aria-label="Call Sto. Domingo at 0998 598 5936"
-                  >0998 598 5936</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Oas</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985943"
-                  aria-label="Call Oas at 0998 598 5943"
-                  >0998 598 5943</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Ligao City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985928"
-                  aria-label="Call Ligao City at 0998 598 5928"
-                  >0998 598 5928</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malilipot</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985934"
-                  aria-label="Call Malilipot at 0998 598 5934"
-                  >0998 598 5934</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Manito</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985939"
-                  aria-label="Call Manito at 0998 598 5939"
-                  >0998 598 5939</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Pio Duran</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985946"
-                  aria-label="Call Pio Duran at 0998 598 5946"
-                  >0998 598 5946</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Malinao</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985933"
-                  aria-label="Call Malinao at 0998 598 5933"
-                  >0998 598 5933</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Rapu-Rapu</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985938"
-                  aria-label="Call Rapu-Rapu at 0998 598 5938"
-                  >0998 598 5938</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Polangui</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985944"
-                  aria-label="Call Polangui at 0998 598 5944"
-                  >0998 598 5944</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tabaco City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985930"
-                  aria-label="Call Tabaco City at 0998 598 5930"
-                  >0998 598 5930</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Tiwi</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09985985932"
-                  aria-label="Call Tiwi at 0998 598 5932"
-                  >0998 598 5932</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="coast-guard"
-            aria-labelledby="hotlines-coast-guard"
-          >
-            <h3 id="hotlines-coast-guard" tabindex="-1">Coast Guard</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Coast Guard District Bicol</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09776121237"
-                  aria-label="Call Coast Guard District Bicol at 0977 612 1237"
-                  >0977 612 1237</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09295242099"
-                  aria-label="Call Coast Guard District Bicol at 0929 524 2099"
-                  >0929 524 2099</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Station Albay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09275640600"
-                  aria-label="Call Coast Guard Station Albay at 0927 564 0600"
-                  >0927 564 0600</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Station Cam Norte</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09682805965"
-                  aria-label="Call Coast Guard Station Cam Norte at 0968 280 5965"
-                  >0968 280 5965</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Station Cam Sur</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09463539906"
-                  aria-label="Call Coast Guard Station Cam Sur at 0946 353 9906"
-                  >0946 353 9906</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Station Catanduanes</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09478310880"
-                  aria-label="Call Coast Guard Station Catanduanes at 0947 831 0880"
-                  >0947 831 0880</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Station Masbate</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09637777190"
-                  aria-label="Call Coast Guard Station Masbate at 0963 777 7190"
-                  >0963 777 7190</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Station Sorsogon</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09091141877"
-                  aria-label="Call Coast Guard Station Sorsogon at 0909 114 1877"
-                  >0909 114 1877</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Sub-Station Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09673509009"
-                  aria-label="Call Coast Guard Sub-Station Bacacay at 09673509009"
-                  >09673509009</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Sub-Station Tabaco City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09633753396"
-                  aria-label="Call Coast Guard Sub-Station Tabaco City at 0963 375 3396"
-                  >0963 375 3396</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Sub-Station Rapu-Rapu</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09774218993"
-                  aria-label="Call Coast Guard Sub-Station Rapu-Rapu at 0977-421-8993"
-                  >0977-421-8993</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Sub-Station Sto. Domingo</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09276701530"
-                  aria-label="Call Coast Guard Sub-Station Sto. Domingo at 0927 670 1530"
-                  >0927 670 1530</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Coast Guard Sub-Station Pio Duran</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09706675457"
-                  aria-label="Call Coast Guard Sub-Station Pio Duran at 09706675457"
-                  >09706675457</a
-                >
-              </article>
-            </div>
-          </section>
-          <section
-            class="emergency-category"
-            data-category="social-welfare"
-            aria-labelledby="hotlines-social-welfare"
-          >
-            <h3 id="hotlines-social-welfare" tabindex="-1">Social welfare offices (C/MSWDO)</h3>
-            <div class="emergency-grid">
-              <article class="emergency-card">
-                <h4>Daraga</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09074803972"
-                  aria-label="Call Daraga at 0907 480 3972"
-                  >0907 480 3972</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09365738653"
-                  aria-label="Call Daraga at 0936 573 8653"
-                  >0936 573 8653</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Ligao City</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09543463393"
-                  aria-label="Call Ligao City at 0954 346 3393"
-                  >0954 346 3393</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09306431778"
-                  aria-label="Call Ligao City at 0930 643 1778"
-                  >0930 643 1778</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Rapu-Rapu</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09081788781"
-                  aria-label="Call Rapu-Rapu at 0908 178 8781"
-                  >0908 178 8781</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Polangui</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09958613754"
-                  aria-label="Call Polangui at 0995 861 3754"
-                  >0995 861 3754</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Camalig</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09955856483"
-                  aria-label="Call Camalig at 0995 585 6483"
-                  >0995 585 6483</a
-                >
-                <a
-                  class="emergency-phone"
-                  href="tel:09171124971"
-                  aria-label="Call Camalig at 0917 112 4971"
-                  >0917 112 4971</a
-                >
-              </article>
-              <article class="emergency-card">
-                <h4>Bacacay</h4>
-                <a
-                  class="emergency-phone"
-                  href="tel:09167438847"
-                  aria-label="Call Bacacay at 0916 743 8847"
-                  >0916 743 8847</a
-                >
-              </article>
-            </div>
-          </section>
-          <aside class="emergency-notes">
-            <h3>Directory notes</h3>
-            <p>Notes supplied with the directory dated 8 November 2025:</p>
-            <ul>
-              <li>This is a running post; you may refresh this for an update.</li>
-              <li>
-                In case your respective offices change numbers, kindly inform the Albay PIO for
-                updating purposes
-              </li>
-            </ul>
-          </aside>
-          <section class="emergency-resources">
-            <h3>Official contact resources</h3>
-            <p>
-              <a href="https://ehotlines.e.gov.ph/">National emergency directory (eHotlines)</a> —
-              External resource
-            </p>
-            <p>
-              <a href="https://albay.gov.ph/">Official Albay government website</a> — For office
-              hours and other government inquiries
-            </p>
-          </section>
-        </div>
-      </section>
-      <!-- emergency-directory:end -->
+<section class="section emergency-directory" id="emergency-hotlines" lang="en"><div class="container">
+<h2 data-i18n="hotline-dir-heading">Albay emergency hotlines</h2><p data-i18n="hotline-dir-sub">Call the appropriate office directly using the numbers below.</p>
+<div class="emergency-critical" aria-label="Critical emergency contacts">
+<a href="tel:911"><strong>National emergency</strong><span>911</span></a>
+<a href="tel:09544199935"><strong>APSEMO</strong><span>0954 419 9935</span></a>
+<a href="tel:09475700332"><strong>Albay EMS</strong><span>0947 570 0332</span></a>
+</div>
+<p class="emergency-updated">Directory updated as of <time datetime="2025-11-08">2025-11-08</time>.</p>
+<div class="emergency-filters" hidden><div><label for="hotline-search" data-i18n="hotline-search-label">Search hotlines</label><input id="hotline-search" type="search" placeholder="Office, municipality, or number" data-i18n-placeholder="hotline-search-placeholder" autocomplete="off" /></div>
+<div><label for="hotline-category" data-i18n="hotline-category-label">Category</label><select id="hotline-category"><option value="" data-i18n="hotline-category-all">All categories</option>
+<option value="pdrrmc">Provincial emergency contacts (PDRRMC)</option>
+<option value="lgu-quick-response-team">LGU quick response teams</option>
+<option value="rural-health-unit">Rural health units</option>
+<option value="mdrrmo">Municipal disaster response (MDRRMO)</option>
+<option value="cdrrmo">City disaster response (CDRRMO)</option>
+<option value="mayors-offices">City and municipal mayor’s offices</option>
+<option value="hospitals">Hospitals</option>
+<option value="bfp">Fire stations (BFP)</option>
+<option value="pnp">Police stations (PNP)</option>
+<option value="coast-guard">Coast Guard</option>
+<option value="social-welfare">Social welfare offices (C/MSWDO)</option>
+</select></div><button type="button" id="hotline-clear" data-i18n="hotline-btn-clear" hidden>Clear filters</button></div>
+<p id="hotline-result-count" role="status" aria-live="polite">Showing 115 of 115 contacts</p>
+<p id="hotline-jump-guidance" data-i18n="hotline-jump-note" hidden>Jumping to a category clears filters.</p>
+<nav class="emergency-jumps" aria-label="Hotline categories">
+<a href="#hotlines-pdrrmc">Provincial emergency contacts (PDRRMC)</a>
+<a href="#hotlines-lgu-quick-response-team">LGU quick response teams</a>
+<a href="#hotlines-rural-health-unit">Rural health units</a>
+<a href="#hotlines-mdrrmo">Municipal disaster response (MDRRMO)</a>
+<a href="#hotlines-cdrrmo">City disaster response (CDRRMO)</a>
+<a href="#hotlines-mayors-offices">City and municipal mayor’s offices</a>
+<a href="#hotlines-hospitals">Hospitals</a>
+<a href="#hotlines-bfp">Fire stations (BFP)</a>
+<a href="#hotlines-pnp">Police stations (PNP)</a>
+<a href="#hotlines-coast-guard">Coast Guard</a>
+<a href="#hotlines-social-welfare">Social welfare offices (C/MSWDO)</a>
+</nav>
+<div id="hotline-empty" hidden><h3 data-i18n="hotline-no-match-title">No hotlines match your search.</h3><p data-i18n="hotline-no-match-desc">Try another office, municipality, or number, or clear your filters.</p></div>
+<section class="emergency-category" data-category="pdrrmc" aria-labelledby="hotlines-pdrrmc"><h3 id="hotlines-pdrrmc" tabindex="-1">Provincial emergency contacts (PDRRMC)</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>APSEMO</h4>
+<a class="emergency-phone" href="tel:09544199935" aria-label="Call APSEMO at 0954 419 9935">0954 419 9935</a>
+</article>
+<article class="emergency-card"><h4>Albay EMS</h4>
+<a class="emergency-phone" href="tel:09475700332" aria-label="Call Albay EMS at 0947 570 0332">0947 570 0332</a>
+</article>
+<article class="emergency-card"><h4>PAGASA</h4>
+<a class="emergency-phone" href="tel:09771458474" aria-label="Call PAGASA at 0977 145 8474">0977 145 8474</a>
+</article>
+<article class="emergency-card"><h4>Provincial Health Office</h4>
+<a class="emergency-phone" href="tel:0524378150" aria-label="Call Provincial Health Office at (052) 437 8150">(052) 437 8150</a>
+</article>
+<article class="emergency-card"><h4>Philippine Red Cross Albay- Legazpi City Chapter</h4>
+<a class="emergency-phone" href="tel:0527422199" aria-label="Call Philippine Red Cross Albay- Legazpi City Chapter at (052) 742-2199">(052) 742-2199</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="lgu-quick-response-team" aria-labelledby="hotlines-lgu-quick-response-team"><h3 id="hotlines-lgu-quick-response-team" tabindex="-1">LGU quick response teams</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Tiwi</h4>
+<a class="emergency-phone" href="tel:09178503047" aria-label="Call Tiwi Centro at 0917-850-3047"><span>Centro</span><span>0917-850-3047</span></a>
+<a class="emergency-phone" href="tel:09178492508" aria-label="Call Tiwi Upland at 0917-849-2508"><span>Upland</span><span>0917-849-2508</span></a>
+</article>
+<article class="emergency-card"><h4>Guinobatan — Ambulance</h4>
+<a class="emergency-phone" href="tel:09603390381" aria-label="Call Guinobatan — Ambulance at 0960 339 0381">0960 339 0381</a>
+<a class="emergency-phone" href="tel:09509375110" aria-label="Call Guinobatan — Ambulance at 0950 937 5110">0950 937 5110</a>
+</article>
+<article class="emergency-card"><h4>Polangui</h4>
+<a class="emergency-phone" href="tel:09852122565" aria-label="Call Polangui at 0985 212 2565">0985 212 2565</a>
+<a class="emergency-phone" href="tel:09277555625" aria-label="Call Polangui at 0927 755 5625">0927 755 5625</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09156215063" aria-label="Call Camalig at 0915 621 5063">0915 621 5063</a>
+<a class="emergency-phone" href="tel:09296139296" aria-label="Call Camalig at 0929 613 9296">0929 613 9296</a>
+</article>
+<article class="emergency-card"><h4>Libon</h4>
+<a class="emergency-phone" href="tel:09178641084" aria-label="Call Libon at 0917 864 1084">0917 864 1084</a>
+</article>
+<article class="emergency-card"><h4>Oas</h4>
+<a class="emergency-phone" href="tel:09473857183" aria-label="Call Oas at 0947 385 7183">0947 385 7183</a>
+<a class="emergency-phone" href="tel:09166890123" aria-label="Call Oas at 0916 689 0123">0916 689 0123</a>
+</article>
+<article class="emergency-card"><h4>Malinao</h4>
+<a class="emergency-phone" href="tel:09271869927" aria-label="Call Malinao at 0927 186 9927">0927 186 9927</a>
+</article>
+<article class="emergency-card"><h4>Ligao City</h4>
+<a class="emergency-phone" href="tel:09954004711" aria-label="Call Ligao City at 0995 400 4711">0995 400 4711</a>
+</article>
+<article class="emergency-card"><h4>Sto Domingo</h4>
+<a class="emergency-phone" href="tel:09101536047" aria-label="Call Sto Domingo at 0910 153 6047">0910 153 6047</a>
+</article>
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09307804057" aria-label="Call Bacacay at 0930 780 4057">0930 780 4057</a>
+</article>
+<article class="emergency-card"><h4>Manito</h4>
+<a class="emergency-phone" href="tel:09852153692" aria-label="Call Manito at 0985 215 3692">0985 215 3692</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="rural-health-unit" aria-labelledby="hotlines-rural-health-unit"><h3 id="hotlines-rural-health-unit" tabindex="-1">Rural health units</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09085715110" aria-label="Call Bacacay at 0908 571 5110">0908 571 5110</a>
+</article>
+<article class="emergency-card"><h4>Polangui</h4>
+<a class="emergency-phone" href="tel:09152625978" aria-label="Call Polangui at 0915 262 5978">0915 262 5978</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09097442937" aria-label="Call Camalig at 09097442937">09097442937</a>
+<a class="emergency-phone" href="tel:09701169393" aria-label="Call Camalig at 09701169393">09701169393</a>
+</article>
+<article class="emergency-card"><h4>Libon</h4>
+<a class="emergency-phone" href="tel:09274650937" aria-label="Call Libon at 0927 465 0937">0927 465 0937</a>
+</article>
+<article class="emergency-card"><h4>Daraga</h4>
+<a class="emergency-phone" href="tel:0528260405" aria-label="Call Daraga at 052 826 0405">052 826 0405</a>
+</article>
+<article class="emergency-card"><h4>Rapu-Rapu</h4>
+<a class="emergency-phone" href="tel:09763400112" aria-label="Call Rapu-Rapu at 0976 340 0112">0976 340 0112</a>
+</article>
+<article class="emergency-card"><h4>Malilipot</h4>
+<a class="emergency-phone" href="tel:09180365264" aria-label="Call Malilipot at 0918 036 5264">0918 036 5264</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="mdrrmo" aria-labelledby="hotlines-mdrrmo"><h3 id="hotlines-mdrrmo" tabindex="-1">Municipal disaster response (MDRRMO)</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09954887681" aria-label="Call Bacacay at 0995 488 7681">0995 488 7681</a>
+<a class="emergency-phone" href="tel:09281678494" aria-label="Call Bacacay at 0928 1678 494">0928 1678 494</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09279744966" aria-label="Call Camalig at 0927 974 4966">0927 974 4966</a>
+<a class="emergency-phone" href="tel:09630074854" aria-label="Call Camalig at 0963 007 4854">0963 007 4854</a>
+<a class="emergency-phone" href="tel:09202340738" aria-label="Call Camalig at 0920 234 0738">0920 234 0738</a>
+</article>
+<article class="emergency-card"><h4>Daraga</h4>
+<a class="emergency-phone" href="tel:09214141927" aria-label="Call Daraga at 0921 414 1927">0921 414 1927</a>
+<a class="emergency-phone" href="tel:09274901545" aria-label="Call Daraga at 0927 490 1545">0927 490 1545</a>
+</article>
+<article class="emergency-card"><h4>Jovellar</h4>
+<a class="emergency-phone" href="tel:09778014045" aria-label="Call Jovellar at 0977 801 4045">0977 801 4045</a>
+</article>
+<article class="emergency-card"><h4>Libon</h4>
+<a class="emergency-phone" href="tel:09778401884" aria-label="Call Libon at 0977 840 1884">0977 840 1884</a>
+</article>
+<article class="emergency-card"><h4>Malilipot</h4>
+<a class="emergency-phone" href="tel:09278384310" aria-label="Call Malilipot at 0927 838 4310">0927 838 4310</a>
+</article>
+<article class="emergency-card"><h4>Malinao</h4>
+<a class="emergency-phone" href="tel:09682929228" aria-label="Call Malinao at 0968 292 9228">0968 292 9228</a>
+</article>
+<article class="emergency-card"><h4>Manito</h4>
+<a class="emergency-phone" href="tel:09704913361" aria-label="Call Manito at 0970 491 3361">0970 491 3361</a>
+</article>
+<article class="emergency-card"><h4>Oas</h4>
+<a class="emergency-phone" href="tel:09289800909" aria-label="Call Oas at 0928 980 0909">0928 980 0909</a>
+</article>
+<article class="emergency-card"><h4>Pioduran</h4>
+<a class="emergency-phone" href="tel:09663956804" aria-label="Call Pioduran at 0966 395 6804">0966 395 6804</a>
+</article>
+<article class="emergency-card"><h4>Polangui</h4>
+<a class="emergency-phone" href="tel:09619512959" aria-label="Call Polangui at 0961 951 2959">0961 951 2959</a>
+</article>
+<article class="emergency-card"><h4>Rapu-rapu</h4>
+<a class="emergency-phone" href="tel:09073630504" aria-label="Call Rapu-rapu at 0907 363 0504">0907 363 0504</a>
+</article>
+<article class="emergency-card"><h4>Sto. Domingo</h4>
+<a class="emergency-phone" href="tel:09979968822" aria-label="Call Sto. Domingo at 0997 996 8822">0997 996 8822</a>
+</article>
+<article class="emergency-card"><h4>Guinobatan</h4>
+<a class="emergency-phone" href="tel:09509375110" aria-label="Call Guinobatan at 0950 937 5110">0950 937 5110</a>
+</article>
+<article class="emergency-card"><h4>Tiwi</h4>
+<a class="emergency-phone" href="tel:09178613176" aria-label="Call Tiwi at 0917-861-3176">0917-861-3176</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="cdrrmo" aria-labelledby="hotlines-cdrrmo"><h3 id="hotlines-cdrrmo" tabindex="-1">City disaster response (CDRRMO)</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Legazpi City</h4>
+<a class="emergency-phone" href="tel:09777723909" aria-label="Call Legazpi City at 0977 772 3909">0977 772 3909</a>
+<a class="emergency-phone" href="tel:911" aria-label="Call Legazpi City at 911">911</a>
+</article>
+<article class="emergency-card"><h4>Ligao City</h4>
+<a class="emergency-phone" href="tel:09566352627" aria-label="Call Ligao City at 0956 635 2627">0956 635 2627</a>
+<a class="emergency-phone" href="tel:09622899037" aria-label="Call Ligao City at 0962 289 9037">0962 289 9037</a>
+</article>
+<article class="emergency-card"><h4>Tabaco City</h4>
+<a class="emergency-phone" href="tel:09952905288" aria-label="Call Tabaco City at 0995 290 5288">0995 290 5288</a>
+<a class="emergency-phone" href="tel:09397829833" aria-label="Call Tabaco City at 0939 782 9833">0939 782 9833</a>
+<a class="emergency-phone" href="tel:09092245858" aria-label="Call Tabaco City at 0909 224 5858">0909 224 5858</a>
+<a class="emergency-phone" href="tel:09994758582" aria-label="Call Tabaco City at 0999 475 8582">0999 475 8582</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="mayors-offices" aria-labelledby="hotlines-mayors-offices"><h3 id="hotlines-mayors-offices" tabindex="-1">City and municipal mayor’s offices</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Guinobatan</h4>
+<a class="emergency-phone" href="tel:09369996974" aria-label="Call Guinobatan at 0936 999 6974">0936 999 6974</a>
+<a class="emergency-phone" href="tel:09165994377" aria-label="Call Guinobatan at 0916 599 4377">0916 599 4377</a>
+</article>
+<article class="emergency-card"><h4>Oas</h4>
+<a class="emergency-phone" href="tel:09196051792" aria-label="Call Oas at 0919 605 1792">0919 605 1792</a>
+</article>
+<article class="emergency-card"><h4>Daraga</h4>
+<a class="emergency-phone" href="tel:09623140957" aria-label="Call Daraga at 0962 314 0957">0962 314 0957</a>
+<a class="emergency-phone" href="tel:09166891413" aria-label="Call Daraga at 0916 689 1413">0916 689 1413</a>
+</article>
+<article class="emergency-card"><h4>Tabaco City</h4>
+<a class="emergency-phone" href="tel:09989990135" aria-label="Call Tabaco City at 0998 999 0135">0998 999 0135</a>
+<a class="emergency-phone" href="tel:09778246736" aria-label="Call Tabaco City at 0977 824 6736">0977 824 6736</a>
+</article>
+<article class="emergency-card"><h4>Sto. Domingo</h4>
+<a class="emergency-phone" href="tel:09274431413" aria-label="Call Sto. Domingo at 0927 443 1413">0927 443 1413</a>
+</article>
+<article class="emergency-card"><h4>Malilipot</h4>
+<a class="emergency-phone" href="tel:09153521064" aria-label="Call Malilipot at 0915 352 1064">0915 352 1064</a>
+</article>
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09478364313" aria-label="Call Bacacay at 0947 836 4313">0947 836 4313</a>
+<a class="emergency-phone" href="tel:09276275161" aria-label="Call Bacacay at 0927 627 5161">0927 627 5161</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09267428548" aria-label="Call Camalig at 0926 742 8548">0926 742 8548</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="hospitals" aria-labelledby="hotlines-hospitals"><h3 id="hotlines-hospitals" tabindex="-1">Hospitals</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>ACE Medical Center - Legazpi</h4>
+<a class="emergency-phone" href="tel:09171357907" aria-label="Call ACE Medical Center - Legazpi at 0917 135 7907">0917 135 7907</a>
+<a class="emergency-phone" href="tel:09209606844" aria-label="Call ACE Medical Center - Legazpi at 0920 960 6844">0920 960 6844</a>
+</article>
+<article class="emergency-card"><h4>Albay Doctors&#x27; Hospital, Inc.</h4>
+<a class="emergency-phone" href="tel:0524808747" aria-label="Call Albay Doctors&#x27; Hospital, Inc. at (052) 480 8747">(052) 480 8747</a>
+<a class="emergency-phone" href="tel:09985469453" aria-label="Call Albay Doctors&#x27; Hospital, Inc. at 0998 546 9453">0998 546 9453</a>
+<a class="emergency-phone" href="tel:09453414732" aria-label="Call Albay Doctors&#x27; Hospital, Inc. at 09453414732">09453414732</a>
+</article>
+<article class="emergency-card"><h4>Bicol Regional Hospital and Medical Center</h4>
+<a class="emergency-phone" href="tel:0527325555" aria-label="Call Bicol Regional Hospital and Medical Center at (052) 732 5555">(052) 732 5555</a>
+</article>
+<article class="emergency-card"><h4>Daraga Doctors&#x27; Hospital</h4>
+<a class="emergency-phone" href="tel:09177002950" aria-label="Call Daraga Doctors&#x27; Hospital at 0917 700 2950">0917 700 2950</a>
+</article>
+<article class="emergency-card"><h4>Estevez Memorial Hospital, Inc.</h4>
+<a class="emergency-phone" href="tel:0524804021" aria-label="Call Estevez Memorial Hospital, Inc. at (052) 480 4021">(052) 480 4021</a>
+</article>
+<article class="emergency-card"><h4>Josefina Belmonte Duran Albay Provincial Hospital</h4>
+<a class="emergency-phone" href="tel:0527360503" aria-label="Call Josefina Belmonte Duran Albay Provincial Hospital at (052) 736 0503">(052) 736 0503</a>
+</article>
+<article class="emergency-card"><h4>Tanchuling General Hospital</h4>
+<a class="emergency-phone" href="tel:0524806302" aria-label="Call Tanchuling General Hospital at (052) 480 6302">(052) 480 6302</a>
+<a class="emergency-phone" href="tel:09773774791" aria-label="Call Tanchuling General Hospital at 0977 377 4791">0977 377 4791</a>
+</article>
+<article class="emergency-card"><h4>UST - Legazpi Hospital</h4>
+<a class="emergency-phone" href="tel:09176263621" aria-label="Call UST - Legazpi Hospital at 0917 626 3621">0917 626 3621</a>
+</article>
+<article class="emergency-card"><h4>Ziga Hospital</h4>
+<a class="emergency-phone" href="tel:0524875903" aria-label="Call Ziga Hospital at (052) 487 5903">(052) 487 5903</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="bfp" aria-labelledby="hotlines-bfp"><h3 id="hotlines-bfp" tabindex="-1">Fire stations (BFP)</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>BFP Regional Office</h4>
+<a class="emergency-phone" href="tel:09171139507" aria-label="Call BFP Regional Office at 0917 113 9507">0917 113 9507</a>
+</article>
+<article class="emergency-card"><h4>OPFM Albay</h4>
+<a class="emergency-phone" href="tel:09209441582" aria-label="Call OPFM Albay at 0920 944 1582">0920 944 1582</a>
+<a class="emergency-phone" href="tel:09977724383" aria-label="Call OPFM Albay at 0997 772 4383">0997 772 4383</a>
+</article>
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09319502490" aria-label="Call Bacacay at 0931 950 2490">0931 950 2490</a>
+<a class="emergency-phone" href="tel:09454785544" aria-label="Call Bacacay at 0945 478 5544">0945 478 5544</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09171184146" aria-label="Call Camalig at 0917 118 4146">0917 118 4146</a>
+<a class="emergency-phone" href="tel:09992265345" aria-label="Call Camalig at 0999 226 5345">0999 226 5345</a>
+</article>
+<article class="emergency-card"><h4>Daraga</h4>
+<a class="emergency-phone" href="tel:09065648793" aria-label="Call Daraga at 0906 564 8793">0906 564 8793</a>
+</article>
+<article class="emergency-card"><h4>Guinobatan</h4>
+<a class="emergency-phone" href="tel:09452952906" aria-label="Call Guinobatan at 0945 295 2906">0945 295 2906</a>
+<a class="emergency-phone" href="tel:09630415325" aria-label="Call Guinobatan at 0963 041 5325">0963 041 5325</a>
+</article>
+<article class="emergency-card"><h4>Jovellar</h4>
+<a class="emergency-phone" href="tel:09985777022" aria-label="Call Jovellar at 0998 577 7022">0998 577 7022</a>
+<a class="emergency-phone" href="tel:09209442507" aria-label="Call Jovellar at 0920 944 2507">0920 944 2507</a>
+</article>
+<article class="emergency-card"><h4>Polangui</h4>
+<a class="emergency-phone" href="tel:09541820095" aria-label="Call Polangui at 0954 182 0095">0954 182 0095</a>
+<a class="emergency-phone" href="tel:09511128688" aria-label="Call Polangui at 0951 112 8688">0951 112 8688</a>
+</article>
+<article class="emergency-card"><h4>Rapu-Rapu</h4>
+<a class="emergency-phone" href="tel:09171130185" aria-label="Call Rapu-Rapu at 0917 113 0185">0917 113 0185</a>
+</article>
+<article class="emergency-card"><h4>Sto. Domingo</h4>
+<a class="emergency-phone" href="tel:09278468668" aria-label="Call Sto. Domingo at 0927 846 8668">0927 846 8668</a>
+<a class="emergency-phone" href="tel:09217452459" aria-label="Call Sto. Domingo at 0921 745 2459">0921 745 2459</a>
+</article>
+<article class="emergency-card"><h4>Legazpi City</h4>
+<a class="emergency-phone" href="tel:09171859984" aria-label="Call Legazpi City at 0917 185 9984">0917 185 9984</a>
+<a class="emergency-phone" href="tel:09199925484" aria-label="Call Legazpi City at 0919 992 5484">0919 992 5484</a>
+</article>
+<article class="emergency-card"><h4>Tabaco City</h4>
+<a class="emergency-phone" href="tel:09488506630" aria-label="Call Tabaco City at 0948 850 6630">0948 850 6630</a>
+<a class="emergency-phone" href="tel:09158375720" aria-label="Call Tabaco City at 0915 837 5720">0915 837 5720</a>
+</article>
+<article class="emergency-card"><h4>Tiwi</h4>
+<a class="emergency-phone" href="tel:09209843746" aria-label="Call Tiwi at 0920 984 3746">0920 984 3746</a>
+<a class="emergency-phone" href="tel:09151851417" aria-label="Call Tiwi at 0915 185 1417">0915 185 1417</a>
+</article>
+<article class="emergency-card"><h4>Oas</h4>
+<a class="emergency-phone" href="tel:09177017938" aria-label="Call Oas at 0917 701 7938">0917 701 7938</a>
+<a class="emergency-phone" href="tel:09171156518" aria-label="Call Oas at 0917 115 6518">0917 115 6518</a>
+</article>
+<article class="emergency-card"><h4>Manito</h4>
+<a class="emergency-phone" href="tel:09183177099" aria-label="Call Manito at 0918 317 7099">0918 317 7099</a>
+</article>
+<article class="emergency-card"><h4>Malinao</h4>
+<a class="emergency-phone" href="tel:09773822980" aria-label="Call Malinao at 0977 382 2980">0977 382 2980</a>
+<a class="emergency-phone" href="tel:09506372491" aria-label="Call Malinao at 0950 637 2491">0950 637 2491</a>
+</article>
+<article class="emergency-card"><h4>Libon</h4>
+<a class="emergency-phone" href="tel:09338146379" aria-label="Call Libon at 0933 814 6379">0933 814 6379</a>
+</article>
+<article class="emergency-card"><h4>Malilipot</h4>
+<a class="emergency-phone" href="tel:09668195333" aria-label="Call Malilipot at 0966 819 5333">0966 819 5333</a>
+</article>
+<article class="emergency-card"><h4>Ligao City</h4>
+<a class="emergency-phone" href="tel:09637026628" aria-label="Call Ligao City at 0963 702 6628">0963 702 6628</a>
+<a class="emergency-phone" href="tel:09285071914" aria-label="Call Ligao City at 0928 507 1914">0928 507 1914</a>
+</article>
+<article class="emergency-card"><h4>Pio Duran</h4>
+<a class="emergency-phone" href="tel:09369216586" aria-label="Call Pio Duran at 0936 921 6586">0936 921 6586</a>
+<a class="emergency-phone" href="tel:09319293408" aria-label="Call Pio Duran at 0931 929 3408">0931 929 3408</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="pnp" aria-labelledby="hotlines-pnp"><h3 id="hotlines-pnp" tabindex="-1">Police stations (PNP)</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Albay PPO TOC</h4>
+<a class="emergency-phone" href="tel:09985985925" aria-label="Call Albay PPO TOC at 0998 598 5925">0998 598 5925</a>
+</article>
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09985985935" aria-label="Call Bacacay at 0998 598 5935">0998 598 5935</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09985985940" aria-label="Call Camalig at 0998 598 5940">0998 598 5940</a>
+</article>
+<article class="emergency-card"><h4>Legazpi</h4>
+<a class="emergency-phone" href="tel:09985985926" aria-label="Call Legazpi at 0998 598 5926">0998 598 5926</a>
+</article>
+<article class="emergency-card"><h4>Daraga</h4>
+<a class="emergency-phone" href="tel:09985985937" aria-label="Call Daraga at 0998 598 5937">0998 598 5937</a>
+</article>
+<article class="emergency-card"><h4>Guinobatan</h4>
+<a class="emergency-phone" href="tel:09985985941" aria-label="Call Guinobatan at 0998 598 5941">0998 598 5941</a>
+</article>
+<article class="emergency-card"><h4>Jovellar</h4>
+<a class="emergency-phone" href="tel:09985985942" aria-label="Call Jovellar at 0998 598 5942">0998 598 5942</a>
+</article>
+<article class="emergency-card"><h4>Libon</h4>
+<a class="emergency-phone" href="tel:09985985945" aria-label="Call Libon at 0998 598 5945">0998 598 5945</a>
+</article>
+<article class="emergency-card"><h4>Sto. Domingo</h4>
+<a class="emergency-phone" href="tel:09985985936" aria-label="Call Sto. Domingo at 0998 598 5936">0998 598 5936</a>
+</article>
+<article class="emergency-card"><h4>Oas</h4>
+<a class="emergency-phone" href="tel:09985985943" aria-label="Call Oas at 0998 598 5943">0998 598 5943</a>
+</article>
+<article class="emergency-card"><h4>Ligao City</h4>
+<a class="emergency-phone" href="tel:09985985928" aria-label="Call Ligao City at 0998 598 5928">0998 598 5928</a>
+</article>
+<article class="emergency-card"><h4>Malilipot</h4>
+<a class="emergency-phone" href="tel:09985985934" aria-label="Call Malilipot at 0998 598 5934">0998 598 5934</a>
+</article>
+<article class="emergency-card"><h4>Manito</h4>
+<a class="emergency-phone" href="tel:09985985939" aria-label="Call Manito at 0998 598 5939">0998 598 5939</a>
+</article>
+<article class="emergency-card"><h4>Pio Duran</h4>
+<a class="emergency-phone" href="tel:09985985946" aria-label="Call Pio Duran at 0998 598 5946">0998 598 5946</a>
+</article>
+<article class="emergency-card"><h4>Malinao</h4>
+<a class="emergency-phone" href="tel:09985985933" aria-label="Call Malinao at 0998 598 5933">0998 598 5933</a>
+</article>
+<article class="emergency-card"><h4>Rapu-Rapu</h4>
+<a class="emergency-phone" href="tel:09985985938" aria-label="Call Rapu-Rapu at 0998 598 5938">0998 598 5938</a>
+</article>
+<article class="emergency-card"><h4>Polangui</h4>
+<a class="emergency-phone" href="tel:09985985944" aria-label="Call Polangui at 0998 598 5944">0998 598 5944</a>
+</article>
+<article class="emergency-card"><h4>Tabaco City</h4>
+<a class="emergency-phone" href="tel:09985985930" aria-label="Call Tabaco City at 0998 598 5930">0998 598 5930</a>
+</article>
+<article class="emergency-card"><h4>Tiwi</h4>
+<a class="emergency-phone" href="tel:09985985932" aria-label="Call Tiwi at 0998 598 5932">0998 598 5932</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="coast-guard" aria-labelledby="hotlines-coast-guard"><h3 id="hotlines-coast-guard" tabindex="-1">Coast Guard</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Coast Guard District Bicol</h4>
+<a class="emergency-phone" href="tel:09776121237" aria-label="Call Coast Guard District Bicol at 0977 612 1237">0977 612 1237</a>
+<a class="emergency-phone" href="tel:09295242099" aria-label="Call Coast Guard District Bicol at 0929 524 2099">0929 524 2099</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Station Albay</h4>
+<a class="emergency-phone" href="tel:09275640600" aria-label="Call Coast Guard Station Albay at 0927 564 0600">0927 564 0600</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Station Cam Norte</h4>
+<a class="emergency-phone" href="tel:09682805965" aria-label="Call Coast Guard Station Cam Norte at 0968 280 5965">0968 280 5965</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Station Cam Sur</h4>
+<a class="emergency-phone" href="tel:09463539906" aria-label="Call Coast Guard Station Cam Sur at 0946 353 9906">0946 353 9906</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Station Catanduanes</h4>
+<a class="emergency-phone" href="tel:09478310880" aria-label="Call Coast Guard Station Catanduanes at 0947 831 0880">0947 831 0880</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Station Masbate</h4>
+<a class="emergency-phone" href="tel:09637777190" aria-label="Call Coast Guard Station Masbate at 0963 777 7190">0963 777 7190</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Station Sorsogon</h4>
+<a class="emergency-phone" href="tel:09091141877" aria-label="Call Coast Guard Station Sorsogon at 0909 114 1877">0909 114 1877</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Sub-Station Bacacay</h4>
+<a class="emergency-phone" href="tel:09673509009" aria-label="Call Coast Guard Sub-Station Bacacay at 09673509009">09673509009</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Sub-Station Tabaco City</h4>
+<a class="emergency-phone" href="tel:09633753396" aria-label="Call Coast Guard Sub-Station Tabaco City at 0963 375 3396">0963 375 3396</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Sub-Station Rapu-Rapu</h4>
+<a class="emergency-phone" href="tel:09774218993" aria-label="Call Coast Guard Sub-Station Rapu-Rapu at 0977-421-8993">0977-421-8993</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Sub-Station Sto. Domingo</h4>
+<a class="emergency-phone" href="tel:09276701530" aria-label="Call Coast Guard Sub-Station Sto. Domingo at 0927 670 1530">0927 670 1530</a>
+</article>
+<article class="emergency-card"><h4>Coast Guard Sub-Station Pio Duran</h4>
+<a class="emergency-phone" href="tel:09706675457" aria-label="Call Coast Guard Sub-Station Pio Duran at 09706675457">09706675457</a>
+</article>
+</div></section>
+<section class="emergency-category" data-category="social-welfare" aria-labelledby="hotlines-social-welfare"><h3 id="hotlines-social-welfare" tabindex="-1">Social welfare offices (C/MSWDO)</h3><div class="emergency-grid">
+<article class="emergency-card"><h4>Daraga</h4>
+<a class="emergency-phone" href="tel:09074803972" aria-label="Call Daraga at 0907 480 3972">0907 480 3972</a>
+<a class="emergency-phone" href="tel:09365738653" aria-label="Call Daraga at 0936 573 8653">0936 573 8653</a>
+</article>
+<article class="emergency-card"><h4>Ligao City</h4>
+<a class="emergency-phone" href="tel:09543463393" aria-label="Call Ligao City at 0954 346 3393">0954 346 3393</a>
+<a class="emergency-phone" href="tel:09306431778" aria-label="Call Ligao City at 0930 643 1778">0930 643 1778</a>
+</article>
+<article class="emergency-card"><h4>Rapu-Rapu</h4>
+<a class="emergency-phone" href="tel:09081788781" aria-label="Call Rapu-Rapu at 0908 178 8781">0908 178 8781</a>
+</article>
+<article class="emergency-card"><h4>Polangui</h4>
+<a class="emergency-phone" href="tel:09958613754" aria-label="Call Polangui at 0995 861 3754">0995 861 3754</a>
+</article>
+<article class="emergency-card"><h4>Camalig</h4>
+<a class="emergency-phone" href="tel:09955856483" aria-label="Call Camalig at 0995 585 6483">0995 585 6483</a>
+<a class="emergency-phone" href="tel:09171124971" aria-label="Call Camalig at 0917 112 4971">0917 112 4971</a>
+</article>
+<article class="emergency-card"><h4>Bacacay</h4>
+<a class="emergency-phone" href="tel:09167438847" aria-label="Call Bacacay at 0916 743 8847">0916 743 8847</a>
+</article>
+</div></section>
+<aside class="emergency-notes"><h3>Directory notes</h3><p>Notes supplied with the directory dated 8 November 2025:</p><ul>
+<li>This is a running post; you may refresh this for an update.</li>
+<li>In case your respective offices change numbers, kindly inform the Albay PIO for updating purposes</li>
+</ul></aside><section class="emergency-resources"><h3>Official contact resources</h3>
+<p><a href="https://ehotlines.e.gov.ph/">National emergency directory (eHotlines)</a> — External resource</p>
+<p><a href="https://albay.gov.ph/">Official Albay government website</a> — For office hours and other government inquiries</p>
+</section></div></section>
+<!-- emergency-directory:end -->
     </main>
 
     <footer class="site-footer">
@@ -2095,7 +1076,7 @@
       </div>
     </footer>
 
-    <script defer src="../assets/js/translations.js?v=d522345aad"></script>
+    <script defer src="../assets/js/translations.js?v=d01b354eb6"></script>
     <script defer src="../assets/js/info-bar.js"></script>
     <script defer src="../assets/js/main.js"></script>
     <script defer src="../assets/js/version.js?v=509d9bc9f8"></script>
